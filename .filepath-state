@@ -2,25 +2,13 @@
   "1afdfd1c9a2f67d66c3d9dfd66d28034cf7f2108": [
     "MIMDocs\\configuring-mim-environment-for-pam.md"
   ],
-  "ecbf791f8baceaec666df0bb58428a3439c0c0f3": [
-    "MIMDocs\\configuring-mim-environment-for-pam.md"
-  ],
   "567b0f74626301097108d9488e811cfd22195daa": [
     "MIMDocs\\defining-roles-for-pam.md"
   ],
   "850bd9814cd79926b3ae7f197e3a0389a0500a4e": [
     "MIMDocs\\DeployUse\\certificate-manager-for-non-administrators.md"
   ],
-  "88a6fb4f89c5e7f3e5fd96090b9b58de5b136f17": [
-    "MIMDocs\\DeployUse\\certificate-manager-for-non-administrators.md"
-  ],
-  "82a4b43d59c5bb31968285b1412608b4238b42ee": [
-    "MIMDocs\\DeployUse\\certificate-manager-for-non-administrators.md"
-  ],
   "7347dff9f3cf48bc25c4450060e88d51b1973669": [
-    "MIMDocs\\DeployUse\\certificate-manager-for-software-certificates.md"
-  ],
-  "9f5c083196ca277237779618c9ff4b9fcb5f15b4": [
     "MIMDocs\\DeployUse\\certificate-manager-for-software-certificates.md"
   ],
   "e206f385c3bfec23b56d39a7c410bbf698cd8290": [
@@ -32,28 +20,10 @@
   "e5b397b4000ea9165f09e854fa4197774b29e717": [
     "MIMDocs\\DeployUse\\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md"
   ],
-  "f41c8e546c037de1f8c0002d5448b4cf2ad7ed4d": [
-    "MIMDocs\\DeployUse\\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md"
-  ],
-  "64a308b97ecf9dc8698733be741a3b680423a1a1": [
-    "MIMDocs\\DeployUse\\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md"
-  ],
-  "e0a7a55df11909e3355ff0ef638b58ad40ba0166": [
-    "MIMDocs\\DeployUse\\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md"
-  ],
   "6997d4d8b650196bf2e3ca0fddf9d577a71176d5": [
     "MIMDocs\\DeployUse\\microsoft-identity-manager-deploy.md"
   ],
   "83fc514aa90cedb09773af2382681a8a9c540cd7": [
-    "MIMDocs\\DeployUse\\microsoft-identity-manager-deploy.md"
-  ],
-  "1734bfe9450149c3b86bcf62305368ea86bea8e9": [
-    "MIMDocs\\DeployUse\\microsoft-identity-manager-deploy.md"
-  ],
-  "174101615ee966388e79f37a9d276b4fbc7463a9": [
-    "MIMDocs\\DeployUse\\microsoft-identity-manager-deploy.md"
-  ],
-  "930926ce2e98d3dc09de10c4dc146738ccca9291": [
     "MIMDocs\\DeployUse\\microsoft-identity-manager-deploy.md"
   ],
   "fb74c498d865bce990b618b37e9f81d7c265f330": [
@@ -62,67 +32,22 @@
   "4f8660f09d266700f43024de37ce9e4c6916e7a2": [
     "MIMDocs\\DeployUse\\preparing-domain.md"
   ],
-  "86922c78f84a88f04d95f26c07c1987f057ce520": [
-    "MIMDocs\\DeployUse\\preparing-domain.md"
-  ],
-  "acdbac44553c3a75249f2d85ad61bab1c5cf4f7e": [
-    "MIMDocs\\DeployUse\\preparing-domain.md"
-  ],
   "4f9d9d720c9d65efd73991bf06f939238b1b8a91": [
     "MIMDocs\\DeployUse\\TOC.md"
   ],
   "f3dc4a9fee19b340b354e72f4b3873f2d58a9907": [
     "MIMDocs\\DeployUse\\TOC.md"
   ],
-  "4a8a890a20cbc1c47f7455b224f295f2de507775": [
-    "MIMDocs\\DeployUse\\TOC.md"
-  ],
-  "e6bff1b117dd3fe5ed4b0cbf91365d104e616066": [
-    "MIMDocs\\DeployUse\\TOC.md"
-  ],
-  "e80fccd3b1b49f01e863080db380e4609a627b31": [
-    "MIMDocs\\DeployUse\\TOC.md"
-  ],
-  "3522e4b533ad2bf7f5b03e425e639ab93ed2015c": [
-    "MIMDocs\\DeployUse\\TOC.md"
-  ],
   "0799e6e808dfbbda330111a63055d77424424ef3": [
     "MIMDocs\\DeployUse\\working-with-identity-manager-hybrid-reporting.md"
   ],
-  "69f2820af734179ada6ae5d6e58beecd45b6fdfd": [
-    "MIMDocs\\DeployUse\\working-with-identity-manager-hybrid-reporting.md"
-  ],
-  "fdbaa1b6d84590c44f161e54d9fdac8fb7b8b660": [
-    "MIMDocs\\DeployUse\\working-with-identity-manager-hybrid-reporting.md"
-  ],
-  "9af0320317c63d2e6f7420feb925f38e8cf490fd": [
-    "MIMDocs\\DeployUse\\working-with-identity-manager-hybrid-reporting.md"
-  ],
-  "e72d61a367d82c08f07beb541b4ff5ecad17e847": [
-    "MIMDocs\\DeployUse\\working-with-identity-manager-hybrid-reporting.md"
-  ],
   "dae44eea591f49901422ad00448867aa64612cc0": [
-    "MIMDocs\\DeployUse\\working-with-mim-certificate-manager.md"
-  ],
-  "2301d1260c9e3a2f18e6bb5a203b3eba596a6321": [
     "MIMDocs\\DeployUse\\working-with-mim-certificate-manager.md"
   ],
   "ce03d837a869db939f4232e375ecd7a8e45ff8c1": [
     "MIMDocs\\DeployUse\\working-with-self-service-password-reset.md"
   ],
   "66789e1c31489fbe45c0b806f6fc644b1ff84772": [
-    "MIMDocs\\DeployUse\\working-with-self-service-password-reset.md"
-  ],
-  "6296234e86d2187fb4278e691f227e396b4983d8": [
-    "MIMDocs\\DeployUse\\working-with-self-service-password-reset.md"
-  ],
-  "7499bfa9db3e4f89e47376601d1216e9c2cf1afd": [
-    "MIMDocs\\DeployUse\\working-with-self-service-password-reset.md"
-  ],
-  "27419290118ad73f59c868db4515bf4436823f64": [
-    "MIMDocs\\DeployUse\\working-with-self-service-password-reset.md"
-  ],
-  "83cea8145864deb3eba5e1bc53b14a53d9d937e5": [
     "MIMDocs\\DeployUse\\working-with-self-service-password-reset.md"
   ],
   "c1e99be11f6e20a17296aeaff30809cbe7e98b8b": [
@@ -180,31 +105,13 @@
   "1ba05ad12ab9da3513881ea5964c8514c6defd12": [
     "MIMDocs\\PlanDesign\\microsoft-identity-manager-2016-supported-platforms.md"
   ],
-  "5b6b5837681bf12aeef7ec50361658f19921c0fe": [
-    "MIMDocs\\PlanDesign\\microsoft-identity-manager-2016-supported-platforms.md"
-  ],
-  "f6abe675b936b07e17a5d663f37e52821ea27271": [
-    "MIMDocs\\PlanDesign\\microsoft-identity-manager-2016-supported-platforms.md"
-  ],
   "de95bedc4e3ca5e5b069d8dbe897dd7f1e058546": [
     "MIMDocs\\PlanDesign\\TOC.md"
   ],
   "f6e7f89affbc8d133ad220b8fce233127f09a4f7": [
     "MIMDocs\\PlanDesign\\TOC.md"
   ],
-  "23db485c8435fcc9bf1a642c0f71aeccfab6889c": [
-    "MIMDocs\\PlanDesign\\TOC.md"
-  ],
-  "dc80c1a80085ca99440b24792d86e3172d24e103": [
-    "MIMDocs\\PlanDesign\\TOC.md"
-  ],
-  "36aa470a9638912716b489fa32bcd2b2468ddc9a": [
-    "MIMDocs\\PlanDesign\\TOC.md"
-  ],
   "60e25f254eed153466c164c27bdd5f185e8c887c": [
-    "MIMDocs\\planning-bastion-environment.md"
-  ],
-  "90087cab6a3618e327c208d5f9504b2fc3e4a429": [
     "MIMDocs\\planning-bastion-environment.md"
   ],
   "870e53cf04a6b23f96f763201f0387eb53fd523b": [
@@ -348,12 +255,6 @@
   "1a56fce5b065da09db5f7d8b617b8f3b88b77af2": [
     "MIMDocs\\reference\\toc.md"
   ],
-  "8e114723b756aa92615bd16f000fc35e01231c2d": [
-    "MIMDocs\\reference\\toc.md"
-  ],
-  "a2398aea3ff77dba3e79a2808a8bc9a7cc9e1fa6": [
-    "MIMDocs\\reference\\toc.md"
-  ],
   "c49813b84aef1af60341c204dd69c67789cd3ad9": [
     "MIMDocs\\reference\\update-smartcard-status.md"
   ],
@@ -366,9 +267,6 @@
   "05c612cab12ab17981567ac30a24c8f056ac4399": [
     "MIMDocs\\DeployUse\\media\\MIM-SSPR-Azureportal.png"
   ],
-  "4ee7745a1fc0116503c52c0585d2f57be93c032e": [
-    "MIMDocs\\DeployUse\\media\\MIM-SSPR-Azureportal.png"
-  ],
   "98580a3dcd4d4d6e166dfaa59af61ae8f9869077": [
     "MIMDocs\\DeployUse\\media\\MIM-SSPR-ManageButton.png"
   ],
@@ -379,9 +277,6 @@
     "MIMDocs\\DeployUse\\media\\MIM-SSPR-Azure-MFA.png"
   ],
   "1ff0807544bfe5121656e9472e43c792d804af7f": [
-    "MIMDocs\\DeployUse\\media\\MIM-SSPR-pFile.png"
-  ],
-  "f06bbd988080f2be18b0b8cfdcdbd343ef02d16a": [
     "MIMDocs\\DeployUse\\media\\MIM-SSPR-pFile.png"
   ],
   "b6355f089a1e13e5f99415f6a4a6b4b6461043b9": [
@@ -441,28 +336,10 @@
   "b23b075b34e915308d532dce949a691881c84d56": [
     "MIMDocs\\toc.md"
   ],
-  "85599cd4a385a40486cd3b6f0d37370f4127c076": [
-    "MIMDocs\\toc.md"
-  ],
   "c2b4c7e0de9e21f59f22cfa3b7a14f2443b02b9c": [
     "MIMDocs\\Understand\\identity-manager-hybrid-reporting-azure.md"
   ],
-  "69e2b7c612644acbaac43ab7c5acc598eb29762e": [
-    "MIMDocs\\Understand\\identity-manager-hybrid-reporting-azure.md"
-  ],
-  "16c897839f045515da91efbce08d8f4033d0252c": [
-    "MIMDocs\\Understand\\identity-manager-hybrid-reporting-azure.md"
-  ],
-  "c4885302bbd3b0a75dd89c82f123f32cc8b93c1f": [
-    "MIMDocs\\Understand\\identity-manager-hybrid-reporting-azure.md"
-  ],
   "3f12160c8acd643d00a41ef81ce41e65441c3e85": [
-    "MIMDocs\\Understand\\microsoft-identity-manager-2016.md"
-  ],
-  "6adefc4ccfe8ec7382c9def09ef2a81d62d51b38": [
-    "MIMDocs\\Understand\\microsoft-identity-manager-2016.md"
-  ],
-  "4e81d11774ecab8ad3b4f6381e366de81d1896f9": [
     "MIMDocs\\Understand\\microsoft-identity-manager-2016.md"
   ],
   "451ca2da744a506934c79ff0a9abef9e6963b68d": [
@@ -471,16 +348,7 @@
   "36580ae1c22c6be6a42a531603d4c49764627277": [
     "MIMDocs\\Understand\\TOC.md"
   ],
-  "07f65ad8f37cca981c47fd66a1275626b6620eaa": [
-    "MIMDocs\\Understand\\TOC.md"
-  ],
-  "881e8c48f33a3430e88d5b08165b067944f868ae": [
-    "MIMDocs\\Understand\\TOC.md"
-  ],
   "1c783bc90fedc324d89be8a6e28b83c539ce58d8": [
-    "MIMDocs\\use-azure-mfa-for-activation.md"
-  ],
-  "826285f56bd314897f15393e5998c75dcfaf8dac": [
     "MIMDocs\\use-azure-mfa-for-activation.md"
   ],
   "25e41f7b09448d1b244ea8321b36c29d61001f5e": [
@@ -555,9 +423,6 @@
   "1f1a18f843216bed4052f09815b6b75fd759cbb9": [
     "MIMDocs\\DeployUse\\media\\MIM-UpgSP7.png"
   ],
-  "2fc132e83f6d875b2b872ece9db8f11b87c06c92": [
-    "MIMDocs\\DeployUse\\media\\MIM-UpgSP7.png"
-  ],
   "a0c86274e483e6f9a8ffd55b1884e70cee24560d": [
     "MIMDocs\\DeployUse\\media\\MIM-UpgSP8.PNG"
   ],
@@ -571,9 +436,6 @@
     "MIMDocs\\DeployUse\\media\\MIM-DeploySP1.png"
   ],
   "1480f345e6fc12e8ad603b50ef2781697be09b97": [
-    "MIMDocs\\DeployUse\\media\\MIM-DeploySP2.png"
-  ],
-  "822dbf0d65d682e1ffd044f05f147e6cf1086779": [
     "MIMDocs\\DeployUse\\media\\MIM-DeploySP2.png"
   ],
   "f21f8cd1fd0c882b8768f543e10487140c67dc1c": [
@@ -604,15 +466,6 @@
   "893cb4c7936dc217aedf3e0dafa4d70ee3296502": [
     "MIMDocs\\PlanDesign\\topology-considerations.md"
   ],
-  "58e3789177659652ef6ff9982f1a19f7a8161325": [
-    "MIMDocs\\PlanDesign\\topology-considerations.md"
-  ],
-  "cdec5df24f58a25b264f7ca8fe951f037c7d2925": [
-    "MIMDocs\\PlanDesign\\topology-considerations.md"
-  ],
-  "dfac0b5d3e79d5b2406a22b740fc606fb76df982": [
-    "MIMDocs\\PlanDesign\\topology-considerations.md"
-  ],
   "ff89d0e903b04df6182700b474bc3aef1b0ba24d": [
     "MIMDocs\\PlanDesign\\media\\MIM-topo-multitier.png"
   ],
@@ -625,9 +478,6 @@
   "23c1930dcb1c37d256d0af6f14458e6ce8812ffa": [
     "MIMDocs\\PlanDesign\\capacity-planning-guide.md"
   ],
-  "6914fcd651afa80f3069339e2d1aa3adca91f0ed": [
-    "MIMDocs\\PlanDesign\\capacity-planning-guide.md"
-  ],
   "1e00f86e0dec2c4a64ad4e34caacbd94ef1579bd": [
     "MIMDocs\\index.html"
   ],
@@ -637,28 +487,10 @@
   "6fdb5a211a1edda7f5b7f632302c568db9653c95": [
     "MIMDocs\\index.html"
   ],
-  "4c11cddf710f188b36fd7fb96b4e1fc171ea032a": [
-    "MIMDocs\\index.html"
-  ],
-  "3fefd148b171439cc1ab1fbbc3cbf8bf6d99b3ec": [
-    "MIMDocs\\index.html"
-  ],
-  "c96ec3952309a33e1724eadd69bb5c1b42b4e454": [
-    "MIMDocs\\index.html"
-  ],
-  "7ff7d0b29fb9cd1ce8c68a66da4feb4e24a62d41": [
-    "MIMDocs\\index.html"
-  ],
   "5e70c4f1c93765480449b03f7383bae11dce9237": [
     "MIMDocs\\DeployUse\\install-mim-service-portal.md"
   ],
   "41f9769b32fbf8311db3e7bf8bd3a19158775098": [
-    "MIMDocs\\DeployUse\\install-mim-service-portal.md"
-  ],
-  "1a1b7fa5a033b18b2370a5143dc8009b794f11a9": [
-    "MIMDocs\\DeployUse\\install-mim-service-portal.md"
-  ],
-  "014e023f45f050a2fa9a47f5872de7c454ee7781": [
     "MIMDocs\\DeployUse\\install-mim-service-portal.md"
   ],
   "624919d3dfc3ac35e43043a85de1a21b1a006924": [
@@ -667,19 +499,10 @@
   "8b6afa5c4dd153b0cc5e235d19095b53c5eab526": [
     "MIMDocs\\DeployUse\\install-mim-sync.md"
   ],
-  "868e84d203e6f9a9984260c316e51ccea19727cd": [
-    "MIMDocs\\DeployUse\\install-mim-sync.md"
-  ],
-  "2b1f0a313f2f00ae9490d869eb416dfec3ebe229": [
-    "MIMDocs\\DeployUse\\install-mim-sync.md"
-  ],
   "827aa52604e0851e83575290c230b9dcaf8d7847": [
     "MIMDocs\\DeployUse\\install-mim-sync-ad-service.md"
   ],
   "f0125a57d39988874098ffedf0b73716d3869f38": [
-    "MIMDocs\\DeployUse\\install-mim-sync-ad-service.md"
-  ],
-  "5a757ccdc6d91df7cf473032860f55613a68a90e": [
     "MIMDocs\\DeployUse\\install-mim-sync-ad-service.md"
   ],
   "25e1a190150eaa339d30f4cf6afe1d122c7a2787": [
@@ -688,19 +511,10 @@
   "75e66230764d8375b945d4174b362b044faa8142": [
     "MIMDocs\\DeployUse\\prepare-server-exchange.md"
   ],
-  "e051581a6881198379957e310fbc13a7f0d5ea96": [
-    "MIMDocs\\DeployUse\\prepare-server-exchange.md"
-  ],
   "4b4235eff0af2c090ead920d2382abed97ec5a3d": [
     "MIMDocs\\DeployUse\\prepare-server-sharepoint.md"
   ],
   "50aceecb81a2b6ab5eec0d1c1ad27aa613e0315d": [
-    "MIMDocs\\DeployUse\\prepare-server-sharepoint.md"
-  ],
-  "1f22f09075ce2d82690b106d60b83ce6607012f4": [
-    "MIMDocs\\DeployUse\\prepare-server-sharepoint.md"
-  ],
-  "d1d879181f0db889a2d133f182bcafc7c8745903": [
     "MIMDocs\\DeployUse\\prepare-server-sharepoint.md"
   ],
   "02fdcab663c3c037f5d742b5caaa3e608c464b24": [
@@ -709,22 +523,10 @@
   "2229f35a87f6949bc45d58aa618a3aa3d111fd7c": [
     "MIMDocs\\DeployUse\\prepare-server-sql2014.md"
   ],
-  "386a4f5db58cde7cd45370b4c43d87fcf7d9ca6c": [
-    "MIMDocs\\DeployUse\\prepare-server-sql2014.md"
-  ],
   "de4bd61d0fdf17d2db6ae9433b8a705a4c8370d0": [
     "MIMDocs\\DeployUse\\prepare-server-ws2012r2.md"
   ],
   "6b8c4dcfca7f14f9c2b76eb06df0232b0ebdd86f": [
-    "MIMDocs\\DeployUse\\prepare-server-ws2012r2.md"
-  ],
-  "75c507e63dba9385ddfc47505cb719123d60391e": [
-    "MIMDocs\\DeployUse\\prepare-server-ws2012r2.md"
-  ],
-  "2f7d202be96c8f4fc58747bb66bd3acfcaf4a13e": [
-    "MIMDocs\\DeployUse\\prepare-server-ws2012r2.md"
-  ],
-  "8e2035a6c1240ac84a4c809add71bad5c9551c78": [
     "MIMDocs\\DeployUse\\prepare-server-ws2012r2.md"
   ],
   "319d2a29ee531bb584574825c60b698ab5a63575": [
