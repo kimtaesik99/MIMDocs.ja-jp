@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 3
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 17
-[ In Sync Handback Files ](#insync-handback-success-list)| 202
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 16
+[ In Sync Handback Files ](#insync-handback-success-list)| 203
 [ Ignored Files ](#ignored-list)| 62
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -50,7 +50,6 @@
  [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-service-portal.md) | OutofSyncHandedBackSuccess | [Details](#5e70c4f1c93765480449b03f7383bae11dce923711)
  [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-sync.md) | OutofSyncHandedBackSuccess | [Details](#624919d3dfc3ac35e43043a85de1a21b1a00692413)
  [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | OutofSyncHandedBackSuccess | [Details](#827aa52604e0851e83575290c230b9dcaf8d784712)
- [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr/blob/c0e14e257e92d4f3a134ac0a4a64f598b1ff6670/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png) | OutofSyncHandedBackSuccess | [Details](#773d7c2a80e98ba6e602103140f6828886458e3537)
  [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md) | OutofSyncHandedBackSuccess | [Details](#6997d4d8b650196bf2e3ca0fddf9d577a71176d566)
  [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-exchange.md) | OutofSyncHandedBackSuccess | [Details](#25e1a190150eaa339d30f4cf6afe1d122c7a278767)
  [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-sharepoint.md) | OutofSyncHandedBackSuccess | [Details](#4b4235eff0af2c090ead920d2382abed97ec5a3d68)
@@ -94,6 +93,7 @@
  [MIMDocs\DeployUse\media\MIM-Install8.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/MIM-Install8.png) | InSyncHandedBackSuccess | [Details](#e2495f3a3af2ca7b105187bca71dfeb665cc613534)
  [MIMDocs\DeployUse\media\MIM-SSPR-account-unlock.JPG](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/MIM-SSPR-account-unlock.JPG) | InSyncHandedBackSuccess | [Details](#c8dfc3f1495deeaa1ff2239f44a454c2899358bd35)
  [MIMDocs\DeployUse\media\MIM-SSPR-accountUnlock.JPG](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/MIM-SSPR-accountUnlock.JPG) | InSyncHandedBackSuccess | [Details](#50edb5dfa84929fc614b735bcf3536b50765516836)
+ [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr/blob/c0e14e257e92d4f3a134ac0a4a64f598b1ff6670/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png) | InSyncHandedBackSuccess | [Details](#773d7c2a80e98ba6e602103140f6828886458e3537)
  [MIMDocs\DeployUse\media\MIM-SSPR-Azureportal.png](https://github.com/Microsoft/MIMDocs-pr/blob/c0e14e257e92d4f3a134ac0a4a64f598b1ff6670/MIMDocs/DeployUse/media/MIM-SSPR-Azureportal.png) | InSyncHandedBackSuccess | [Details](#05c612cab12ab17981567ac30a24c8f056ac439939)
  [MIMDocs\DeployUse\media\MIM-SSPR-Azureportal-2.png](https://github.com/Microsoft/MIMDocs-pr/blob/c0e14e257e92d4f3a134ac0a4a64f598b1ff6670/MIMDocs/DeployUse/media/MIM-SSPR-Azureportal-2.png) | InSyncHandedBackSuccess | [Details](#41e36ef43e62d24a1ffa3c74c585e9b9579e72e238)
  [MIMDocs\DeployUse\media\MIM-SSPR-keepcurrentorsetnewpwd.JPG](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/MIM-SSPR-keepcurrentorsetnewpwd.JPG) | InSyncHandedBackSuccess | [Details](#5c7b53097393ddeeb4ae606c968a6d01ac1458bb40)
@@ -815,18 +815,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='773d7c2a80e98ba6e602103140f6828886458e3537'></a> Source: [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr/blob/c0e14e257e92d4f3a134ac0a4a64f598b1ff6670/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/bcc6f1c08ca423b6a83f3ffae1c5732128917d31/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png)
 * Handoff File: [773d7c2a80e98ba6e602103140f6828886458e35.png](https://github.com/Microsoft/EM.handoff/blob/1164700382d72d61d863238b4a740231d826e03c/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/773d7c2a80e98ba6e602103140f6828886458e35.png)
 * Handoff Datetime: 2016-03-16 22:56:02
 * Handoff Reason: IsDependency
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/3e55cd85ebe0fa5cd7423e9602eb485dff817fee/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png)
-* Current Handback File: [eb16bf2dbbe30b0919cdba186f097ee64c93993d.png](https://github.com/Microsoft/EM.handback/blob/c43df903d71ec5fd7bdcccef8a111f8e1b800973/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/eb16bf2dbbe30b0919cdba186f097ee64c93993d.png)
-* Current Handback Datetime: 2016-03-31 09:21:22
+* Handback File: [773d7c2a80e98ba6e602103140f6828886458e35.png](https://github.com/Microsoft/EM.handback/blob/ebc8495105e3863d7c787d08032d9b779177f6d8/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/773d7c2a80e98ba6e602103140f6828886458e35.png)
+* Handback Datetime: 2016-03-31 09:23:23
 * Dependency From: MIMDocs\DeployUse\working-with-self-service-password-reset.md
 * [Back to Top](#report-top)
 

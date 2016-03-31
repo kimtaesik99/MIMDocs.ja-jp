@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "bd715d12900298a48dbe4fdcce55ee562652a5b8",
-  "LastTranslatedCommit": "3e55cd85ebe0fa5cd7423e9602eb485dff817fee",
+  "LastTranslatedCommit": "bcc6f1c08ca423b6a83f3ffae1c5732128917d31",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
       "FileHash": "c1e15c9548e46cbbff7810e63478074ceeb06152",
@@ -7205,14 +7205,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "bcc6f1c08ca423b6a83f3ffae1c5732128917d31",
+      "TargetFilePath": "MIMDocs\\DeployUse\\media\\MIM-SSPR-Azure-MFA.png",
+      "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.ja-jp\\master\\773d7c2a80e98ba6e602103140f6828886458e35.png",
+      "HandbackFileCommit": "ebc8495105e3863d7c787d08032d9b779177f6d8",
+      "HandbackDateTime": "2016-03-31T09:23:23.7609348Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-03-31T09:23:23.7609348Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
