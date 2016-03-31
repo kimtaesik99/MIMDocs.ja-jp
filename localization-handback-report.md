@@ -1,27 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr/blob/c0e14e257e92d4f3a134ac0a4a64f598b1ff6670/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png) | InSyncHandedBackSuccess | [Details](#773d7c2a80e98ba6e602103140f6828886458e3537)
 
 ## Item Details
-##### <a name='773d7c2a80e98ba6e602103140f6828886458e3537'></a> Source: [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr/blob/c0e14e257e92d4f3a134ac0a4a64f598b1ff6670/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/bcc6f1c08ca423b6a83f3ffae1c5732128917d31/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png)
-* Handoff File: [773d7c2a80e98ba6e602103140f6828886458e35.png](https://github.com/Microsoft/EM.handoff/blob/1164700382d72d61d863238b4a740231d826e03c/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/773d7c2a80e98ba6e602103140f6828886458e35.png)
-* Handoff Datetime: 2016-03-16 22:56:02
-* Handoff Reason: IsDependency
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [773d7c2a80e98ba6e602103140f6828886458e35.png](https://github.com/Microsoft/EM.handback/blob/ebc8495105e3863d7c787d08032d9b779177f6d8/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/773d7c2a80e98ba6e602103140f6828886458e35.png)
-* Handback Datetime: 2016-03-31 09:23:23
-* Dependency From: MIMDocs\DeployUse\working-with-self-service-password-reset.md
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
