@@ -339,18 +339,6 @@
   "23c1930dcb1c37d256d0af6f14458e6ce8812ffa": [
     "MIMDocs\\PlanDesign\\capacity-planning-guide.md"
   ],
-  "512010f0017a5c1736a1aa71045fc97e4fa17808": [
-    "MIMDocs\\index.html"
-  ],
-  "1e00f86e0dec2c4a64ad4e34caacbd94ef1579bd": [
-    "MIMDocs\\index.html"
-  ],
-  "661ab885005a67bf037291acc42f4d16f9c7e0a6": [
-    "MIMDocs\\index.html"
-  ],
-  "6fdb5a211a1edda7f5b7f632302c568db9653c95": [
-    "MIMDocs\\index.html"
-  ],
   "eb2af412d9638035de591197fa191e990ade0ca1": [
     "MIMDocs\\DeployUse\\install-mim-service-portal.md"
   ],
@@ -484,6 +472,6 @@
     "MIMDocs\\DeployUse\\media\\MIM-SSPR-Azureportal-2.png"
   ],
   "48d3e50678a1a44aa42ab9b3048c04dbf0aef318": [
-    "MIMDocs\\index - new design.md"
+    "MIMDocs\\index.md"
   ]
 }
