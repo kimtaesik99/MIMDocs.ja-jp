@@ -1,35 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | OutofSyncHandedBackSuccess | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998115)
- [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | HandedOffSuccess | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee7)
+ [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/7d409d04d785e1ae4858fee4573bf964a09af930/MIMDocs/index.md) | HandedOffSuccess | [Details](#fd417049ca3f5fa7d29ee1fdc8fb2f5e6686b1ae81)
 
 ## Item Details
-##### <a name='50c0edd60abfa6550cb5a873d32a842e8c0998115'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/c57faeaef3d8cedd60dfad8f56f3285b5281f5e7/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.ja-jp.xlf)
-* Handoff Datetime: 2016-04-21 18:49:11
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/3e55cd85ebe0fa5cd7423e9602eb485dff817fee/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
-* Current Handback File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/c43df903d71ec5fd7bdcccef8a111f8e1b800973/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.ja-jp.xlf)
-* Current Handback Datetime: 2016-03-31 09:21:22
-* [Back to Top](#report-top)
-
-##### <a name='85e83b85f047ca2c2648b42ec68b832caae645ee7'></a> Source: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
+##### <a name='fd417049ca3f5fa7d29ee1fdc8fb2f5e6686b1ae81'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/7d409d04d785e1ae4858fee4573bf964a09af930/MIMDocs/index.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/c57faeaef3d8cedd60dfad8f56f3285b5281f5e7/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf)
-* Handoff Datetime: 2016-04-21 18:49:11
+* Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/5ac7ed9346cacddfa04825d8a11e9746d0edc251/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf)
+* Handoff Datetime: 2016-04-21 22:52:29
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
