@@ -1,43 +1,24 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | OutofSyncHandedBackSuccess | [Details](#cd4ac84af4e5416512cf546a5d23b342ebe13c3969)
- [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/preparing-domain.md) | OutofSyncHandedBackSuccess | [Details](#b22ccf69e6a1a6c8e13baa35c57bde0c6c07183a70)
+ [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/7639dc76a809b5f8552bca52018b02a0b0df8c7f/MIMDocs/index.md) | HandedOffSuccess | [Details](#62f14b7d815943bda0ecf7c608bbf05a0c1c852c81)
 
 ## Item Details
-##### <a name='cd4ac84af4e5416512cf546a5d23b342ebe13c3969'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='62f14b7d815943bda0ecf7c608bbf05a0c1c852c81'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/7639dc76a809b5f8552bca52018b02a0b0df8c7f/MIMDocs/index.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/9dc689edd57ff0e8e84e7fb4e7bc8efd69c2123b/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.ja-jp.xlf)
-* Handoff Datetime: 2016-04-22 17:47:57
+* Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/76f249d19448748f889b36b937fc83cba14f66c1/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf)
+* Handoff Datetime: 2016-04-25 21:17:38
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/3e55cd85ebe0fa5cd7423e9602eb485dff817fee/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
-* Current Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/c43df903d71ec5fd7bdcccef8a111f8e1b800973/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.ja-jp.xlf)
-* Current Handback Datetime: 2016-03-31 09:21:22
-* [Back to Top](#report-top)
-
-##### <a name='b22ccf69e6a1a6c8e13baa35c57bde0c6c07183a70'></a> Source: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/preparing-domain.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/9dc689edd57ff0e8e84e7fb4e7bc8efd69c2123b/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.ja-jp.xlf)
-* Handoff Datetime: 2016-04-22 17:47:57
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/3e55cd85ebe0fa5cd7423e9602eb485dff817fee/MIMDocs/DeployUse/preparing-domain.md)
-* Current Handback File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/c43df903d71ec5fd7bdcccef8a111f8e1b800973/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.ja-jp.xlf)
-* Current Handback Datetime: 2016-03-31 09:21:22
 * [Back to Top](#report-top)
 
 
