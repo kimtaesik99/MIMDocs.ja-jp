@@ -1,30 +1,45 @@
 ---
-title: ドメインを準備する |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-author: kgremban
----
-# ドメインを準備します。
+# required metadata
 
-## ユーザー アカウントとグループを作成します。
+title: ドメインのセットアップ | Microsoft Identity Manager
+description: MIM 2016 をインストールする前に、Active Directory ドメイン コントローラーを作成する
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# ドメインのセットアップ
+
+>[!div class="step-by-step"]  
+[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
+
+## ユーザー アカウントとグループを作成する
 
 MIM では、Active Directory が既にインストールされている必要があります。 ドメインを管理するには、環境内にドメイン コントローラーがあることを確認します。
 
 > [!NOTE]
-> 次に、すべての例で **mimservername** 、ドメイン コント ローラーの名前を表す **contoso** ドメイン名を表すと **Pass@word1** 例パスワードを表します。
+> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
 
-1. ドメイン管理者としてドメイン コント ローラーへのサインイン (*contoso \administrator*)。
+1. ドメイン管理者 (*contoso \administrator* など) としてドメイン コントローラーにサインインします。
 
-2. MIM サービス用の次のユーザー アカウントを作成します。 PowerShell を起動し、ドメインを更新する次の PowerShell スクリプトを入力します。
+2. MIM サービス用に次のユーザー アカウントを作成します。 PowerShell を起動し、次の PowerShell スクリプトを入力してドメインを更新します。
 
         ```
         import-module activedirectory
@@ -64,7 +79,7 @@ MIM では、Active Directory が既にインストールされている必要�
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
 
-3.  サービス アカウントの Kerberos 認証を有効にするには Spn を追加します。
+3.  SPN を追加して、サービス アカウントで Kerberos 認証を有効にする
 
     ```
     setspn -S http/mimservername.contoso.local Contoso\SharePoint
@@ -73,11 +88,10 @@ MIM では、Active Directory が既にインストールされている必要�
     setspn -S MIMSync/mimservername.contoso.local Contoso\MIMSync
     ```
 
->[! div クラスを「ステップバイ ステップ」=]  
-[次へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-ws2012r2.html)
-**Id 管理サーバーの準備: Windows Server 2012 R2**
+>[!div class="step-by-step"]  
+[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 

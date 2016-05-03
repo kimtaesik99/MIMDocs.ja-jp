@@ -1,27 +1,40 @@
 ---
-title: Id 管理サーバーと #58; を準備します。SQL Server 2014 |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-author: kgremban
----
-# Id 管理サーバーを準備する: SQL Server 2014
+# required metadata
 
->[! div クラスを「ステップバイ ステップ」=]
-[前へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-ws2012r2.html)
-**Id 管理サーバーの準備: Windows Server 2012 R2**
+title: ID 管理サーバー&#58; SQL Server 2014 のセットアップ |Microsoft Identity Manager
+description: MIM 2016 インストールの準備で SQL Server 2014 をインストールします。
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# ID 管理サーバー: SQL Server 2014 のセットアップ
+
+>[!div class="step-by-step"]
+[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
+[SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> 次に、すべての例で **mimservername** 、ドメイン コント ローラーの名前を表す **contoso** ドメイン名を表すと **Pass@word1** 例パスワードを表します。
+> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
 
-## インストール **SQL Server 2014 Standard Edition**
+## **SQL Server 2014 Standard Edition** をインストールします。
 
 1. ドメイン管理者として **PowerShell** を起動します。
 
@@ -33,11 +46,11 @@ author: kgremban
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="contoso\SqlServer" /SQLSVCPASSWORD="Pass@word1"   /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="contoso\Administrator"
     ```
 
->[! div クラスを「ステップバイ ステップ」=]  
-[次へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-sharepoint.html)
-**Id 管理サーバーの準備をしています: SharePoint**
+>[!div class="step-by-step"]  
+[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
+[SharePoint »](prepare-server-sharepoint.md)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 

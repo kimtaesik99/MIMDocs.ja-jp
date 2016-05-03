@@ -1,26 +1,38 @@
 ---
-title: 管理者以外のユーザーの証明書マネージャー |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
+# required metadata
+
+title: 非管理者のスマートカードの登録 |Microsoft Identity Manager
+description: 自身のコンピューターへの管理者アクセス権を持たないユーザーに対し、スマートカードを登録して証明書マネージャーを使用できるようにする方法について説明します。
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
-# 管理者ではないユーザーの証明書マネージャー
+
+# 非管理者のスマートカードの登録
 ユーザーがコンピューターのローカル管理者ではない場合、既定では、そのコンピューターにスマートカードを登録できません。 この制限を回避するには、次の手順を実行します。
 
 ## MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
 
 1.  **appx ファイルを展開する**
 
-    署名証明書を取得します。 手順に従います [内部 PKI を使用してサインオン Windows 8 アプリケーション](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx)します。 "アプリケーションに署名する" 段階になったら、停止します。 エクスポートされる pfx ファイルに名前を付けます。 .cer ファイルにもエクスポートし、新しい署名証明書の cer ファイルを使用してクライアントにインポートします。
+    署名証明書を取得します。 「[Sign Windows 8 applications using an internal PKI (内部 PKI を使用して Windows 8 アプリケーションに署名する)](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx)」の手順に従います。 "アプリケーションに署名する" 段階になったら、停止します。 エクスポートされる pfx ファイルに名前を付けます。 .cer ファイルにもエクスポートし、新しい署名証明書の cer ファイルを使用してクライアントにインポートします。
 
     次を実行して appx ファイルを展開します。
 
@@ -32,11 +44,11 @@ author: kgremban
 
 2.  **構成ファイルを変更する**
 
-     `CustomDataExample.xml custom.data`というファイルの名前を変更します。 CM アプリは、このファイル名を探します。
+    `CustomDataExample.xml custom.data`というファイルの名前を変更します。 CM アプリは、このファイル名を探します。
 
     custom.data ファイルを編集し、次のように変更します。
 
-    1.  & Lt;NonAdmin & gt;要素値属性の値を"True"に変更します。
+    1.  &lt;NonAdmin&gt; 要素の Value 属性値を "True" に変更します
 
     2.  ファイルを保存してエディターを終了します
 
@@ -44,7 +56,7 @@ author: kgremban
 
     4.  AppxManifest.xml というファイルを編集します
 
-    5.  & Lt; Identity & gt;要素は、署名証明書のサブジェクトに発行元属性の値を変更例。"CN = ABCD")
+    5.  &lt;Identity&gt; 要素の Publisher 属性値を、署名証明書のサブジェクトに変更します (例:"CN = ABCD")
 
         このサブジェクトは、アプリへのサインインに使用している署名証明書のサブジェクトと同じにする必要があります。
 
@@ -64,13 +76,13 @@ author: kgremban
 
     1.  管理者特権を持つユーザーとして CM ポータルにログインします。
 
-    2.   **[管理]** &gt; **[プロファイル テンプレートの管理]** を選択し、作成したテンプレートのプロファイルの横にあるボックスをオンにして、選択したプロファイル テンプレートの [コピー] をクリックします。
+    2.  **[管理]** &gt; **[プロファイル テンプレートの管理]** を選択し、作成したテンプレートのプロファイルの横にあるボックスをオンにして、選択したプロファイル テンプレートの [コピー] をクリックします。
 
     3.  プロファイル テンプレートの名前を入力し、"nonAdmin" を追加し、 **[OK]**をクリックします。
 
     4.  プロファイル テンプレートの全般的な設定が表示されたら、一番下までクロールして、 **[スマートカードの構成]**の **[設定の変更]**をクリックします。
 
-    5.   **管理キーの初期値 (16 進)** に既定の管理キーを入力します。"010203040506070801020304050607080102030405060708"
+    5.  **管理キーの初期値 (16 進)** に既定の管理キーを入力します。"010203040506070801020304050607080102030405060708"
 
     6.  下にスクロールして、 **[OK]**をクリックします。
 
@@ -89,6 +101,6 @@ author: kgremban
 8.  **仮想スマートカードの CM アプリと登録を起動する**
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 

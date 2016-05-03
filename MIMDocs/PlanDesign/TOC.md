@@ -1,12 +1,12 @@
-# [理解し、調査](/MIM/Understand/microsoft-identity-manager-2016.html)
-# [計画と設計](/MIM/PlanDesign/microsoft-identity-manager-2016-supported-platforms.html)
+# [理解と調査](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016)
+# [計画と設計](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms)
 ## [サポートされているプラットフォーム](microsoft-identity-manager-2016-supported-platforms.md)
 ## [キャパシティ プランニング](capacity-planning-guide.md)
 ## [展開トポロジ](topology-considerations.md)
-# [展開および使用](/MIM/DeployUse/microsoft-identity-manager-deploy.html)
-# [開発者向けリファレンス](/MIM/reference/microsoft-identity-manager-2016-developer-reference.html)
+# [展開と使用](/microsoft-identity-manager/DeployUse/microsoft-identity-manager-deploy)
+# [開発者向けリファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Mar16_HO5-->
 
 

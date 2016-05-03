@@ -1,47 +1,60 @@
 ---
-title: MIM 2016 & #58; をインストールします。MIM 同期サービス |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-author: kgremban
----
-# MIM 同期サービスのインストールを実行する MIM 2016:
+# required metadata
 
->[! div クラスを「ステップバイ ステップ」=]
-[前へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-exchange.html)
-**Id 管理サーバーの準備をしています: Exchange (省略可能)**
+title: MIM 2016 のインストール&#58; MIM 同期サービス |Microsoft Identity Manager
+description: 同期サービスをインストールおよび構成して、MIM 2016 コンポーネントを使用開始します。
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# MIM 2016 のインストール: MIM 同期サービス
+
+>[!div class="step-by-step"]
+[« Exchange Server](prepare-server-exchange.md)
+[MIM サービスおよびポータル »](install-mim-service-portal.md)
 
 > [!NOTE]
-> 次に、すべての例で **mimservername** 、ドメイン コント ローラーの名前を表す **contoso** ドメイン名を表すと **Pass@word1** 例パスワードを表します。
+> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
 
-Microsoft Identity Manager 2016 コンポーネントを最初にインストールするには。
+Microsoft Identity Manager 2016 をインストールするには、最初に次のことを行います。
 
-1. としてサインイン *contoso \administrator* id 管理を使用している CORPIDM サーバーにします。
+1. *contoso\Administrator* として、ID 管理に使用している CORPIDM サーバーにサインインします。
 
 2. MIM インストール パッケージを展開するか、MIM イメージ DVD をマウントします。
 
-## MIM 2016 同期 (Sync) サービスをインストールします。
+## MIM 2016 同期 (Sync) サービスのインストール
 
 1. 展開した MIM インストール フォルダー内で、 **同期サービス** のフォルダーに移動します。
 
-2.  **MIM 同期サービス インストーラー**を実行します。 インストーラーのガイドラインに従って、インストールを完了します。
+2. **MIM 同期サービス インストーラー**を実行します。 インストーラーのガイドラインに従って、インストールを完了します。
 
 3. ウェルカム画面で、 **[次へ]**をクリックします。
 
-    ![MIM インストーラー ウィザードへようこそ] のイメージ](media/MIM-Install1.png)
+    ![MIM インストーラー ウィザードの [ようこそ] の画像](media/MIM-Install1.png)
 
 4. ライセンス条項を読み、同意する場合は、 **[次へ]**をクリックします。
 
-5.  **カスタム セットアップ** 画面をクリックして **次**します。
+5. **[カスタム セットアップ]** 画面で **[次へ]** をクリックします。
 
-    ![カスタム セットアップ イメージ](media/MIM-Install2.png)
+    ![カスタム セットアップの画像](media/MIM-Install2.png)
 
 6.  同期データベースの構成画面では、次のように選択します。
 
@@ -49,7 +62,7 @@ Microsoft Identity Manager 2016 コンポーネントを最初にインストー
 
     2.  SQL Server のインスタンス: **既定のインスタンス**。
 
-    ![データベース接続のイメージ](media/MIM-Install3.png)
+    ![データベース接続の画像](media/MIM-Install3.png)
 
 7.  前に作成したアカウントに従って同期サービス アカウントを構成します。
 
@@ -63,9 +76,9 @@ Microsoft Identity Manager 2016 コンポーネントを最初にインストー
 
 8.  MIM 同期インストーラーに、関連するセキュリティ グループを指定します。
 
-    1.  管理者 = *contoso \mimsyncadmins*
+    1.  管理者 = *contoso\MIMSyncAdmins*
 
-    2.  演算子 = *contoso \mimsyncoperators*
+    2.  演算子 = *contoso\MIMSyncOperators*
 
     3.  参加者 = *contoso \mimsyncjoiners*
 
@@ -73,11 +86,11 @@ Microsoft Identity Manager 2016 コンポーネントを最初にインストー
 
     5.  WMI パスワード管理 = *contoso \mimsyncpasswordreset*
 
-    ![セキュリティ グループのイメージ](media/MIM-Install5.png)
+    ![セキュリティ グループの画像](media/MIM-Install5.png)
 
-9. セキュリティ設定] 画面でチェック **受信 RPC 通信用にファイアウォール ルールを有効にする**, 、] をクリック **次**します。
+9. [セキュリティ設定] 画面で、**[受信 RPC 通信用のファイアウォール ルールを有効にする]** をオンにし、**[次へ]** をクリックします。
 
-10. クリックして **インストール** MIM 同期のインストールを開始します。
+10. **[インストール]** をクリックして、MIM 同期のインストールを開始します。
 
     1.  MIM 同期サービス アカウントに関する警告が表示される場合があります。 **[OK]**をクリックします。
 
@@ -85,21 +98,21 @@ Microsoft Identity Manager 2016 コンポーネントを最初にインストー
 
         ![MIM 同期のインストール ステータスの画像](media/MIM-Install6.png)
 
-    3.  暗号化キーが表示されます: のバックアップを作成するのに注意してください] をクリックして **OK**, 、暗号化キーのバックアップを保存するフォルダーを選択します。
+    3.  暗号化キーのバックアップ作成に関する注意が表示されます。**[OK]** をクリックし、暗号化キーのバックアップを格納するフォルダーを選択します。
 
         ![MIM 同期バックアップの暗号化キーの通知の画像](media/MIM-Install7.png)
 
     4.  インストーラーによるインストールが正常に終了したら、 **[完了]**をクリックします。
 
-        ![MIM 同期のインストール成功イメージ](media/MIM-Install8.png)
+        ![MIM 同期のインストール成功の画像](media/MIM-Install8.png)
 
-    5.  サインアウトしてサインインを有効にするグループのメンバーシップの変更を入力するように求められます。 をクリックして **はい** からサインアウトします。
+    5.  サインアウトしてサインインし、グループ メンバーシップの変更を有効にする必要があります。 **[はい]** をクリックして、サインアウトします。
 
->[! div クラスを「ステップバイ ステップ」=]  
-[次へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/mim-install-service-portal.html)
-**インストールを実行する MIM 2016: MIM サービスおよびポータル**
+>[!div class="step-by-step"]  
+[« Exchange Server](prepare-server-exchange.md)
+[MIM サービスおよびポータル »](install-mim-service-portal.md)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 

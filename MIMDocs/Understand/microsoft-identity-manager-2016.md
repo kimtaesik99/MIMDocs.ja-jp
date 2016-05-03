@@ -1,18 +1,30 @@
 ---
+# required metadata
+
 title: Microsoft Identity Manager 2016 |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
+description: クラウドとオンプレミスでより安全でより便利な ID 管理エクスペリエンスを作成する MIM 2016 のしくみを理解します。
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Microsoft Identity Manager 2016
 MIM 2016 は、既に強力な FIM 2010 R2 の ID とアクセス管理機能を基盤として、ハイブリッド対応環境と特権アクセス管理機能が加わっていて、新しいプラットフォームもサポートしています。
 
@@ -42,6 +54,6 @@ MIM がサポートする製品とプラットフォームの一覧は更新さ�
 -   [Microsoft BHOLD スイート](https://technet.microsoft.com/en-us/library/jj134096.aspx)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 

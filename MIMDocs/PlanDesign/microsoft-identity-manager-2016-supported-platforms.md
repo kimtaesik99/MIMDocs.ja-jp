@@ -1,18 +1,30 @@
 ---
-title: MIM 2016 のサポートされるプラットフォーム |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
+# required metadata
+
+title: MIM 2016 でサポートされるプラットフォーム |Microsoft Identity Manager
+description: MIM 2016 の各コンポーネントと互換性のある製品およびバージョンを検索
+keywords:
 author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # MIM 2016 でサポートされるプラットフォーム
 
 | **MIM コンポーネント** | **プラットフォーム** | **バージョン** |
@@ -41,17 +53,17 @@ author: kgremban
 | **MIM アドインと拡張機能** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
 || Outlook の統合 (省略可能) | Outlook 2007 SP2<br/>Outlook 2010<br/>Outlook 2013 |
 || PAM PowerShell Requestor コマンドレット (省略可能) | Windows 8.1<br/>Windows 10 |
-| **MIM Certificate Management** (サーバーと CA 統合) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
+| **MIM Certificate Management** (サーバーと CA の統合) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || 証明機関 | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
 || MIM CM データベース | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
 | **MIM Certificate Management** (アプリケーション) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| **MIM Certificate Management** (クライアントと一括クライアント) | Windows | Windows 7 |
+| **MIM Certificate Management** (クライアントと Bulk クライアント) | Windows | Windows 7 |
 | **MIM BHOLD スイート** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || BHOLD データベース | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 |
 || メール サーバー (省略可能) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
 || Web ブラウザー | Internet Explorer 7、8、9、10、または 11 と Silverlight |
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 

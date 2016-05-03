@@ -1,25 +1,38 @@
 ---
-title: Id 管理サーバーと #58; を準備します。Exchange |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-author: kgremban
----
-# Id 管理サーバーの準備をしています: Exchange
+# required metadata
 
->[! div クラスを「ステップバイ ステップ」=]
-[前へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-sharepoint.html)
-**Id 管理サーバーの準備をしています: SharePoint**
+title: ID 管理サーバー&#58; Exchange のセットアップ |Microsoft Identity Manager
+description: オプションの手順として、Exchange サーバーを展開して、MIM 2016 でメールの送信とメールボックスの作成ができるようにします。 
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# ID 管理サーバー: Exchange のセットアップ
+
+>[!div class="step-by-step"]
+[« SharePoint](prepare-server-sharepoint.md)
+[MIM 同期サービス »](install-mim-sync.md)
 
 > [!NOTE]
-> 次に、すべての例で **mimservername** 、ドメイン コント ローラーの名前を表す **contoso** ドメイン名を表すと **Pass@word1** 例パスワードを表します。
+> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
 
 ## Microsoft Exchange Server を展開する
 電子メールを送受信するように MIM を構成する場合、またはメールボックスをプロビジョニングする場合は、Exchange が環境に存在する必要があります。 Exchange をまだ展開していない場合は、評価のために試用版をインストールできます。
@@ -34,11 +47,11 @@ author: kgremban
 
 3.  [MS Exchange Server 2013 180 日試用バージョン](http://www.microsoft.com/en-us/evalcenter/evaluate-exchange-server-2013)をダウンロードしてインストールします
 
->[! div クラスを「ステップバイ ステップ」=]  
-[次へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/install-mim-sync.html)
-**MIM 同期サービスのインストールを実行する MIM 2016:**
+>[!div class="step-by-step"]  
+[« SharePoint](prepare-server-sharepoint.md)
+[MIM 同期サービス »](install-mim-sync.md)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 

@@ -1,25 +1,38 @@
 ---
-title: Id 管理サーバーと #58; を準備します。Windows Server 2012 R2 |Microsoft Identity Manager
-ms.custom:
-  - Identity Management
-  - MIM
-ms.prod: identity-manager-2015
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-author: kgremban
----
-# Id 管理サーバーの準備: Windows Server 2012 R2
+# required metadata
 
->[! div クラスを「ステップバイ ステップ」=]
-[前へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/preparing-domain.html)
-**ドメインを準備します。**
+title: ID 管理サーバー&#58;Windows Server 2012 R2 のセットアップ | Microsoft Identity Manager
+description: MIM 2016 と連動するように Windows Server 2012 RS を準備するための手順と最小要件を説明します。
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# ID 管理サーバー: Windows Server 2012 R2 のセットアップ
+
+>[!div class="step-by-step"]
+[« ドメインの準備](preparing-domain.md)
+[SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
-> 次に、すべての例で **mimservername** 、ドメイン コント ローラーの名前を表す **contoso** ドメイン名を表すと **Pass@word1** 例パスワードを表します。
+> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
 
 ## Windows Server 2012 R2 をドメインに参加させる
 
@@ -27,27 +40,27 @@ author: kgremban
 
 2. その新しいコンピューターに管理者としてログインします。
 
-3. コントロール パネルを使用して、コンピューターの静的 IP アドレス ネットワーク上の指定、します。 前の手順で、ドメイン コント ローラーの IP アドレスを DNS クエリを送信するには、そのネットワーク インターフェイスを構成し、コンピューター名を設定 **CORPIDM**します。  これにはサーバーの再起動が必要になります。
+3. コントロール パネルを使用して、コンピューターにネットワーク上の静的 IP アドレスを指定します。 前の手順のドメイン コントローラーの IP アドレスに DNS クエリを送信するようにそのネットワーク インターフェイスを構成し、さらにコンピューター名を **CORPIDM** に設定します。  これにはサーバーの再起動が必要になります。
 
-4. コンピューターがインターネット接続を提供していない仮想ネットワーク上にある場合は、インターネットへの接続を提供するコンピューターへの追加ネットワーク インターフェイスを追加します。  これにより、SharePoint のインストールに必要なされ、その手順が完了したら無効にすることができます。
+4. コンピューターがインターネット接続を提供していない仮想ネットワーク上にある場合は、インターネットへの接続を提供するコンピューターへの追加ネットワーク インターフェイスを追加します。  この設定は、SharePoint のインストールで必要となります。この手順が完了したら、無効にすることができます。
 
-5. コントロール パネルを開き、コンピューターを最後の手順で構成されているドメインに参加させる *contoso.local*します。  これは、ユーザー名とドメイン管理者の資格情報を提供するように含まれます。 *contoso \administrator*します。  ウェルカム メッセージが表示されたら、ダイアログ ボックスを閉じて、このサーバーを再起動します。
+5. コントロール パネルを開き、コンピューターを最後の手順で構成したドメイン *contoso.local* に参加させます。  これには、ドメイン管理者のユーザー名と資格情報 (たとえば、*Contoso\Administrator*) を指定することも含まれます。  ウェルカム メッセージが表示されたら、ダイアログ ボックスを閉じて、このサーバーを再起動します。
 
-6. コンピューターにサインイン *CorpIDM* など、ドメイン管理者として *contoso \administrator*します。
+6. コンピューター *CorpIDM* に *Contoso\Administrator* などのドメイン管理者としてサインインします。
 
-7. 管理者として PowerShell ウィンドウを起動し、グループ ポリシー設定でコンピューターを更新するには、次のコマンドを入力します。
+7. 管理者として PowerShell ウィンドウを起動し、次のコマンドを入力してグループ ポリシー設定でコンピューターを更新します。
 
     ```
     gpupdate /force /target:computer
     ```
 
-    結局、分よりも多くのジョブが完了と、メッセージ「コンピューターのポリシーの更新プログラムが正常に完了します」
+    最大 1 分で、「コンピューター ポリシーの更新が正常に完了しました。」というメッセージが表示され、更新が完了します。
 
-8. 追加、 **Web サーバー (IIS)** と **アプリケーション サーバー** の役割、 **.NET Framework** 3.5、4.0、および 4.5 の機能、および **Windows PowerShell 用 Active Directory モジュール**します。
+8. **Web サーバー (IIS)** および **アプリケーション サーバー** の役割、 **.NET Framework** 3.5、4.0、4.5 の機能、**Windows PowerShell 用の Active Directory モジュール**を追加します。
 
-    ![PowerShell の機能の画像](media/MIM-DeployWS2.png)
+    ![PowerShell 機能の画像](media/MIM-DeployWS2.png)
 
-9. PowerShell では、管理者は、まだとして、次のコマンドを入力します。  **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 これらの機能は通常提示されません Windows Server のインストール、OS のサイド バイ サイド (SxS) フォルダーにインストール ディスク ソース フォルダーなど、ときに"* d:\Sources\SxS\*"です。
+9. PowerShell で管理者のまま、次のコマンドを入力します。 **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー (“*d:\Sources\SxS\*”) 上のサイド バイ サイド (SxS) フォルダーにあります。
 
     ```
     import-module ServerManager
@@ -56,40 +69,40 @@ author: kgremban
 
 ## サーバーのセキュリティ ポリシーを構成する
 
-サービスとして実行するために新しく作成されたアカウントを許可するように、サーバーのセキュリティ ポリシーを設定します。
+新しく作成したアカウントがサービスとして実行されるように、サーバー セキュリティ ポリシーを設定します。
 
 1. ローカル セキュリティ ポリシー プログラムを起動します。
 
-2. 移動 **ローカル ポリシー > ユーザー権利の割り当て**します。
+2. **[ローカル ポリシー]、[ユーザー権利の割り当て]** の順に移動します。
 
 3. 詳細ウィンドウで、 **[サービスとしてログオン]**を右クリックして、 **[プロパティ]**を選択します。
 
     ![ローカル セキュリティ ポリシーの画像](media/MIM-DeployWS3.png)
 
-4. をクリックして **[ユーザーまたはグループ**, 、および、テキスト ボックスに「 `contoso\mimsync; contoso\mimma; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\mimsspr`, 、] をクリックして **名前の確認**, ] をクリック **[ok]**します。
+4. **[ユーザーまたはグループの追加]**をクリックし、テキスト ボックスに「`contoso\mimsync; contoso\mimma; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\mimsspr`」と入力し、**[名前の確認]** をクリックして **[OK]** をクリックします。
 
-5. をクリックして **OK** を閉じる、 **サービスのプロパティとしてログオン** ウィンドウです。
+5. **[OK]** をクリックして、**[サービスとしてログオン]** プロパティ ウィンドウを閉じます。
 
-6.  詳細ウィンドウで右クリック **ネットワークからこのコンピューターへのアクセスを拒否**, を選択して **プロパティ**します。
+6.  詳細ウィンドウで、**[ネットワークからのこのコンピューターへのアクセスを拒否する]**を右クリックし、**[プロパティ]** を選択します。
 
-7. をクリックして **[ユーザーまたはグループ**, 、および、テキスト ボックスに「 `contoso\MIMSync; contoso\MIMService` ] をクリック **[ok]**します。
+7. **[ユーザーまたはグループの追加]** をクリックし、テキスト ボックスに「`contoso\MIMSync; contoso\MIMService`」と入力し、**[OK]** をクリックします。
 
-8. をクリックして **OK** を閉じる、 **ネットワークのプロパティからこのコンピューターへのアクセスを拒否** ウィンドウです。
+8. **[OK]** をクリックして、**[ネットワーク経由でコンピューターへアクセスを拒否する]** プロパティ ウィンドウを閉じます。
 
-9. 詳細ウィンドウで右クリック **ローカル ログオンを拒否する**, を選択して **プロパティ**します。
+9. 詳細ウィンドウで、**[ローカルでのログオンを拒否する]**を右クリックして、**[プロパティ]** を選択します。
 
-10. をクリックして **[ユーザーまたはグループ**, 、および、テキスト ボックスに「 `contoso\MIMSync; contoso\MIMService` ] をクリック **[ok]**します。
+10. **[ユーザーまたはグループの追加]** をクリックし、テキスト ボックスに「`contoso\MIMSync; contoso\MIMService`」と入力し、**[OK]** をクリックします。
 
-11. をクリックして **OK** を閉じる、 **プロパティではローカルでログオンを拒否する** ウィンドウです。
+11. **[OK]** をクリックして、**[ローカルでのログオンを拒否する]** プロパティ ウィンドウを閉じます。
 
-12. ローカル セキュリティ ポリシー] ウィンドウを閉じます。
+12. [ローカル セキュリティ ポリシー] ウィンドウを閉じます。
 
 
-## IIS Windows 認証モードを変更します。
+## IIS Windows 認証モードを変更する
 
 1.  PowerShell ウィンドウを開きます。
 
-2.  コマンドを使用して IIS を停止 *iisreset/STOP*
+2.  *iisreset /STOP* コマンドを使用して IIS を停止します。
 
         ```
         iisreset /STOP
@@ -97,11 +110,11 @@ author: kgremban
         iisreset /START
         ```
 
->[! div クラスを「ステップバイ ステップ」=]  
-[次へ](https://docsmsftstage.azurewebsites.net/MIM/DeployUse/prepare-server-sql2014.html)
-**Id 管理サーバーを準備する: SQL Server 2014**
+>[!div class="step-by-step"]  
+[« ドメインの準備](preparing-domain.md)
+[SQL Server 2014 »](prepare-server-sql2014.md)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=Apr16_HO2-->
 
 
