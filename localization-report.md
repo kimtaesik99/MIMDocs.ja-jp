@@ -5,11 +5,11 @@
  -------- | ----- 
  Total Files | 283
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 14
+[ Handoff Success Files ](#handoff-success-list)| 13
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 18
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 19
 [ In Sync Handback Files ](#insync-handback-success-list)| 145
 [ Ignored Files ](#ignored-list)| 106
 
@@ -18,7 +18,6 @@
 ## <a name='handoff-success-list'></a> Handoff Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | HandedOffSuccess | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee7)
  [MIMDocs\DeployUse\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/150x150.png) | HandedOffSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7113)
  [MIMDocs\GetStarted\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/bd6a830380bd91f497bf5db7f0364457467d5b8e/MIMDocs/GetStarted/media/150x150.png) | HandedOffSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7178)
  [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/a32d802e581c32763dce68b2388fb8362d44bded/MIMDocs/index.md) | HandedOffSuccess | [Details](#5bc5676ebc9191389004fc41770383843e54751f81)
@@ -43,6 +42,7 @@
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | OutofSyncHandedBackSuccess | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998115)
+ [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | OutofSyncHandedBackSuccess | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee7)
  [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-service-portal.md) | OutofSyncHandedBackSuccess | [Details](#eb2af412d9638035de591197fa191e990ade0ca19)
  [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync.md) | OutofSyncHandedBackSuccess | [Details](#8a99b3a291d2b145f453732a72244c43f9c535d611)
  [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | OutofSyncHandedBackSuccess | [Details](#74c61573d520f7ce6969dedefe3d484cdb2e434c10)
@@ -409,7 +409,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='85e83b85f047ca2c2648b42ec68b832caae645ee7'></a> Source: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
-* Status: HandedOffSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/c57faeaef3d8cedd60dfad8f56f3285b5281f5e7/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf)
 * Handoff Datetime: 2016-04-21 18:49:11
@@ -418,6 +418,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/782ab805cab39f7fb65ef9f2908ce0f1cfb5a53d/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
+* Current Handback File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/f4087d9dd6b4c9b64fcb5d29e81d5eaec2f9b64d/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf)
+* Current Handback Datetime: 2016-05-04 01:52:41
 * [Back to Top](#report-top)
 
 ##### <a name='da6b40be764789e41be27fb941b0f24dc735837f8'></a> Source: [MIMDocs\DeployUse\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/bd6a830380bd91f497bf5db7f0364457467d5b8e/MIMDocs/DeployUse/docfx.json)
