@@ -418,9 +418,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/782ab805cab39f7fb65ef9f2908ce0f1cfb5a53d/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
-* Current Handback File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/f4087d9dd6b4c9b64fcb5d29e81d5eaec2f9b64d/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf)
-* Current Handback Datetime: 2016-05-04 01:52:41
+* Current Target File: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/ddb3a40b0bcaaa87d559ff570d0a327c5859a90c/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
+* Current Handback File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/2d2bd9c8c77d19417336579453ab51d4da50fd5c/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.ja-jp.xlf)
+* Current Handback Datetime: 2016-05-04 02:16:19
 * [Back to Top](#report-top)
 
 ##### <a name='da6b40be764789e41be27fb941b0f24dc735837f8'></a> Source: [MIMDocs\DeployUse\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/bd6a830380bd91f497bf5db7f0364457467d5b8e/MIMDocs/DeployUse/docfx.json)
