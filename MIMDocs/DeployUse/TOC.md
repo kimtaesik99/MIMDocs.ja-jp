@@ -1,5 +1,5 @@
-# [理解と調査](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016)
-# [計画と設計](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms)
+# [理解と調査](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [計画と設計](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [展開と使用](microsoft-identity-manager-deploy.md)
 ## [初回展開](microsoft-identity-manager-deploy.md)
 ### [ドメインのセットアップ](preparing-domain.md)
@@ -17,9 +17,9 @@
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [スマートカードの登録](certificate-manager-for-non-administrators.md)
 ### [ソフトウェア証明書の作成](certificate-manager-for-software-certificates.md)
-# [開発者向けリファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
+# [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO4-->
 
 
