@@ -2,8 +2,8 @@
 asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
 
-title: Microsoft Identity Manager Documentation
-description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
+title: Microsoft Identity Manager のドキュメント
+description: Microsoft Intune のテクニカル ドキュメント - モバイル デバイスとアプリケーションの管理
 keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
 author: msstevenpo
 manager: stevenpo
@@ -16,34 +16,31 @@ ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 
 ---
-# Microsoft Identity Management Documentation
+# Microsoft ID 管理のドキュメント
 <article id="main">
     <section id="hero-content">
-      <h1>Microsoft Identity Manager Documentation</h1>
-      <h2>Microsoft Identity Manager (MIM) provides on-premises identity &amp; access management capabilities including identity synchronization, identity-theft thwarting, and more</h2>
-      <h3>New to MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="_blank">Visit the product page &rarr;</a></h3>
+      <h1>Microsoft Identity Manager のドキュメント</h1>
+      <h2>Microsoft Identity Manager (MIM) は、ID の同期や ID の盗難からの保護など、ID とアクセスのオンプレミスの管理機能を提供します。</h2>
+      <h3>MIM の使用は初めてですか? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="\_blank">製品ページをご覧ください &rarr;</a></h3>
     </section>
-
     <aside class="alert section-border">
-      <p>Ready to get hands-on?</p>
+      <p>実践する準備はできていますか?</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-identity-manager-2016" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
+        <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">今すぐ試す</a></li>
       </ol>
     </aside>
-
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span> おすすめコンテンツ</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">What is Microsoft Identity Manager?</a></li>
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Identity Management REST API Reference</a></li>
+          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">Microsoft Identity Manager の概要</a></li>
+          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Identity Management REST API リファレンス</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Deploy MIM software on a Fresh Server</a></li>
+          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">新しいサーバーに MIM ソフトウェアを展開する</a></li>
         </ul>
       </div>
     </section>
-
     <div id="journeys">
       <section class="container">
         <ul class="journeys-list">
@@ -52,9 +49,9 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
               <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Understand &amp; Explore</p>
+                  <p>理解と調査</p>
                 </div>
-                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Microsoft Identity Manager.
+                <p class="description column-two-thirds">Microsoft Identity Manager の概要および機能について説明します。
                 </p>
               </a>
             </header>
@@ -62,20 +59,20 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
               <ul class="row">
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
-                    <h3>What is MIM 2016?</h3>
-                    <p>Learn how MIM 2016 provides on-premises &amp; hybrid identity and access management capabilities.</p>
+                    <h3>MIM 2016 とは</h3>
+                    <p>MIM 2016 がどのようにオンプレミスおよびハイブリッドの ID およびアクセス管理機能を提供しているかを説明します。</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure">
-                    <h3>Hybrid Reporting in Azure</h3>
-                    <p>Create a single report of events that occur on-premises and in the cloud.</p>
+                    <h3>Azure の ハイブリッド レポート</h3>
+                    <p>オンプレミスおよびクラウド内のイベントの 1 つのレポートを作成します。</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms">
-                    <h3>Supported Platforms</h3>
-                    <p>The list of platforms, servers, and applications supported by MIM.</p>
+                    <h3>サポートされるプラットフォーム</h3>
+                    <p>MIM でサポートされるプラットフォーム、サーバー、およびアプリケーションの一覧はこちらをご覧ください。</p>
                   </a>
                 </li>
               </ul>
@@ -86,9 +83,9 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
               <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
                 <div class="title column-third">
                   <span class="step-number">2</span>
-                  <p>Deploy &amp; Use</p>
+                  <p>展開と使用</p>
                 </div>
-                <p class="description column-two-thirds">Deploy and use MIM.
+                <p class="description column-two-thirds">MIM を展開して使用します。
                 </p>
               </a>
             </header>
@@ -96,20 +93,20 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
               <ul class="row">
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
-                    <h3>First Time Deployment</h3>
-                    <p>Deploy MIM on a fresh server that has not previously had FIM or MIM.</p>
+                    <h3>初回展開</h3>
+                    <p>以前に FIM または MIM を展開したことがない新しいサーバーに MIM を展開します。</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-R2">
-                    <h3>Upgrading from FIM 2010 R2</h3>
-                    <p>Upgrade an existing FIM 2010 R2 test system to MIM 2016.</p>
+                    <h3>FIM 2010 R2 からのアップグレード</h3>
+                    <p>既存の FIM 2010 R2 テスト システムを MIM 2016 にアップグレードします。</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller">
-                    <h3>Password Change Notification Service</h3>
-                    <p>Install PCNS on each domain controller server to enable password synchronization.</p>
+                    <h3>パスワード変更通知サービス</h3>
+                    <p>各ドメイン コントローラー サーバーに PCNS をインストールして、パスワードの同期を可能にします。</p>
                   </a>
                 </li>
               </ul>
@@ -118,25 +115,28 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </ul>
       </section>
     </div>
-
     <div class="section-border">
       <section class="resources container">
-        <h2 class="section-heading"><span class="icon icon-options"></span> Developer Reference</h2>
+        <h2 class="section-heading"><span class="icon icon-options"></span> 開発者用リファレンス</h2>
         <div class="resource-list row">
           <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Access Management REST API Reference</a></li>
+            <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Access Management REST API リファレンス</a></li>
           </ul>
           <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">Certificate Management REST API Reference</a></li>
+            <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">Certificate Management REST API リファレンス</a></li>
           </ul>
         </div>
       </section>
     </div>
-
     <aside class="alert alert-social">
-      <p>Keep up with MIM support news</p>
+      <p>最新の MIM サポートニュースを入手</p>
       <ol class="action-list">
-        <li><a href="https://blogs.technet.microsoft.com/iamsupport/" target="_blank" class="button-bordered button-translucent">official support blog</a></li>
+        <li><a href="https://blogs.technet.microsoft.com/iamsupport/" target="\_blank" class="button-bordered button-translucent">サポート チーム公式ブログ</a></li>
       </ol>
     </aside>
 </article>
+
+
+<!--HONumber=May16_HO3-->
+
+
