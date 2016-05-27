@@ -26,16 +26,17 @@ ms.suite: ems
 ---
 
 # Microsoft Identity Manager 2016
-MIM 2016 は、既に強力な FIM 2010 R2 の ID とアクセス管理機能を基盤として、ハイブリッド対応環境と特権アクセス管理機能が加わっていて、新しいプラットフォームもサポートしています。
+Microsoft Identity Manager (MIM) 2016 は、FIM 2010 R2 の ID およびアクセス管理機能 を基盤としています。 FIM 2010 R2 と同様、MIM は、組織内のユーザー、資格情報、ポリシー、およびアクセスの管理に役立ちます。  また MIM 2016 にはハイブリッド対応環境と特権アクセス管理機能が加わっており、新しいプラットフォームもサポートします。
+
+このバージョンの Microsoft Identity Manager には、Privileged Identity Management、REST API アクセス用 Certificate Management のサポートなどの新しい機能があります。 Certificate Management には、複数フォレスト トポロジのサポート、仮想スマートカード用 Windows ストア アプリ、および証明書のライフサイクル管理が追加され、イベントとトラブルシューティング機能が更新されました。 セルフ サービスのシナリオには、アカウントのロック解除とパスワード リセットの多要素認証ゲートが追加されました。
 
 ## ハイブリッド エクスペリエンス
-Microsoft Identity Manager 2016 は、Azure AD レポートに含まれる MIM のハイブリッド レポートをサポートしています。 また、セルフサービスによるパスワードのリセット ポータルでは、Azure Multi-Factor Authentication (MFA) をサポートしています。
+Microsoft Identity Manager 2016 は Azure と連携して、お使いの環境の完全な制御を実現します。 Azure のハイブリッド レポート機能は、クラウドとオンプレミス両方のデータを 1 つにまとめて提示します。 また、セルフサービスによるパスワードのリセット ポータルでは、Azure Multi-Factor Authentication (MFA) をサポートしています。
 
 ## Privileged Identity Management
-Privileged Identity Management は、サイバー攻撃に利用される完全に自由な管理アクセス権を制限し、機密性の高いリソースに対して一時的なタスクベースのアクセス権を付与することで、管理アクセス権を制御および管理します。 さらに、Privileged Identity Management は既存の Active Directory フォレストから管理アカウントを抽出して分離します。
+Privileged Identity Management は、機密性の高いリソースに対して一時的なタスクベースのアクセス権を付与することで、管理アクセス権を制御および管理します。 つまり、ユーザーには必要な権限のみが与えられるため、攻撃者が完全な管理アクセス権を手に入れるリスクを低減します。 さらに、Privileged Identity Management は既存の Active Directory フォレストから管理アカウントを抽出して分離します。
 
-## 近代化
-このバージョンの Microsoft Identity Manager には、Privileged Identity Management、REST API アクセス用 Certificate Management のサポートなどの新しい機能があります。 Certificate Management には、複数フォレスト トポロジのサポート、仮想スマートカード用 Windows ストア アプリ、および証明書のライフサイクル管理が追加され、イベントとトラブルシューティング機能が更新されました。 セルフ サービスのシナリオには、アカウントのロック解除とパスワード リセットの多要素認証ゲートが追加されました。
+## サポートされているプラットフォーム
 
 MIM がサポートする製品とプラットフォームの一覧は更新され、次のように、最新の Microsoft プラットフォームと Office/サーバー スタック、Windows クライアント OS、Windows Server OS、SharePoint、SQL、および Outlook などが追加されました。
 
@@ -49,11 +50,7 @@ MIM がサポートする製品とプラットフォームの一覧は更新さ�
 
 -   System Center Service Manager 2012 および 2012 R2
 
-以前からあった Identity Manager コンポーネントの詳細については、次を参照してください。
 
--   [Microsoft BHOLD スイート](https://technet.microsoft.com/en-us/library/jj134096.aspx)
-
-
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 

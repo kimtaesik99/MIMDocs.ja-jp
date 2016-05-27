@@ -32,23 +32,24 @@ ms.suite: ems
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
-> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
+> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
+> - ドメイン コントローラー名 - **mimservername**
+> - ドメイン名 - **contoso**
+> - パスワード - **Pass@word1**
 
 ## Windows Server 2012 R2 をドメインに参加させる
 
-1. 8 GB 以上の RAM を備えた Windows Server 2012 R2 コンピューターを作成します。 インストール時に、"Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64" エディションを指定します。
+8 GB 以上の RAM を備えた Windows Server 2012 R2 コンピューターで開始します。 インストール時に、"Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64" エディションを指定します。
 
-2. その新しいコンピューターに管理者としてログインします。
+1. その新しいコンピューターに管理者としてログインします。
 
-3. コントロール パネルを使用して、コンピューターにネットワーク上の静的 IP アドレスを指定します。 前の手順のドメイン コントローラーの IP アドレスに DNS クエリを送信するようにそのネットワーク インターフェイスを構成し、さらにコンピューター名を **CORPIDM** に設定します。  これにはサーバーの再起動が必要になります。
+2. コントロール パネルを使用して、コンピューターにネットワーク上の静的 IP アドレスを指定します。 前の手順のドメイン コントローラーの IP アドレスに DNS クエリを送信するようにそのネットワーク インターフェイスを構成し、さらにコンピューター名を **CORPIDM** に設定します。  これにはサーバーの再起動が必要になります。
 
-4. コンピューターがインターネット接続を提供していない仮想ネットワーク上にある場合は、インターネットへの接続を提供するコンピューターへの追加ネットワーク インターフェイスを追加します。  この設定は、SharePoint のインストールで必要となります。この手順が完了したら、無効にすることができます。
+3. コントロール パネルを開き、コンピューターを最後の手順で構成したドメイン *contoso.local* に参加させます。  これには、ドメイン管理者のユーザー名と資格情報 (たとえば、*Contoso\Administrator*) を指定することも含まれます。  ウェルカム メッセージが表示されたら、ダイアログ ボックスを閉じて、このサーバーを再起動します。
 
-5. コントロール パネルを開き、コンピューターを最後の手順で構成したドメイン *contoso.local* に参加させます。  これには、ドメイン管理者のユーザー名と資格情報 (たとえば、*Contoso\Administrator*) を指定することも含まれます。  ウェルカム メッセージが表示されたら、ダイアログ ボックスを閉じて、このサーバーを再起動します。
+4. コンピューター *CorpIDM* に *Contoso\Administrator* などのドメイン管理者としてサインインします。
 
-6. コンピューター *CorpIDM* に *Contoso\Administrator* などのドメイン管理者としてサインインします。
-
-7. 管理者として PowerShell ウィンドウを起動し、次のコマンドを入力してグループ ポリシー設定でコンピューターを更新します。
+5. 管理者として PowerShell ウィンドウを起動し、次のコマンドを入力してグループ ポリシー設定でコンピューターを更新します。
 
     ```
     gpupdate /force /target:computer
@@ -56,11 +57,11 @@ ms.suite: ems
 
     最大 1 分で、「コンピューター ポリシーの更新が正常に完了しました。」というメッセージが表示され、更新が完了します。
 
-8. **Web サーバー (IIS)** および **アプリケーション サーバー** の役割、 **.NET Framework** 3.5、4.0、4.5 の機能、**Windows PowerShell 用の Active Directory モジュール**を追加します。
+6. **Web サーバー (IIS)** および **アプリケーション サーバー** の役割、 **.NET Framework** 3.5、4.0、4.5 の機能、**Windows PowerShell 用の Active Directory モジュール**を追加します。
 
     ![PowerShell 機能の画像](media/MIM-DeployWS2.png)
 
-9. PowerShell で管理者のまま、次のコマンドを入力します。 **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー (“*d:\Sources\SxS\*”) 上のサイド バイ サイド (SxS) フォルダーにあります。
+7. PowerShell で次のコマンドを入力します。 **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー (“*d:\Sources\SxS\*”) 上のサイド バイ サイド (SxS) フォルダーにあります。
 
     ```
     import-module ServerManager
@@ -104,17 +105,17 @@ ms.suite: ems
 
 2.  *iisreset /STOP* コマンドを使用して IIS を停止します。
 
-        ```
-        iisreset /STOP
-        C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-        iisreset /START
-        ```
+    ```
+    iisreset /STOP
+    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+    iisreset /START
+    ```
 
 >[!div class="step-by-step"]  
 [« ドメインの準備](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO4-->
 
 

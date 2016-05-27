@@ -6,7 +6,7 @@ description: FIM 2010 R2 コンポーネントをアップグレードし、MIM 
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,16 +25,22 @@ ms.suite: ems
 
 ---
 
-# Forefront Identity Manager 2010 R2 から Microsoft Identity Manager 2016 へのアップグレード
-このセクションでは、既存のテスト FIM 2010 R2 システムの MIM 2016 へのアップグレードについて説明します。 アップグレードのためのインストーラーは、新しい展開に使用するものと同じです。
+# Forefront Identity Manager 2010 R2 からのアップグレード
 
-このセクションでは、既存の FIM 2010 R2 ソリューションがテスト環境に展開されているものとします。 サーバーは FIM 2010 R2 サーバー用の一般的なオペレーティング システムである Windows Server 2012、Windows Server 2012 R2、または Windows Server 2008 R2 で実行しており、ローカルおよび環境に関するすべての前提条件 (SQL Server、Exchange Server、SharePoint Services など) は、FIM 2010 R2 用に構成されています。
+現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の 3 ステップです:
 
-1.  MIM 同期サービス (Sync) は最初に、AD ドメインに参加しているサーバーにインストールされて実行し、Sync の FIM 2010 R2 インスタンスを置き換えます。
+1.  MIM 2016 同期サービス (Sync) を、Active Directory (AD) ドメインに参加しているサーバーにインストールします。 これにより Sync の FIM 2010 R2 インスタンスが置き換えられます。
 
-2.  その後、MIM サービスとポータルがインストールされます。必要に応じて、SSPR 登録ポータルと SSPR サービス ポータルを含めることができ、Privileged Access Management 機能セットを除外できます。
+2.  MIM サービスとポータルをインストールします。 その際に、セルフサービス パスワード リセット (SSPR) 登録ポータルおよびサービス ポータルのインストールも選択することができます。 Privileged Access Management 機能セットは除外して、後でインストールすることができます。
 
-3.  SSPR Windows ログイン統合クライアントを含む MIM アドインおよび拡張機能を別のクライアント コンピューターに展開できます。
+3.  MIM アドインおよび拡張機能を別のクライアント コンピューターに展開します。 これには SSPR Windows ログイン統合クライアントが含まれます。
+
+
+この記事では、次の手順を完了済みであることを前提としています:
+- FIM 2010 R2 がテスト環境に展開されている
+- サーバーが Windows Server 2012、Windows Server 2012 R2 または Windows Server 2008 R2 で実行されている
+- ローカルおよび環境に関するすべての前提条件 (SQL Server、Exchange Server、SharePoint Services など) は FIM 2010 R2 用に構成されている
+
 
 ## 準備
 
@@ -201,6 +207,6 @@ ms.suite: ems
 注: FIM のアドインおよび拡張機能がユーザーの SSPR 用のコンピューターに現在展開されている場合、FIM のアドインおよび拡張機能をすべて MIM 2016 にアップグレードするまで、パスワードのリセットに新しい MFA 電話ゲートを構成しないでください。  FIM 2010 と FIM 2010 R2 のアドインと拡張機能は新しいゲートを認識しないため、エラーが返され、ユーザーはパスワードのリセットを完了できません。
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

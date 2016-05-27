@@ -2,7 +2,7 @@
 # required metadata
 
 title: ID 管理サーバー&#58; Exchange のセットアップ |Microsoft Identity Manager
-description: オプションの手順として、Exchange サーバーを展開して、MIM 2016 でメールの送信とメールボックスの作成ができるようにします。 
+description: オプションの手順として、Exchange サーバーを展開して、MIM 2016 でメールの送信とメールボックスの作成ができるようにします。
 keywords:
 author: kgremban
 manager: stevenpo
@@ -31,9 +31,6 @@ ms.suite: ems
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM 同期サービス »](install-mim-sync.md)
 
-> [!NOTE]
-> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
-
 ## Microsoft Exchange Server を展開する
 電子メールを送受信するように MIM を構成する場合、またはメールボックスをプロビジョニングする場合は、Exchange が環境に存在する必要があります。 Exchange をまだ展開していない場合は、評価のために試用版をインストールできます。
 
@@ -52,6 +49,6 @@ ms.suite: ems
 [MIM 同期サービス »](install-mim-sync.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 

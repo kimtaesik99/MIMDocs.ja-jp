@@ -32,15 +32,18 @@ ms.suite: ems
 [MIM サービスおよびポータル »](install-mim-service-portal.md)
 
 > [!NOTE]
-> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
+> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
+> - ドメイン コントローラー名 - **mimservername**
+> - ドメイン名 - **contoso**
+> - パスワード- **Pass@word1**
 
-Microsoft Identity Manager 2016 をインストールするには、最初に次のことを行います。
+Microsoft Identity Manager 2016 をインストールするには、最初にインストール パッケージをセットアップします。
 
-1. *contoso\Administrator* として、ID 管理に使用している CORPIDM サーバーにサインインします。
+1. *contoso\Administrator* として、ID 管理に使用しているサーバーにサインインします。
 
 2. MIM インストール パッケージを展開するか、MIM イメージ DVD をマウントします。
 
-## MIM 2016 同期 (Sync) サービスのインストール
+## MIM 2016 同期サービスのインストール
 
 1. 展開した MIM インストール フォルダー内で、 **同期サービス** のフォルダーに移動します。
 
@@ -50,7 +53,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初に次
 
     ![MIM インストーラー ウィザードの [ようこそ] の画像](media/MIM-Install1.png)
 
-4. ライセンス条項を読み、同意する場合は、 **[次へ]**をクリックします。
+4. ライセンス条項を読み、同意する場合は**[次へ]**をクリックします。
 
 5. **[カスタム セットアップ]** 画面で **[次へ]** をクリックします。
 
@@ -76,15 +79,15 @@ Microsoft Identity Manager 2016 をインストールするには、最初に次
 
 8.  MIM 同期インストーラーに、関連するセキュリティ グループを指定します。
 
-    1.  管理者 = *contoso\MIMSyncAdmins*
+    1. 管理者 = *contoso\MIMSyncAdmins*
 
-    2.  演算子 = *contoso\MIMSyncOperators*
+    2. 演算子 = *contoso\MIMSyncOperators*
 
-    3.  参加者 = *contoso \mimsyncjoiners*
+    3. 参加者 = *contoso \mimsyncjoiners*
 
-    4.  コネクタ参照 = *contoso \mimsyncbrowse*
+    4. コネクタ参照 = *contoso \mimsyncbrowse*
 
-    5.  WMI パスワード管理 = *contoso \mimsyncpasswordreset*
+    5. WMI パスワード管理 = *contoso \mimsyncpasswordreset*
 
     ![セキュリティ グループの画像](media/MIM-Install5.png)
 
@@ -92,27 +95,23 @@ Microsoft Identity Manager 2016 をインストールするには、最初に次
 
 10. **[インストール]** をクリックして、MIM 同期のインストールを開始します。
 
-    1.  MIM 同期サービス アカウントに関する警告が表示される場合があります。 **[OK]**をクリックします。
+    1. MIM 同期サービス アカウントに関する警告が表示される場合があります。 **[OK]**をクリックします。
 
-    2.  これで、MIM 同期がインストールされます。
+    2. MIM 同期がインストールされます。
 
-        ![MIM 同期のインストール ステータスの画像](media/MIM-Install6.png)
-
-    3.  暗号化キーのバックアップ作成に関する注意が表示されます。**[OK]** をクリックし、暗号化キーのバックアップを格納するフォルダーを選択します。
+    3. 暗号化キーのバックアップ作成に関する注意が表示されます。**[OK]** をクリックし、暗号化キーのバックアップを格納するフォルダーを選択します。
 
         ![MIM 同期バックアップの暗号化キーの通知の画像](media/MIM-Install7.png)
 
-    4.  インストーラーによるインストールが正常に終了したら、 **[完了]**をクリックします。
+    4. インストーラーによるインストールが正常に終了したら、 **[完了]**をクリックします。
 
-        ![MIM 同期のインストール成功の画像](media/MIM-Install8.png)
-
-    5.  サインアウトしてサインインし、グループ メンバーシップの変更を有効にする必要があります。 **[はい]** をクリックして、サインアウトします。
+    5. サインアウトしてサインインし、グループ メンバーシップの変更を有効にする必要があります。 **[はい]** をクリックして、サインアウトします。
 
 >[!div class="step-by-step"]  
 [« Exchange Server](prepare-server-exchange.md)
 [MIM サービスおよびポータル »](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 

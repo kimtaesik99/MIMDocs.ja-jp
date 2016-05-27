@@ -29,7 +29,7 @@ ms.suite: ems
 このセクションの記事では、これまでに FIM または MIM が展開されていない新規のサーバー上に、エンド ユーザー セルフ サービス シナリオのために Microsoft Identity Manager (MIM) 2016 を展開するための手順を提供します。
 
 > [!NOTE]
-> このセクションで説明する展開トポロジは、MIM 初心者の学習のみを目的としています。  運用展開のトポロジの詳細については、[容量計画ガイド](/microsoft-identity-manager/PlanDesign/capacity-planning-guide)を参照してください。  運用規模または運用用途の場合、MIM を展開する前にこのドキュメントを確認することをお勧めします。
+> このセクションで説明する展開トポロジは、MIM 初心者の学習のみを目的としています。  運用展開のトポロジの詳細については、[容量計画ガイド](/microsoft-identity-manager/plan-design/capacity-planning-guide)を参照してください。  運用規模または運用用途の場合、MIM を展開する前にこのドキュメントを確認することをお勧めします。
 
 <!---
 Comment: Restore after PAM content is included
@@ -43,18 +43,18 @@ MIM は Active Directory (AD) と連動するため、次の手順に従って A
 
 ## 2: ID 管理サーバーを準備する
 自分のドメインを配置して構成したら、会社の ID 管理サーバーを準備します。 これには、次のセットアップが含まれます。
-- [サーバーのセットアップ: Windows Server 2012 R2](prepare-server-ws2012r2.md)
-- [サーバーのセットアップ: SQL Server 2014](prepare-server-sql2014.md)
-- [サーバーのセットアップ: SharePoint](prepare-server-sharepoint.md)
-- [サーバーのセットアップ: Exchange Server](prepare-server-exchange.md) (省略可能)
+- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
+- [SQL Server 2014](prepare-server-sql2014.md)
+- [SharePoint](prepare-server-sharepoint.md)
+- [Exchange Server](prepare-server-exchange.md) (オプション)
 
 ## 3: Microsoft Identity Manager 2016 コンポーネントをインストールする
 ドメインとサーバーをセットアップしたら、MIM コンポーネントをインストールし、AD と同期するように構成することができます。
-- [MIM のインストール: MIM 同期サービス](install-mim-sync.md)
-- [MIM のインストール: MIM サービスおよびポータル](install-mim-service-portal.md)
-- [MIM のインストール: Active Directory と MIM サービス データベースを同期する](install-mim-sync-ad-service.md)
+- [MIM 同期サービス](install-mim-sync.md)
+- [MIM サービスおよびポータル](install-mim-service-portal.md)
+- [Active Directory と MIM サービス データベースを同期する](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO4-->
 
 

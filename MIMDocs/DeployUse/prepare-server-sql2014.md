@@ -32,7 +32,10 @@ ms.suite: ems
 [SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> 以下の例ではすべて、**mimservername** はドメイン コントローラー名、**contoso** はドメイン名、**Pass@word1** は例で使用するパスワードをそれぞれ表しています。
+> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
+> - ドメイン コントローラー名 - **mimservername**
+> - ドメイン名 - **contoso**
+> - パスワード - **Pass@word1**
 
 ## **SQL Server 2014 Standard Edition** をインストールします。
 
@@ -51,6 +54,6 @@ ms.suite: ems
 [SharePoint »](prepare-server-sharepoint.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 
