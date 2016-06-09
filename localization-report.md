@@ -471,8 +471,8 @@
 * Handoff File: [install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/548ba8b6bd89fb74b95aa5162b87811ca70d3467/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf)
 * Handoff Datetime: 2016-06-03 18:44:09
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/5521118173594f489eca530ab7673cb9c0aac242/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/archive/install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf)
+* Archive Datetime: 2016-06-09 00:19:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/599e73b084a44fe1092e9f296e4ed17d7814d3fb/MIMDocs/DeployUse/install-mim-sync-ad-service.md)
@@ -1354,8 +1354,8 @@
 * Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/b355f96c57a578cf4583011e523ae9f98f6ef621/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf)
 * Handoff Datetime: 2016-06-03 21:44:12
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/5521118173594f489eca530ab7673cb9c0aac242/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.ja-jp.xlf)
+* Archive Datetime: 2016-06-09 00:19:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/2fc194008479e3e90e8bc9dc4c9d1e0cd1fca008/MIMDocs/index.md)
