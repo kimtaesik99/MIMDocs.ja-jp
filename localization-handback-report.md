@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | InSyncHandedBackSuccess | [Details](#f4e94980c6a03b08221fd46e19c421cce226086d11)
 
 ## Item Details
+##### <a name='f4e94980c6a03b08221fd46e19c421cce226086d11'></a> Source: [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a/MIMDocs/DeployUse/install-mim-sync-ad-service.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/4943cef5dbdf8d12d9eb87e9d6189d86416998a5/MIMDocs/DeployUse/install-mim-sync-ad-service.md)
+* Handoff File: [install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/548ba8b6bd89fb74b95aa5162b87811ca70d3467/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf)
+* Handoff Datetime: 2016-06-03 18:44:09
+* Handoff Reason: Include
+* Archive File: [install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/5521118173594f489eca530ab7673cb9c0aac242/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/archive/install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf)
+* Archive Datetime: 2016-06-09 00:19:36
+* Handback File: [install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/f6a56364fd1d692dd009265481cd0046ab06d4cc/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.ja-jp.xlf)
+* Handback Datetime: 2016-06-15 10:56:38
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
