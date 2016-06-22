@@ -27,7 +27,8 @@ ms.suite: ems
 
 # MIM 2016 のインストール: Active Directory と MIM サービスを同期する
 
->[!div class="step-by-step"] [« MIM サービスおよびポータル](install-mim-service-portal.md)
+>[!div class="step-by-step"] 
+[« MIM サービスおよびポータル](install-mim-service-portal.md)
 
 > [!NOTE]
 > このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
@@ -437,7 +438,8 @@ MIM サービス データベースにオブジェクトを設定するには、
     - **[実行プロファイル]** の一覧で、実行する実行プロファイルを選択します
     - **[OK]** をクリックして、実行プロファイルを開始します。
 
->[!div class="step-by-step"] [« MIM サービスおよびポータル](install-mim-service-portal.md)
+>[!div class="step-by-step"] 
+[« MIM サービスおよびポータル](install-mim-service-portal.md)
 
 
 <!--HONumber=Jun16_HO1-->
