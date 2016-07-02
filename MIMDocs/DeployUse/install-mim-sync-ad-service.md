@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: MIM 2016 のインストール&#58; Active Directory と MIM サービスを同期する | Microsoft Identity Manager
-description: 管理エージェントと MIM 同期サービスを使用して、Active Directory と MIM データベースを同期します。
-keywords:
+title: "MIM 2016 のインストール&#58; Active Directory と MIM サービスを同期する | Microsoft Identity Manager"
+description: "管理エージェントと MIM 同期サービスを使用して、Active Directory と MIM データベースを同期します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,18 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
+ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+
 
 ---
 
 # MIM 2016 のインストール: Active Directory と MIM サービスを同期する
 
->[!div class="step-by-step"] 
+>[!div class="step-by-step"]
 [« MIM サービスおよびポータル](install-mim-service-portal.md)
 
 > [!NOTE]
@@ -43,7 +37,8 @@ MIM 管理エージェント (MA) は、MIM 同期が MIM サービスに接続�
 
 MIM 管理エージェントを構成するときには、ユーザー アカウントを指定する必要があります。 このドキュメントでは、このアカウントの名前として **MIMMA** を使用します。
 
-> [!NOTE] MIM 管理エージェントで使用するアカウントは、MIM サービスのインストール時に指定したのと同じアカウントである必要があります。
+> [!NOTE]
+> MIM 管理エージェントで使用するアカウントは、MIM サービスのインストール時に指定したのと同じアカウントである必要があります。
 
 ###MIM MA を作成するには
 
@@ -438,10 +433,11 @@ MIM サービス データベースにオブジェクトを設定するには、
     - **[実行プロファイル]** の一覧で、実行する実行プロファイルを選択します
     - **[OK]** をクリックして、実行プロファイルを開始します。
 
->[!div class="step-by-step"] 
+>[!div class="step-by-step"]
 [« MIM サービスおよびポータル](install-mim-service-portal.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
