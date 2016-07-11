@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: セルフサービスのパスワード リセットを使用する | Microsoft Identity Manager
-description: MIM 2016 でのセルフ サービス パスワード リセットの新機能 (多要素認証による SSPR のしくみなど) を参照してください。 
-keywords:
+title: "セルフサービスのパスワード リセットを使用する | Microsoft Identity Manager"
+description: "MIM 2016 でのセルフ サービス パスワード リセットの新機能 (多要素認証による SSPR のしくみなど) を参照してください。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3a4350e54383dc1098c778090bb29b435082045f
+
 
 ---
 
@@ -73,7 +67,7 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 2.  左下隅の **[新規]**をクリックします。
 
-3.  **[App Services] &gt; [Active Directory] &gt; [多要素認証プロバイダー] &gt; [簡易作成]**をクリックします。
+3.  **[App Services] &gt; [Active Directory] &gt; [多要素認証プロバイダー] &gt; [簡易作成]** をクリックします。
 
 ![Azure ポータルでの MFA の簡易作成の画像](media/MIM-SSPR-Azureportal.png)
 
@@ -162,7 +156,7 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 #### Windows デスクトップ ログインに統合されたパスワード リセット
 
-1.  ユーザーがサインイン画面で間違ったパスワードを複数回入力した場合、**[ログインできませんか?]** をクリックできます。 .
+1.  ユーザーがサインイン画面で間違ったパスワードを複数回入力した場合、**[ログインできませんか?]** をクリックできます。 。
 
     ![サインイン画面のイメージ](media/MIM-SSPR-problemsloggingin.JPG)
 
@@ -211,6 +205,7 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
     ![MIM ログイン アシスタントのパスワードのリセットの画像](media/MIM-SSPR-PR1.JPG)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
