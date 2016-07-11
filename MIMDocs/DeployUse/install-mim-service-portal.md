@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: MIM 2016 & #58; MIM サービスおよびポータルのインストール |Microsoft Identity Manager
-description: MIM サービスおよび Microsoft Identity Manager 2016 用のポータルをインストールする手順を説明します。
-keywords:
+title: MIM 2016 &
+description: "MIM サービスおよび Microsoft Identity Manager 2016 用のポータルをインストールする手順を説明します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: eb2af412d9638035de591197fa191e990ade0ca1
+
 
 ---
 
 # MIM 2016: MIM サービスおよびポータルのインストール
 
 >[!div class="step-by-step"]
-[« MIM 同期サービス](install-mim-sync.md)
-[データベースの同期 »](install-mim-sync-ad-service.md)
+[«MIM 同期サービス](install-mim-sync.md)
+[データベースの同期»](install-mim-sync-ad-service.md)
 
 > [!NOTE]
 > このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
@@ -153,10 +147,11 @@ ms.suite: ems
 > 省略可能: この時点で MIM アドインおよび拡張機能をインストールできます。
 
 >[!div class="step-by-step"]  
-[« MIM 同期サービス](install-mim-sync.md)
-[データベースの同期 »](install-mim-sync-ad-service.md)
+[«MIM 同期サービス](install-mim-sync.md)
+[データベースの同期»](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Microsoft Identity Manager 2016 |Microsoft Identity Manager
-description: クラウドとオンプレミスでより安全でより便利な ID 管理エクスペリエンスを作成する MIM 2016 のしくみを理解します。
-keywords:
+description: "クラウドとオンプレミスでより安全でより便利な ID 管理エクスペリエンスを作成する MIM 2016 のしくみを理解します。"
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
+ms.openlocfilehash: 5247cce895344ac6148b735fe550eb16c39103c7
+
 
 ---
 
@@ -36,21 +30,10 @@ Microsoft Identity Manager 2016 は Azure と連携して、お使いの環境�
 ## Privileged Identity Management
 Privileged Identity Management は、機密性の高いリソースに対して一時的なタスクベースのアクセス権を付与することで、管理アクセス権を制御および管理します。 つまり、ユーザーには必要な権限のみが与えられるため、攻撃者が完全な管理アクセス権を手に入れるリスクを低減します。 さらに、Privileged Identity Management は既存の Active Directory フォレストから管理アカウントを抽出して分離します。
 
-## サポートされているプラットフォーム
-
-MIM がサポートする製品とプラットフォームの一覧は更新され、次のように、最新の Microsoft プラットフォームと Office/サーバー スタック、Windows クライアント OS、Windows Server OS、SharePoint、SQL、および Outlook などが追加されました。
-
--   Internet Explorer 8 以降がインストールされた Windows 8.1
-
--   Windows Server 2012 R2
-
--   SQL 2014
-
--   Outlook 2013
-
--   System Center Service Manager 2012 および 2012 R2
+MIM では、Active Director を管理するため、オンプレミスの Privileged Identity Management ソリューションをサポートしています。 概要については、「[Privileged Access Management の使用](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)」をご覧ください。
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

@@ -4,9 +4,10 @@
 ## [キャパシティ プランニング](capacity-planning-guide.md)
 ## [展開トポロジ](topology-considerations.md)
 # [展開と使用](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# [Privileged Access Management の使用](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 

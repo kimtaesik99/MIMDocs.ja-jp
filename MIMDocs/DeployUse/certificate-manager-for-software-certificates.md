@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ソフトウェア証明書の作成 |Microsoft Identity Manager
-description: 証明書マネージャーを使用して、プロファイル テンプレートでソフトウェア証明書を作成および更新する方法について説明します。
-keywords:
+title: "ソフトウェア証明書の作成 |Microsoft Identity Manager"
+description: "証明書マネージャーを使用して、プロファイル テンプレートでソフトウェア証明書を作成および更新する方法について説明します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 6b58093744656b9bfa62c1cfcab340ea88e6e168
+
 
 ---
 
@@ -82,7 +76,7 @@ ms.suite: ems
 
 1.  管理者特権を持つユーザーとして CM ポータルにログインします。
 
-2.  **[管理] &gt; [プロファイル テンプレートの管理]** を選択し、 **MIM CM サンプル スマート カードのログオン プロファイル テンプレート** の横にあるチェック ボックスをオンにして、選択したプロファイル テンプレートの **[コピー]**をクリックします。
+2.  **[管理] &gt; [プロファイル テンプレートの管理]** を選択し、**MIM CM サンプル スマート カードのログオン プロファイル テンプレート**の横にあるチェック ボックスをオンにして、**[選択したプロファイル テンプレートのコピー]** をクリックします。
 
 3.  プロファイル テンプレートの名前を入力し、 **[OK]**をクリックします。
 
@@ -103,6 +97,7 @@ ms.suite: ems
 11. 仮想スマート カード CM を使用している場合、データ収集を使用しないので、データ収集項目を無効にする必要があります。 個々のすべてのポリシーについてデータ収集項目を無効にします。無効にするには、左側のウィンドウでポリシーをクリックしてから、 **[サンプル データ項目]** の横のチェック ボックスをオフにして、 **[データ収集項目の削除]**をクリックします。 **[OK]**をクリックします。
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
