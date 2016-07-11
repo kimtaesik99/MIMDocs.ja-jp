@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "d348acc2137d578c8625a6ebe5e05fbc0a1ff8fc",
-  "LastTranslatedCommit": "17636263e8644c0512f0079b105bef78752b1728",
+  "LastTranslatedCommit": "b2d320b561a1799d5ea78bf08e2099f207fdae61",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
       "FileHash": "c1e15c9548e46cbbff7810e63478074ceeb06152",
@@ -15730,7 +15730,7 @@
       "TargetFilePath": null,
       "HandbackFilePath": null,
       "HandbackFileCommit": null,
-      "HandbackDateTime": "2016-07-11T13:50:34.8624265Z",
+      "HandbackDateTime": "2016-07-11T14:21:00.2341365Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\e189a7\\ol-handback\\Microsoft\\MIMDocs-pr.ja-jp\\master\\step-6-transition-group-to-pam.3da4e6e10d0a1601bae157e78307b689be5b4641.ja-jp.xlf failed.",
@@ -15740,7 +15740,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "0001-01-01T00:00:00",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.ja-jp\\master\\archive\\step-6-transition-group-to-pam.3da4e6e10d0a1601bae157e78307b689be5b4641.ja-jp.xlf",
       "ArchiveFileCommit": "bc56c47f99668774c3cb99efa3f6ef9786f9b776",
