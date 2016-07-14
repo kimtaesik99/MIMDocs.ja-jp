@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md) | InSyncHandedBackSuccess | [Details](#e1f18ad9bfc7946a751af0b73bba4faf0689c265247)
 
 ## Item Details
-##### <a name='e1f18ad9bfc7946a751af0b73bba4faf0689c265247'></a> Source: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr.ja-jp/blob/391b0c1e9450418bd1f5addd4dc117470441c32e/MIMDocs/PlanDesign/supported-management-agents.md)
-* Handoff File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/f48b12318474dba883cc1f06c8e4fce9c50a7db6/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ja-jp.xlf)
-* Handoff Datetime: 2016-07-06 22:20:01
-* Handoff Reason: Include
-* Archive File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/3d417704e9a927ecd3bab2d505aa9f53706b61ea/ol-handoff/Microsoft/MIMDocs-pr.ja-jp/master/archive/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ja-jp.xlf)
-* Archive Datetime: 2016-07-08 23:15:21
-* Handback File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/35244cdaedcebe0d86ee5a22e9a68eff6d72e475/ol-handback/Microsoft/MIMDocs-pr.ja-jp/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ja-jp.xlf)
-* Handback Datetime: 2016-07-14 15:59:39
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
