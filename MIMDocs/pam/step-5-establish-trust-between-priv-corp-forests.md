@@ -20,7 +20,8 @@ ms.openlocfilehash: 1260b4e1792bf43a7288866cf3afa41fabe79fe9
 
 # 手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
 
->[!div class="step-by-step"] [« 手順 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« 手順 4](step-4-install-mim-components-on-pam-server.md)
 [手順 6 »](step-6-transition-group-to-pam.md)
 
 
@@ -104,11 +105,12 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 
 次の手順で、グループを PAM に移動します。
 
->[!div class="step-by-step"] [« 手順 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« 手順 4](step-4-install-mim-components-on-pam-server.md)
 [手順 6 »](step-6-transition-group-to-pam.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
