@@ -37,10 +37,11 @@ ms.openlocfilehash: c9f2cf2ba1f42ea1513ae38d8089839d85ae5553
 
 7.  保護されたリソースに対する昇格された特権アクセスの要求、受け取り、および利用をデモンストレーションします。
 
->[!div class="step-by-step"] [開始 »](step-1-prepare-corp-domain.md)
+>[!div class="step-by-step"]
+[[!div class="step-by-step"] [開始 »](step-1-prepare-corp-domain.md)](step-1-prepare-corp-domain.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
