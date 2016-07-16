@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ハイブリッド ID 管理レポート | Microsoft Identity Manager
-description: Azure Active Directory のハイブリッド レポートでは、クラウドとオンプレミスの両方のイベントを含むカスタム レポートを作成することができます。
-keywords:
+title: "ハイブリッド ID 管理レポート | Microsoft Identity Manager"
+description: "Azure Active Directory のハイブリッド レポートでは、クラウドとオンプレミスの両方のイベントを含むカスタム レポートを作成することができます。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7e61e201b277a2e8ec9fee785e9e34fca3b1cb29
+ms.openlocfilehash: b3f3982ade46932b18fb730fe5c16d52cde188a1
+
 
 ---
 
@@ -52,6 +46,7 @@ IT 担当者は、ハイブリッド レポートを使用することで一般�
 - 詳細については「[Identity Manager ハイブリッド レポートの操作](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting)」を参照してください。
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

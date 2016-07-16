@@ -17,9 +17,10 @@
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [スマートカードの登録](certificate-manager-for-non-administrators.md)
 ### [ソフトウェア証明書の作成](certificate-manager-for-software-certificates.md)
+# [Privileged Access Management の使用](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

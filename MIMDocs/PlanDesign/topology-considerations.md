@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: MIM を展開するためのトポロジに関する考慮事項 |Microsoft Identity Manager
-description: MIM 2016 コンポーネントを理解し、これらを環境内に展開する方法についての提案を得ます。
-keywords:
+title: "MIM を展開するためのトポロジに関する考慮事項 |Microsoft Identity Manager"
+description: "MIM 2016 コンポーネントを理解し、これらを環境内に展開する方法についての提案を得ます。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: e33a08d77a0b5c422cdbc8c19516b55df980a2c6
+
 
 ---
 
@@ -71,6 +65,7 @@ MIM 同期サービスと MIM サービス データベースをホストして�
 - テスト ビルドとパフォーマンス テストの結果に関する詳細は、ダウンロード可能な「[Forefront Identity Manager (FIM) 2010 Capactity Planning Guide (Forefront Identity Manager (FIM) 2010 容量計画ガイド)](http://go.microsoft.com/fwlink/?LinkId=200180)」を参照してください。
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

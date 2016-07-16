@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 容量計画ガイド |Microsoft Identity Manager
-description: このガイドを使用して、負荷レベルやポリシーの決定など、MIM 2016 を展開する前に考慮すべき変数を理解します。
-keywords:
+title: "容量計画ガイド |Microsoft Identity Manager"
+description: "このガイドを使用して、負荷レベルやポリシーの決定など、MIM 2016 を展開する前に考慮すべき変数を理解します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6
+ms.openlocfilehash: 323a875aba14a238aa7cb3a0e6df192729ce53d6
+
 
 ---
 
@@ -100,6 +94,7 @@ MIM のポリシー構成では、環境でのプロビジョニングについ�
 - テスト ビルドとパフォーマンス テストの結果に関する詳細は、ダウンロード可能な「[Forefront Identity Manager (FIM) 2010 Capactity Planning Guide (Forefront Identity Manager (FIM) 2010 容量計画ガイド)](http://go.microsoft.com/fwlink/?LinkId=200180)」を参照してください。
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
