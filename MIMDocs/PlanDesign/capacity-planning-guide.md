@@ -3,8 +3,8 @@ title: "容量計画ガイド |Microsoft Identity Manager"
 description: "このガイドを使用して、負荷レベルやポリシーの決定など、MIM 2016 を展開する前に考慮すべき変数を理解します。"
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 05/13/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6
-ms.openlocfilehash: 323a875aba14a238aa7cb3a0e6df192729ce53d6
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 2aeca4630f0d6f64d012e000e5dbabec618e7b1e
 
 
 ---
@@ -95,6 +95,6 @@ MIM のポリシー構成では、環境でのプロビジョニングについ�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
