@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Identity Manager ハイブリッド レポートの操作 |Microsoft Identity Manager
-description: オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。
-keywords:
+title: "Identity Manager ハイブリッド レポートの操作 |Microsoft Identity Manager"
+description: "オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: e2d0bd6120628d4fd2a14718fc205cde976c7785
+
 
 ---
 
@@ -100,7 +94,7 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 Microsoft Identity Manager から Azure Active Directory へのレポート データのアップロードを停止する場合は、ハイブリッド レポート エージェントをアンインストールします。 Windows の **[プログラムの追加と削除]** ツールを使用して、Microsoft Identity Manager ハイブリッド レポートをアンインストールします。
 
 ## ハイブリッド レポートに使用される Windows イベント
-Microsoft Identity Manager によって生成されたイベントは、Windows イベント ログに記録され、[アプリケーションとサービス ログ]、**[Identity Manager 要求ログ]** の下のイベント ビューアーに表示されます。 それぞれの MIM 要求は、JSON 構造の Windows イベント ログにイベントとしてエクスポートされます。 これは SIEM にエクスポートすることができます。
+Microsoft Identity Manager によって生成されたイベントは、Windows イベント ログに記録されます。[アプリケーションとサービス ログ]&gt; **[Identity Manager 要求ログ]** の下にあり、イベント ビューアーで表示できます。 それぞれの MIM 要求は、JSON 構造の Windows イベント ログにイベントとしてエクスポートされます。 これは SIEM にエクスポートすることができます。
 
 |イベントの種類|ID|イベントの詳細|
 |--------------|------|-----------------|
@@ -108,6 +102,7 @@ Microsoft Identity Manager によって生成されたイベントは、Windows 
 |説明|4137|MIM イベント 4121 の拡張イベント。1 つのイベントに対するデータが過剰である場合。 このイベントのヘッダーの形式は次のとおりです。 `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

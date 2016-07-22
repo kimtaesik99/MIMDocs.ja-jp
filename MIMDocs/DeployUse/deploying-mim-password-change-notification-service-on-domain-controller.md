@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: パスワード変更通知サービスの展開 |Microsoft Identity Manager
-description: ドメイン コントローラーに MIM パスワード変更通知サービスをインストールして構成する手順を説明します。
-keywords:
+title: "パスワード変更通知サービスの展開 |Microsoft Identity Manager"
+description: "ドメイン コントローラーに MIM パスワード変更通知サービスをインストールして構成する手順を説明します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 85e83b85f047ca2c2648b42ec68b832caae645ee
+
 
 ---
 
@@ -66,6 +60,7 @@ ms.suite: ems
 ドメイン管理者として DC サーバーに再接続した後、*C:\Program Files\Microsoft Password Change Notification* に移動します。 *pcnscfg.exe* を実行します。
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

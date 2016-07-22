@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: MIM Certificate Manager の操作 |Microsoft Identity Manager
-description: Certificate Manager アプリを展開して、ユーザーが独自のアクセス権を管理できるようにする方法について説明します。 
-keywords:
+title: "MIM Certificate Manager の操作 |Microsoft Identity Manager"
+description: "Certificate Manager アプリを展開して、ユーザーが独自のアクセス権を管理できるようにする方法について説明します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3e0e6cea0b268836bb6347e81694deec93320ce3
+
 
 ---
 
@@ -43,7 +37,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 2.  MMC を開きます。
 
-3.  **[ファイル]、[スナップインの追加と削除]** の順にクリックします。
+3.  **[ファイル] &gt; [スナップインの追加と削除]** をクリックします。
 
 4.  [利用できるスナップイン] の一覧で、**[証明書テンプレート]** をクリックして、**[追加]** をクリックします。
 
@@ -71,7 +65,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 14. MMC の左側のウィンドウで **[証明機関 (ローカル)]** を展開し、証明機関の一覧内に自身の CA を展開します。
 
-15. **[証明書テンプレート]** を右クリックし、**[新規作成]、[発行する証明書テンプレート]** の順にクリックします。
+15. **[証明書テンプレート]** を右クリックし、**[新規作成] &gt; [発行する証明書テンプレート]** をクリックします。
 
 16. 一覧から作成した新しいテンプレートを選択し、 **[OK]**をクリックします。
 
@@ -80,7 +74,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 1.  管理者特権を持つユーザーとして CM ポータルにログインします。
 
-2.  [管理]、[プロファイル テンプレートの管理] の順に選択し、MIM CM サンプル スマート カードのログオン プロファイル テンプレート の横にあるチェック ボックスをオンにして、選択したプロファイル テンプレートの [コピー]をクリックします。
+2.  [管理] &gt; [プロファイル テンプレートの管理] を選択し、MIM CM サンプル スマート カードのログオン プロファイル テンプレートの横にあるチェック ボックスをオンにして、選択したプロファイル テンプレートの [コピー] をクリックします。
 
 3.  プロファイル テンプレートの名前を入力し、 **[OK]**をクリックします。
 
@@ -96,7 +90,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 9. **[ユーザー暗証番号ポリシー]** の下で、 **[ユーザー指定]**を選択します。
 
-10. 左側のウィンドウで、 **[書き換えポリシー] &gt; [全般設定の変更]**をクリックします。 **[書き換えたカードの再利用]** を選択し、 **[OK]**をクリックします。
+10. 左側のウィンドウで、**[書き換えポリシー] &gt; [全般設定の変更]** をクリックします。 **[書き換えたカードの再利用]** を選択し、 **[OK]**をクリックします。
 
 11. それぞれすべてのポリシーに対するデータ収集項目を無効にする必要があります。これを行うには、左側のウィンドウでポリシーをクリックしてから、 **[サンプル データ項目]** の横のチェック ボックスをオンにして、 **[データ収集項目の削除]**をクリックします。 **[OK]**をクリックします。
 
@@ -154,7 +148,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
     -   仮想スマート カード アプリケーションを開きます。 これにより、次の手順に必要な値が見つけやすくなります。
 
-    -   アプリケーションをクライアントとして AD FS サーバーに追加して、サーバー上で CM を構成するには、AD FS サーバーで Windows PowerShell を開き、コマンド `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`を実行します。
+    -   アプリケーションをクライアントとして AD FS サーバーに追加して、サーバー上で CM を構成するには、AD FS サーバーで Windows PowerShell を開き、次のコマンドを実行します `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
 
         ConfigureMimCMClientAndRelyingParty.ps1 スクリプトを以下に示します。
 
@@ -255,12 +249,13 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
     -   ServerFQDN は MIMCM サーバーのフル コンピューター名のみです。
 
-    -    **ConfigureMIimCMClientAndRelyingParty.ps1** のスクリプトのヘルプについては、 `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`を実行します。
+    -   **ConfigureMIimCMClientAndRelyingParty.ps1** のスクリプトのヘルプについては、次のコマンドを実行します `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
 ## アプリを展開する
-CM アプリをセットアップする際には、ダウンロード センターでファイル MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip をダウンロードして、すべてのコンテンツを展開します。 .appx ファイルはインストーラーです。 Windows ストア アプリを展開する通常の方法で展開できます。[System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)を使用したり、[Intune](https://technet.microsoft.com/library/dn613839.aspx) を使用してアプリをサイドロードして、ユーザーがポータル サイトを使用してアクセスしなければならないようにしたり、ユーザーが自身のマシンに直接プッシュされるようにすることができます。
+CM アプリをセットアップする際には、ダウンロード センターでファイル MIMDMModernApp_&lt;バージョン&gt;_AnyCPU_Test.zip をダウンロードして、すべてのコンテンツを抽出します。 .appx ファイルはインストーラーです。 Windows ストア アプリを展開する通常の方法で展開できます。[System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)を使用したり、[Intune](https://technet.microsoft.com/library/dn613839.aspx) を使用してアプリをサイドロードして、ユーザーがポータル サイトを使用してアクセスしなければならないようにしたり、ユーザーが自身のマシンに直接プッシュされるようにすることができます。
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

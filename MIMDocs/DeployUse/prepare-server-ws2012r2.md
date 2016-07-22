@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ID 管理サーバー&#58;Windows Server 2012 R2 のセットアップ | Microsoft Identity Manager
-description: MIM 2016 と連動するように Windows Server 2012 RS を準備するための手順と最小要件を説明します。
-keywords:
+title: "ID 管理サーバー&#58;Windows Server 2012 R2 のセットアップ | Microsoft Identity Manager"
+description: "MIM 2016 と連動するように Windows Server 2012 RS を準備するための手順と最小要件を説明します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,23 +10,19 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: af9f7f75f19bb29f2e29577c787252f6b7fabb7d
+ms.openlocfilehash: cd4ac84af4e5416512cf546a5d23b342ebe13c39
+
 
 ---
 
 # ID 管理サーバー: Windows Server 2012 R2 のセットアップ
 
 >[!div class="step-by-step"]
-[« ドメインの準備](preparing-domain.md)
+[«ドメインの準備](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
@@ -61,7 +55,7 @@ ms.suite: ems
 
     ![PowerShell 機能の画像](media/MIM-DeployWS2.png)
 
-7. PowerShell で次のコマンドを入力します。 **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー (“*d:\Sources\SxS\*”) 上のサイド バイ サイド (SxS) フォルダーにあります。
+7. PowerShell で次のコマンドを入力します。 **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー上のサイド バイ サイド (SxS) フォルダー (例: “*d:\Sources\SxS\*”) にあります。
 
     ```
     import-module ServerManager
@@ -112,10 +106,11 @@ ms.suite: ems
     ```
 
 >[!div class="step-by-step"]  
-[« ドメインの準備](preparing-domain.md)
+[«ドメインの準備](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

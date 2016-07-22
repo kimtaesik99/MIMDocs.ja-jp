@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 非管理者のスマート カードの登録 |Microsoft Identity Manager
-description: 自身のコンピューターへの管理者アクセス権を持たないユーザーに対し、スマート カードを登録して証明書マネージャーを使用できるようにする方法について説明します。
-keywords:
+title: "非管理者のスマート カードの登録 |Microsoft Identity Manager"
+description: "自身のコンピューターへの管理者アクセス権を持たないユーザーに対し、スマート カードを登録して証明書マネージャーを使用できるようにする方法について説明します。"
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 50c0edd60abfa6550cb5a873d32a842e8c099811
+
 
 ---
 
@@ -56,7 +50,7 @@ ms.suite: ems
 
     4.  AppxManifest.xml というファイルを編集します
 
-    5.  &lt;Identity&gt; 要素の Publisher 属性値を、署名証明書のサブジェクトに変更します (例:"CN = ABCD")
+    5.  &lt;Identity&gt; 要素の Publisher 属性の値を、署名証明書のサブジェクトに変更します (例: "CN = ABCD")
 
         このサブジェクトは、アプリへのサインインに使用している署名証明書のサブジェクトと同じにする必要があります。
 
@@ -101,6 +95,7 @@ ms.suite: ems
 8.  **仮想スマート カードの CM アプリと登録を起動する**
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
