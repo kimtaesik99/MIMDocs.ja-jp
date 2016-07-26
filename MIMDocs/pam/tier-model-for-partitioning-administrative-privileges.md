@@ -1,10 +1,10 @@
 ---
-title: "管理者特権のパーティション分割の階層モデル | Microsoft Identity Manager"
-description: 
+title: "PAM 環境階層モデル | Microsoft Identity Manager"
+description: "リスクに対する脆弱性に基づいてシステムを分離する階層モデルについて説明します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
 
 
 ---
@@ -44,7 +44,7 @@ Windows Server Active Directory (AD) フォレストに対して永続的な管�
 - ドメイン管理者 (階層 0) は、エンタープライズ サーバー (階層 1 ) と標準ユーザー ワークステーション (階層 2) にログオンできません。
 - サーバー管理者 (階層 1) は、標準ユーザー ワークステーション (階層 2) にログオンできません。
 
->[!NOTE] 
+>[!NOTE]
 > サーバー管理者はドメイン管理者グループに属していてはなりません。 ドメイン コントローラーとエンタープライズ サーバーの両方を管理する責任を負うユーザーは、個別のアカウントが必要です。
 
 ログオン制限は次によって適用することができます。
@@ -62,6 +62,6 @@ Windows Server Active Directory (AD) フォレストに対して永続的な管�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

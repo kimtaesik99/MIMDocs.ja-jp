@@ -1,10 +1,10 @@
 ---
-title: "手順 3 – PAM サーバーの準備 | Microsoft Identity Manager"
-description: 
+title: "PAM の展開、手順 3 – PAM サーバー | Microsoft Identity Manager"
+description: "Privileged Access Management の展開に備えて、SQL と SharePoint の両方をホストする PAM サーバーを準備します。"
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ec65078cea33b73aa9482e831a1870df477c6581
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 
 
 ---
@@ -118,7 +118,7 @@ SQL Server がまだ要塞環境に存在しない場合は、SQL Server 2012 (S
 
 SharePoint Foundation 2013 SP1 のインストーラーを使用して、SharePoint のソフトウェア必須コンポーネントを PAMSRV にインストールします。
 
-> [!NOTE] 
+> [!NOTE]
 > 前提条件となるものをインストーラーでダウンロードするためには、インターネット接続が必要です。 インストールが完了すると、サーバーが再起動します。
 
 1. [PowerShell] を右クリックし、**[管理者として実行]** を選択します。  
@@ -158,7 +158,7 @@ SharePoint の必須コンポーネントがインストールされた後に、
 
 2. Windows クラシックの認証方法が使用されることを警告するメッセージが表示されます。また、最後のコマンドが返されるまで数分かかる場合があります。  完了すると、新しいポータルの URL を示す出力が返されます。
 
-> [!NOTE] 
+> [!NOTE]
 > 次の手順で使うため、[SharePoint 2013 管理シェル] ウィンドウを開いたままにしておきます。
 
 ## SharePoint サイト コレクションを作成する
@@ -212,6 +212,6 @@ SharePoint の必須コンポーネントがインストールされた後に、
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

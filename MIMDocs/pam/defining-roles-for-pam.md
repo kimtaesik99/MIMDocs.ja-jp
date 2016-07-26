@@ -1,10 +1,10 @@
 ---
-title: "Privileged Access Management のロールを定義する | Microsoft Identity Manager"
-description: 
+title: "PAM の特権ロールの定義 | Microsoft Identity Manager"
+description: "管理する特権ロールを決定し、該当する特権ロールごとに管理ポリシーを定義します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 7ba6f744f7fb7a1c5052b14669aa3de2cd10ddbb
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 442b596107d9ade0ca466500440a32b2dd26fa14
 
 
 ---
 
 # Privileged Access Management のロールを定義する
 
-Privileged Access Management では、ジャスト イン タイムのアクセスを必要に応じてアクティブ化できる特権ロールにユーザーを割り当てることができます。 これらのロールは手動で定義され、要塞環境で確立されます。 この記事では、PAM で管理するロールを決定するプロセス、およびそれらに適切なアクセス許可と制限を定義する方法について、順を追って説明します。
+Privileged Access Management では、ジャスト イン タイムのアクセスを必要に応じてアクティブ化できる特権ロールにユーザーを割り当てることができます。 これらのロールは、手動で定義し、要塞環境で確立します。 この記事では、PAM で管理するロールを決定するプロセス、およびそれらに適切なアクセス許可と制限を定義する方法について、順を追って説明します。
 
 Privileged Access Management のロールを定義する最も簡単なアプローチは、スプレッドシート内のすべての情報をコンパイルすることです。 ロール内のロールを一覧表示し、ガバナンス要件とアクセス許可を識別するために列を使用します。
 
@@ -202,6 +203,6 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

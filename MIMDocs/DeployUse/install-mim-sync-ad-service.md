@@ -1,10 +1,10 @@
 ---
-title: "MIM 2016 のインストール&#58; Active Directory と MIM サービスを同期する | Microsoft Identity Manager"
+title: "AD と MIM サービスの同期 | Microsoft Identity Manager"
 description: "管理エージェントと MIM 同期サービスを使用して、Active Directory と MIM データベースを同期します。"
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
-ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
 
 
 ---
@@ -316,7 +316,7 @@ AD ユーザー受信同期規則を作成するには:
 
     -   メタバース リソースの種類: 個人
     -   外部システム:ADMA
-    -   外部システム リソースの種類: 個人
+    -   外部システム リソースの種類: ユーザー
 
 6. **[関係]** タブで、次の情報を指定し、**[次へ]** をクリックします。
 
@@ -328,10 +328,10 @@ AD ユーザー受信同期規則を作成するには:
 
     | フロー ルール | ソース | Destination |
     |-|-|-|
-    |規則 1|samAccountName|f|
+    |規則 1|samAccountName|accountName|
     |規則 2|displayName|displayName|
-    |規則 3|Employee種類|Employee種類|
-    |規則 4|givenName|givenName|
+    |規則 3|Employee種類|employee種類|
+    |規則 4|givenName|firstName|
     |規則 5|sn|lastName|
     |規則 6|Manager|manager|
     |規則 7|objectSID|ObjectSID|
@@ -438,6 +438,6 @@ MIM サービス データベースにオブジェクトを設定するには、
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

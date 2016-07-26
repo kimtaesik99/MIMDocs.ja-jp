@@ -1,10 +1,10 @@
 ---
-title: "手順 2 - PRIV ドメイン コントローラーの準備 | Microsoft Identity Manager"
-description: 
+title: "PAM の展開、手順 2 - PRIV DC | Microsoft Identity Manager"
+description: "Privileged Access Management が分離される要塞環境が提供されるように、PRIV ドメイン コント ローラーを準備します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 62d80222ea85fe5066cfa396b5e5a10bced4d3cd
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 048a17c6b8150501185b7a13c3d2cb292791c9e8
 
 
 ---
@@ -221,7 +221,7 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > 他のフォレストは、PRIV フォレストに対する DNS クエリをこのドメイン コントローラーにルーティングできる必要もあります。  複数の既存の Active Directory フォレストがある場合は、それらの各フォレストに DNS 条件付きフォワーダーを追加する必要もあります。
 
 ### Kerberos の構成
@@ -235,7 +235,7 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
   setspn -S FIMService/pamsrv PRIV\MIMService
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > このドキュメントの次のステップでは、1 台のコンピューターに MIM 2016 サーバー コンポーネントをインストールする方法について説明します。 高可用性のためにもう 1 台のサーバーを追加する場合は、「[FIM 2010: Kerberos Authentication Setup (Kerberos 認証のセットアップ)](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx)」の説明に従って、追加の Kerberos 構成を用意する必要があります。
 
 ### MIM サービス アカウントにアクセス許可を与える委任を構成する
@@ -307,6 +307,6 @@ PRIV リソースのメンテナンス (MIM など) を実行するために PRI
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

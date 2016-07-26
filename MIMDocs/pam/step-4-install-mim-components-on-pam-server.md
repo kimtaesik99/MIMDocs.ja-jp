@@ -1,10 +1,10 @@
 ---
-title: "手順 4 - PAM サーバーとワークステーションに MIM コンポーネントをインストールする | Microsoft Identity Manager"
-description: 
+title: "PAM の展開、手順 4 – MIM のインストール | Microsoft Identity Manager"
+description: "Privileged Access Management サーバーとワークステーションに MIM サービスとポータルをインストールして構成します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
 
 PAMSRV で、MIM サービスおよびポータル、サンプル ポータル Web アプリケーションをインストールできるように、PRIV\Administrator としてサインインします。
 
-  > [!NOTE] 
+  > [!NOTE]
   > ドメイン管理者である必要があります。ドメイン管理者として次のコマンドを実行しない場合、次の手順で行う信頼検証チェックは完了しません。
 
 MIM をダウンロードした場合は、新しいフォルダーに MIM のインストール アーカイブを展開します。
@@ -44,7 +44,7 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 2.  一般的なサービスと MIM データベース接続を構成する場合は、**[新しいデータベースを作成]** を指定します。
 
-    > [!NOTE] 
+    > [!NOTE]
     > 高可用性のために MIM サービスを 2 回以上インストールする場合は、2 回目以降のすべてのインストールで **[既存のデータベースを使用]** を指定します。
 
 3.  メール サーバーの接続を構成するときは、メール サーバーを CORP 環境の Exchange または SMTP サーバーのホスト名 (メール サーバーがない場合は「corpdc.contoso.local」) に設定し、**[SSL を使用する]** と **[メール サーバーは Exchange Server 2007 または Exchange Server 2010]** の各チェックボックスをオフにします。
@@ -193,6 +193,6 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

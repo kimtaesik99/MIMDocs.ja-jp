@@ -1,10 +1,10 @@
 ---
-title: "PAM のコンポーネントについて理解する |Microsoft Identity Manager"
-description: 
+title: "PAM のコンポーネントについて理解する | Microsoft Identity Manager"
+description: "Privileged Access Management は一部のコンポーネントを MIM と共有します。固有のコンポーネントもいくつかあります。 これらの連携方法について説明します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/13/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,8 +12,9 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60
-ms.openlocfilehash: 49f47050703095d402a1514342baf4e928f66c70
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: d17feb5d78b864bef8f0b96bfbf92a18c3c91694
 
 
 ---
@@ -34,7 +35,7 @@ PAM 用に構成される MIM ソリューションには、次のコンポー�
 - **PowerShell コマンドレット**: MIM サービスと PRIV AD に PAM 管理者の CORP フォレスト内のユーザーおよびグループに対応するユーザーおよびグループを追加するためのコマンドレット。管理アカウントに対する特権のジャスト イン タイム (JIT) の使用を要求するエンド ユーザー用。
 - **PAM REST API とサンプル ポータル**: 昇格のために PAM シナリオ内の MIM をカスタム クライアントに統合する開発者向け。PowerShell または SOAP を使用する必要はありません。 サンプルの Web アプリケーションを使用して、REST API の使い方を説明します。
 
-インストールおよび構成が行われると、PRIV フォレスト内の移行手順によって作成された各グループは、シャドウ SIDHistory ベース のセキュリティ グループ (または、最近の Windows Server vNext による更新では、外部プリンシパル グループ) になります。これは、元の CORP フォレスト内のグループの SID をミラーリングします。 さらに、MIM サービスによって、PRIV フォレスト内のそれらのグループにメンバーが追加された場合、それらのメンバーシップは期間限定となります。
+インストールおよび構成が行われると、PRIV フォレスト内の移行手順によって作成された各グループは、シャドウ SIDHistory ベースのセキュリティ グループ (または、最近の Windows Server vNext による更新では、外部プリンシパル グループ) になります。これは、元の CORP フォレスト内のグループの SID をミラーリングします。 さらに、MIM サービスによって、PRIV フォレスト内のそれらのグループにメンバーが追加された場合、それらのメンバーシップは期間限定となります。
 
 その結果、ユーザーが PowerShell コマンドレットを使用して昇格を要求し、その要求が承認されると、MIM サービスは PRIV フォレストにあるそのユーザーのアカウントを PRIV フォレスト内のグループに追加します。 ユーザーが特権アカウントを使用してログインする場合、ユーザーの Kerberos トークンには CORP フォレスト内のグループのセキュリティ識別子 (SID) と同じ SID が含まれます。 CORP フォレストは、PRIV フォレストを信頼するように構成されているため、CORP フォレスト内のリソースへのアクセスに使用されている管理者特権のアカウントが表示されます。Kerberos グループ メンバーシップをチェックするリソースに対しては、そのリソースのセキュリティ グループのメンバーとします。 これは、Kerberos フォレスト間認証を介して提供されます。
 
@@ -42,6 +43,6 @@ PAM 用に構成される MIM ソリューションには、次のコンポー�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

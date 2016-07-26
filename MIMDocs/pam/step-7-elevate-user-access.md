@@ -1,10 +1,10 @@
 ---
-title: "手順 7 - ユーザーのアクセスを昇格する |Microsoft Identity Manager"
-description: 
+title: "PAM の展開、手順 7 – ユーザー アクセス | Microsoft Identity Manager"
+description: "最後の手順として、Privileged Access Management の展開が成功したことを確認できるように、特権を持つユーザーに一時的なアクセス権を付与します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
 
 
 ---
@@ -46,7 +46,7 @@ ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
 2. PRIV.Jen アカウントのパスワードを求める画面が表示されたら、パスワードを入力します。 新しいコマンド プロンプト ウィンドウが表示されます。
 3. PowerShell ウィンドウが表示されたら、次のコマンドを入力します。
 
-    > [!NOTE] 
+    > [!NOTE]
     > これらのコマンドを実行すると、以降のすべての手順は時間の影響を受けます。
 
     ```
@@ -92,7 +92,7 @@ PAM のサンプル ポータルを使用して特権アクセスを要求する
 7. **[インターネット オプション]** ダイアログを閉じます。
 8. 左側のタブの **[アクティブ化]**をクリックします。 **PAM ロール** を選択し、**[アクティブ化]**をクリックします。
 
-> [!Note] 
+> [!Note]
 > この環境では、PAM REST API を使用してアクティブ化するアプリケーションを開発する方法についても学習できます (「[Privileged Access Management REST API リファレンス](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md)」をご参照ください)。
 
 ## [概要]
@@ -103,6 +103,6 @@ PAM のサンプル ポータルを使用して特権アクセスを要求する
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

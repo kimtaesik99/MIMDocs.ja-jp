@@ -1,10 +1,10 @@
 ---
-title: "Azure MFA を使用したアクティブ化 | Microsoft Identity Manager"
-description: 
+title: "Azure MFA を使用した PAM のアクティブ化 | Microsoft Identity Manager"
+description: "ユーザーが Privileged Access Management でロールをアクティブ化すると、Azure MFA が第 2 のセキュリティ層として設定されます。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: d6f6927eec479c705fd9ef7f33fafdeec05857e0
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 518a7e165946049745c8eea15ecb61866d6f9c04
 
 
 ---
@@ -70,7 +70,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 
 7.  MIM サービスがインストールされている各システムに、ダウンロードした ZIP ファイルをコピーします。 
 
->[!NOTE] 
+>[!NOTE]
 > ZIP ファイルには Azure MFA サービスへの認証に使用されるキー生成情報が含まれています。
 
 ## Azure MFA の MIM サービスの構成
@@ -99,7 +99,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 
 11.  MIM サービス フォルダー `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service` に **MfaSettings.xml** を保存して上書きします。 
 
-> [!NOTE] 
+> [!NOTE]
 > プロセスの最後に、ファイル **MfaSettings.xml** またはそのコピー、あるいは ZIP ファイルが読み取り可能ではないことを確認します。
 
 ## Azure MFA 用に PAM ユーザーを構成する
@@ -151,6 +151,6 @@ Privileged Access Management のイベント ログには、次のイベント�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

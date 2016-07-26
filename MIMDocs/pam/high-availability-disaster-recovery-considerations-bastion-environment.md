@@ -1,10 +1,10 @@
 ---
-title: "要塞環境の高可用性と障害復旧の考慮事項 | Microsoft Identity Manager"
-description: 
+title: "PAM の障害復旧 | Microsoft Identity Manager"
+description: "高可用性と障害復旧を実現するために Privileged Access Management を構成する方法について説明します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 1d9e005bfb3e26f9a2b818667f14acd3e5239523
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9164e48bf10fa27ff6c87ba3816b586a940dda69
 
 
 ---
@@ -161,7 +161,7 @@ Windows Server Active Directory ドメイン サービスには、ネイティ�
 
 追加のドメイン コントローラーを追加する手順は、「[Windows Server 2012 のレプリカ ドメイン コントローラーを既存のドメインにインストールする (レベル 200)](https://technet.microsoft.com/library/jj574134.aspx)」をご参照ください。  
 
->[!NOTE] 
+>[!NOTE]
 > ドメイン コントローラーが Hyper-V などの仮想化プラットフォーム上でホストされる場合は、「[仮想化ドメイン コントローラーの展開と構成](https://technet.microsoft.com/library/jj574223.aspx)」の注意事項をご確認ください。
 
 #### 復元
@@ -199,7 +199,7 @@ MIM サービスは PRIV ドメインに参加している複数のサーバー�
 
 複数のサーバーにまたがって運用環境を展開する場合は、ネットワーク負荷分散 (NLB) を使用して処理負荷を分散することができます。  1 つの共通名がユーザーに公開されるように、単一のエイリアス (たとえば、A または CNAME レコード) も必要です。
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > Windows Server 2012 R2 で NLB 機能以外の負荷分散テクノロジを使用する場合は、ソリューションが 1 つのセッションをランダム サーバーではなく、同じサーバーにリダイレクトすることを確認してください。
 
 マルチ サーバーの MIM 展開では、各 MIM サービスに外部ホスト名、サービス名、サービス パーティション名があります。  サービス名の既定値はコンピューターの名前であり、外部ホスト名とサービス パーティション名の既定値は、MIM サービスのインストール中に MIM サービス サーバーのアドレスの入力を求める画面上で構成されます。 これら 3 つの名前は、`resourceManagementService` 構成ノードの属性 `externalHostName`、`serviceName`、および `servicePartitionName` として %ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config ファイルに保存されます。  
@@ -224,6 +224,6 @@ Privileged Access Management コンポーネントは、MIM サービスがイ�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

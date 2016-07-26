@@ -1,10 +1,10 @@
 ---
-title: "手順 1 - ホストと CORP ドメインの準備 | Microsoft Identity Manager"
-description: 
+title: "PAM の展開、手順 1 - CORP ドメイン | Microsoft Identity Manager"
+description: "Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/10/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 7d6888ad4d694ad0ed746598563de32d7c363936
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9a2fafa86c5c928339ff8d7ad1593472046ccb98
 
 
 ---
@@ -94,7 +94,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 新しい CORP ドメインを作成した場合、PAM シナリオのデモンストレーション用に追加のユーザーとグループを作成する必要があります。 デモンストレーション用のユーザーやグループを、ドメイン管理者にすることも、AD の adminSDHolder 設定で制御することもできません。
 
-> [!NOTE] 
+> [!NOTE]
 > CORP ドメインとして使用するドメインを既にお持ちであり、そのドメインにデモンストレーション用に使用できるユーザーやグループが含まれている場合は、「[監査を構成する](#configure-auditing)」のセクションに進みます。
 
 *CorpAdmins* という名前のセキュリティ グループと *Jen* という名前のユーザーを作成します。 別の名前を使うこともできます。
@@ -167,7 +167,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 ドメインに参加しているワークステーション コンピューターをお持ちでない場合は、次の手順に従って準備します。  
 
-> [!NOTE] 
+> [!NOTE]
 > ドメインに参加しているワークステーションを既にお持ちの場合は、「[デモンストレーション用にリソースを作成する](#create-a-resource-for-demonstration-purposes)」に進みます。
 
 ### Windows 8.1 や Windows 10 Enterprise を VM インストールする
@@ -215,6 +215,6 @@ PAM を使ったセキュリティ グループ ベースのアクセス制御�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

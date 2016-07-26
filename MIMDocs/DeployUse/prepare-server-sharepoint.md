@@ -1,10 +1,10 @@
 ---
-title: "ID 管理サーバー&#58; SharePoint のセットアップ |Microsoft Identity Manager"
+title: "SharePoint の構成 | Microsoft Identity Manager"
 description: "SharePoint Foundation をインストールして、MIM ポータル ページをホストできるように構成します。"
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: b144f28b41eb8e02afa44495c0019ccc81022005
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 
 
 ---
@@ -92,7 +92,7 @@ ms.openlocfilehash: b144f28b41eb8e02afa44495c0019ccc81022005
     -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
-    > [!NOTE] 
+    > [!NOTE]
     > Windows クラシック認証方法が使用されることを警告するメッセージが表示されます。また、最後のコマンドが返されるまで数分かかる場合があります。 完了すると、新しいポータルの URL を示す出力が返されます。 後で参照するために**SharePoint 2013 管理シェル** ウィンドウを開いたままにしておきます。
 
 2. SharePoint 2013 管理シェルを起動し、次の PowerShell スクリプトを実行して、Web アプリケーションに関連付られた**SharePoint サイト コレクション**を作成します。
@@ -107,7 +107,7 @@ ms.openlocfilehash: b144f28b41eb8e02afa44495c0019ccc81022005
   $s.CompatibilityLevel
   ```
 
-  > [!NOTE] 
+  > [!NOTE]
   > *CompatibilityLevel* 変数の結果が「14」であることを確認します。 結果が「15」の場合は、2010 エクスペリエンス バージョンに対応するサイト コレクションが作成されていないので、サイト コレクションを削除して作成し直します。
 
 3. **SharePoint サーバー側 Viewstate**、および SharePoint タスク「正常性解析ジョブ (時間単位で、Microsoft SharePoint Foundation Timer、すべてのサーバーが対象)」を無効にします。そのためには、**SharePoint 2013 管理シェル**内の次の PowerShell コマンドを実行します。
@@ -137,6 +137,6 @@ ms.openlocfilehash: b144f28b41eb8e02afa44495c0019ccc81022005
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

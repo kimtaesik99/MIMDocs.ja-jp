@@ -1,10 +1,10 @@
 ---
-title: "Active Directory ドメイン サービスの Privileged Access Management | Microsoft Identity Manager"
-description: 
+title: "ADDS の PAM の概要 | Microsoft Identity Manager"
+description: "Privileged Access Management について説明すると共に、Active Directory 環境を管理および保護する場合に、これがどのように役に立つのかを説明します。"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/13/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 959c92f2e98fe712703ca23d3e38cdec6a8b85dc
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: bbc5c6760bc035d57f9d76d102246abbfe298e8b
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 959c92f2e98fe712703ca23d3e38cdec6a8b85dc
 # Active Directory ドメイン サービスの Privileged Access Management
 Privileged Access Management (PAM) は、Microsoft Identity Manager (MIM) と Windows Server 2012 R2 および Windows Server Technical Preview に基づくソリューションです。 既存の Active Directory 環境内で特権アクセスを制限するのに役立ちます。
 
-> [!NOTE] 
+> [!NOTE]
 > PAM は、Microsoft Identity Manager (MIM) を使用して実装される [Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM) のインスタンスです。
 
 Privileged Access Management は、次の 2 つの目標を実現します。
@@ -95,6 +95,6 @@ PAM には次のような利点があります。
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

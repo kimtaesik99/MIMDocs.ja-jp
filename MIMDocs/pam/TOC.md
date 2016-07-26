@@ -11,7 +11,7 @@
 ### [ロールを定義する](defining-roles-for-pam.md)
 ### [高可用性と災害復旧](high-availability-disaster-recovery-considerations-bastion-environment.md)
 ### [ハードウェアとソフトウェアの要件](hardware-software-requirements.md)
-## [Privileged Access Management の MIM を展開する](configuring-mim-environment-for-pam.md)
+## [Privileged Access Management の MIM を構成する](configuring-mim-environment-for-pam.md)
 ### [手順 1 - CORP ドメイン](step-1-prepare-corp-domain.md)
 ### [手順 2 - PRIV ドメイン コントローラー](step-2-prepare-priv-domain-controller.md)
 ### [手順 3 - PAM サーバー](step-3-prepare-pam-server.md)
@@ -23,6 +23,6 @@
 # [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 
