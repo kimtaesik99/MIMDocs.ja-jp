@@ -1,12 +1,12 @@
 ---
 asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
-title: "Microsoft Identity Manager のドキュメント"
-description: "Microsoft Intune のテクニカル ドキュメント - モバイル デバイスとアプリケーションの管理"
-keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
-author: msstevenpo
-manager: stevenpo
-ms.date: 04/28/2016
+title: "Identity Manager のドキュメント | Microsoft ドキュメント"
+description: "Microsoft Identity Manager の技術ドキュメント - オンプレミスの ID およびアクセス管理"
+keywords: "Identity Manager のドキュメント, Microsoft Identity Manager, MIM"
+author: kgremban
+manager: femila
+ms.date: 07/21/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -14,16 +14,16 @@ ms.technology: security
 ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 translationtype: Human Translation
-ms.sourcegitcommit: 0bbdacbfc5b912221257a9425db13804d6dd6a25
-ms.openlocfilehash: f589140e0feac52474256e7ab29b9d3a7a36c5ec
+ms.sourcegitcommit: 455a24d3008a2ef54e1229100e7150a1090c9b2e
+ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
 
 
 ---
-# Microsoft ID 管理のドキュメント
+# Identity Management のドキュメント
 <article id="main">
     <section id="hero-content">
-      <h1>Microsoft Identity Manager のドキュメント</h1>
-      <h2>Microsoft Identity Manager (MIM) は、ID の同期や ID の盗難からの保護など、ID とアクセスのオンプレミスの管理機能を提供します。</h2>
+      <h1>Identity Manager のドキュメント</h1>
+      <h2>Microsoft Identity Manager でオンプレミスの ID 管理をセットアップする方法について説明します。 ID の同期や ID の盗難防止などを構成する方法を説明します。</h2>
       <h3>MIM の使用は初めてですか? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">製品ページをご覧ください &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
@@ -44,6 +44,7 @@ ms.openlocfilehash: f589140e0feac52474256e7ab29b9d3a7a36c5ec
         </ul>
         <ul class="column column-half">
           <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">新しいサーバーに MIM ソフトウェアを展開する</a></li>
+          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Privileged Access Management についての説明</a></li>
         </ul>
       </div>
     </section>
@@ -71,7 +72,7 @@ ms.openlocfilehash: f589140e0feac52474256e7ab29b9d3a7a36c5ec
                 </li>
                 <li class="column-third">
                   <a href="/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure">
-                    <h3>Azure の ハイブリッド レポート</h3>
+                    <h3>Azure のハイブリッド レポート</h3>
                     <p>オンプレミスおよびクラウド内のイベントの 1 つのレポートを作成します。</p>
                   </a>
                 </li>
@@ -144,6 +145,6 @@ ms.openlocfilehash: f589140e0feac52474256e7ab29b9d3a7a36c5ec
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
