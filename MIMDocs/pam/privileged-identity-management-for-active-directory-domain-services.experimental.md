@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: e695dd47e4bd31c4004c7d0d9ec76498d52fb56a
-ms.openlocfilehash: b46c2b50873023d504fb7b440a1d4e40e8fa3ac7
+ms.openlocfilehash: 82c97351f66558c3270821f786560ef4b3e0c473
 
 ---
 
 # Active Directory ドメイン サービスの Privileged Access Management
-Privileged Access Management (PAM) は、組織の既存の Active Directory 環境内で特権アクセスを制限するのに役立つソリューションです。
+Privileged Access Management (PAM) は、組織の既存の Active Directory 環境内で特権アクセスを制限するのに役立ちます。
 
-Privileged Access Management は、次の 2 つの目標を実現します。
+![PAM の手順: 準備、保護、運用、監視 - 図](media/MIM_PIM_SetupProcess.png)
+
+環境の準備、保護、運用、監視というサイクルに焦点を当てて、Privileged Access Management は次の 2 つの目標を達成します。
 
 - 悪意のある攻撃の影響を受けていないと認識されている別の要塞環境を維持することにより、侵害された Active Directory 環境の制御を再び確立します。  
 - 特権アカウントの使用を分離して、これらの資格情報が盗まれるリスクを低減します。
@@ -43,7 +44,6 @@ PAM は Just-in-Time 管理の原則に基づいており、[Just Enough Adminis
 
 PAM のセットアップと操作は 4 つの手順で行います。
 
-![PAM の手順: 準備、保護、動作、監視 - 図](media/MIM_PIM_SetupProcess.png)
 
 1.  **準備**:既存のフォレスト内で重要な特権を持つグループを識別します。 要塞フォレスト内のメンバーを含めずにこれらのグループを再作成します。
 

@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
+ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
+ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
 
 
 ---
@@ -93,7 +93,7 @@ PAM のサンプル ポータルを使用して特権アクセスを要求する
 8. 左側のタブの **[アクティブ化]**をクリックします。 **PAM ロール** を選択し、**[アクティブ化]**をクリックします。
 
 > [!Note]
-> この環境では、PAM REST API を使用してアクティブ化するアプリケーションを開発する方法についても学習できます (「[Privileged Access Management REST API リファレンス](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md)」をご参照ください)。
+> この環境では、PAM REST API を使用するアプリケーションを開発する方法も学習することができます (「[Privileged Access Management REST API リファレンス](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference)」をご参照ください)。
 
 ## [概要]
 このチュートリアルの手順を完了すると、ユーザー特権を限られた時間だけ昇格し、別の特権アカウントで保護されたリソースへのアクセスをユーザーに許可する、Privileged Access Managment のシナリオを実際に行ったことになります。 昇格セッションの有効期限が切れると、その特権アカウントでは保護されたリソースにアクセスできなくなります。 どのセキュリティ グループが特権ロールを持つかについての決定は、PAM 管理者が調整します。 アクセス権が Privileged Access Managment システムに移行されると、元のユーザー アカウントを使用してアクセス可能だったものが、要求によって使用可能になる特別な特権アカウントでサインインしないとアクセスできなくなります。 その結果、高い特権を持つグループのグループ メンバーが、限られた時間だけ有効になります。
@@ -103,6 +103,6 @@ PAM のサンプル ポータルを使用して特権アクセスを要求する
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
