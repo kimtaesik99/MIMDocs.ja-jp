@@ -4,7 +4,7 @@ description: "MIM サービスおよび Microsoft Identity Manager 2016 用の�
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c18ea7b0390ca11c213ed66bfd1476454cf86951
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: c18ea7b0390ca11c213ed66bfd1476454cf86951
 > このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
 > - ドメイン コントローラー名 - **mimservername**
 > - ドメイン名 - **contoso**
-> - パスワード- **Pass@word1**
+> - パスワード - **Pass@word1**
 > - サービス アカウント名 - **MIMService**
 
 最後の手順で MIM インストール パッケージをセットアップしなかった場合は、Microsoft Identity Manager 2016 コンポーネントをインストールしてから次の手順に進みます。
@@ -93,7 +93,7 @@ ms.openlocfilehash: c18ea7b0390ca11c213ed66bfd1476454cf86951
 
 1.  SSPR 登録のサービス アカウント名を *Contoso\MIMSSPRService* に、そのパスワードを *Pass@word1* に設定します。
 
-2.  MIM パスワード登録のホスト名として *CORPIDM* を指定し、ポートを **8080** に設定します。 **[ファイアウォールでポートを開く]** オプションを有効にします。
+2.  MIM パスワード リセット ポータルのホスト名として *CORPIDM* を指定し、ポートを **8088** に設定します。 **[ファイアウォールでポートを開く]** オプションを有効にします。
 
     ![IIS で使用される構成情報を入力する画像](media/MIM-Install15.png)
 
@@ -152,6 +152,6 @@ ms.openlocfilehash: c18ea7b0390ca11c213ed66bfd1476454cf86951
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 

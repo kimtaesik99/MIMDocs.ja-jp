@@ -4,7 +4,7 @@ description: "同期サービスをインストールおよび構成して、MIM
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
 
 
 ---
@@ -53,7 +53,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
     ![カスタム セットアップの画像](media/MIM-Install2.png)
 
-6.  同期データベースの構成画面では、次のように選択します。
+6.  同期サービス データベースの構成画面で、次のように選択します。
 
     1.  SQL Server の配置場所: **このコンピューター**。
 
@@ -71,7 +71,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
     ![サービス アカウントの画像](media/MIM-Install4.png)
 
-8.  MIM 同期インストーラーに、関連するセキュリティ グループを指定します。
+8.  MIM 同期サービスに関連するセキュリティ グループを次のとおりに指定します。
 
     1. 管理者 = *contoso\MIMSyncAdmins*
 
@@ -87,11 +87,11 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
 9. [セキュリティ設定] 画面で、**[受信 RPC 通信用のファイアウォール ルールを有効にする]** をオンにし、**[次へ]** をクリックします。
 
-10. **[インストール]** をクリックして、MIM 同期のインストールを開始します。
+10. **[インストール]** をクリックして MIM 同期サービスのインストールを開始します。
 
     1. MIM 同期サービス アカウントに関する警告が表示される場合があります。 **[OK]**をクリックします。
 
-    2. MIM 同期がインストールされます。
+    2. MIM 同期サービスがインストールされます。
 
     3. 暗号化キーのバックアップ作成に関する注意が表示されます。**[OK]** をクリックし、暗号化キーのバックアップを格納するフォルダーを選択します。
 
@@ -107,6 +107,6 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
