@@ -4,7 +4,7 @@ description: "MIM 2016 の各コンポーネントと互換性のある製品お
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
+ms.sourcegitcommit: b4527c61dcdbef21c46414e190e0f0d0852e3aa3
+ms.openlocfilehash: d3995474ac91f109052c004ec9b84ac66efafbc7
 
 
 ---
@@ -49,7 +49,7 @@ ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
 || PAM PowerShell Requestor コマンドレット (省略可能) | Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (サーバーと CA の統合) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || 証明機関 | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-|| MIM CM データベース | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
+|| MIM CM データベース | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 |
 | **MIM Certificate Management** (アプリケーション) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **MIM Certificate Management** (クライアントと Bulk クライアント) | Windows | Windows 7 |
 | **MIM BHOLD スイート** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
@@ -59,6 +59,6 @@ ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 
