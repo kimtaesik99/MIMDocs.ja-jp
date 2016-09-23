@@ -4,7 +4,7 @@ description: "Microsoft Identity Manager 2016 を展開するためのすべて�
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 406269e3c8dc3137c2dcd625c50c6cf4eb126d86
-ms.openlocfilehash: 74d7bfd1e0c89c880b2b6a06756f84ad63d3a8cc
+ms.sourcegitcommit: 40dbec941eb2f0b1a01de0f47d44e01717aaca21
+ms.openlocfilehash: 77dae279f9078c55abf342a8956aaf77c62773d5
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 74d7bfd1e0c89c880b2b6a06756f84ad63d3a8cc
 > [!NOTE]
 > このセクションで説明する展開トポロジは、MIM 初心者の学習のみを目的としています。  運用展開のトポロジの詳細については、[容量計画ガイド](/microsoft-identity-manager/plan-design/capacity-planning-guide)を参照してください。  運用規模または運用用途の場合、MIM を展開する前にこのドキュメントを確認することをお勧めします。
 
-Privileged Access Management のシナリオは、専用拠点のフォレスト環境が必要な点が、他の MIM シナリオとは異なる展開方法です。  Privileged Identity Management 用に MIM を展開する方法については、「[Privileged Access Management をお使いになる前に](/microsoft-identity-manager/pam/privileged-access-management-get-started)」をご覧ください。
+Privileged Access Management のシナリオは、専用拠点のフォレスト環境が必要な点が、他の MIM シナリオとは異なる展開方法です。  Privileged Identity Management 用に MIM を展開する方法については、「[Privileged Access Management の MIM 環境を構成する](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam)」をご覧ください。
 
 MIM 2016 を展開するためのプロセスは、その前身である FIM 2010 R2 のプロセスによく似ています。 FIM のドキュメントを参照する必要がある場合は、「[Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310)」(Forefront Identity Manager 2010 R2 展開ガイド) をご覧ください。
 
@@ -48,6 +48,6 @@ MIM は Active Directory (AD) と連動するため、次の手順に従って A
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 
