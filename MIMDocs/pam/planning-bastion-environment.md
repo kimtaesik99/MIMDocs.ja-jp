@@ -4,7 +4,7 @@ description:
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
+ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
+ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
 
 
 ---
@@ -43,7 +43,7 @@ ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
 
 実稼働 *CORP* フォレストは管理用 *PRIV* フォレストを信頼する必要がありますが、管理用フォレストが実稼働フォレストを信頼する必要はありません。 これにはドメイン信頼またはフォレスト信頼があります。 管理フォレストのドメインは管理対象のドメインとフォレストを信頼しなくても Active Directory を管理できます。ただし、アプリケーションを追加する場合、2 方向の信頼関係、セキュリティ検証、試験が必要になることがあります。
 
-管理フォレストのアカウントが適切な運用ホストのみを使うように強制するには、認証の選択を使う必要があります。 ドメイン コントローラーを維持し、Active Directory の権限を委任する場合は通常、管理フォレストの指定の層 0 管理アカウントにドメイン コントローラーの「ログオン許可」権利を与える必要があります。 詳細については、「[Configuring Selective Authentication Settings (認証の選択の構成)](http://technet.microsoft.com/library/cc755844.aspx)」を参照してください。
+管理フォレストのアカウントが適切な運用ホストのみを使うように強制するには、認証の選択を使う必要があります。 ドメイン コントローラーを維持し、Active Directory の権限を委任する場合は通常、管理フォレストの指定の層 0 管理アカウントにドメイン コントローラーの「ログオン許可」権利を与える必要があります。 詳細については、「[Configuring Selective Authentication Settings (認証の選択設定の構成)](http://technet.microsoft.com/library/cc816580.aspx)」をご覧ください。
 
 ## 論理的な分離の維持
 
@@ -149,7 +149,7 @@ MIM では、PowerShell コマンドレットを使って、要塞環境にお�
 
 既存の Active Directory トポロジを変更する場合、 `Test-PAMTrust`、 `Test-PAMDomainConfiguration`、 `Remove-PAMTrust` 、および `Remove-PAMDomainConfiguration` コマンドレットを使用して、信頼関係を更新できます。
 
-### 各フォレストの信頼の確立
+## 各フォレストの信頼の確立
 
 `New-PAMTrust` コマンドレットを既存フォレストごとに 1 回実行する必要があります。 これは管理ドメイン内の MIM サービスのコンピューターで呼び出されます。 このコマンドのパラメーターは、既存フォレストの最上位ドメインのドメイン名とそのドメインの管理者の資格情報です。
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 信頼を確立したら、次のセクションで説明するように、要塞環境から管理できるように各ドメインを構成します。
 
-### 各ドメインの管理の有効化
+## 各ドメインの管理の有効化
 
 既存ドメインの管理を有効にするには 7 つの要件があります。
 
-#### 1.ローカル ドメインのセキュリティ グループ
+### 1.ローカル ドメインのセキュリティ グループ
 
 既存ドメインにグループを用意する必要があります。その名前は NetBIOS ドメイン名の後ろにドル記号を 3 つ付けて作ります。たとえば、「*CONTOSO$$$*」のようになります。 グループの範囲は「*ドメイン ローカル*」に、グループの種類は「*セキュリティ*」にする必要があります。 この措置は、このドメインのグループと同じセキュリティ ID を持つグループを専用管理フォレストで作成するために必要です。 このグループを作成するには、既存ドメインの管理者が既存ドメインに参加しているワークステーションで次の PowerShell コマンドを実行します。
 
@@ -171,7 +171,7 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-#### 2.成功と失敗の監査
+### 2.成功と失敗の監査
 
 ドメイン コントローラーに監査のためのグループ ポリシーを設定する場合、監査アカウント管理と監査ディレクトリ サービス アクセスで成功と失敗の両方を監査する必要があります。 これはグループ ポリシー管理コンソールで実行できます。このコンソールは、既存ドメインの管理者によって、既存ドメインに参加しているワークステーション上で実行されます。
 
@@ -201,7 +201,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 「コンピューター ポリシーの更新が正常に完了しました。」というメッセージが 数分後に表示されます。
 
-#### 3.ローカル セキュリティ機関への接続を許可する
+### 3.ローカル セキュリティ機関への接続を許可する
 
 ドメイン コントローラーで、ローカル セキュリティ機関 (LSA) のために要塞環境からの TCP/IP 接続による RPC を許可する必要があります。 以前のバージョンの Windows Server の場合、LSA の TCP/IP のサポートをレジストリで有効にする必要があります。
 
@@ -209,7 +209,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-#### 4.PAM ドメイン構成の作成
+### 4.PAM ドメイン構成の作成
 
 `New-PAMDomainConfiguration` コマンドレットを管理ドメイン内の MIM サービスのコンピューターで実行する必要があります。 このコマンドのパラメーターは、既存ドメインのドメイン名とそのドメインの管理者の資格情報です。
 
@@ -217,7 +217,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-#### 5.アカウントへの読み取りアクセス許可の付与
+### 5.アカウントへの読み取りアクセス許可の付与
 
 ロール ( `New-PAMUser` 、および `New-PAMGroup` コマンドレットを使用する管理者) の確立に使用される要塞フォレストのアカウントと MIM モニター サービスで使用されるアカウントには、そのドメインの読み取りアクセス許可が必要です。
 
@@ -239,11 +239,11 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 18. [Active Directory ユーザーとコンピューター] を閉じます。
 
-#### 6.非常事態用アカウント
+### 6.非常事態用アカウント
 
 特権アクセス管理プロジェクトの目的が、ドメイン管理者特権がドメインに永久的に割り当てられるアカウントの数を減らすことであれば、後で信頼関係に問題が発生した場合に備え、ドメインに*非常事態用*アカウントを用意する必要があります。 運用フォレストに緊急アクセスするためのアカウントをドメインごとに配置する必要があります。ログインできるのはドメイン コントローラーに限定します。 サイトを複数所有する組織の場合、冗長性のために追加アカウントが必要なことがあります。
 
-#### 7.要塞環境でのアクセス許可の更新
+### 7.要塞環境でのアクセス許可の更新
 
 最後に、そのドメインのシステム コンテナーで *AdminSDHolder* オブジェクトのアクセス許可を確認します。 *AdminSDHolder* オブジェクトにアクセス制御リスト (ACL) があります。これは組み込まれている特権 Active Directory グループのメンバーであるセキュリティ プリンシパルのアクセス許可を制御するために使用されます。 既定のアクセス許可を変更した結果、ドメインで管理特権を持つユーザーが影響を受けるかどうかに注意してください。アカウントが要塞環境にあるユーザーにはこのようなアクセス許可は適用されません。
 
@@ -253,6 +253,6 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 
