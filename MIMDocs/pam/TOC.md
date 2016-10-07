@@ -24,7 +24,7 @@
 ### [手順 1. Priv ドメインの構成](sp1-step1-configuring-priv-domain.md)
 ### [手順 2. CORP ドメインの構成](sp1-step2-configuring-corp-domain.md)
 ### [手順 3. SQL の構成](sp1-step3-installing-configuring-sql.md)
-### [手順 4. SharePoint の構成](sp1-step4-configuring-sharepoiint.md)
+### [手順 4. SharePoint の構成](sp1-step4-configuring-sharepoint.md)
 ### [手順 5. PAM のインストール/構成](sp1-step5-configuring-pam.md)
 ### [手順 6. PAM 信頼のセットアップ](sp1-step6-setup-pam-trust.md)
 ### [手順 7. セットアップ SID 履歴/SID フィルター](sp1-step7-setup-sidhistory-sidfiltering.md)

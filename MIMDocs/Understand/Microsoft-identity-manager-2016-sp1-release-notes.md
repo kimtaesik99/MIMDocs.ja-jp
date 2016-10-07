@@ -69,7 +69,8 @@ MIM SP1 の運用環境への展開中に問題が発生した場合は、Micros
 
 Microsoft Identity Manager 2016 Service Pack 1 にアップグレードするお客様は、以下で説明されている、展開に適用可能なすべてのサービスについてのガイダンスに従ってください。
 
->[!Note] Forefront Identity Manager 2010 R2 SP1 またはそれ以前のバージョンを実行しているお客様は、2015 年 8 月にリリースされた Microsoft Identity Manager 2016 に環境をアップグレードしてから、次の手順に従ってください。
+>[!Note]
+>Forefront Identity Manager 2010 R2 SP1 またはそれ以前のバージョンを実行しているお客様は、2015 年 8 月にリリースされた Microsoft Identity Manager 2016 に環境をアップグレードしてから、次の手順に従ってください。
 
 始める前に
 
