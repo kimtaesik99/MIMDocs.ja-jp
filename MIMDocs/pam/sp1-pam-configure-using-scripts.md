@@ -4,7 +4,7 @@ description: "スクリプトによって、Privileged Identity Manager で管�
 keywords: 
 author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 96c734ade75f5c206858387cf45106761bc0a881
-ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
+ms.sourcegitcommit: a50528778379afac14ff9abd70c7b8d56df8f5bf
+ms.openlocfilehash: 971bd5f166edbb2c58cbfe7c9f787c76cb8c7f92
 
 
 ---
@@ -66,7 +66,11 @@ ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
 |  CORPClient | <PRIV>\PRIV.pamRequestor ユーザーおよび PRIVOnly の場合: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1、Test-PAMValidationScenarioNoApprovalRequest  |
 
 
+>[!div class="step-by-step"]
+[開始 »](sp1-step1-configuring-priv-domain.md)
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Oct16_HO1-->
 
 
