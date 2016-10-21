@@ -4,7 +4,7 @@ description: "スクリプトによって、Privileged Identity Manager で管�
 keywords: 
 author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,13 +13,13 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
+ms.sourcegitcommit: bc56b57a06592527bab13aad879ca13466e968b3
+ms.openlocfilehash: 52226bfa5742e39d834f80dac69317e10b6259c7
 
 
 ---
 
-# PAM 信頼のセットアップ
+# 手順 6. PAM 信頼のセットアップ
 
 **PRIV のみの環境に必須ではありません。** MIMAdmin アカウントを使用して PAMServer にログインします。
 
@@ -31,8 +31,12 @@ ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
 
   要求された場合は、CORP 管理者アカウントの資格情報を入力します。 資格情報を入力した後、信頼関係が確立され、構成が完了します。
 
+>[!div class="step-by-step"]
+[« 手順 5](sp1-step5-configuring-pam.md)
+[手順 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Oct16_HO1-->
 
 

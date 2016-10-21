@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7c5266f3d1c51e933855031f4128cbcb967d6e2
-ms.openlocfilehash: 43a176ed2f1375eb98851064c460515ec09de132
+ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
+ms.openlocfilehash: 82500ff42e24f5b155bfdd336566a2cd3d87fe7e
 
 
 ---
@@ -30,10 +30,13 @@ ms.openlocfilehash: 43a176ed2f1375eb98851064c460515ec09de132
 4. この環境には、次の 3 つ専用 (物理または仮想) コンピューターがあり、別々に CORPDC、PRIVDC、PAMSERVER を実行しています。
 5. 検証オプション用に、この手順を実行する専用のクライアント コンピューターが存在するものとします。
 
->[!NOTE] スクリプトの実行に関する問題が発生した場合は、ログの確認が必要になる場合があります。 すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に電子メールで mim2016@microsoft.com に送信してください。
+>[!NOTE]
+>スクリプトの実行に関する問題が発生した場合は、ログの確認が必要になる場合があります。 すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に電子メールで mim2016@microsoft.com に送信してください。
+
+PAM 展開スクリプトを使用する準備ができたら、 「[スクリプトを使用した PAM の構成](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts)」に進んでください。
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
