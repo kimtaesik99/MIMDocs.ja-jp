@@ -13,13 +13,13 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 4c5cfa92f3111a6d298f586ba547a1eca2502853
+ms.sourcegitcommit: bc56b57a06592527bab13aad879ca13466e968b3
+ms.openlocfilehash: 4ad5d755de100ad598c6cebd209296edd361e8c5
 
 
 ---
 
-# セットアップ SID 履歴/SID フィルター
+# 手順 7. SID 履歴/SID フィルターのセットアップ
 
 **PRIV のみの環境に必須ではありません。** MIMAdmin アカウントを使用して PAMServer にログインします。
 
@@ -35,8 +35,12 @@ SID フィルターの場合: <br/></br>
 SID 履歴の場合: </br></br>
 "この信頼に対して SID 履歴を有効にしています。" または "SID 履歴はこの信頼に対して既に有効になっています。"
 
+>[!div class="step-by-step"]
+[« 手順 6](sp1-step6-setup-pam-trust.md)
+[手順 8 »](sp1-step8-pam-deployment-verification.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Oct16_HO1-->
 
 

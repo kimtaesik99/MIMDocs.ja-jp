@@ -13,12 +13,12 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 482cfbbac3ea668ca4bf9d8a4a45469e61634f98
+ms.sourcegitcommit: bc56b57a06592527bab13aad879ca13466e968b3
+ms.openlocfilehash: cdd859ceb13d187af3303235c0fe1e496f2bfb6e
 
 
 ---
-# 補遺:
+# PAM 展開スクリプトの補遺:
 
 ## 補遺 1 PRIV ドメインのセットアップ
 
@@ -70,10 +70,10 @@ PAM を使い始めたばかりでテスト環境をセットアップする場�
 
 ## 補遺 4 問題が発生した場合
 
-すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に電子メールで [mim2016@microsoft.com](mim2016@microsoft.com) に送信してください。
+すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に電子メールで [mim2016@microsoft.com](mailto:mim2016@microsoft.com) に送信してください。
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
