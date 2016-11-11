@@ -3,23 +3,27 @@ title: "手順 6. PAM 信頼のセットアップ"
 description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc56b57a06592527bab13aad879ca13466e968b3
-ms.openlocfilehash: 52226bfa5742e39d834f80dac69317e10b6259c7
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 5bcf4f4ef201236746ec1bf75c1c8900841a6c79
 
 
 ---
 
-# 手順 6. PAM 信頼のセットアップ
+# <a name="step-6-set-up-the-pam-trust"></a>手順 6. PAM 信頼のセットアップ
+
+>[!div class="step-by-step"]
+[« 手順 5](sp1-step5-configuring-pam.md)
+[手順 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 **PRIV のみの環境に必須ではありません。** MIMAdmin アカウントを使用して PAMServer にログインします。
 
@@ -37,6 +41,6 @@ ms.openlocfilehash: 52226bfa5742e39d834f80dac69317e10b6259c7
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
