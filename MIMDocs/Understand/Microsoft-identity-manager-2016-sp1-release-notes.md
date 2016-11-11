@@ -6,7 +6,6 @@ author: barclayn
 manager: mbaldwin
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
@@ -18,7 +17,7 @@ ms.openlocfilehash: b791b18fa3775295e9c199086aa11a0d6c6a55e7
 
 
 ---
-# Microsoft Identity Manager 2016 Service Pack 1 の新機能 #
+# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Microsoft Identity Manager 2016 Service Pack 1 の新機能 #
 
 Microsoft Identity Manager の通常の提供および更新サイクルの一環として、[Microsoft Identity Manager (MIM) 2016 Service Pack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212) を発表いたします。 このドキュメントでは、このリリースに含まれる更新プログラム、拡張機能、機能、および変更について概要を示します。
 
@@ -28,9 +27,9 @@ MIM SP1 の運用環境への展開中に問題が発生した場合は、Micros
 
 
 
-## この Service Pack での更新内容 #
+## <a name="updates-in-this-service-pack"></a>この Service Pack での更新内容 #
 
-### MIM
+### <a name="mim"></a>MIM
 
 - **MIM ポータルにおけるブラウザー間のエンド ユーザーのセルフ サービスの互換性:** この Service Pack より、ほとんどの主要なブラウザーをサポートします。 ユーザーは、Edge、Chrome、および Safari から、セルフ サービス グループとプロファイルを管理するために MIM ポータルにアクセスし、操作できるようになりました。
 
@@ -38,7 +37,7 @@ MIM SP1 の運用環境への展開中に問題が発生した場合は、Micros
 
 - **アップロード時のイメージ ファイル形式の検証:** イメージをポータルにアップロードする際に、MIM によってイメージ ファイルの形式を検証できるようになりました。
 
-### Privileged Access Management (PAM)
+### <a name="privileged-access-managementpam"></a>Privileged Access Management (PAM)
 
 - **Windows Server 2016 の機能レベルの PAM "PRIV" (要塞) フォレストのサポート:** MIM PAM サービスは、Windows Server 2016 の Active Directory Domain Services フォレストの機能レベルで実行されているドメイン コント ローラーを使用した環境で構成できます。 構成すると、ユーザーの Kerberos チケットは、ロールのアクティブ化の残りの時間に期間が限定されます。
 
@@ -55,17 +54,17 @@ MIM SP1 の運用環境への展開中に問題が発生した場合は、Micros
     これらのコマンドレットは、展開スクリプトの一部として自動的に実行されます。
 
 
-## プラットフォームのサポート
+## <a name="platform-support"></a>プラットフォームのサポート
 更新されたプラットフォームのサポート情報は、ドキュメント「[MIM 2016 でサポートされるプラットフォーム](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)」に記載されています。  この Service Pack でサポートされている新しいプラットフォームには、SQL Server 2016 や SharePoint 2016 もあります。
 
-## MIM 2016 の一般公開からこのリリースで修正された問題
+## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>MIM 2016 の一般公開からこのリリースで修正された問題
 
-### PAM
+### <a name="pam"></a>PAM
 - New-PAMGroup では、PRIV フォレスト内のドメイン ローカル グループの MIM オブジェクトが作成されない
 - New-PAMDomainConfiguration が "netdom" エラー メッセージで失敗する
 - PAM 監視サービスでは、PRIV フォレスト内のグループに対する警告を記録する
 
-## Service Pack 1 にアップグレードする方法
+## <a name="how-to-upgrade-to-service-pack-1"></a>Service Pack 1 にアップグレードする方法
 
 Microsoft Identity Manager 2016 Service Pack 1 にアップグレードするお客様は、以下で説明されている、展開に適用可能なすべてのサービスについてのガイダンスに従ってください。
 
