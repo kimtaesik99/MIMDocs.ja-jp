@@ -3,10 +3,10 @@ title: "MIM2016 SP1 PAM 展開スクリプト"
 description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
 ms.date: 09/26/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
@@ -19,7 +19,7 @@ ms.openlocfilehash: 82500ff42e24f5b155bfdd336566a2cd3d87fe7e
 
 ---
 
-# MIM2016 SP1 PAM 展開スクリプト
+# <a name="mim2016-sp1-pam-deployment-scripts"></a>MIM2016 SP1 PAM 展開スクリプト
 
 この Service Pack には、PAM の展開を容易にする一連の展開スクリプトが導入されています。 これらのスクリプトは、ダウンロード センターで入手できます。 スクリプトを使用する前に、次の前提条件が使用中の環境に当てはまることを確認してください。
 

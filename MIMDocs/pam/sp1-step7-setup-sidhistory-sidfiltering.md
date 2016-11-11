@@ -3,23 +3,27 @@ title: "手順 7. セットアップ SID 履歴/SID フィルター"
 description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc56b57a06592527bab13aad879ca13466e968b3
-ms.openlocfilehash: 4ad5d755de100ad598c6cebd209296edd361e8c5
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: a98d83a22c61ef534fcc02725e4cd500be10cc8a
 
 
 ---
 
-# 手順 7. SID 履歴/SID フィルターのセットアップ
+# <a name="step-7-set-up-sid-historysid-filtering"></a>手順 7. SID 履歴/SID フィルターのセットアップ
+
+>[!div class="step-by-step"]
+[« 手順 6](sp1-step6-setup-pam-trust.md)
+[手順 8 »](sp1-step8-pam-deployment-verification.md)
 
 **PRIV のみの環境に必須ではありません。** MIMAdmin アカウントを使用して PAMServer にログインします。
 
@@ -41,6 +45,6 @@ SID 履歴の場合: </br></br>
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
