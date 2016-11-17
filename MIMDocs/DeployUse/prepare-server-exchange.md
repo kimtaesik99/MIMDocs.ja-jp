@@ -1,31 +1,31 @@
 ---
-title: "Exchange サーバーの構成 | Microsoft Identity Manager"
+title: "Exchange サーバーの構成 | Microsoft Docs"
 description: "オプションの手順として、Exchange サーバーを展開して、MIM 2016 でメールの送信とメールボックスの作成ができるようにします。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 77e790f57f9060310a99f8bd3f2a446323a9fafc
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: db3e93de5e6ac907271e379b24b4b6b58641ca32
 
 
 ---
 
-# ID 管理サーバー: Exchange のセットアップ
+# <a name="set-up-an-identity-management-server-exchange"></a>ID 管理サーバー: Exchange のセットアップ
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
-[MIM 同期サービス»](install-mim-sync.md)
+[MIM 同期サービス »](install-mim-sync.md)
 
-## Microsoft Exchange Server を展開する
+## <a name="deploy-microsoft-exchange-server"></a>Microsoft Exchange Server を展開する
 電子メールを送受信するように MIM を構成する場合、またはメールボックスをプロビジョニングする場合は、Exchange が環境に存在する必要があります。 Exchange をまだ展開していない場合は、評価のために試用版をインストールできます。
 
 1. Microsoft Office 2010 Filter Packs - Version 2.0 と Microsoft Office 2010 Filter Packs - Version 2.0 SP1 をダウンロードしてインストールします
@@ -40,10 +40,10 @@ ms.openlocfilehash: 77e790f57f9060310a99f8bd3f2a446323a9fafc
 
 >[!div class="step-by-step"]  
 [« SharePoint](prepare-server-sharepoint.md)
-[MIM 同期サービス»](install-mim-sync.md)
+[MIM 同期サービス »](install-mim-sync.md)
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

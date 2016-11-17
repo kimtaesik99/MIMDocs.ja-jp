@@ -1,34 +1,34 @@
 ---
-title: "PAM の展開、手順 5 – フォレストのリンク | Microsoft Identity Manager"
+title: "PAM の展開、手順 5 – フォレスト リンク | Microsoft Docs"
 description: "PRIV 内の特権を持つユーザーが CORP 内のリソースに引き続きアクセスできるように、PRIV フォレストと CORP フォレストとの間に信頼関係を確立します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 16208efe08c5a2c0f63ee121c64c45cad5a73909
 
 
 ---
 
-# 手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
+# <a name="step-5-establish-trust-between-priv-and-corp-forests"></a>手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
 
 >[!div class="step-by-step"]
-[« 手順 4](step-4-install-mim-components-on-pam-server.md)
+[«手順 4](step-4-install-mim-components-on-pam-server.md)
 [手順 6 »](step-6-transition-group-to-pam.md)
 
 
 Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメイン コントローラーを信頼関係でバインドする必要があります。 これにより、PRIV ドメインのユーザーが CORP ドメインのリソースにアクセスできるようになります。
 
-## 各ドメイン コントローラーを対応するドメイン コントローラーに接続する
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>各ドメイン コントローラーを対応するドメイン コントローラーに接続する
 
 信頼関係を確立する前に、各ドメイン コントローラーで、相手側のドメイン コントローラーと DNS サーバーの IP アドレスに基づいて、相手側の DNS 名解決を構成する必要があります。
 
@@ -46,7 +46,7 @@ Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメ�
 
     ![priv キーのファイル構造 - スクリーンショット](./media/PAM_GS_DNS_Manager.png)
 
-## PAMSRV で信頼関係を確立する
+## <a name="establish-trust-on-pamsrv"></a>PAMSRV で信頼関係を確立する
 
 PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確立し、CORP ドメイン コントローラーが PRIV フォレストを信頼するようにします。
 
@@ -68,7 +68,7 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## フォレストに Active Directory への読み取りアクセス権を付与する
+## <a name="give-forests-read-access-to-active-directory"></a>フォレストに Active Directory への読み取りアクセス権を付与する
 
 既存のフォレストごとに、PRIV 管理者と監視サービスによる AD に対する読み取りアクセス権を有効にします。
 
@@ -91,7 +91,7 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 
     また、出力には "**SID フィルタはこの信頼に対して有効になっていません**" という内容も示されるはずです。 詳細については、「[SID フィルター検疫を無効にする](http://technet.microsoft.com/library/cc772816.aspx)」をご参照ください。
 
-## 監視サービスとコンポーネント サービスを開始する
+## <a name="start-the-monitoring-and-component-services"></a>監視サービスとコンポーネント サービスを開始する
 
 1.  PRIV ドメイン管理者 (PRIV\Administrator) として PAMSRV にサインインします。
 
@@ -107,11 +107,11 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 次の手順で、グループを PAM に移動します。
 
 >[!div class="step-by-step"]
-[« 手順 4](step-4-install-mim-components-on-pam-server.md)
+[«手順 4](step-4-install-mim-components-on-pam-server.md)
 [手順 6 »](step-6-transition-group-to-pam.md)
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

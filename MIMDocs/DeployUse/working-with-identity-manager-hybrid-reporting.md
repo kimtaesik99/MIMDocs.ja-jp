@@ -1,27 +1,27 @@
 ---
-title: "Azure でのハイブリッド レポート | Microsoft Identity Manager"
+title: "Azure でのハイブリッド レポート | Microsoft Docs"
 description: "オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
 
 
 ---
 
-# Identity Manager ハイブリッド レポートの操作
+# <a name="working-with-identity-manager-hybrid-reporting"></a>Identity Manager ハイブリッド レポートの操作
 
-## 使用可能なハイブリッド レポート
+## <a name="available-hybrid-reports"></a>使用可能なハイブリッド レポート
 Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) レポートは、**パスワード リセット アクティビティ**、**パスワード リセット登録**、および**セルフ サービス グループ アクティビティ**です。
 
 -   パスワード リセット アクティビティは、ユーザーが SSPR を使用してパスワード リセットを実行したとき、各インスタンスを表示します。さらに、認証のためのゲートまたは **メソッド** を提供します。
@@ -38,7 +38,7 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 >
 > ハイブリッド レポートをアンインストールする場合は、MIMreportingAgent.msi エージェントをアンインストールします。
 
-## 前提条件
+## <a name="prerequisites"></a>必要条件
 
 1.  MIM サービスを含む Microsoft Identity Manager 2016 をインストールします。
 
@@ -46,7 +46,7 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 
 3.  Microsoft Identity Manager サーバーから Azure への送信用インターネット接続があることを確認します。
 
-## Azure AD への Microsoft Identity Manager レポートのインストール
+## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Azure AD への Microsoft Identity Manager レポートのインストール
 レポート エージェントがインストールされた後で、Microsoft Identity Manager アクティビティによってもたらされたデータは MIM から Windows イベント ログにエクスポートされます。 MIM レポート エージェントは、イベントを処理して Azure にアップロードします。 Azure では、必要なレポートに合わせて、イベントの解析、暗号化の解除、およびフィルター処理が行われます。
 
 1.  Microsoft Identity Manager 2016 をインストールします。
@@ -75,7 +75,7 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 
     レポート データを作成するには、Microsoft Identity Manager セルフ サービス パスワード リセット ポータルを使用してユーザーのパスワードをリセットします。 パスワード リセットが正常に完了したことを確認し、Azure AD 管理ポータルにデータが表示されていることを確認します。
 
-## Azure クラシック ポータルでハイブリッド レポートを表示する
+## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Azure クラシック ポータルでハイブリッド レポートを表示する
 
 1.  テナント用のグローバル管理者アカウントを使用して [Azure クラシック ポータル](https://manage.windowsazure.com/)にログインします。
 
@@ -90,10 +90,10 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 > [!WARNING]
 > Microsoft Identity Manager データが Azure AD に表示されるまで時間がかかる場合があります。
 
-## ハイブリッド レポートの作成を停止する
+## <a name="stop-creating-hybrid-reports"></a>ハイブリッド レポートの作成を停止する
 Microsoft Identity Manager から Azure Active Directory へのレポート データのアップロードを停止する場合は、ハイブリッド レポート エージェントをアンインストールします。 Windows の **[プログラムの追加と削除]** ツールを使用して、Microsoft Identity Manager ハイブリッド レポートをアンインストールします。
 
-## ハイブリッド レポートに使用される Windows イベント
+## <a name="windows-events-used-for-hybrid-reporting"></a>ハイブリッド レポートに使用される Windows イベント
 Microsoft Identity Manager によって生成されたイベントは、Windows イベント ログに記録されます。[アプリケーションとサービス ログ]&gt; **[Identity Manager 要求ログ]** の下にあり、イベント ビューアーで表示できます。 それぞれの MIM 要求は、JSON 構造の Windows イベント ログにイベントとしてエクスポートされます。 これは SIEM にエクスポートすることができます。
 
 |イベントの種類|ID|イベントの詳細|
@@ -103,6 +103,6 @@ Microsoft Identity Manager によって生成されたイベントは、Windows 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

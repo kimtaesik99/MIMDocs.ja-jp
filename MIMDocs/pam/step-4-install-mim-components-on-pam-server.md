@@ -1,12 +1,12 @@
 ---
-title: "PAM の展開、手順 4 – MIM のインストール | Microsoft Identity Manager"
+title: "PAM の展開、手順 4 – MIM のインストール | Microsoft Docs"
 description: "Privileged Access Management サーバーとワークステーションに MIM サービスとポータルをインストールして構成します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
@@ -14,16 +14,16 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5b9653cb8de9e9fc788685ba027f84a795467cf6
 
 
 ---
 
-# 手順 4 - PAM サーバーとワークステーションに MIM コンポーネントをインストールする
+# <a name="step-4-install-mim-components-on-pam-server-and-workstation"></a>手順 4 - PAM サーバーとワークステーションに MIM コンポーネントをインストールする
 
 >[!div class="step-by-step"]
-[« 手順 3.](step-3-prepare-pam-server.md)
+[«手順 3](step-3-prepare-pam-server.md)
 [手順 5 »](step-5-establish-trust-between-priv-corp-forests.md)
 
 
@@ -34,7 +34,7 @@ PAMSRV で、MIM サービスおよびポータル、サンプル ポータル W
 
 MIM をダウンロードした場合は、新しいフォルダーに MIM のインストール アーカイブを展開します。
 
-##  サービスおよびポータルのインストール プログラムを実行します。  
+##  <a name="run-the-service-and-portal-install-program"></a>サービスおよびポータルのインストール プログラムを実行します。  
 
 インストーラーのガイドラインに従って、インストールを完了します。
 
@@ -55,7 +55,7 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
     - サービス アカウント名: *MIMService*  
     - サービス アカウント パスワード: *Pass@word1* (または手順 2 で作成したパスワード)  
     - サービス アカウント ドメイン: *PRIV*  
-    - サービスの電子メール アカウント: *MIMService@priv.contoso.local*  
+    - サービス メール アカウント: *MIMService@priv.contoso.local*  
 
 6.  同期サーバーのホスト名は既定値をそのまま使い、MIM 管理エージェント アカウントには「*PRIV\MIMMA*」を指定します。 MIM 同期サービスが存在しないという警告メッセージが表示されます。 このシナリオでは MIM 同期サービスを使わないので、この警告は問題ありません。
 
@@ -98,7 +98,7 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 インストールが完了して、サーバーは再起動したら、MIM ポータルがアクティブであることと、ユーザーが MIM で自分のオブジェクト リソースを表示できることを確認します。
 
-## MIM ポータル管理ポリシー規則のセットアップ
+## <a name="set-up-mim-portal-management-policy-rules"></a>MIM ポータル管理ポリシー規則のセットアップ
 
 1. PAMSRV が再起動したら、PRIV\Administrator としてサインインします。
 
@@ -114,7 +114,7 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 7. この管理ポリシー規則を選択し、**[ポリシーを無効にする]** をオフにして **[OK]** をクリックし、**[送信]** をクリックします。
 
-## ファイアウォール接続の確認
+## <a name="verify-the-firewall-connections"></a>ファイアウォール接続の確認
 
 ファイアウォールが TCP ポート 5725、5726、8086、8090 との受信接続を許可していることを確認します。
 
@@ -131,7 +131,7 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 8.  "priv.contoso.local" および [ドメイン ネットワーク] として表示されたアクティブなネットワークがあることを確認します。  
 9. **[コントロール パネル]**を閉じます。
 
-## サンプル Web アプリケーションのセットアップ
+## <a name="set-up-the-sample-web-application"></a>サンプル Web アプリケーションのセットアップ
 
 このセクションでは、MIM PAM REST API のサンプル Web アプリケーションをインストールして構成します。
 
@@ -167,7 +167,7 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 7.  (省略可能) ユーザーが REST API に対して認証できることを確認します。 PAMSRV で管理者として Web ブラウザーを開きます。  Web サイト URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/ にアクセスし、必要に応じて認証し、ダウンロードが実行されることを確認します。
 
-## MIM PAM Requestor コマンドレットをインストールします。
+## <a name="install-the-mim-pam-requestor-cmdlets"></a>MIM PAM Requestor コマンドレットをインストールします。
 
 手順 1 で構成したワークステーションに MIM PAM Requestor コマンドレットをインストールします。
 
@@ -188,11 +188,11 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 次の手順では、PRIV フォレストと CORP フォレストの間に信頼関係を確立します。
 
 >[!div class="step-by-step"]
-[« 手順 3.](step-3-prepare-pam-server.md)
+[«手順 3](step-3-prepare-pam-server.md)
 [手順 5 »](step-5-establish-trust-between-priv-corp-forests.md)
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

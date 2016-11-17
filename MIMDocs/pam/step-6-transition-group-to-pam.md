@@ -1,25 +1,25 @@
 ---
-title: "PAM の展開、手順 6 – グループの移動 | Microsoft Identity Manager"
+title: "PAM の展開、手順 6 – グループの移動 | Microsoft Docs"
 description: "グループを Privilege Access Management で管理できるように、PRIV フォレストに移動します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 603e5e28f0eee0f648ef7e00ef137f5a08b2ba34
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 9e70bdd3c586a16a9a55c91bd0e099a500950a64
 
 
 ---
 
-# ステップ 6: Privileged Access Managment へのグループの移行
+# <a name="step-6-transition-a-group-to-privileged-access-management"></a>ステップ 6: Privileged Access Managment へのグループの移行
 
 >[!div class="step-by-step"]
 [« 手順 5 ](step-5-establish-trust-between-priv-corp-forests.md)
@@ -45,7 +45,7 @@ PRIV フォレストで特権アカウントを作成する場合は、PowerShel
 
 3.  デモンストレーションを目的として、既存のフォレスト内のユーザー アカウントに対応するユーザー アカウントを PRIV 内に作成します。
 
-    PowerShell に次のコマンドを入力します。  前の手順で contoso.local に作成したユーザーの名前が *Jen* でない場合は、それに応じてコマンドのパラメーターを変更してください。 パスワード ’Pass@word1’ は一例ですので、固有のパスワード値に変更する必要があります。
+    PowerShell に次のコマンドを入力します。  前の手順で contoso.local に作成したユーザーの名前が *Jen* でない場合は、それに応じてコマンドのパラメーターを変更してください。 パスワード 'Pass@word1' は一例ですので、固有のパスワード値に変更してください。
 
     ```
     $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
@@ -90,6 +90,6 @@ PRIV フォレストで特権アカウントを作成する場合は、PowerShel
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

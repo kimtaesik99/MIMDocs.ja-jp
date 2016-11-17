@@ -1,28 +1,28 @@
 ---
-title: "Windows Server の構成 | Microsoft Identity Manager"
+title: "Windows Server の構成 | Microsoft Docs"
 description: "MIM 2016 と連動するように Windows Server 2012 RS を準備するための手順と最小要件を説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 06d2365808858dc09d04ab37eafa9d6e3212cbcf
 
 
 ---
 
-# ID 管理サーバー: Windows Server 2012 R2 のセットアップ
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>ID 管理サーバー: Windows Server 2012 R2 のセットアップ
 
 >[!div class="step-by-step"]
-[«ドメインの準備](preparing-domain.md)
+[« ドメインの準備](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
 
-## Windows Server 2012 R2 をドメインに参加させる
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Windows Server 2012 R2 をドメインに参加させる
 
 8 GB 以上の RAM を備えた Windows Server 2012 R2 コンピューターで開始します。 インストール時に、"Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64" エディションを指定します。
 
@@ -62,7 +62,7 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## サーバーのセキュリティ ポリシーを構成する
+## <a name="configure-the-server-security-policy"></a>サーバーのセキュリティ ポリシーを構成する
 
 新しく作成したアカウントがサービスとして実行されるように、サーバー セキュリティ ポリシーを設定します。
 
@@ -93,7 +93,7 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
 12. [ローカル セキュリティ ポリシー] ウィンドウを閉じます。
 
 
-## IIS Windows 認証モードを変更する
+## <a name="change-the-iis-windows-authentication-mode"></a>IIS Windows 認証モードを変更する
 
 1.  PowerShell ウィンドウを開きます。
 
@@ -106,11 +106,11 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
     ```
 
 >[!div class="step-by-step"]  
-[«ドメインの準備](preparing-domain.md)
+[« ドメインの準備](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

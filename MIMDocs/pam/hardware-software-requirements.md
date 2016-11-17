@@ -1,31 +1,31 @@
 ---
-title: "PAM ソフトウェアの要件 | Microsoft Identity Manager"
+title: "PAM ソフトウェアの要件 | Microsoft Docs"
 description: "Privileged Access Management の展開を成功させるためのハードウェアとソフトウェアの要件を確認する"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 75a748f7035cfb10e833e4fdbfdc208b5245d3ea
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 2f696738d21ad4b221d7adce5f83753c6f126f86
 
 
 ---
 
-# ハードウェアとソフトウェアの要件
+# <a name="hardware-and-software-requirements"></a>ハードウェアとソフトウェアの要件
 
 Privileged Access Management では、基礎となるソフトウェア プラットフォームの要件以外にハードウェアの要件はありません。 十分なメモリまたはディスク領域と、ネットワーク接続が確保されていることを確認してください。
 
 この記事では、基本的な展開の最小要件を提供します。 この要件は、パフォーマンス、スケーラビリティ、高可用性をデモンストレーションするためのものではありません。また、大規模なエンタープライズ環境や運用環境向けの推奨される展開トポロジを示すものでもありません。
 
-## ソフトウェア パッケージからのインストール
+## <a name="installing-from-software-packages"></a>ソフトウェア パッケージからのインストール
 
 次のソフトウェアは、TechNet Evaluation Center または MSDN からダウンロードできます。  
 - Microsoft Identity Manager 2016
@@ -35,28 +35,28 @@ Privileged Access Management では、基礎となるソフトウェア プラ�
 次のソフトウェアは、GitHub からダウンロードできます。  
 - PAMSamplePortal: REST API のサンプル Web アプリケーションが含まれています
 
-## 必須ソフトウェア
+## <a name="required-software"></a>必須ソフトウェア
 
 - Windows Server 2012 R2  
 - Windows 8.1 Enterprise または Windows 10 Enterprise  
 - SQL Server 2012 Service Pack 1 または SQL Server 2014  
 
-## 評価版ソフトウェア
+## <a name="evaluation-software"></a>評価版ソフトウェア
 
 Windows、SQL Server、Windows Server のライセンスを持っていない場合は、評価版をダウンロードできます。
 
-### TechNet Evaluation Center
+### <a name="technet-evaluation-center"></a>TechNet Evaluation Center
 
 - [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
 - [Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
 - [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
 
-### Microsoft ダウンロード センター
+### <a name="microsoft-download-center"></a>Microsoft ダウンロード センター
 
 - [SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
 - [SharePoint Foundation 2013 SP1 とその前提条件](https://www.microsoft.com/download/details.aspx?id=42039)
 
-## ハードウェア要件
+## <a name="hardware-requirements"></a>ハードウェア要件
 
 PAM の各コンポーネントについては、ソフトウェア製品のシステム要件を参照してください。
 
@@ -75,6 +75,6 @@ PAMSRV の場合:
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

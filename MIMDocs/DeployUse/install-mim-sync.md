@@ -1,35 +1,35 @@
 ---
-title: "MIM 同期サービスのインストール | Microsoft Identity Manager"
+title: "MIM 同期サービスのインストール | Microsoft Docs"
 description: "同期サービスをインストールおよび構成して、MIM 2016 コンポーネントを使用開始します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: dc1f7ff40ed5f657c24e7293ff76241c3a7082f1
 
 
 ---
 
-# MIM 2016 のインストール: MIM 同期サービス
+# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016 のインストール: MIM 同期サービス
 
 >[!div class="step-by-step"]
-[«Exchange Server](prepare-server-exchange.md)
-[MIM サービスおよびポータル»](install-mim-service-portal.md)
+[« Exchange Server](prepare-server-exchange.md)
+[MIM サービスおよびポータル »](install-mim-service-portal.md)
 
 > [!NOTE]
 > このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
 > - ドメイン コントローラー名 - **mimservername**
 > - ドメイン名 - **contoso**
-> - パスワード- **Pass@word1**
+> - パスワード - **Pass@word1**
 
 Microsoft Identity Manager 2016 をインストールするには、最初にインストール パッケージをセットアップします。
 
@@ -37,7 +37,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
 2. MIM インストール パッケージを展開するか、MIM イメージ DVD をマウントします。
 
-## MIM 2016 同期サービスのインストール
+## <a name="install-mim-2016-synchronization-service"></a>MIM 2016 同期サービスのインストール
 
 1. 展開した MIM インストール フォルダー内で、 **同期サービス** のフォルダーに移動します。
 
@@ -65,7 +65,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
     1.  サービス アカウント: *MIMSync*
 
-    2.  ［パスワード］: *Pass@word1*
+    2.  パスワード: *Pass@word1*
 
     3.  サービス アカウント ドメインまたはローカル コンピューターの名前: *contoso*
 
@@ -102,11 +102,11 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
     5. サインアウトしてサインインし、グループ メンバーシップの変更を有効にする必要があります。 **[はい]** をクリックして、サインアウトします。
 
 >[!div class="step-by-step"]  
-[«Exchange Server](prepare-server-exchange.md)
-[MIM サービスおよびポータル»](install-mim-service-portal.md)
+[« Exchange Server](prepare-server-exchange.md)
+[MIM サービスおよびポータル »](install-mim-service-portal.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

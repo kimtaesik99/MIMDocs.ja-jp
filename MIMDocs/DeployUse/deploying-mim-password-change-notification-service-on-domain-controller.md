@@ -1,27 +1,27 @@
 ---
-title: "パスワード変更の通知 | Microsoft Identity Manager"
+title: "パスワード変更通知 | Microsoft Docs"
 description: "ドメイン コントローラーに MIM パスワード変更通知サービスをインストールして構成する手順を説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: e25f4b3a60f2c432cd33c8f84c750110cbe605ee
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
 
 
 ---
 
-# ドメイン コントローラーに MIM パスワード変更通知サービスを展開する
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>ドメイン コントローラーに MIM パスワード変更通知サービスを展開する
 
-## パスワード変更通知サービスをインストールする
+## <a name="install-the-password-change-notification-service"></a>パスワード変更通知サービスをインストールする
 パスワード変更通知サービス (PCNS) をドメイン コントローラーにインストールすると、MIM は、別のベンダーのディレクトリ サーバーなどの他のシステムにパスワードを同期できます。 パスワード同期のためには、各ドメイン コントローラー サーバーに PCNS をインストールします。
 
 1.  Active Directory ドメイン サービスの役割を持つ Windows Server 搭載サーバーに、ドメイン管理者としてログインします。
@@ -56,11 +56,11 @@ ms.openlocfilehash: e25f4b3a60f2c432cd33c8f84c750110cbe605ee
 
 14. コンピューターを再起動し、MIM パスワード変更通知サービスに対する構成の変更を有効にします。 表示されるポップアップ ウィンドウで **[はい]** をクリックしても、後で再起動してもかまいません。
 
-## パスワード変更通知サービスを構成する
+## <a name="configuring-the-password-change-notification-service"></a>パスワード変更通知サービスを構成する
 ドメイン管理者として DC サーバーに再接続した後、*C:\Program Files\Microsoft Password Change Notification* に移動します。 *pcnscfg.exe* を実行します。
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
