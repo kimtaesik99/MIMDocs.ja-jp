@@ -1,28 +1,28 @@
 ---
-title: "ソフトウェア証明書の作成 |Microsoft Identity Manager"
+title: "ソフトウェア証明書の作成 |Microsoft Docs"
 description: "証明書マネージャーを使用して、プロファイル テンプレートでソフトウェア証明書を作成および更新する方法について説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 ---
 
-# 証明書マネージャーを使用してソフトウェア証明書を作成する
+# <a name="create-software-certificates-with-certificate-manager"></a>証明書マネージャーを使用してソフトウェア証明書を作成する
 ソフトウェア証明書を登録および更新するには、管理者である必要はありません。また、仮想スマート カードも必要ありません。 ある時点で、証明書操作を許可するように求められますが、これは通常の操作です。
 
-## MIM 2016 証明書マネージャーでソフトウェア証明書プロファイル テンプレートを作成する
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーでソフトウェア証明書プロファイル テンプレートを作成する
 
 1.  仮想スマート カードに必要な証明書のテンプレートを作成します。 MMC を開きます。
 
@@ -72,7 +72,7 @@ ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
 
     10. 一覧から作成した新しいテンプレート (**アーカイブ済み証明書テンプレート**) を選択し、 **[OK]**をクリックします。
 
-## プロファイル テンプレートを作成する
+## <a name="create-the-profile-template"></a>プロファイル テンプレートを作成する
 
 1.  管理者特権を持つユーザーとして CM ポータルにログインします。
 
@@ -98,6 +98,6 @@ ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

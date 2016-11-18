@@ -1,25 +1,25 @@
 ---
-title: "ドメインのセットアップ | Microsoft Identity Manager"
+title: "ドメインのセットアップ | Microsoft Docs"
 description: "MIM 2016 をインストールする前に、Active Directory ドメイン コントローラーを作成する"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80fde32862a322a7a067982d0b02c99a8b43063e
-ms.openlocfilehash: 4ee1742e388da1ccb973b64316629debe570add0
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: aa110cc31896ac08aa3f84fa48858d978efe0c63
 
 
 ---
 
-# ドメインのセットアップ
+# <a name="set-up-a-domain"></a>ドメインのセットアップ
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -28,9 +28,9 @@ Microsoft Identity Manger (MIM) は、Active Directory (AD) ドメインと連�
 
 この記事では、ドメインと MIM を連携させるために必要な手順について説明します。
 
-## ユーザー アカウントとグループを作成する
+## <a name="create-user-accounts-and-groups"></a>ユーザー アカウントとグループを作成する
 
-MIM 展開のすべてのコンポーネントには、ドメインでの個別の ID が必要です。  これには MIM サービスと MIM 同期サービス、SharePoint、およびSQL などの MIM コンポーネントが含まれます。
+MIM 展開のすべてのコンポーネントには、ドメインでの個別の ID が必要です。  これには MIM サービスと MIM 同期サービス、SharePoint、および SQL などの MIM コンポーネントが含まれます。
 
 > [!NOTE]
 > このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
@@ -71,11 +71,11 @@ MIM 展開のすべてのコンポーネントには、ドメインでの個別�
 3.  すべてのグループにセキュリティ グループを作成します。
 
     ```
-    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncAdmins
-    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global       –SamAccountName MIMSyncOperators
-    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global         –SamAccountName MIMSyncJoiners
-    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncBrowse
-    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global          –SamAccountName MIMSyncPasswordReset
+    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncAdmins
+    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncOperators
+    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
+    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncBrowse
+    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
@@ -94,6 +94,6 @@ MIM 展開のすべてのコンポーネントには、ドメインでの個別�
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,25 +1,25 @@
 ---
-title: "容量計画ガイド |Microsoft Identity Manager"
+title: "容量計画ガイド |Microsoft Docs"
 description: "このガイドを使用して、負荷レベルやポリシーの決定など、MIM 2016 を展開する前に考慮すべき変数を理解します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2aeca4630f0d6f64d012e000e5dbabec618e7b1e
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 33e7d901dcd9d8cf1bcaddcfa521625060bb3dbc
 
 
 ---
 
-# 容量計画ガイド
+# <a name="capacity-planning-guide"></a>容量計画ガイド
 
 Microsoft Identity Manager (MIM) を使用すると、組織全体でユーザー アカウントを作成、更新、削除することができます。 また、エンド ユーザーが、自分のアカウントをセルフサービス機能で管理できるようになります。 小規模環境であっても、これらすべての操作のメリットをすぐに感じられるでしょう。
 
@@ -27,7 +27,7 @@ MIM を使いはじめる前に、このガイドとテスト環境を併せて�
 
 MIM 2016 とそのコンポーネントにまだ慣れていない場合は、先へ進む前に [Microsoft Identity Manager 2016](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016) の詳細を確認してください。
 
-## 概要
+## <a name="overview"></a>概要
 全体の容量と Microsoft Identity Manager の展開のパフォーマンスに影響する可能性のある多くの変数があります。 物理的に MIM コンポーネント (トポロジ) を展開する方法と、これらのコンポーネントを実行するハードウェアは、MIM 展開から予想されるパフォーマンスと容量を決定する際の重要な要因となります。 MIM ポリシーの構成オブジェクトの数と複雑さはわかりにくい場合がありますが、それでも容量を計画する際に考慮すべき重要な要素です。 最後に、予想される展開のスケールと、それに対する負荷は、一般的にパフォーマンスと容量に影響を与えるより明白な要素です。
 
 MIM 2016 の展開により予想される容量とパフォーマンスに影響を与える主な要素を、次の表で説明します。
@@ -41,7 +41,7 @@ MIM 2016 の展開により予想される容量とパフォーマンスに影�
 | 読み込み | 使用頻度。 たとえば、新しいグループまたはユーザーを作成する頻度、パスワードをリセットする頻度、または特定の期間内にポータルにアクセスされる頻度を予測します。 1 時間、1 日、1 週間、または 1 年の間に負荷が異なる場合があることに注意してください。 コンポーネントによっては、ピーク時の負荷または平均負荷に合わせて設計することをお勧めします。 |
 
 
-## Microsoft Identity Manager コンポーネントのホスト
+## <a name="hosting-microsoft-identity-manager-components"></a>Microsoft Identity Manager コンポーネントのホスト
 
 Microsoft Identity Manager の各コンポーネントは、同じコンピューター上に配置する必要はありません。 これらのコンポーネント、そして各コンポーネントをホストする物理または仮想コンピューターについて検討することは、容量計画の重要な部分です。
 
@@ -52,7 +52,7 @@ Microsoft Identity Manager の各コンポーネントは、同じコンピュ�
 - MIM 2016 サービス データベースの構成に SAN を使用している場合、他にどのアプリケーションが SAN を共有しているかを考慮します。 こうしたアプリケーションにより SAN 上の共有ディスク リソースで競合が発生すると、データベースのパフォーマンスが影響を受ける可能性があります。
 
 
-## ユーザーとグループ
+## <a name="users-and-groups"></a>ユーザーとグループ
 環境内のユーザーとグループの数は、展開の規模について検討する際の一般的な考慮事項です。 しかし、他にも計画で考慮すべき関連する考慮事項がいくつかあります。
 
 - ユーザーがグループを作成できますか。 できる場合、ユーザーが新しいグループを作成することで、環境内のグループの増加にどのように影響するかを考慮する必要があります。
@@ -60,7 +60,7 @@ Microsoft Identity Manager の各コンポーネントは、同じコンピュ�
 - 動的なグループが展開されますか。 環境で必要になる動的グループの数と種類を確認してください。
 
 
-## 予想される負荷レベル
+## <a name="expected-load-levels"></a>予想される負荷レベル
 また、MIM コンポーネントにかかる負荷の種類を検討する必要があります。 こうした情報は、通常、環境内にある現在のアプリケーションを調べることで推測できます。 考慮すべきいくつかの関連する質問を以下に示します。
 
 - グループへの参加またはグループからの脱退要求はどのくらいの頻度で発生しますか。
@@ -74,7 +74,7 @@ Microsoft Identity Manager の各コンポーネントは、同じコンピュ�
 - 負荷レベルが、標準からピーク時の負荷まで、大きく変化することが予想されますか。 たとえば、休日後は多くのパスワードがリセットされる傾向にあります。 システム メンテナンスと同期は、必ず予想される使用率のピーク時を避けてスケジュールします。 容量計画を検討する際には、必ず負荷のピーク期間を考慮します。
 
 
-## ポリシーの構成オブジェクト
+## <a name="policy-configuration-objects"></a>ポリシーの構成オブジェクト
 
 Microsoft Identity Manager ポリシーの構成オブジェクトには、MPR、セット、ワークフロー、および特定の展開のための同期規則が含まれます。 ポリシー構成が展開ごとのニーズに合わせて変更されるため、MIM の展開はお客様それぞれに固有のものになります。 MIM ポリシーの構成オブジェクトに関連する主要なパフォーマンスの考慮事項を以下に示します。
 
@@ -89,12 +89,12 @@ MIM のポリシー構成では、環境でのプロビジョニングについ�
 - コード不要のプロビジョニングを使用しますか。 使用する場合、これは予想される規則エントリの数と、システム内の関連付けられた要求およびワークフローにも影響します。
 
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 - [MIM を展開する際のトポロジに関する考慮事項](topology-considerations.md)
 - テスト ビルドとパフォーマンス テストの結果に関する詳細は、ダウンロード可能な「[Forefront Identity Manager (FIM) 2010 Capactity Planning Guide (Forefront Identity Manager (FIM) 2010 容量計画ガイド)](http://go.microsoft.com/fwlink/?LinkId=200180)」を参照してください。
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

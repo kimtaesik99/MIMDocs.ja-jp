@@ -1,25 +1,25 @@
 ---
-title: "PAM 環境の概要 | Microsoft Identity Manager"
+title: "PAM 環境の概要 | Microsoft Docs"
 description: "Privileged Access Management を正常に展開するために必要な仮想マシンの数と構成を確認する"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 3057618c609ed251efe1f6cc6b2d3694ac61eafd
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 750ba152813b4c03c913453c42e0e503e90b883b
 
 
 ---
 
-# 環境の概要
+# <a name="environment-overview"></a>環境の概要
 
 Privileged Access Management は、共有ネットワーク上で互いに接続された個別のドライブを備えた仮想マシン (VM) と連携します。 これらの仮想マシンは、Windows 8.1、Windows Server 2012 R2、または他のオペレーティング システム プラットフォームでホストできます。
 
@@ -34,6 +34,6 @@ Privileged Access Management は、共有ネットワーク上で互いに接続
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

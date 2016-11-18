@@ -1,25 +1,25 @@
 ---
-title: "FIM 2010 R2 からのアップグレード | Microsoft Identity Manager"
+title: "FIM 2010 R2 からのアップグレード | Microsoft Docs"
 description: "FIM 2010 R2 コンポーネントをアップグレードし、MIM 2016 で新しく導入されたコンポーネントをインストールする方法について説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
 
 
 ---
 
-# Forefront Identity Manager 2010 R2 からのアップグレード
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Forefront Identity Manager 2010 R2 からのアップグレード
 
 現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の 3 ステップです:
 
@@ -36,7 +36,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 - ローカルおよび環境に関するすべての前提条件 (SQL Server、Exchange Server、SharePoint Services など) は FIM 2010 R2 用に構成されている
 
 
-## 準備
+## <a name="preparation"></a>準備
 
 1.  FIM サービス データベース、FIM Sync データベース、FIM Sync、サービスの構成とソフトウェアをバックアップします。
 
@@ -44,7 +44,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 3.  MIM ソフトウェアをダウンロードまたは展開します。
 
-## 同期サービスをアップグレードする
+## <a name="upgrade-the-synchronization-service"></a>同期サービスをアップグレードする
 
 1.  FIM 2010 R2 同期サービス (“Sync”) が展開されているサーバーに管理者としてログインします。
 
@@ -82,7 +82,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 13. **同期サービス** が再起動します。
 
-## サービスおよびポータルをアップグレードする
+## <a name="upgrade-the-service-and-portal"></a>サービスおよびポータルをアップグレードする
 
 1.  FIM 2010 R2 のサービスおよびポータルが展開されているサーバーに管理者としてログインします。
 
@@ -138,9 +138,9 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 14. MIM ポータルをインストールする場合は、現在 FIM ポータルがホストされている SharePoint サイト コレクションの URL を提供します。  **[次へ]**をクリックします。
 
-## MIM パスワード登録ポータルをインストールする
+## <a name="install-the-mim-password-registration-portal"></a>MIM パスワード登録ポータルをインストールする
 
-1. MIM パスワード登録ポータルをインストールする場合は、パスワード登録ポータルの要求された URL を提供します。 **[次へ]**をクリックします。
+1. MIM パスワード登録ポータルをインストールする場合は、パスワード登録ポータルの要求された URL を提供します。  **[次へ]**をクリックします。
 
 2. クライアントとエンドユーザーがサービスおよびポータルを使用する機能を構成します。
 
@@ -160,7 +160,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
     3.  **[ファイアウォールでポートを開く]** オプションをオンにします。
 
-    4.  **[次へ]**をクリックします。
+    4.   **[次へ]**をクリックします。
 
 4. 次の MIM パスワード登録構成画面で以下のようにします。
 
@@ -168,7 +168,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
     2.  このポータルにエクストラネットおよびイントラネットのユーザーがアクセスできるようにするか、または前に FIM パスワード リセットに構成したようにイントラネット ユーザーのみに許可するかを決定します。
 
-## MIM パスワード リセット ポータルをインストールする
+## <a name="install-the-mim-password-reset-portal"></a>MIM パスワード リセット ポータルをインストールする
 
 1. MIM パスワード リセット ポータルをインストールする場合は、MIM パスワード リセットのアクセスの詳細と資格情報を提供します。
 
@@ -180,7 +180,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
     3.  **[ファイアウォールでポートを開く]** オプションをオンにします。
 
-    4.  **[次へ]**をクリックします。
+    4.   **[次へ]**をクリックします。
 
 2. 次の MIM パスワード リセット構成画面で以下のようにします。
 
@@ -188,7 +188,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
     2.  エクストラネット ユーザーとイントラネット ユーザーがこのポータルにアクセスできるか、またはイントラネット ユーザーのみかを指定します。
 
-## インストールの完了とアップグレード
+## <a name="finish-installation-and-upgrade"></a>インストールの完了とアップグレード
 
 1. すべての構成の定義が正常に完了すると、インストール ページが表示されます。 **[インストール]** をクリックして、MIM サービスおよびポータルのインストールとアップグレードを開始します。
 
@@ -202,6 +202,6 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
