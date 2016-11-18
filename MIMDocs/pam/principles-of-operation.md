@@ -1,25 +1,25 @@
 ---
-title: "PAM のコンポーネントについて理解する | Microsoft Identity Manager"
+title: "PAM のコンポーネントについて理解する | Microsoft Docs"
 description: "Privileged Access Management は一部のコンポーネントを MIM と共有します。固有のコンポーネントもいくつかあります。 これらの連携方法について説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: d17feb5d78b864bef8f0b96bfbf92a18c3c91694
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
 
 
 ---
 
-# PAM のコンポーネントについて理解する
+# <a name="understand-the-components-of-pam"></a>PAM のコンポーネントについて理解する
 
 Privileged Access Management は、日常的に使用するユーザー アカウントとは切り離された管理アクセス権を保持しています。 このソリューションは、次の並列フォレストに依存しています。
 
@@ -43,6 +43,6 @@ PAM 用に構成される MIM ソリューションには、次のコンポー�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

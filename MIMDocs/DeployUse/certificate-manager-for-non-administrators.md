@@ -1,28 +1,28 @@
 ---
-title: "セルフサービス スマート カードの更新 | Microsoft Identity Manager"
+title: "セルフサービス スマート カードの更新 | Microsoft Docs"
 description: "自身のコンピューターへの管理者アクセス権を持たないユーザーに対し、スマート カードを登録して証明書マネージャーを使用できるようにする方法について説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
 
 
 ---
 
-# 非管理者のスマート カードの登録
+# <a name="enroll-smart-cards-for-nonadministrators"></a>非管理者のスマート カードの登録
 ユーザーがコンピューターのローカル管理者ではない場合、既定では、そのコンピューターにスマート カードを登録できません。 この制限を回避するには、次の手順を実行します。
 
-## MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
+## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
 
 1.  **appx ファイルを展開する**
 
@@ -64,7 +64,7 @@ ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
 
     `makeappx pack /l /d .\appx /p <app package name>.appx`
 
-    S`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
+    s`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
 
 4.  プロファイル テンプレートと MIM サーバーを構成する最初の管理キーの追加を複製する
 
@@ -92,10 +92,10 @@ ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
 
 7.  **管理者以外のアカウントで CM アプリをインストールする**
 
-8.  **仮想スマート カードの CM アプリと登録を起動する**
+8.  **CM アプリを起動して仮想スマート カードを登録する**
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

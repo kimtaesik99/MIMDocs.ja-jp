@@ -1,29 +1,29 @@
 ---
-title: "MIM サービスおよびポータルのインストール | Microsoft Identity Manager"
+title: "MIM サービスおよびポータルのインストール | Microsoft Docs"
 description: "MIM サービスおよび Microsoft Identity Manager 2016 用のポータルをインストールする手順を説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
 
 ---
 
-# MIM 2016: MIM サービスおよびポータルのインストール
+# <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016: MIM サービスおよびポータルのインストール
 
 >[!div class="step-by-step"]
-[«MIM 同期サービス](install-mim-sync.md)
-[データベースの同期»](install-mim-sync-ad-service.md)
+[« MIM 同期サービス](install-mim-sync.md)
+[データベースを同期する »](install-mim-sync-ad-service.md)
 
 > [!NOTE]
 > このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
@@ -35,7 +35,7 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 最後の手順で MIM インストール パッケージをセットアップしなかった場合は、Microsoft Identity Manager 2016 コンポーネントをインストールしてから次の手順に進みます。
 
 
-## インストールするために MIM サービスおよびポータルを構成する
+## <a name="configure-mim-service-and-portal-for-installation"></a>インストールするために MIM サービスおよびポータルを構成する
 
 1. アンパックした **サービスおよびポータル** サブフォルダから **MIM サービスおよびポータルのインストーラー**を実行します。
 
@@ -57,7 +57,7 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 8. 新しい自己署名証明書を生成するか、適切な証明書を選択するかを指定します。
 
-9. 使用するサービス アカウント名 (たとえば、*MIMService*)、サービス アカウント パスワード (たとえば、*Pass@word1*)、サービス アカウント ドメイン (たとえば、*contoso*)、サービス電子メール アカウント (たとえば、*contoso*) を指定します。
+9. 使用するサービス アカウント名 (例: *MIMService*)、サービス アカウント パスワード (例: *Pass@word1*)、サービス アカウント ドメイン (例: *contoso*)、サービス電子メール アカウント (例: *contoso*) を指定します。
 
     ![MIMサービス アカウント イメージを構成する](media/MIM-Install12.png)
 
@@ -77,9 +77,9 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 16. ファイアウォールのポート 5725 および 5726 を開くためのチェック ボックスをオンにし、さらに、すべての認証されたユーザーに MIM ポータルへのアクセス権を付与するためのチェック ボックスを選択します。
 
-## MIM パスワード登録ポータルを構成する
+## <a name="configure-mim-password-registration-portal"></a>MIM パスワード登録ポータルを構成する
 
-1.  SSPR 登録のサービス アカウント名を *contoso\MIMSSPR* に、そのパスワードを *Pass@word1* に設定します。
+1.  SSPR 登録用のサービス アカウント名を *contoso\MIMSSPR* に、そのパスワードを *Pass@word1* に設定します。
 
 2.  MIM パスワード登録のホスト名として *CORPIDM* を指定し、ポートを **8080** に設定します。 **[ファイアウォールでポートを開く]** オプションを有効にします。
 
@@ -89,9 +89,9 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 4. 次の MIM パスワード登録ポータルの構成画面で、パスワード登録ポータルの [MIM サービス サーバーのアドレス] に *http://CorpIDM.contoso.local* を指定します。
 
-## MIM パスワード リセット ポータルを構成する
+## <a name="configure-mim-password-reset-portal"></a>MIM パスワード リセット ポータルを構成する
 
-1.  SSPR 登録のサービス アカウント名を *Contoso\MIMSSPRService* に、そのパスワードを *Pass@word1* に設定します。
+1.  SSPR 登録用のサービス アカウント名を *Contoso\MIMSSPRService* に、そのパスワードを *Pass@word1* に設定します。
 
 2.  MIM パスワード リセット ポータルのホスト名として *CORPIDM* を指定し、ポートを **8088** に設定します。 **[ファイアウォールでポートを開く]** オプションを有効にします。
 
@@ -101,7 +101,7 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 4. 次の MIM パスワード登録ポータルの構成画面で、パスワード リセット ポータルの [MIM サービス サーバーのアドレス] に *CorpIDname  http://CorpIDname.domain.local* を指定します。
 
-## MIM サービスおよびポータルのインストール
+## <a name="install-mim-service-and-portal"></a>MIM サービスおよびポータルのインストール
 
 インストール前のすべての定義が準備できたら、**[インストール]** をクリックして、選択した**サービスおよびポータル** コンポーネントのインストールを開始します。
 
@@ -147,11 +147,11 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 > 省略可能: この時点で MIM アドインおよび拡張機能をインストールできます。
 
 >[!div class="step-by-step"]  
-[«MIM 同期サービス](install-mim-sync.md)
-[データベースの同期»](install-mim-sync-ad-service.md)
+[« MIM 同期サービス](install-mim-sync.md)
+[データベースを同期する »](install-mim-sync-ad-service.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,25 +1,25 @@
 ---
-title: MIM Certificate Manager | Microsoft Identity Manager
+title: MIM Certificate Manager | Microsoft Docs
 description: "Certificate Manager アプリを展開して、ユーザーが独自のアクセス権を管理できるようにする方法について説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
 
 
 ---
 
-# MIM Certificate Manager の操作
+# <a name="working-with-the-mim-certificate-manager"></a>MIM Certificate Manager の操作
 MIM 2016 と Certificate Manager を起動して実行している場合、MIM Certificate Manager Windows ストア アプリケーションをデプロイして、ユーザーが物理スマート カード、仮想スマート カード、およびソフトウェアの証明書を簡単に管理できるようにすることができます。 MIM CM アプリを展開する手順は次のとおりです。
 
 1.  証明書テンプレートを作成する。
@@ -30,7 +30,7 @@ MIM 2016 と Certificate Manager を起動して実行している場合、MIM C
 
 4.  SCCM または Intune を使用してアプリを展開する。
 
-## 証明書テンプレートを作成する
+## <a name="create-a-certificate-template"></a>証明書テンプレートを作成する
 CM アプリに証明書テンプレートを作成します。通常と同じ方法で作成できますが、証明書テンプレートがバージョン 3 以降であることを確認する必要があります。
 
 1.  AD CS (証明書サーバー) を実行しているサーバーにログインします。
@@ -69,7 +69,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 16. 一覧から作成した新しいテンプレートを選択し、 **[OK]**をクリックします。
 
-## プロファイル テンプレートを作成する
+## <a name="create-a-profile-template"></a>プロファイル テンプレートを作成する
 プロファイル テンプレートを作成する際に、必ずテンプレートを vSC の作成/破棄およびデータ コレクションの削除に設定します。 CM アプリは収集したデータを処理できないため、次の手順で無効にすることが重要です。
 
 1.  管理者特権を持つユーザーとして CM ポータルにログインします。
@@ -94,7 +94,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 11. それぞれすべてのポリシーに対するデータ収集項目を無効にする必要があります。これを行うには、左側のウィンドウでポリシーをクリックしてから、 **[サンプル データ項目]** の横のチェック ボックスをオンにして、 **[データ収集項目の削除]**をクリックします。 **[OK]**をクリックします。
 
-## CM アプリの展開を準備する
+## <a name="prepare-the-cm-app-for-deployment"></a>CM アプリの展開を準備する
 
 1.  コマンド プロンプトで次のコマンドを実行して、アプリをアンパックして、appx という名前の新しいサブフォルダーにコンテンツを展開し、元のファイルを変更しないように、コピーを作成します。
 
@@ -148,7 +148,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
     -   仮想スマート カード アプリケーションを開きます。 これにより、次の手順に必要な値が見つけやすくなります。
 
-    -   アプリケーションをクライアントとして AD FS サーバーに追加して、サーバー上で CM を構成するには、AD FS サーバーで Windows PowerShell を開き、次のコマンドを実行します `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -   アプリケーションをクライアントとして AD FS サーバーに追加して、サーバー上で CM を構成するには、AD FS サーバーで Windows PowerShell を開き、コマンド `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`を実行します。
 
         ConfigureMimCMClientAndRelyingParty.ps1 スクリプトを以下に示します。
 
@@ -249,13 +249,13 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
     -   ServerFQDN は MIMCM サーバーのフル コンピューター名のみです。
 
-    -   **ConfigureMIimCMClientAndRelyingParty.ps1** のスクリプトのヘルプについては、次のコマンドを実行します `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    -    **ConfigureMIimCMClientAndRelyingParty.ps1** のスクリプトのヘルプについては、 `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`を実行します。
 
-## アプリを展開する
+## <a name="deploy-the-app"></a>アプリを展開する
 CM アプリをセットアップする際には、ダウンロード センターでファイル MIMDMModernApp_&lt;バージョン&gt;_AnyCPU_Test.zip をダウンロードして、すべてのコンテンツを抽出します。 .appx ファイルはインストーラーです。 Windows ストア アプリを展開する通常の方法で展開できます。[System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)を使用したり、[Intune](https://technet.microsoft.com/library/dn613839.aspx) を使用してアプリをサイドロードして、ユーザーがポータル サイトを使用してアクセスしなければならないようにしたり、ユーザーが自身のマシンに直接プッシュされるようにすることができます。
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

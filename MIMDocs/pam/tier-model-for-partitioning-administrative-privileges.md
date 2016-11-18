@@ -1,35 +1,35 @@
 ---
-title: "PAM 環境階層モデル | Microsoft Identity Manager"
+title: "PAM 環境階層モデル | Microsoft Docs"
 description: "リスクに対する脆弱性に基づいてシステムを分離する階層モデルについて説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 659a9d8ff53372300c0e52432116c7c295d59a4b
 
 
 ---
 
-# 管理者特権のパーティション分割の階層モデル
+# <a name="tier-model-for-partitioning-administrative-privileges"></a>管理者特権のパーティション分割の階層モデル
 
 今日の脅威に直面した環境では、攻撃者がシステムへのアクセス権を取得するかどうかは問題ではなく、いつそうなるかが問題です。 つまり、社内のセキュリティは強力な境界の防御と同様に重要です。 この記事では、危険度の高いゾーンから高い特権のアクティビティを隔離することによって、特権の昇格から保護するためのセキュリティ モデルについて説明します。 このモデルは、ベスト プラクティスとセキュリティの原則に従いながら、優れたユーザー エクスペリエンスを実現します。
 
-## Active Directory フォレストにおける特権の昇格
+## <a name="elevation-of-privilege-in-active-directory-forests"></a>Active Directory フォレストにおける特権の昇格
 
 Windows Server Active Directory (AD) フォレストに対して永続的な管理者特権を与えられているユーザー、サービス、アプリケーションのアカウントにより、組織の任務と業務に多大なリスクが発生します。 これらのアカウントは攻撃者のターゲットとされることがあり、侵害されると、攻撃者はドメイン内の他のサーバーやアプリケーションに接続する権限を持つことになります。
 
 階層モデルは、管理するリソースに基づいて管理者の間に区分を設けます。 ユーザー ワークステーションを制御する管理者は、アプリケーションを制御する管理者やエンタープライズ ID を管理する管理者から分離されています。 このモデルについては、「[Securing privileged access reference material (特権を持つアクセスのセキュリティ強化に関する参考資料)](http://aka.ms/tiermodel)」をご覧ください。
 
-## ログオン制限による資格情報の公開の制限
+## <a name="restricting-credential-exposure-with-logon-restrictions"></a>ログオン制限による資格情報の公開の制限
 
 管理者アカウントの資格情報が盗難されるリスクを軽減するには、一般に管理作業を変更して、攻撃者への公開を制限する必要があります。 最初の手順として、組織は次を実行することをお勧めします。
 
@@ -39,7 +39,7 @@ Windows Server Active Directory (AD) フォレストに対して永続的な管�
 
 次の手順は、ログオン制限を実装し、プロセスと作業が階層モデル要件を遵守できるようにすることです。 理想的には、資格情報の公開を各階層内のロールに最低限必要な権限に縮小する必要もあります。
 
-高い特権を持つアカウントにセキュリティ レベルの低いリソースへのアクセス権を付与しないようにするには、ログオン制限を適用する必要があります。 例:
+高い特権を持つアカウントにセキュリティ レベルの低いリソースへのアクセス権を付与しないようにするには、ログオン制限を適用する必要があります。 たとえば、
 
 - ドメイン管理者 (階層 0) は、エンタープライズ サーバー (階層 1 ) と標準ユーザー ワークステーション (階層 2) にログオンできません。
 - サーバー管理者 (階層 1) は、標準ユーザー ワークステーション (階層 2) にログオンできません。
@@ -62,6 +62,6 @@ Windows Server Active Directory (AD) フォレストに対して永続的な管�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

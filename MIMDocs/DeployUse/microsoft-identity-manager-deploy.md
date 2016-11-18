@@ -1,25 +1,25 @@
 ---
-title: "MIM 2016 の展開 |Microsoft Identity Manager"
+title: "MIM 2016 の展開 | Microsoft Docs"
 description: "Microsoft Identity Manager 2016 を展開するためのすべての手順を、ポータルを構成する環境を準備するところから説明します。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/07/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 40dbec941eb2f0b1a01de0f47d44e01717aaca21
-ms.openlocfilehash: 77dae279f9078c55abf342a8956aaf77c62773d5
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 7fdad09650af245157264778d2732ac4327f25b5
 
 
 ---
 
-# MIM 2016 の展開
+# <a name="deploy-mim-2016"></a>MIM 2016 の展開
 このセクションの記事では、これまでに FIM または MIM が展開されていない新規のサーバー上に、エンド ユーザー セルフ サービス シナリオのために Microsoft Identity Manager (MIM) 2016 を展開するための手順を提供します。
 
 > [!NOTE]
@@ -29,18 +29,18 @@ Privileged Access Management のシナリオは、専用拠点のフォレスト
 
 MIM 2016 を展開するためのプロセスは、その前身である FIM 2010 R2 のプロセスによく似ています。 FIM のドキュメントを参照する必要がある場合は、「[Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310)」(Forefront Identity Manager 2010 R2 展開ガイド) をご覧ください。
 
-## 1: ドメインを準備する
+## <a name="first-prepare-a-domain"></a>1: ドメインを準備する
 MIM は Active Directory (AD) と連動するため、次の手順に従って AD ドメイン コントローラーを構成します。
 - [ドメインのセットアップ](preparing-domain.md)
 
-## 2: ID 管理サーバーを準備する
+## <a name="next-prepare-an-identity-management-server"></a>2: ID 管理サーバーを準備する
 自分のドメインを配置して構成したら、会社の ID 管理サーバーを準備します。 これには、次のセットアップが含まれます。
 - [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (オプション)
 
-## 3: Microsoft Identity Manager 2016 コンポーネントをインストールする
+## <a name="finally-install-microsoft-identity-manager-2016-components"></a>3: Microsoft Identity Manager 2016 コンポーネントをインストールする
 ドメインとサーバーをセットアップしたら、MIM コンポーネントをインストールし、AD と同期するように構成することができます。
 - [MIM 同期サービス](install-mim-sync.md)
 - [MIM サービスおよびポータル](install-mim-service-portal.md)
@@ -48,6 +48,6 @@ MIM は Active Directory (AD) と連動するため、次の手順に従って A
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

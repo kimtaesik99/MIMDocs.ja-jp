@@ -3,23 +3,27 @@ title: "手順 8. PAM 展開の検証"
 description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
-ms.openlocfilehash: 9a617d8a5fbe8bcdac40cdf3250e5efedb7a0b84
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
 
 
 ---
 
-# 手順 8. PAM 展開の検証
+# <a name="step-8-pam-deployment-verification"></a>手順 8. PAM 展開の検証
+
+>[!div class="step-by-step"]
+[« 手順 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[補遺 »](sp1-pam-deployment-addendum.md)
 
 展開パッケージには検証スクリプトが付属していて、PAM シナリオを実行して PAM 展開が想定どおりに動作していることを検証できます。
 展開の検証を使用するには、<PamValidation/> という PAMDeploymentConfig.xml セクションを変更します。
@@ -61,7 +65,7 @@ PAMDeploymentConfig.xml の <PAMValidationClient/> タグのクライアント �
 
 この手順では、CORPAdmin 資格情報を求められます。 指定すると、必要なユーザーが "Remote Desktop Users" および "Remote Management Users" グループに追加されます。
 CORP クライアントで、次のコマンドを使用して、検証する PRIV ユーザーとして PowerShell を開きます。 </br></br>
-**Runas/u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+**Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
 PowerShell ウィンドウから次のように入力します。
 
 1. cd $env:path: SYSTEMDRIVE\PAM
@@ -79,6 +83,6 @@ PowerShell ウィンドウから次のように入力します。
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

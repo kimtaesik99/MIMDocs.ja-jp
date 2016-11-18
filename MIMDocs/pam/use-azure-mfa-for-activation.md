@@ -1,25 +1,25 @@
 ---
-title: "Azure MFA を使用した PAM のアクティブ化 | Microsoft Identity Manager"
+title: "Azure MFA を使用した PAM のアクティブ化 | Microsoft Docs"
 description: "ユーザーが Privileged Access Management でロールをアクティブ化すると、Azure MFA が第 2 のセキュリティ層として設定されます。"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 518a7e165946049745c8eea15ecb61866d6f9c04
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: fa6d69038e5b2f0b933773381661929159198242
 
 
 ---
 
-# Azure MFA を使用したアクティブ化
+# <a name="using-azure-mfa-for-activation"></a>Azure MFA を使用したアクティブ化
 PAM ロールを構成するときは、ロールのアクティブ化を要求するユーザーを承認する方法を選択できます。 PAM の認証アクティビティの実装には、以下の選択肢があります。
 
 - ロールの所有者の承認
@@ -29,7 +29,7 @@ PAM ロールを構成するときは、ロールのアクティブ化を要求�
 
 Microsoft Azure Multi-Factor Authentication (MFA) は、ユーザーがモバイル アプリ、電話、またはテキスト メッセージを使用してサインイン試行を確認する必要がある認証サービスです。 Microsoft Azure Active Directory での利用が可能で、クラウドとオンプレミスのエンタープライズ アプリケーション用のサービスとして使用できます。 PAM のシナリオでは、Azure MFA には、候補ユーザーが以前 Windows PRIV ドメインに対して使用していた認証方法に関係なく、認証で使用できる追加の認証メカニズムがあります。
 
-## 前提条件
+## <a name="prerequisites"></a>必要条件
 
 MIM で Azure MFA を使用するには、次の項目が必要です。
 
@@ -38,7 +38,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 - 候補ユーザー用の Azure Active Directory Premium ライセンス、またはその他 Azure MFA のライセンス許諾を受ける方法
 - 全候補ユーザーの電話番号
 
-## Azure MFA プロバイダーの作成
+## <a name="creating-an-azure-mfa-provider"></a>Azure MFA プロバイダーの作成
 
 ここでは、Microsoft Azure Active Directory に Azure MFA プロバイダーを設定します。  すでに Azure MFA をスタンドアロンで使用している場合、または Azure Active Directory Premium を使用して構成している場合は、次のセクションに進んでください。
 
@@ -50,7 +50,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 
 4.  **[名前]** フィールドに「 **PAM**」と入力し、[使用モデル] フィールドで [有効化されたユーザーごと] を選択します。 Azure AD ディレクトリが既にある場合は、そのディレクトリを選択します。 最後に **[作成]**をクリックします。
 
-## Azure MFA サービス資格情報のダウンロード
+## <a name="downloading-the-azure-mfa-service-credentials"></a>Azure MFA サービス資格情報のダウンロード
 
 次に、Azure MFA に接続するために PAM の認証情報を含むファイルを生成します。
 
@@ -73,7 +73,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 >[!NOTE]
 > ZIP ファイルには Azure MFA サービスへの認証に使用されるキー生成情報が含まれています。
 
-## Azure MFA の MIM サービスの構成
+## <a name="configuring-the-mim-service-for-azure-mfa"></a>Azure MFA の MIM サービスの構成
 
 1.  MIM サービスがインストールされているコンピューターで、管理者または MIM をインストールしたユーザーとしてサインインします。
 
@@ -102,7 +102,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 > [!NOTE]
 > プロセスの最後に、ファイル **MfaSettings.xml** またはそのコピー、あるいは ZIP ファイルが読み取り可能ではないことを確認します。
 
-## Azure MFA 用に PAM ユーザーを構成する
+## <a name="configure-pam-users-for-azure-mfa"></a>Azure MFA 用に PAM ユーザーを構成する
 
 Azure MFA を必要とするロールをアクティブ化するユーザーについては、そのユーザーの電話番号を MIM に格納する必要があります。 この属性は 2 通りの方法で設定します。
 
@@ -115,7 +115,7 @@ Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 ```
 
 
-## Azure MFA 用に PAM ロールを構成する
+## <a name="configure-pam-roles-for-azure-mfa"></a>Azure MFA 用に PAM ロールを構成する
 
 PAM ロールの候補ユーザーすべての電話番号を MIM サービス データベースに格納すると、Azure MFA を必要とするようにロールを構成できます。 これは、`New-PAMRole` コマンドまたは `Set-PAMRole` コマンドを使用して行います。 例:
 
@@ -125,7 +125,7 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 
 `Set-PAMRole` コマンドにパラメーター "-MFAEnabled 0" を指定すると、ロールに対して Azure MFA を無効にすることができます。
 
-## トラブルシューティング
+## <a name="troubleshooting"></a>トラブルシューティング
 
 Privileged Access Management のイベント ログには、次のイベントが記録されます。
 
@@ -151,6 +151,6 @@ Privileged Access Management のイベント ログには、次のイベント�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

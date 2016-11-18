@@ -3,23 +3,23 @@ title: "スクリプトを使用した PAM の構成"
 description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
 ms.date: 10/04/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a50528778379afac14ff9abd70c7b8d56df8f5bf
-ms.openlocfilehash: 971bd5f166edbb2c58cbfe7c9f787c76cb8c7f92
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
 
 
 ---
 
-# スクリプトを使用した PAM の構成
+# <a name="configure-pam-using-scripts"></a>スクリプトを使用した PAM の構成
 
 別々のサーバーに SQL および SharePoint をインストールする場合は、次の手順に従って構成する必要があります。 SQL、SharePoint および PAM コンポーネントが同じコンピューターにインストールされている場合、次の手順は、そのコンピューターから実行する必要があります。
 
@@ -39,11 +39,11 @@ ms.openlocfilehash: 971bd5f166edbb2c58cbfe7c9f787c76cb8c7f92
 5. 同じ PAMDeploymentConfig.xml をすべてのコンピューター、CORPDC、PRIVDC、PAM サーバー、SQL Server および SharePoint サーバー上の %SYSTEMDRIVE%\PAM フォルダーにコピーします。
 
 
-## 展開ワークシート
+## <a name="deployment-worksheet"></a>展開ワークシート
 
 続行する前に、PAMDeploymentConfig.xml を更新し、更新されたコピーをすべてのコンピューターに配置します。
 
-### Setup
+### <a name="setup"></a>Setup
 
 |マシン   | 次のユーザーとして実行   |コマンド   |
 |---|---|---|
@@ -55,7 +55,7 @@ ms.openlocfilehash: 971bd5f166edbb2c58cbfe7c9f787c76cb8c7f92
 | PAMServer  | ローカル管理者 (ドメインへの参加後は MIM 管理者)  | .\PAMDeployment.ps1 メニュー オプション 5 を選択 (MIM PAM セットアップ)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 メニュー オプション 6 を選択 (PAM 信頼セットアップ) .\PAMDeployment.ps1 メニュー オプション 6 を選択 (PAM 信頼セットアップ) |
 
-### Validation
+### <a name="validation"></a>Validation
 
 |  マシン | 次のユーザーとして実行   | コマンド   |
 |---|---|---|
@@ -71,6 +71,6 @@ ms.openlocfilehash: 971bd5f166edbb2c58cbfe7c9f787c76cb8c7f92
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
