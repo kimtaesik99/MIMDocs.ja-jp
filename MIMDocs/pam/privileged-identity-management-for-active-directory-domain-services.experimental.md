@@ -1,11 +1,11 @@
 ---
 title: "ADDS の PAM の概要 | Microsoft Docs"
-description: "Privileged Access Management について説明すると共に、Active Directory 環境を管理および保護する場合に、これがどのように役に立つのかを説明します。"
+description: "Privileged Access Management (PAM) は、組織の既存の Active Directory 環境内で特権アクセスを制限するのに役立ちます。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/27/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -14,12 +14,12 @@ ms.reviewer: mwahl
 ms.suite: ems
 experiment_id: kgremban_images
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 7751722f4f75dcdd4af5f578060b4e1b144073ef
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: 9a047644d07e3ee3c2d1abfde7753849b5ddc63b
 
 ---
 
-# <a name="privileged-access-management-for-active-directory-domain-services"></a>Active Directory ドメイン サービスの Privileged Access Management
+# <a name="privileged-access-management-for-active-directory-domain-services"></a>Active Directory Domain Services の Privileged Access Management
 Privileged Access Management (PAM) は、組織の既存の Active Directory 環境内で特権アクセスを制限するのに役立ちます。
 
 ![PAM の手順: 準備、保護、運用、監視 - 図](media/MIM_PIM_SetupProcess.png)
@@ -96,6 +96,6 @@ PAM には次のような利点があります。
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
