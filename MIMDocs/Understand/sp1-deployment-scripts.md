@@ -1,11 +1,11 @@
 ---
 title: "MIM2016 SP1 PAM 展開スクリプト"
-description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
+description: "このページは、スクリプトを使用した Privileged Identity Manager の構成に関するシリーズ記事の一部です。 環境の前提条件の一覧が記載されています。"
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 2bf445f2103c2793d613e001f15e06bdc8b9ad54
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 10d06ae573e378797467ab1eb91e977d59b821d1
 
 
 ---
@@ -37,6 +37,6 @@ PAM 展開スクリプトを使用する準備ができたら、 「[スクリ�
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

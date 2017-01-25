@@ -1,11 +1,11 @@
 ---
 title: "スクリプトを使用した PAM の構成"
-description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
+description: "この記事は、スクリプトを使用した PAM の構成に関するシリーズの一部です。 PAM 展開スクリプトで使用する XML ファイルの変更について説明します。"
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
 
 
 ---
@@ -71,6 +71,6 @@ ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

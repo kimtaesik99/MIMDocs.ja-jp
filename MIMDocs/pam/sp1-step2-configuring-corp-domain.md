@@ -1,11 +1,11 @@
 ---
 title: "手順 2. CORP ドメインの構成"
-description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
+description: "この記事では、CORP ドメインの構成に必要な 2 番目の手順について説明します。この手順では、CORPDC への sids.txt のコピー後にスクリプトを実行します。"
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: b7acc475c505b29559c510fd3fa350fed1c3157b
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 8480350f85b3543a32d4db3dbc6a388afcb16352
 
 
 ---
@@ -39,6 +39,6 @@ SIDs.txt を CORPDC にコピーした場合は、**PRIVOnly の展開には不�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
