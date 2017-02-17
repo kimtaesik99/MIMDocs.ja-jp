@@ -1,11 +1,11 @@
 ---
-title: "パスワード変更通知 | Microsoft Docs"
+title: "パスワード変更通知サービスの展開 | Microsoft Docs"
 description: "ドメイン コントローラーに MIM パスワード変更通知サービスをインストールして構成する手順を説明します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
 
 
 ---
@@ -32,7 +32,7 @@ ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
 
 4.  ショートカット ファイルを右クリックして、 **[プロパティ]**を表示します。
 
-5.  [ターゲット] フィールドで、msi ファイルへのパスの前に *msiexec.exe /i* を追加し、後に *SCHEMAONLY=TRUE* を追加します。 たとえば、セットアップ フォルダーが *C:\PCNS* の場合、実行するコマンドは次のようになります (全体が 1 行です)。
+5.  [ターゲット] フィールドで、msi ファイルへのパスの前に *msiexec.exe /i* を追加し、後に *SCHEMAONLY=TRUE* を追加します。 たとえば、セットアップ フォルダーが *C:\PCNS* の場合、実行するコマンドは次のようになります (全体が&1; 行です)。
 
     ```
     msiexec.exe /i "C:\PCNS\x64\Password Change Notification Service.msi" SCHEMAONLY=TRUE
@@ -61,6 +61,6 @@ ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
