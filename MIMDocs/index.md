@@ -1,152 +1,132 @@
 ---
-asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
-layout: HubPage
-title: "Identity Manager のドキュメント | Microsoft ドキュメント"
-description: "Microsoft Identity Manager の技術ドキュメント - オンプレミスの ID およびアクセス管理"
-keywords: "Identity Manager のドキュメント, Microsoft Identity Manager, MIM"
-author: kgremban
-manager: femila
-ms.date: 10/25/2016
-ms.topic: hubpage
-ms.prod: microsoft-identity-manager
-ms.service: microsoft-identity-manager
-ms.technology: security
-ms.suite: ems
-ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
+layout: LandingPage
+title: "Microsoft Identity Manager のドキュメント | Microsoft ドキュメント"
+description: "Microsoft Identity Manager を使用する方法について学習します。"
 translationtype: Human Translation
-ms.sourcegitcommit: 584efc6cc60eebe69fb32e7a0bdff25f568eee7f
-ms.openlocfilehash: b857664f1065f975e6d7e95508928b679548b52c
-
+ms.sourcegitcommit: d6b2c0db8fa071d3cec9ea680667b9e9b7f75267
+ms.openlocfilehash: 921e34c6625d798909e6ded0ea611c731141a052
 
 ---
-# Identity Management のドキュメント
-<article id="main">
-    <section id="hero-content">
-      <h1>Identity Manager のドキュメント</h1>
-      <h2>Microsoft Identity Manager でオンプレミスの ID 管理をセットアップする方法について説明します。 ID の同期や ID の盗難防止などを構成する方法を説明します。</h2>
-      <h3>MIM の使用は初めてですか? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">製品ページをご覧ください &rarr;</a></h3>     
-    </section>
-    <aside class="alert section-border">
-      <p>実践する準備はできていますか?</p>
-      <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">無料試用版の使用開始</a></li>
-      </ol>
-    </aside>
-    <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> おすすめコンテンツ</h2>
-      <div class="features row">
-        <ul class="column column-half">
-          <li><mark><b>新しい </b></mark><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">Microsoft Identity Manager 2016 Service Pack 1</a></li>
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">新しいサーバーに MIM ソフトウェアを展開する</a></li>
-        </ul>
-        <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Identity Management REST API リファレンス</a></li>
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">MIM 2016 の概要</a></li>
-        </ul>
-      </div>
-    </section>
-    <div id="journeys">
-      <section class="container">
-        <ul class="journeys-list">
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
-                <div class="title column-third">
-                  <span class="step-number">1</span>
-                  <p>理解と調査</p>
+# <a name="microsoft-identity-manager-documentation"></a>Microsoft Identity Manager のドキュメント
+
+Microsoft Identity Manager 2016 では、複数のオンプレミスの認証ストアを Active Directory、LDAP、Oracle、およびその他のアプリケーションを Azure Active Directory とｐシームレスにブリッジすることで Microsoft の ID およびアクセス管理ソリューションをまとめてバインドします。 これにより、オンプレミスの LOB アプリケーションに一貫したエクスペリエンスが提供されます。
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microsoft Identity Manager 2016 Service Pack 1 の新機能</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Microsoft Identity Manager の概要および機能について説明します。
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
-                    <h3>MIM 2016 とは</h3>
-                    <p>MIM 2016 がどのようにオンプレミスおよびハイブリッドの ID およびアクセス管理機能を提供しているかを説明します。</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure">
-                    <h3>Azure のハイブリッド レポート</h3>
-                    <p>オンプレミスおよびクラウド内のイベントの 1 つのレポートを作成します。</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms">
-                    <h3>サポートされているプラットフォーム</h3>
-                    <p>MIM でサポートされるプラットフォーム、サーバー、およびアプリケーションの一覧はこちらをご覧ください。</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
-                <div class="title column-third">
-                  <span class="step-number">2</span>
-                  <p>展開と使用</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microsoft Identity Manager について</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">MIM を展開して使用します。
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
-                    <h3>初回展開</h3>
-                    <p>以前に FIM または MIM を展開したことがない新しいサーバーに MIM を展開します。</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-R2">
-                    <h3>FIM 2010 R2 からのアップグレード</h3>
-                    <p>既存の FIM 2010 R2 テスト システムを MIM 2016 にアップグレードします。</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller">
-                    <h3>パスワード変更通知サービス</h3>
-                    <p>各ドメイン コントローラー サーバーに PCNS をインストールして、パスワードの同期を可能にします。</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div class="section-border">
-      <section class="resources container">
-        <h2 class="section-heading"><span class="icon icon-options"></span> 開発者用リファレンス</h2>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Access Management REST API リファレンス</a></li>
-          </ul>
-          <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">Certificate Management REST API リファレンス</a></li>
-          </ul>
+            </div>
         </div>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="https://technet.microsoft.com/library/mt604080.aspx">Privileged Access Management のコマンドレット</a></li>
-          </ul>
+        </a>
+    </li>
+    <li>
+        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/deploy.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microsoft Identity Manager 2016 のデプロイ</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </div>
-    <aside class="alert alert-social">
-      <p>最新の MIM サポートニュースを入手</p>
-      <ol class="action-list">
-        <li><a href="https://blogs.technet.microsoft.com/iamsupport/" target="\_blank" class="button-bordered button-translucent">サポート チーム公式ブログ</a></li>
-      </ol>
-    </aside>
-</article>
+        </a>
+    </li>
+</ul>
+
+---
+
+<h2>リファレンス</h2>
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_reference.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Privileged Access Management REST API リファレンス</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://blogs.technet.microsoft.com/iamsupport/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_blog.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>ID およびアクセス管理サポートチームのブログ</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+
+<h2>ソリューション</h2>
+<ul class="panelContent cardsW">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <p><a href="/enterprise-mobility-security/solutions/manage-access-at-scale">大量のアクセスの管理</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
