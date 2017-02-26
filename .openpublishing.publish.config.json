@@ -73,6 +73,7 @@
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/MIMDocs.ja-jp",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -82,7 +83,11 @@
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/Microsoft/MIMDocs-pr",
-      "branch": "live"
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "master": "master"
+      }
     }
   ],
   "need_generate_pdf_url_template": false
