@@ -1,11 +1,11 @@
 ---
-title: Microsoft Identity Manager 2016 |Microsoft Docs
+title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
 description: "クラウドとオンプレミスでより安全でより便利な ID 管理エクスペリエンスを作成する MIM 2016 のしくみを理解します。"
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ed477de53abbf646f47efb90e617b04184bc29a9
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: 4f293a349916ae1a55d8551ef949758cab851b74
 
 
 ---
@@ -24,7 +24,7 @@ Microsoft Identity Manager の通常の提供および更新サイクルの一�
 
 MIM SP1 の運用環境への展開中に問題が発生した場合は、Microsoft カスタマー サポートにお問い合わせください。
 
-ご意見もお待ちしています。 製品チームに対するフィードバック、コメント、または懸案事項がありましたら、[mim2016@microsoft.com.](mailto:mim2016@microsoft.com) まで電子メールでお知らせください。
+ご意見もお待ちしています。 製品チームに対するフィードバック、コメント、または懸案事項がありましたら、[mim2016@microsoft.com](mailto:mim2016@microsoft.com) まで電子メールでお知らせください。
 
 
 
@@ -85,6 +85,6 @@ MIMService と MIM 同期データベースをバックアップする必要が�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

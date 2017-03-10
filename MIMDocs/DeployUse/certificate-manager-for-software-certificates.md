@@ -1,11 +1,11 @@
 ---
-title: "ソフトウェア証明書の作成 |Microsoft Docs"
+title: "証明書マネージャーでテンプレートを使用して証明書を要求する | Microsoft Docs"
 description: "証明書マネージャーを使用して、プロファイル テンプレートでソフトウェア証明書を作成および更新する方法について説明します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
 
 
 ---
@@ -98,6 +98,6 @@ ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

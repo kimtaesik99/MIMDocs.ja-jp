@@ -1,11 +1,11 @@
 ---
-title: "AD と MIM サービスの同期 | Microsoft Docs"
+title: "Microsoft Identity Manager と AD との同期を使用する | Microsoft Docs"
 description: "管理エージェントと MIM 同期サービスを使用して、Active Directory と MIM データベースを同期します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 59e050c8ccd811586e2da8476f842b853d37f2f1
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: f84fbbdc8de5cfffc8570c52f8298cc69273c3ee
 
 
 ---
@@ -230,7 +230,7 @@ ADMA および MIMMA コネクタの実行プロファイルを作成します�
 
 ### <a name="create-run-profiles-for-the-adma-connector"></a>ADMA コネクタの実行プロファイルの作成
 
-この表では、ADMA コネクタ用に作成する 5 つの実行プロファイルを示しています。
+この表では、ADMA コネクタ用に作成する&5; つの実行プロファイルを示しています。
 
 | 名前 | 型 |
 | ---- | ---- |
@@ -262,7 +262,7 @@ ADMA コネクタの実行プロファイルを作成するには
 
 ### <a name="create-run-profiles-for-the-mimma-connector"></a>MIMMA コネクタの実行プロファイルの作成
 
-この表では、MIMMA コネクタの対応する 5 つの実行プロファイルを示します。
+この表では、MIMMA コネクタの対応する&5; つの実行プロファイルを示します。
 
 | 名前 | 型 |
 | -------- | -------- |
@@ -347,7 +347,7 @@ AD ユーザー受信同期規則を作成するには:
 8. **[概要]** タブで、**[送信]** をクリックします。
 
 ## <a name="initialize-the-testing-environment"></a>テスト環境の初期化
-AD データを使用して MIM 構成のテストを行うには、以下の 4 つの手順を実行する必要があります。
+AD データを使用して MIM 構成のテストを行うには、以下の&4; つの手順を実行する必要があります。
 
 ### <a name="enable-provisioning"></a>プロビジョニングを有効にする
 
@@ -435,6 +435,6 @@ MIM サービス データベースにオブジェクトを設定するには、
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

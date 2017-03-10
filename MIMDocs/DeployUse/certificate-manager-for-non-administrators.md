@@ -1,11 +1,11 @@
 ---
-title: "セルフサービス スマート カードの更新 | Microsoft Docs"
+title: "Microsoft Identity Manager の管理者アクセス権なしでのセルフサービスによるスマート カードの更新 | Microsoft Docs"
 description: "自身のコンピューターへの管理者アクセス権を持たないユーザーに対し、スマート カードを登録して証明書マネージャーを使用できるようにする方法について説明します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,16 +13,16 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
 
 
 ---
 
-# <a name="enroll-smart-cards-for-nonadministrators"></a>非管理者のスマート カードの登録
+# <a name="enroll-smart-cards-for-non-administrators"></a>非管理者のスマート カードの登録
 ユーザーがコンピューターのローカル管理者ではない場合、既定では、そのコンピューターにスマート カードを登録できません。 この制限を回避するには、次の手順を実行します。
 
-## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
 
 1.  **appx ファイルを展開する**
 
@@ -96,6 +96,6 @@ ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
