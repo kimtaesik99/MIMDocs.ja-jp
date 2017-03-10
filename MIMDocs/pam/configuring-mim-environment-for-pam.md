@@ -1,5 +1,5 @@
 ---
-title: "PAM の展開と構成 | Microsoft Docs"
+title: "Privileged Access Management の MIM 2016 を構成する | Microsoft Docs"
 description: "MIM をインストールし Privileged Access Management 用に構成するためのロードマップ。"
 keywords: 
 author: kgremban
@@ -13,8 +13,8 @@ ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: a081b49ca8d0de7ce7d5f7385e5a652b09b722c3
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 32815c4ddc51fb9c9187c9fc9a1710239faf7935
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: a081b49ca8d0de7ce7d5f7385e5a652b09b722c3
 
 これらの手順は、テスト環境を最初から作成して構築できるようにレイアウトされています。 PAM を既存の環境に適用している場合は、例と同じ新しいドメイン コントローラーやユーザー アカウントを作成するのではなく、独自のものを使うことができます。
 
-1.   *CORPDC* サーバーをドメイン コントローラーとして、 *CORPWKSTN* をメンバー ワークステーションとして準備します。
+1.  *CORPDC* サーバーをドメイン コントローラーとして、 *CORPWKSTN* をメンバー ワークステーションとして準備します。
 
 2.  *PRIVDC* サーバーをドメイン コントローラーとして準備します。
 
@@ -43,6 +43,6 @@ ms.openlocfilehash: a081b49ca8d0de7ce7d5f7385e5a652b09b722c3
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: MIM Certificate Manager | Microsoft Docs
+title: "MIM Certificate Manager Windows アプリケーションの展開 | Microsoft Docs"
 description: "Certificate Manager アプリを展開して、ユーザーが独自のアクセス権を管理できるようにする方法について説明します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
 
 
 ---
@@ -120,7 +120,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 4.  ファイルを保存してエディターを終了します。
 
-5.  パッケージに署名すると、署名ファイルが 1 つ作成されるため、AppxSignature.p7x という名前の元の署名ファイルを削除する必要があります。
+5.  パッケージに署名すると、署名ファイルが&1; つ作成されるため、AppxSignature.p7x という名前の元の署名ファイルを削除する必要があります。
 
 6.  AppxManifest.xml ファイルは、署名証明書のサブジェクト名を指定します。 このファイルを開いて編集します。
 
@@ -249,13 +249,13 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
     -   ServerFQDN は MIMCM サーバーのフル コンピューター名のみです。
 
-    -    **ConfigureMIimCMClientAndRelyingParty.ps1** のスクリプトのヘルプについては、 `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`を実行します。
+    -   **ConfigureMIimCMClientAndRelyingParty.ps1** のスクリプトのヘルプについては、 `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`を実行します。
 
 ## <a name="deploy-the-app"></a>アプリを展開する
 CM アプリをセットアップする際には、ダウンロード センターでファイル MIMDMModernApp_&lt;バージョン&gt;_AnyCPU_Test.zip をダウンロードして、すべてのコンテンツを抽出します。 .appx ファイルはインストーラーです。 Windows ストア アプリを展開する通常の方法で展開できます。[System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)を使用したり、[Intune](https://technet.microsoft.com/library/dn613839.aspx) を使用してアプリをサイドロードして、ユーザーがポータル サイトを使用してアクセスしなければならないようにしたり、ユーザーが自身のマシンに直接プッシュされるようにすることができます。
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,11 +1,11 @@
 ---
 title: "手順 8. PAM 展開の検証"
-description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
+description: "スクリプトを使用した PAM の展開には、PAM シナリオを実行して PAM 展開が想定どおりに動作していることを検証可能な検証スクリプトが付属しています。"
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 2f4306dc50ecb869a3c917dfaf320ad80dddedd1
 
 
 ---
@@ -83,6 +83,6 @@ PowerShell ウィンドウから次のように入力します。
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

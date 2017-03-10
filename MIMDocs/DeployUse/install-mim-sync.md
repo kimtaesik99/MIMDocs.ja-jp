@@ -1,11 +1,11 @@
 ---
-title: "MIM 同期サービスのインストール | Microsoft Docs"
+title: "Microsoft Identity Manager 同期サービスのインストール | Microsoft Docs"
 description: "同期サービスをインストールおよび構成して、MIM 2016 コンポーネントを使用開始します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: dc1f7ff40ed5f657c24e7293ff76241c3a7082f1
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: c6cf0c93679319716c34904ea6239902010e0860
 
 
 ---
@@ -107,6 +107,6 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

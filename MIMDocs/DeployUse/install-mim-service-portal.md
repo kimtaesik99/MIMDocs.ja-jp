@@ -1,11 +1,11 @@
 ---
-title: "MIM サービスおよびポータルのインストール | Microsoft Docs"
+title: "Microsoft Identity Manager サービスおよびポータルのインストール | Microsoft Docs"
 description: "MIM サービスおよび Microsoft Identity Manager 2016 用のポータルをインストールする手順を説明します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
 
 
 ---
@@ -51,7 +51,7 @@ ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
     ![MIM データベース接続イメージを構成する](media/MIM-Install10.png)
 
-7. **[メール サーバーの接続の構成]** で、**[メール サーバー]** に Exchange サーバーの名前を入力します。 メール サーバーが構成されていない場合は、メール サーバー名として**localhost**を使用し、一番上の 2 つのチェック ボックスをオフにします。 **[Next]** をクリックします。
+7. **[メール サーバーの接続の構成]** で、**[メール サーバー]** に Exchange サーバーの名前を入力します。 メール サーバーが構成されていない場合は、メール サーバー名として**localhost**を使用し、一番上の&2; つのチェック ボックスをオフにします。 **[Next]** をクリックします。
 
     ![メール サーバーの接続の構成の画像](media/MIM-Install11.png)
 
@@ -129,7 +129,7 @@ ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
     2.  **[受信の規則]**をクリックします。
 
-    3.  次の 2 つの規則が表示されていることを確認します。
+    3.  次の&2; つの規則が表示されていることを確認します。
 
         -   Forefront Identity Manager サービス (STS)。
 
@@ -152,6 +152,6 @@ ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

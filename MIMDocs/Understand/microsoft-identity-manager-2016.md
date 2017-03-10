@@ -37,6 +37,6 @@ Microsoft Identity Manager は、その前身である Forefront Identity Manage
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

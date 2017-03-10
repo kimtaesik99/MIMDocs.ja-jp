@@ -1,11 +1,11 @@
 ---
-title: "Azure でのハイブリッド レポート | Microsoft Docs"
+title: "MIM 2016 を使用した Azure のハイブリッド レポートの操作 | Microsoft Docs"
 description: "オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。"
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/27/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 9e64f930a8fe8422c7f6c8d98e558961ae8b88f2
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
 # <a name="working-with-identity-manager-hybrid-reporting"></a>Identity Manager ハイブリッド レポートの操作
 
 ## <a name="available-hybrid-reports"></a>使用可能なハイブリッド レポート
-Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) レポートは、**パスワード リセット アクティビティ**、**パスワード リセット登録**、および**セルフ サービス グループ アクティビティ**です。
+Azure AD で使用可能な最初の&3; つの Microsoft Identity Manager (MIM) レポートは、**パスワード リセット アクティビティ**、**パスワード リセット登録**、および**セルフ サービス グループ アクティビティ**です。
 
 -   パスワード リセット アクティビティは、ユーザーが SSPR を使用してパスワード リセットを実行したとき、各インスタンスを表示します。さらに、認証のためのゲートまたは **メソッド** を提供します。
 
@@ -103,6 +103,6 @@ Microsoft Identity Manager によって生成されたイベントは、Windows 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

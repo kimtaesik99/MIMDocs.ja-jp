@@ -19,6 +19,7 @@
 ### [手順 5 - PRIV と CORP 間に信頼関係を確立する](step-5-establish-trust-between-priv-corp-forests.md)
 ### [手順 6 - 特権アカウントを作成する](step-6-transition-group-to-pam.md)
 ### [手順 7 - ユーザーのアクセスを昇格する](step-7-elevate-user-access.md)
+### [Windows Server 2016 を使用した MIM PAM の展開](deploy-pam-with-windows-server-2016.md)
 ### [Azure MFA のセットアップ](use-azure-mfa-for-activation.md)
 ## [スクリプトを使用した PAM の構成](sp1-pam-configure-using-scripts.md)
 ### [手順 1. Priv ドメインの構成](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +34,6 @@
 # [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
