@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 2f2ae09ab8bc28b83b66073985b3574517a220b7
 ms.openlocfilehash: bed26316673d777f3d1934011668686b3e9def1d
+ms.lasthandoff: 01/13/2017
 
 
 ---
@@ -34,13 +35,13 @@ ms.openlocfilehash: bed26316673d777f3d1934011668686b3e9def1d
 | | その他の接続システム (省略可能) | Active Directory ドメイン サービス<br/>Active Directory<br/>ライトウェイト ディレクトリ サービス<br/>SQL Server 2000 以降<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> 他のサード パーティ製品 |
 | **MIM サービス** (PAM シナリオを除く) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | MIM サービス データベース | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | MIM サービスの承認とグループ管理電子メール用の Exchange (省略可能) | Exchange Server 2007 SP3 (Exchange 管理コンソールがインストール済み)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | MIM サービスの承認とグループ管理電子メール用の Exchange (省略可能) | Exchange Server 2007 SP3 (Exchange 管理コンソールがインストール済み)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | **MIM サービスおよびポータル** (PAM シナリオのみ)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | 要塞環境の PAM フォレストの Active Directory | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | 既存フォレストの Active Directory | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | 既存フォレストの Active Directory | Windows Server 2008 <br/> Windows Server 2008 R2 *<br/> Windows Server 2012* <br/> Windows Server 2012 R2 *<br/> Windows Server 2016* |
 | | MIM サービス データベース | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | MIM サービスの承認とグループ管理電子メール用のメール サーバー (省略可能) | Exchange Server 2007 SP3 (Exchange 管理コンソールがインストール済み)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | MIM サービスの承認とグループ管理電子メール用のメール サーバー (省略可能) | Exchange Server 2007 SP3 (Exchange 管理コンソールがインストール済み)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | | ブラウザー | すべての主要なブラウザー |
 | **MIM サービス レポート** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 | | データ ウェアハウス | System Center 2012 Service Manager SP1 |
@@ -59,9 +60,4 @@ ms.openlocfilehash: bed26316673d777f3d1934011668686b3e9def1d
 | | BHOLD データベース | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * |
 | | メール サーバー (省略可能) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
 | | Web ブラウザー | Internet Explorer 7、8、9、10、または 11 と Silverlight |
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
