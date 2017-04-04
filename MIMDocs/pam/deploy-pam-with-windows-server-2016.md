@@ -5,14 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 02/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 18accbf24fc7af1a27e2e88059a9a8371dfd2c4d
-ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
+ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
+ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -29,7 +30,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
 ## <a name="preparation"></a>準備
 
-ラボ環境には少なくとも&2; つの VM が必要です。
+ラボ環境には少なくとも 2 つの VM が必要です。
 
 -   Windows Server 2016 を実行している、PRIV ドメイン コントローラーをホストする VM
 
@@ -73,7 +74,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
     ```
     $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
-    Enable-ADOptionalFeature \$of -scope ForestOrConfigurationSet -target "priv.contoso.local"
+    Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
     ```
 
   -   委任を構成した後、サーバーを再起動する前に、MIM 管理者と MIM サービス アカウントに対してシャドウのプリンシパルの作成および更新を承認します。
@@ -94,7 +95,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
  -   委任を構成した後、サーバーを再起動する前に、MIM 管理者に対して認証ポリシーの作成および更新を承認します。
 
-     a.  Powershell ウィンドウを起動して次のコマンドを入力し、4 つの行のそれぞれで “mimadmin” を MIM 管理者アカウントの名前に置き換えます。
+     a.  管理者特権の**コマンド プロンプト**を起動して次のコマンドを入力し、4 つの行のそれぞれで “mimadmin” を MIM 管理者アカウントの名前に置き換えます。
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
@@ -128,7 +129,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
 -   「[Step 5 - Establish trust](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md)」(手順 5 - 信頼関係を確立する) の指示に従いますが、以下の変更点があります。
 
-    -   一方向の信頼関係を確立する際は、最初の&2; つの PowerShell コマンド (get-credential および New-PAMTrust) のみを実行し、**New-PAMDomainConfiguration コマンドは実行しないでください**。
+    -   一方向の信頼関係を確立する際は、最初の 2 つの PowerShell コマンド (get-credential および New-PAMTrust) のみを実行し、**New-PAMDomainConfiguration コマンドは実行しないでください**。
 
     -   信頼関係を確立した後、PRIV\\Administrator として PRIVDC にログオンし、PowerShell を起動して次のコマンドを入力します。
   ```
@@ -149,9 +150,4 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 - [Active Directory Domain Services の Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
 - [Privileged Access Management の MIM 環境の構成](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
 - [スクリプトを使用した PAM の構成](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
