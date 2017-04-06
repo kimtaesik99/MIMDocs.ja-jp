@@ -1,5 +1,5 @@
-# [理解と調査](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-## [Microsoft Identity Manager の概要](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016.md)
+# 理解と調査
+## [Microsoft Identity Manager 2016 の概要](understand-explore/microsoft-identity-manager-2016.md)
 ## [プレインストールとトポロジの構成](https://technet.microsoft.com/library/ff602886)
 ## 基本要素
 ### 同期サービス
@@ -13,33 +13,34 @@
 #### [同期ポリシー ベースの送信同期の概要](https://technet.microsoft.com/library/jj150433)
 ### 証明書の管理
 ### BHOLD
-### [Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-#### [Privileged Access Management のコンポーネントを理解する](/microsoft-identity-manager/pam/principles-of-operation.md)
+### [Privileged Access Management](pam/privileged-identity-management-for-active-directory-domain-services.md)
+#### [Privileged Access Management のコンポーネントを理解する](pam/principles-of-operation.md)
 ### レポート
 ### コネクタ
-#### [コネクタのバージョン リリース履歴](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history.md)
+#### [コネクタのバージョン リリース履歴](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-version-history)
 ### [パスワード変更通知サービス](https://technet.microsoft.com/en-us/library/839a9291-a78f-4959-8e6a-3bf68bf62700)
-# [計画と設計](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
-## [Microsoft Identity Manager 2016 でサポートされるプラットフォーム](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md)
-## [容量計画ガイド](/microsoft-identity-manager/PlanDesign/capacity-planning-guide.md)
-## [トポロジに関する考慮事項](/microsoft-identity-manager/PlanDesign/topology-considerations.md)
+# 計画と設計
+## [Microsoft Identity Manager 2016 でサポートされるプラットフォーム](plan-design/microsoft-identity-manager-2016-supported-platforms.md)
+## [容量計画ガイド](plan-design/capacity-planning-guide.md)
+## [トポロジに関する考慮事項](plan-design/topology-considerations.md)
 ## 同期サービス
-### [ディレクトリへの接続](/microsoft-identity-manager/plan-design/supported-management-agents.md)
+### [ディレクトリへの接続](plan-design/supported-management-agents.md)
 ## サービスおよびポータル
 ### [ベスト プラクティス](https://technet.microsoft.com/library/ff608274)
 ### [FIM 2010 バックアップおよび復元ガイド](https://technet.microsoft.com/library/fim-2010-backup-and-restore-guide)
-### [ビジネス ポリシー ルールのデザイン]
-##  [Privileged Access Management](/microsoft-identity-manager/pam/environment-overview.md)
-### [階層モデル](/microsoft-identity-manager/pam/tier-model-for-partitioning-administrative-privileges.md)
-### [要塞環境を計画する](/microsoft-identity-manager/pam/planning-bastion-environment.md)
-### [ロールを定義する](/microsoft-identity-manager/pam/defining-roles-for-pam.md)
-### [高可用性と災害復旧](/microsoft-identity-manager/pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
-### [ハードウェアとソフトウェアの要件](/microsoft-identity-manager/pam/hardware-software-requirements.md)
+### ビジネス ポリシー ルールの設計
+##  [Privileged Access Management](pam/environment-overview.md)
+### [階層モデル](pam/tier-model-for-partitioning-administrative-privileges.md)
+### [要塞環境を計画する](pam/planning-bastion-environment.md)
+### [ロールを定義する](pam/defining-roles-for-pam.md)
+### [高可用性と災害復旧](pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
+### [ハードウェアとソフトウェアの要件](pam/hardware-software-requirements.md)
 ## [セルフサービスのパスワード リセット](https://technet.microsoft.com/library/jj134278)
 ## [レポート](https://technet.microsoft.com/library/jj133851)
-# [展開と使用](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# 展開と使用
+## [MIM 2016 の展開に必要な手順](deploy-use/microsoft-identity-manager-deploy.md)
 ## Identity Manager を展開する
-## [Forefront Identity Manager 2012 R2 からのアップグレード](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
+## [Forefront Identity Manager 2012 R2 からのアップグレード](deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
 ## サービスおよびポータル
 ### [FIM 2010 Kerberos の設定](https://technet.microsoft.com/library/jj134299)
 ### [FIM 2010 R2 の一般的なユーザーとグループの構成](https://technet.microsoft.com/library/jj150431)
@@ -52,17 +53,17 @@
 ### [FIM ポータルの構成とカスタマイズについて](https://technet.microsoft.com/library/ff393653)
 ### [カスタム リソースと属性の管理について](https://technet.microsoft.com/library/ff519007)
 ### [予期された状態の検出について](https://technet.microsoft.com/library/ff608269)
-## [セルフサービスのパスワード リセット](/microsoft-identity-manager/deploy-use/working-with-self-service-password-reset.md)
+## [セルフサービスのパスワード リセット](deploy-use/working-with-self-service-password-reset.md)
 ### [パスワード リセットについて](https://technet.microsoft.com/library/gg214071)
 ### [パスワードの登録とリセットのポータルのカスタマイズ](https://technet.microsoft.com/library/hh877809)
 ### [Forefront Identity Manager 2010 を使用したパスワード リセットの展開](https://technet.microsoft.com/video/video/password-reset-deployment-with-forefront-identity-manager-fim-2010)
 ### [Kerberos およびセルフサービスのパスワード リセット](https://technet.microsoft.com/library/jj134304)
 ### [Forefront Identity Manager 2010 R2 の維持 - セルフサービスのパスワード リセット](https://technet.microsoft.com/library/jj134290)
 ## パスワード変更通知サービス
-### [ドメイン コントローラーに MIM パスワード変更通知サービスを展開する](/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
+### [ドメイン コントローラーに MIM パスワード変更通知サービスを展開する](deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
 ### [パスワード変更通知のダウンロード](https://www.microsoft.com/download/details.aspx?id=19495)
 ## レポート
-###[Identity Manager ハイブリッド レポート](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting.md)
+###[Identity Manager ハイブリッド レポート](deploy-use/working-with-identity-manager-hybrid-reporting.md)
 ###[System Center Service Manager のレポートの統合](https://technet.microsoft.com/library/jj133845)
 ## 同期サービス
 ### [チュートリアル - ハウツー ガイド (GalSync、パスワード管理)](https://technet.microsoft.com/library/cc720550)
@@ -72,12 +73,12 @@
 
 ### パスワード リセットの展開ガイド
 ## 証明書マネージャー
-### [非管理者のスマート カードの登録](/microsoft-identity-manager/deploy-use/certificate-manager-for-non-administrators.md)
-### [証明書マネージャーを使用してソフトウェア証明書を作成する](/microsoft-identity-manager/deploy-use/certificate-manager-for-software-certificates.md)
+### [非管理者のスマート カードの登録](deploy-use/certificate-manager-for-non-administrators.md)
+### [証明書マネージャーを使用してソフトウェア証明書を作成する](deploy-use/certificate-manager-for-software-certificates.md)
 ## 特権アクセスの管理
-### [Privileged Access Management の MIM 環境を構成する](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-### [スクリプトを使用した PAM の構成](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-### [Azure MFA を使用したアクティブ化](/microsoft-identity-manager/pam/use-azure-mfa-for-activation.md)
+### [Privileged Access Management の MIM 環境を構成する](pam/configuring-mim-environment-for-pam.md)
+### [スクリプトを使用した PAM の構成](pam/sp1-pam-configure-using-scripts.md)
+### [Azure MFA を使用したアクティブ化](pam/use-azure-mfa-for-activation.md)
 # 管理インフラストラクチャ
 ## [Identity Manager のベスト プラクティス アナライザー](https://technet.microsoft.com/library/jj203402)
 ## 同期サービス
@@ -94,7 +95,7 @@
 ## BHOLD
 ## サービスおよびポータル
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
-### [動的なログ記録](/microsoft-identity-manager/infrastructure/mim-service-dynamic-logging.md)
+### [動的なログ記録](infrastructure/mim-service-dynamic-logging.md)
 ### [エクスポート パフォーマンス ガイド](https://technet.microsoft.com/library/hh322883)
 ## 特権アクセスの管理
 ## [レポート](https://technet.microsoft.com/library/jj133848)
@@ -118,21 +119,21 @@
 ### [例: 複数ソースからのルール エクステンションの作成](https://msdn.microsoft.com/en-us/library/ms696018)
 ### [ルール エクステンションを構築するためのヒント](https://technet.microsoft.com/library/cc708673)
 ## 証明書の管理
-### [Certificate Management REST API リファレンス](/microsoft-identity-manager/reference/certificate-management-rest-api-reference.md)
+### [Certificate Management REST API リファレンス](reference/certificate-management-rest-api-reference.md)
 ### [CM の通知 API の概要](https://msdn.microsoft.com/library/bb468066)
 ### [CM のプロビジョニング API の概要](https://msdn.microsoft.com/library/bb468046)
 ### [CM の SQL API の概要](https://msdn.microsoft.com/library/bb468093)
 ### [CM のカスタマイズ可能なインターフェイスの概要](https://msdn.microsoft.com/library/bb468076)
 ## [BHOLD](https://msdn.microsoft.com/library/jj853041)
 ## 特権アクセスの管理
-### [Privileged Access Management REST API リファレンス](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md)
+### [Privileged Access Management REST API リファレンス](reference/privileged-access-management-rest-api-reference.md)
 ## レポート
 ## コネクタ
-### [汎用 LDAP コネクタのテクニカル リファレンス](/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap.md)
-### [汎用 SQL コネクタ](/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md)
+### [汎用 LDAP コネクタのテクニカル リファレンス](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap)
+### [汎用 SQL コネクタ](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql)
 ### [Web サービスのコネクタ](https://www.microsoft.com/download/details.aspx?id=29943)
-### [Windows PowerShell コネクタのテクニカル リファレンス](/azure/active-directory/connect/active-directory-aadconnectsync-connector-powershell.md)
-### [Lotus Domino コネクタのテクニカル リファレンス](/azure/active-directory/connect/active-directory-aadconnectsync-connector-domino.md)
+### [Windows PowerShell コネクタのテクニカル リファレンス](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-powershell)
+### [Lotus Domino コネクタのテクニカル リファレンス](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-domino)
 ## サービス
 ## テクニカル リファレンス
 ### [FIM 2010 の関数リファレンス](https://technet.microsoft.com/library/ff800820)
