@@ -8,19 +8,14 @@
 ### [サーバーのセットアップ: SharePoint](prepare-server-sharepoint.md)
 ### [サーバーのセットアップ: Exchange](prepare-server-exchange.md)
 ### [MIM のインストール: 同期](install-mim-sync.md)
-### [MIM のインストール: サービスおよびポータル](install-mim-service-portal.md)
+### [MIM サービスとポータルをインストールします。](install-mim-service-portal.md)
 ### [MIM のインストール: 同期データベース](install-mim-sync-ad-service.md)
-## [Forefront Identity Manager 2010 R2 からのアップグレード](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+## [Forefront Identity Manager 2012 R2 からのアップグレード](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
 ## [パスワード変更通知サービス](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ## [Identity Manager ハイブリッド レポート](working-with-identity-manager-hybrid-reporting.md)
 ## [セルフサービスのパスワード リセット](working-with-self-service-password-reset.md)
 ## [MIM Certificate Manager](working-with-mim-certificate-manager.md)
 ### [スマートカードの登録](certificate-manager-for-non-administrators.md)
 ### [ソフトウェア証明書の作成](certificate-manager-for-software-certificates.md)
-# [Privileged Access Management の使用](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
+# [Privileged Access Management を使う](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
-
-
-<!--HONumber=Jul16_HO3-->
-
-

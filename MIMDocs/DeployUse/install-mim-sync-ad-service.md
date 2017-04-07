@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: f84fbbdc8de5cfffc8570c52f8298cc69273c3ee
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -44,7 +45,7 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
 
 1.  Synchronization Service Manager を開きます。
 
-2.  [管理エージェントを作成する] ウィザードを開くには、**[管理操作]** ページに切り替えて、**[操作]** メニューで、**[作成] **をクリックします。
+2.  [管理エージェントを作成する] ウィザードを開くには、**[管理操作]** ページに切り替えて、**[操作]** メニューで、**[作成]**をクリックします。
 
 3.  **[管理エージェントを作成する]** ページで、次の設定を行い、**[次へ]** をクリックします。
 
@@ -432,9 +433,4 @@ MIM サービス データベースにオブジェクトを設定するには、
 
 >[!div class="step-by-step"]
 [« MIM サービスおよびポータル](install-mim-service-portal.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
