@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
+ms.lasthandoff: 02/13/2017
 
 
 ---
@@ -201,9 +202,4 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 注: FIM のアドインおよび拡張機能がユーザーの SSPR 用のコンピューターに現在展開されている場合、FIM のアドインおよび拡張機能をすべて MIM 2016 にアップグレードするまで、パスワードのリセットに新しい MFA 電話ゲートを構成しないでください。  FIM 2010 と FIM 2010 R2 のアドインと拡張機能は新しいゲートを認識しないため、エラーが返され、ユーザーはパスワードのリセットを完了できません。
 
 Microsoft Identity Manager 2016 SP1 のアップグレード ガイダンスについては、次の [Microsoft Identity Manager 2016 Service Pack 1 アップグレード パッケージ](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)に関する記事をご覧ください。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
