@@ -55,6 +55,25 @@
 ### [手順 7. セットアップ SID 履歴/SID フィルター](/microsoft-identity-manager/pam/sp1-step7-setup-sidhistory-sidfiltering)
 ### [手順 8. PAM 展開の検証](/microsoft-identity-manager/pam/sp1-step8-pam-deployment-verification)
 ### [補遺](/microsoft-identity-manager/pam/sp1-pam-deployment-addendum)
+# 管理インフラストラクチャ
+## [Identity Manager のベスト プラクティス アナライザー](https://technet.microsoft.com/library/jj203402)
+## [パスワード変更通知サービス](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308)
+## 証明書の管理
+### [CLMUtil コマンド ライン ツール](https://technet.microsoft.com/library/cc720647)
+### [構成プロファイル テンプレート](https://technet.microsoft.com/library/cc708656)
+### [証明書管理 Web サイトの使用](https://technet.microsoft.com/library/cc720560)
+### [スマート カード アプリケーションの管理](https://technet.microsoft.com/library/cc708681)
+### [バックアップと復元](https://technet.microsoft.com/library/dd883245)
+## セルフサービスのパスワード リセット
+### [プログラムによるユーザーの登録](https://technet.microsoft.com/library/jj134294)
+### [カスタマイズ](https://technet.microsoft.com/library/jj134312)
+## サービスおよびポータル
+### [Kerberos](https://technet.microsoft.com/library/jj134299)
+### [動的なログ記録](/microsoft-identity-manager/infrastructure/mim-service-dynamic-logging)
+### [エクスポート パフォーマンス ガイド](https://technet.microsoft.com/library/hh322883)
+## レポート
+### [カスタム レポートおよび拡張性のレポート](https://technet.microsoft.com/library/jj133861)
+## [Microsoft ID ソフトウェア: パブリック リリース ビルド バージョン](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 ## [Microsoft Identity Manager 2016 開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 ### [Certificate Management REST API リファレンス](/microsoft-identity-manager/reference/certificate-management-rest-api-reference)
