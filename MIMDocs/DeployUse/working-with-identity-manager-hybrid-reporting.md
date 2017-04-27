@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 9e64f930a8fe8422c7f6c8d98e558961ae8b88f2
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -22,7 +23,7 @@ ms.openlocfilehash: 9e64f930a8fe8422c7f6c8d98e558961ae8b88f2
 # <a name="working-with-identity-manager-hybrid-reporting"></a>Identity Manager ハイブリッド レポートの操作
 
 ## <a name="available-hybrid-reports"></a>使用可能なハイブリッド レポート
-Azure AD で使用可能な最初の&3; つの Microsoft Identity Manager (MIM) レポートは、**パスワード リセット アクティビティ**、**パスワード リセット登録**、および**セルフ サービス グループ アクティビティ**です。
+Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) レポートは、**パスワード リセット アクティビティ**、**パスワード リセット登録**、および**セルフ サービス グループ アクティビティ**です。
 
 -   パスワード リセット アクティビティは、ユーザーが SSPR を使用してパスワード リセットを実行したとき、各インスタンスを表示します。さらに、認証のためのゲートまたは **メソッド** を提供します。
 
@@ -100,9 +101,4 @@ Microsoft Identity Manager によって生成されたイベントは、Windows 
 |--------------|------|-----------------|
 |説明|4121|すべての要求データを含む MIM イベント データです。|
 |説明|4137|MIM イベント 4121 の拡張イベント。1 つのイベントに対するデータが過剰である場合。 このイベントのヘッダーの形式は次のとおりです。 `"Request: <GUID> , message <xxx> out of <xxx>`|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

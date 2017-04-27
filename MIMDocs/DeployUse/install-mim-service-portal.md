@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -51,7 +52,7 @@ ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
 
     ![MIM データベース接続イメージを構成する](media/MIM-Install10.png)
 
-7. **[メール サーバーの接続の構成]** で、**[メール サーバー]** に Exchange サーバーの名前を入力します。 メール サーバーが構成されていない場合は、メール サーバー名として**localhost**を使用し、一番上の&2; つのチェック ボックスをオフにします。 **[Next]** をクリックします。
+7. **[メール サーバーの接続の構成]** で、**[メール サーバー]** に Exchange サーバーの名前を入力します。 メール サーバーが構成されていない場合は、メール サーバー名として**localhost**を使用し、一番上の 2 つのチェック ボックスをオフにします。 **[Next]** をクリックします。
 
     ![メール サーバーの接続の構成の画像](media/MIM-Install11.png)
 
@@ -129,7 +130,7 @@ ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
 
     2.  **[受信の規則]**をクリックします。
 
-    3.  次の&2; つの規則が表示されていることを確認します。
+    3.  次の 2 つの規則が表示されていることを確認します。
 
         -   Forefront Identity Manager サービス (STS)。
 
@@ -149,9 +150,4 @@ ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
 >[!div class="step-by-step"]  
 [« MIM 同期サービス](install-mim-sync.md)
 [データベースを同期する »](install-mim-sync-ad-service.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
