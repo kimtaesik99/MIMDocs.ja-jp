@@ -15,15 +15,16 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
+ms.lasthandoff: 02/13/2017
 
 
 ---
 
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Forefront Identity Manager 2010 R2 からのアップグレード
 
-現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の&3; ステップです:
+現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の 3 ステップです:
 
-1.  MIM&2016; 同期サービス (Sync) を、Active Directory (AD) ドメインに参加しているサーバーにインストールします。 これにより Sync の FIM 2010 R2 インスタンスが置き換えられます。
+1.  MIM 2016 同期サービス (Sync) を、Active Directory (AD) ドメインに参加しているサーバーにインストールします。 これにより Sync の FIM 2010 R2 インスタンスが置き換えられます。
 
 2.  MIM サービスとポータルをインストールします。 その際に、セルフサービス パスワード リセット (SSPR) 登録ポータルおよびサービス ポータルのインストールも選択することができます。 Privileged Access Management 機能セットは除外して、後でインストールすることができます。
 
@@ -102,7 +103,7 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
     ![カスタム セットアップの画像](media/MIM-UpgSP4.png)
 
-    1.  **MIM サービス:** この機能は、少なくとも&1; つのサーバーで必須であり、同じサーバーまたは別のサーバーに SQL Server データベース サーバーが必要です。
+    1.  **MIM サービス:** この機能は、少なくとも 1 つのサーバーで必須であり、同じサーバーまたは別のサーバーに SQL Server データベース サーバーが必要です。
 
     2.  **MIM ポータル:** この機能は、少なくとも 1 つのサーバーで必須であり、SharePoint 2013 Foundation が必要です。
 
@@ -201,9 +202,4 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 注: FIM のアドインおよび拡張機能がユーザーの SSPR 用のコンピューターに現在展開されている場合、FIM のアドインおよび拡張機能をすべて MIM 2016 にアップグレードするまで、パスワードのリセットに新しい MFA 電話ゲートを構成しないでください。  FIM 2010 と FIM 2010 R2 のアドインと拡張機能は新しいゲートを認識しないため、エラーが返され、ユーザーはパスワードのリセットを完了できません。
 
 Microsoft Identity Manager 2016 SP1 のアップグレード ガイダンスについては、次の [Microsoft Identity Manager 2016 Service Pack 1 アップグレード パッケージ](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)に関する記事をご覧ください。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
