@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -49,7 +50,7 @@ ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
     gpupdate /force /target:computer
     ```
 
-    最大&1; 分で、「コンピューター ポリシーの更新が正常に完了しました。」というメッセージが表示され、更新が完了します。
+    最大 1 分で、「コンピューター ポリシーの更新が正常に完了しました。」というメッセージが表示され、更新が完了します。
 
 6. **Web サーバー (IIS)** および **アプリケーション サーバー** の役割、 **.NET Framework** 3.5、4.0、4.5 の機能、**Windows PowerShell 用の Active Directory モジュール**を追加します。
 
@@ -108,9 +109,4 @@ ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
 >[!div class="step-by-step"]  
 [« ドメインの準備](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

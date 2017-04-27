@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -120,7 +121,7 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 4.  ファイルを保存してエディターを終了します。
 
-5.  パッケージに署名すると、署名ファイルが&1; つ作成されるため、AppxSignature.p7x という名前の元の署名ファイルを削除する必要があります。
+5.  パッケージに署名すると、署名ファイルが 1 つ作成されるため、AppxSignature.p7x という名前の元の署名ファイルを削除する必要があります。
 
 6.  AppxManifest.xml ファイルは、署名証明書のサブジェクト名を指定します。 このファイルを開いて編集します。
 
@@ -253,9 +254,4 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 ## <a name="deploy-the-app"></a>アプリを展開する
 CM アプリをセットアップする際には、ダウンロード センターでファイル MIMDMModernApp_&lt;バージョン&gt;_AnyCPU_Test.zip をダウンロードして、すべてのコンテンツを抽出します。 .appx ファイルはインストーラーです。 Windows ストア アプリを展開する通常の方法で展開できます。[System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)を使用したり、[Intune](https://technet.microsoft.com/library/dn613839.aspx) を使用してアプリをサイドロードして、ユーザーがポータル サイトを使用してアクセスしなければならないようにしたり、ユーザーが自身のマシンに直接プッシュされるようにすることができます。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

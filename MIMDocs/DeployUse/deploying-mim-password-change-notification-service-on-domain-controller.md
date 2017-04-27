@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
 
 4.  ショートカット ファイルを右クリックして、 **[プロパティ]**を表示します。
 
-5.  [ターゲット] フィールドで、msi ファイルへのパスの前に *msiexec.exe /i* を追加し、後に *SCHEMAONLY=TRUE* を追加します。 たとえば、セットアップ フォルダーが *C:\PCNS* の場合、実行するコマンドは次のようになります (全体が&1; 行です)。
+5.  [ターゲット] フィールドで、msi ファイルへのパスの前に *msiexec.exe /i* を追加し、後に *SCHEMAONLY=TRUE* を追加します。 たとえば、セットアップ フォルダーが *C:\PCNS* の場合、実行するコマンドは次のようになります (全体が 1 行です)。
 
     ```
     msiexec.exe /i "C:\PCNS\x64\Password Change Notification Service.msi" SCHEMAONLY=TRUE
@@ -58,9 +59,4 @@ ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
 
 ## <a name="configuring-the-password-change-notification-service"></a>パスワード変更通知サービスを構成する
 ドメイン管理者として DC サーバーに再接続した後、*C:\Program Files\Microsoft Password Change Notification* に移動します。 *pcnscfg.exe* を実行します。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
