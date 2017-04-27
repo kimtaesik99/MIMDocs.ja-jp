@@ -22,9 +22,9 @@ ms.lasthandoff: 02/13/2017
 
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Forefront Identity Manager 2010 R2 からのアップグレード
 
-現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の&3; ステップです:
+現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の 3 ステップです:
 
-1.  MIM&2016; 同期サービス (Sync) を、Active Directory (AD) ドメインに参加しているサーバーにインストールします。 これにより Sync の FIM 2010 R2 インスタンスが置き換えられます。
+1.  MIM 2016 同期サービス (Sync) を、Active Directory (AD) ドメインに参加しているサーバーにインストールします。 これにより Sync の FIM 2010 R2 インスタンスが置き換えられます。
 
 2.  MIM サービスとポータルをインストールします。 その際に、セルフサービス パスワード リセット (SSPR) 登録ポータルおよびサービス ポータルのインストールも選択することができます。 Privileged Access Management 機能セットは除外して、後でインストールすることができます。
 
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/13/2017
 
     ![カスタム セットアップの画像](media/MIM-UpgSP4.png)
 
-    1.  **MIM サービス:** この機能は、少なくとも&1; つのサーバーで必須であり、同じサーバーまたは別のサーバーに SQL Server データベース サーバーが必要です。
+    1.  **MIM サービス:** この機能は、少なくとも 1 つのサーバーで必須であり、同じサーバーまたは別のサーバーに SQL Server データベース サーバーが必要です。
 
     2.  **MIM ポータル:** この機能は、少なくとも 1 つのサーバーで必須であり、SharePoint 2013 Foundation が必要です。
 
