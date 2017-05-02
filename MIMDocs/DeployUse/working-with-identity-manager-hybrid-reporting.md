@@ -13,9 +13,9 @@ ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 9e64f930a8fe8422c7f6c8d98e558961ae8b88f2
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 3144ee195675df5dc120896cc801a7124ee12214
+ms.openlocfilehash: 6b3fda2cb78ec885d986462dcf0edb8843811095
+ms.lasthandoff: 04/27/2017
 
 
 ---
@@ -27,7 +27,7 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 
 -   パスワード リセット アクティビティは、ユーザーが SSPR を使用してパスワード リセットを実行したとき、各インスタンスを表示します。さらに、認証のためのゲートまたは **メソッド** を提供します。
 
-    ![Azure ハイブリッド レポート - パスワード リセット アクティビティの画像](media/MIM-Hybrid-passwordreset.jpg)
+    ![Azure ハイブリッド レポート - パスワード リセット アクティビティの画像](media/MIM-Hybrid-passwordreset2.jpg)
 
 -   パスワード リセット登録は、SSPR および認証に使用する **メソッド** にユーザーが登録するたびに表示されます (たとえば、携帯電話番号、または質問や回答など)。
     パスワード リセット登録の場合、SMS ゲートと MFA ゲートは差別化されず、両方とも **携帯電話**とみなされます。
@@ -41,13 +41,13 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 
 ## <a name="prerequisites"></a>必要条件
 
-1.  MIM サービスを含む Microsoft Identity Manager 2016 をインストールします。
+1.  Microsoft Identity Manager 2016 RTM または SP1 MIM サービスをインストールします。
 
 2.  Azure AD プレミアム テナントとライセンス付き管理者がディレクトリに割り当てられていることを確認します。
 
 3.  Microsoft Identity Manager サーバーから Azure への送信用インターネット接続があることを確認します。
 
-## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Azure AD への Microsoft Identity Manager レポートのインストール
+## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Azure AD への Microsoft Identity Manager レポート エージェントのインストール
 レポート エージェントがインストールされた後で、Microsoft Identity Manager アクティビティによってもたらされたデータは MIM から Windows イベント ログにエクスポートされます。 MIM レポート エージェントは、イベントを処理して Azure にアップロードします。 Azure では、必要なレポートに合わせて、イベントの解析、暗号化の解除、およびフィルター処理が行われます。
 
 1.  Microsoft Identity Manager 2016 をインストールします。
@@ -62,10 +62,8 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 
 3.  次の手順に従って、Microsoft Identity Manager レポート エージェントをインストールします。
 
-    1.  コンピューター上にディレクトリを作成します。
-
-    2.  `MIMHybridReportingAgent.msi` ファイルと `tenant.cert` ファイルをディレクトリに解凍します。
-
+    1.  [MIMHReportingAgentSetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) を Microsoft Identity Manager サービス サーバーにダウンロードします。
+    2.  `MIMHReportingAgentSetup.exe` を実行します。 
     3.  エージェント インストーラーを実行します。
 
     4.  MIM レポート エージェント サービスが実行されていることを確認します。
@@ -78,21 +76,21 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 
 ## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Azure クラシック ポータルでハイブリッド レポートを表示する
 
-1.  テナント用のグローバル管理者アカウントを使用して [Azure クラシック ポータル](https://manage.windowsazure.com/)にログインします。
+1.  テナント用のグローバル管理者アカウントを使用して [Azure ポータル](https://portal.azure.com/)にログインします。
 
-2.  **Active Directory** アイコンをクリックします。
+2.  **Azure Active Directory** アイコンをクリックします。
 
 3.  サブスクリプションで使用可能なディレクトリの一覧からテナント ディレクトリを選択します。
 
-4.  **[レポート]** をクリックし、 **[パスワード リセット アクティビティ]**をクリックします。
+4.  **[監査ログ]** をクリックします。
 
-5.  ソース ドロップダウン メニューでは、 **[Identity Manager]** を必ず選択します。
+5.  カテゴリ ドロップダウン メニューで **[MIM サービス]** を必ず選択します。
 
 > [!WARNING]
-> Microsoft Identity Manager データが Azure AD に表示されるまで時間がかかる場合があります。
+> Microsoft Identity Manager 監査データが Azure AD に表示されるまで時間がかかる場合があります。
 
 ## <a name="stop-creating-hybrid-reports"></a>ハイブリッド レポートの作成を停止する
-Microsoft Identity Manager から Azure Active Directory へのレポート データのアップロードを停止する場合は、ハイブリッド レポート エージェントをアンインストールします。 Windows の **[プログラムの追加と削除]** ツールを使用して、Microsoft Identity Manager ハイブリッド レポートをアンインストールします。
+Microsoft Identity Manager から Azure Active Directory へのレポート監査データのアップロードを停止する場合は、ハイブリッド レポート エージェントをアンインストールします。 Windows の **[プログラムの追加と削除]** ツールを使用して、Microsoft Identity Manager ハイブリッド レポートをアンインストールします。
 
 ## <a name="windows-events-used-for-hybrid-reporting"></a>ハイブリッド レポートに使用される Windows イベント
 Microsoft Identity Manager によって生成されたイベントは、Windows イベント ログに記録されます。[アプリケーションとサービス ログ]&gt; **[Identity Manager 要求ログ]** の下にあり、イベント ビューアーで表示できます。 それぞれの MIM 要求は、JSON 構造の Windows イベント ログにイベントとしてエクスポートされます。 これは SIEM にエクスポートすることができます。
