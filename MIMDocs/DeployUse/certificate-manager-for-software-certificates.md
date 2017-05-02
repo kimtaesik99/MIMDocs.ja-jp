@@ -2,10 +2,10 @@
 title: "証明書マネージャーでテンプレートを使用して証明書を要求する | Microsoft Docs"
 description: "証明書マネージャーを使用して、プロファイル テンプレートでソフトウェア証明書を作成および更新する方法について説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
 
     1.  **[全般]** タブの表示名フィールドに「 **アーカイブ済み証明書テンプレート**」と入力します。
 
-    2.  b.  **[要求処理]** タブの操作
+    2.  b.    **[要求処理]** タブの操作
 
         1.  **[目的]** を [署名と暗号化] に設定します。
 
@@ -95,9 +96,4 @@ ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
 10. アーカイブされた証明書を再発行する場合は、 **[アーカイブされた証明書の再発行]** の左にあるチェック ボックスをオンにして、 **[OK]**をクリックします。
 
 11. 仮想スマート カード CM を使用している場合、データ収集を使用しないので、データ収集項目を無効にする必要があります。 個々のすべてのポリシーについてデータ収集項目を無効にします。無効にするには、左側のウィンドウでポリシーをクリックしてから、 **[サンプル データ項目]** の横のチェック ボックスをオフにして、 **[データ収集項目の削除]**をクリックします。 **[OK]**をクリックします。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

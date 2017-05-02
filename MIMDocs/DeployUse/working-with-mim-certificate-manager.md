@@ -2,10 +2,10 @@
 title: "MIM Certificate Manager Windows アプリケーションの展開 | Microsoft Docs"
 description: "Certificate Manager アプリを展開して、ユーザーが独自のアクセス権を管理できるようにする方法について説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security

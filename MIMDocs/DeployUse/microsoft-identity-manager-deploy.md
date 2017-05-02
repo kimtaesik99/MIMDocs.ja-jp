@@ -2,10 +2,10 @@
 title: "Microsoft Identity Manager 2016 の展開に必要な手順 | Microsoft Docs"
 description: "Microsoft Identity Manager 2016 を展開するためのすべての手順を、ポータルを構成する環境を準備するところから説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/27/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 804f957d5cf9f5fb09efa65944983b1d5013fff3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -45,9 +46,4 @@ MIM は Active Directory (AD) と連動するため、次の手順に従って A
 - [MIM 同期サービス](install-mim-sync.md)
 - [MIM サービスおよびポータル](install-mim-service-portal.md)
 - [Active Directory と MIM サービス データベースを同期する](install-mim-sync-ad-service.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

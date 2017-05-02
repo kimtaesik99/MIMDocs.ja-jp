@@ -2,10 +2,10 @@
 title: "Microsoft Identity Manager と AD との同期を使用する | Microsoft Docs"
 description: "管理エージェントと MIM 同期サービスを使用して、Active Directory と MIM データベースを同期します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security

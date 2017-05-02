@@ -2,10 +2,10 @@
 title: "パスワード変更通知サービスの展開 | Microsoft Docs"
 description: "ドメイン コントローラーに MIM パスワード変更通知サービスをインストールして構成する手順を説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
