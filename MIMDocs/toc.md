@@ -112,3 +112,5 @@
 #### [保留中の PAM 要求を取得する](/microsoft-identity-manager/reference/privileged-access-management-get-pending-requests)
 #### [保留中の PAM 要求を承認または拒否する](/microsoft-identity-manager/reference/privileged-access-management-approve-reject-pending-request)
 #### [PAM セッション情報を取得する](/microsoft-identity-manager/reference/privileged-access-management-get-session-info)
+## [テクニカル リファレンス]
+### [リソース コントロールの表示構成 XML のリファレンス](/microsoft-identity-manager/reference/rcd-configuration-xml-reference)
