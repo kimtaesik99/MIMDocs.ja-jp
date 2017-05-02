@@ -2,10 +2,10 @@
 title: "Microsoft Identity Manager サービスおよびポータルのインストール | Microsoft Docs"
 description: "MIM サービスおよび Microsoft Identity Manager 2016 用のポータルをインストールする手順を説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security

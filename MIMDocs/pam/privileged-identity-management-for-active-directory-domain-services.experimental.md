@@ -2,10 +2,10 @@
 title: "ADDS の PAM の概要 | Microsoft Docs"
 description: "Privileged Access Management (PAM) は、組織の既存の Active Directory 環境内で特権アクセスを制限するのに役立ちます。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/10/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -16,6 +16,7 @@ experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
 ms.openlocfilehash: 9a047644d07e3ee3c2d1abfde7753849b5ddc63b
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -93,9 +94,4 @@ PAM には次のような利点があります。
 > これに対し、有効期限が切れたリンクはセキュリティ アカウント マネージャー (SAM) によってリアルタイムで評価されます。 グループ メンバーの追加はアクセス要求を受信する DC によってレプリケートされる必要がありますが、グループ メンバーの削除はどの DC 上でも即座に評価されます。
 
 このワークフローは、特にこれらの管理アカウントを目的としたものです。 特権グループにアクセスする必要が頻繁ではない管理者 (またはスクリプト) は、そのアクセスを正確に要求できます。 MIM は要求および Active Directory での変更をログに記録し、管理者はそれをイベント ビューアーで確認したり、System Center 2012 - Operations Manager 監査コレクション サービス (ACS) や他のサードパーティ製のツールなどのエンタープライズ監視ソリューションにデータを送信したりできます。
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

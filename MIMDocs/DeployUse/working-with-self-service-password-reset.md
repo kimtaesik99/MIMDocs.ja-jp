@@ -2,10 +2,10 @@
 title: "セルフサービス パスワード リセット ポータルを使用する | Microsoft Docs"
 description: "MIM 2016 でのセルフ サービス パスワード リセットの新機能 (多要素認証による SSPR のしくみなど) を参照してください。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security

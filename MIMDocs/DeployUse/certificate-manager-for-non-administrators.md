@@ -2,10 +2,10 @@
 title: "Microsoft Identity Manager の管理者アクセス権なしでのセルフサービスによるスマート カードの更新 | Microsoft Docs"
 description: "自身のコンピューターへの管理者アクセス権を持たないユーザーに対し、スマート カードを登録して証明書マネージャーを使用できるようにする方法について説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
+ms.lasthandoff: 02/07/2017
 
 
 ---
@@ -93,9 +94,4 @@ ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
 7.  **管理者以外のアカウントで CM アプリをインストールする**
 
 8.  **CM アプリを起動して仮想スマート カードを登録する**
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

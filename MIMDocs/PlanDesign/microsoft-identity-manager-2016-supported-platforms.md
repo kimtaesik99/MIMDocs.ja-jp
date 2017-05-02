@@ -2,8 +2,8 @@
 title: "サポートされるソフトウェア プラットフォーム | Microsoft Docs"
 description: "MIM 2016 の各コンポーネントと互換性のある製品およびバージョンを検索"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 03/28/2017
 ms.topic: article

@@ -2,10 +2,10 @@
 title: "MIM 2016 向けの Windows Server 2012 R2 の構成 | Microsoft Docs"
 description: "MIM 2016 と連動するように Windows Server 2012 RS を準備するための手順と最小要件を説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
