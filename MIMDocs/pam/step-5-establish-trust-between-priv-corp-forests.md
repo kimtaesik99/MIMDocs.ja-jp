@@ -2,10 +2,10 @@
 title: "PAM の展開、手順 5 – フォレスト リンク | Microsoft Docs"
 description: "PRIV 内の特権を持つユーザーが CORP 内のリソースに引き続きアクセスできるように、PRIV フォレストと CORP フォレストとの間に信頼関係を確立します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,13 +13,14 @@ ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 16208efe08c5a2c0f63ee121c64c45cad5a73909
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
+ms.lasthandoff: 05/02/2017
 
 
 ---
 
-# <a name="step-5-establish-trust-between-priv-and-corp-forests"></a>手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
+# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
 
 >[!div class="step-by-step"]
 [«手順 4](step-4-install-mim-components-on-pam-server.md)
@@ -109,9 +110,4 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 >[!div class="step-by-step"]
 [«手順 4](step-4-install-mim-components-on-pam-server.md)
 [手順 6 »](step-6-transition-group-to-pam.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
