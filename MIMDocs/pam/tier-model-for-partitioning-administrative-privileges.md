@@ -2,10 +2,10 @@
 title: "PAM 環境階層モデル | Microsoft Docs"
 description: "リスクに対する脆弱性に基づいてシステムを分離する階層モデルについて説明します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 659a9d8ff53372300c0e52432116c7c295d59a4b
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -59,9 +60,4 @@ Windows Server Active Directory (AD) フォレストに対して永続的な管�
 - アカウントが専用管理者フォレスト内にある場合、認証の選択
 
 次の記事「[Planning a bastion environment (要塞環境の計画)](planning-bastion-environment.md)」では、Microsoft Identity Manager に専用管理フォレストを追加し、管理者アカウントを確立する方法について説明します。
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

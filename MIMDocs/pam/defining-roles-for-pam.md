@@ -2,10 +2,10 @@
 title: "PAM の特権ロールの定義 | Microsoft Docs"
 description: "管理する特権ロールを決定し、該当する特権ロールごとに管理ポリシーを定義します。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -144,7 +145,7 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 
 次のセクションでは、一般的なエンタープライズ シナリオの例を示します。
 
-### <a name="tier-0-administrative-forest"></a>階層 0 - 管理フォレスト
+### <a name="tier-0---administrative-forest"></a>階層 0 - 管理フォレスト
 
 要塞環境のアカウントに適したロールには次のものが含まれることがあります。
 
@@ -153,7 +154,7 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 - 運用フォレストの管理者であるユーザー
 - 運用フォレスト内のアプリケーションに対する制限された管理権限を委任されたユーザー
 
-### <a name="tier-0-enterprise-production-forest"></a>階層 0 - エンタープライズ運用フォレスト
+### <a name="tier-0---enterprise-production-forest"></a>階層 0 - エンタープライズ運用フォレスト
 
 階層 0 の運用フォレスト アカウントおよびリソースの管理に適したロールには次のものが含まれることがあります。
 
@@ -200,9 +201,4 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 - ヘルプデスク
 - セキュリティ グループ管理者
 - ワークステーションのデスクサイド サポート
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

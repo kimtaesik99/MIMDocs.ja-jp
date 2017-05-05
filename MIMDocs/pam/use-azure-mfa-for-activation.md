@@ -2,10 +2,10 @@
 title: "Azure MFA を使用した PAM のアクティブ化 | Microsoft Docs"
 description: "ユーザーが Privileged Access Management でロールをアクティブ化すると、Azure MFA が第 2 のセキュリティ層として設定されます。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: fa6d69038e5b2f0b933773381661929159198242
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -148,9 +149,4 @@ Privileged Access Management のイベント ログには、次のイベント�
 5.  時間の範囲を選択して、追加のレポート列の **[名前]** の隣のチェックボックスをオンにします。 **[CSV にエクスポート]**をクリックします。
 
 6.  レポートが生成されたら、それをポータルで表示したり、MFA レポートが大きい場合は CSV ファイルにダウンロードしたりすることができます。 **AUTH TYPE** 列の **SDK** の値は、PAM のアクティブ化要求と関連する行を示します。これは MIM またはその他のオンプレミス ソフトウェアから送信されたイベントです。 **USERNAME** フィールドは、MIM サービス データベース内のユーザー オブジェクトの GUID です。 呼び出しが失敗すると、**AUTHD** 列の値は **No** となり、**CALL RESULT** 列には失敗理由の詳細が格納されます。
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

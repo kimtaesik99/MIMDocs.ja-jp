@@ -2,10 +2,10 @@
 title: "展開用のトポロジ ガイド | Microsoft Docs"
 description: "MIM 2016 コンポーネントを理解し、これらを環境内に展開する方法についての提案を得ます。"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 23ef8843201790bc758e9ef6def5d77d175bfcf0
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: f7e4dc737444df70de3a8a78eb518e9e6f26aadc
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,7 +27,7 @@ Microsoft Identity Manager (MIM) コンポーネントは、同じサーバー�
 ## <a name="mim-components"></a>MIM コンポーネント
 展開トポロジを設計する場合は、各コンポーネントの動作や、それらのすべての相互作用を理解することが重要です。
 
-- <a name="mim-portal-an-interface-for-password-resets-group-management-and-administrative-operations"></a>**MIM ポータル** - パスワードのリセット、グループの管理、および管理操作のためのインターフェイスです。
+- <a name="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations"></a>**MIM ポータル** - パスワードのリセット、グループの管理、および管理操作のためのインターフェイスです。
     -
 - **MIM サービス** - MIM 2016 ID 管理機能を実装する Web サービスです。
 - **MIM 同期サービス** - 他の ID システムとデータを同期します。
@@ -63,9 +64,4 @@ MIM 同期サービスと MIM サービス データベースをホストして�
 
 ## <a name="see-also"></a>関連項目
 - テスト ビルドとパフォーマンス テストの結果に関する詳細は、ダウンロード可能な「[Forefront Identity Manager (FIM) 2010 Capactity Planning Guide (Forefront Identity Manager (FIM) 2010 容量計画ガイド)](http://go.microsoft.com/fwlink/?LinkId=200180)」を参照してください。
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
