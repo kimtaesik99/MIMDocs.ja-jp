@@ -2,24 +2,26 @@
 title: "PAM の展開、手順 1 - CORP ドメイン | Microsoft Docs"
 description: "Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 127d368c15cce125ba7f69302cfa329b600d9498
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 
 ---
 
-# <a name="step-1-prepare-the-host-and-the-corp-domain"></a>手順 1 - ホストと CORP ドメインの準備
+# <a name="step-1---prepare-the-host-and-the-corp-domain"></a>手順 1 - ホストと CORP ドメインの準備
 
 >[!div class="step-by-step"]
 [手順 2 »](step-2-prepare-priv-domain-controller.md)
@@ -101,7 +103,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 1. PowerShell を起動します。
 
-2. 次のコマンドを入力します。 パスワード 'Pass@word1' を別のパスワード文字列に置き換えます。
+2. 次のコマンドを入力します。 パスワード「Pass@word1」を別のパスワード文字列に置き換えます。
 
   ```
   import-module activedirectory
@@ -212,9 +214,4 @@ PAM を使ったセキュリティ グループ ベースのアクセス制御�
 
 >[!div class="step-by-step"]
 [手順 2 »](step-2-prepare-priv-domain-controller.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
