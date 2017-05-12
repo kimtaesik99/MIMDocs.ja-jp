@@ -5,15 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
-ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
-ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -40,9 +41,9 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 ラボ環境内にまだ "CORP" ドメインがない場合は、そのドメイン用の追加のドメイン コントローラーが必要です。 “CORP” ドメイン コントローラーは、Windows Server 2016 または Windows Server 2012 R2 のいずれかを実行できます。
 
 
-「[Getting started guide](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)」(ファースト ステップ ガイド) の説明に従ってインストールを実行しますが、**以下の変更点があります**。
+「[Getting started guide](privileged-identity-management-for-active-directory-domain-services.md)」(ファースト ステップ ガイド) の説明に従ってインストールを実行しますが、**以下の変更点があります**。
 
--   新しい CORP ドメインを作成する場合、「[Step 1 - Prepare the CORP domain controller](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md)」(手順 1 - CORP ドメイン コントローラーを準備する) の指示に従う際に、CORP ドメインを Windows Server 2016 の機能レベルになるように構成することもできます。 **このオプションを選択する場合は、以下の変更点に従ってください。**
+-   新しい CORP ドメインを作成する場合、「[Step 1 - Prepare the CORP domain controller](step-1-prepare-corp-domain.md)」(手順 1 - CORP ドメイン コントローラーを準備する) の指示に従う際に、CORP ドメインを Windows Server 2016 の機能レベルになるように構成することもできます。 **このオプションを選択する場合は、以下の変更点に従ってください。**
 
     -   Windows Server 2016 メディアを使用する場合、このインストール オプションは、Windows Server 2016 (デスクトップ エクスペリエンス搭載サーバー) と呼ばれます。
 
@@ -56,7 +57,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
 -   CORPDC のオペレーティング システムとして Windows Server 2012 R2 を使用する場合は、修正プログラム 2919442、2919355、[および更新プログラム 3155495](http://support.microsoft.com/kb/3156418) を CORPDC にインストールする必要があります。
 
--   「[Step 2 - Prepare PRIV domain controller](/microsoft-identity-manager/pam/step-2-prepare-priv-domain-controller.md)」(手順 2 - PRIV ドメイン コントローラーを準備する) の指示に従いますが、以下の変更点があります。
+-   「[Step 2 - Prepare PRIV domain controller](step-2-prepare-priv-domain-controller.md)」(手順 2 - PRIV ドメイン コントローラーを準備する) の指示に従いますが、以下の変更点があります。
 
     -   Windows Server 2016 メディアを使用してインストールします。 インストール オプションは、Windows Server 2016 (デスクトップ エクスペリエンス搭載サーバー) と呼ばれます。
 
@@ -115,19 +116,19 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
     ```
 
 
--   「[Step 3 - Prepare a PAM server](/microsoft-identity-manager/pam/step-3-prepare-pam-server.md)」(手順 3 - PAM サーバーを準備する) の指示に従いますが、以下の変更点があります。
+-   「[Step 3 - Prepare a PAM server](step-3-prepare-pam-server.md)」(手順 3 - PAM サーバーを準備する) の指示に従いますが、以下の変更点があります。
 
     -   Windows Server 2016 にインストールする場合は、"ApplicationServer" ロールを使用できません。
 
     -   Windows Server 2016 に MIM をインストールする場合は、**SharePoint 2013 をインストールすることはできません**。
 
--   「[Step 4 – Install MIM components on PAM server and workstation](/microsoft-identity-manager/pam/step-4-install-mim-components-on-pam-server.md)」(手順 4 – PAM サーバーとワークステーションに MIM コンポーネントをインストールする) の指示に従いますが、以下の変更点があります。
+-   「[Step 4 – Install MIM components on PAM server and workstation](step-4-install-mim-components-on-pam-server.md)」(手順 4 – PAM サーバーとワークステーションに MIM コンポーネントをインストールする) の指示に従いますが、以下の変更点があります。
 
     -   MIM のインストールによって “PAM オブジェクト” という新しい AD OU が作成されるため、MIM サービスと PAM コンポーネントをインストールするユーザーには **AD の PRIV ドメインに対する書き込みアクセス権が必要です**。
 
     -   SharePoint がインストールされていない場合は、MIM ポータルをインストールしないでください。
 
--   「[Step 5 - Establish trust](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md)」(手順 5 - 信頼関係を確立する) の指示に従いますが、以下の変更点があります。
+-   「[Step 5 - Establish trust](step-5-establish-trust-between-priv-corp-forests.md)」(手順 5 - 信頼関係を確立する) の指示に従いますが、以下の変更点があります。
 
     -   一方向の信頼関係を確立する際は、最初の 2 つの PowerShell コマンド (get-credential および New-PAMTrust) のみを実行し、**New-PAMDomainConfiguration コマンドは実行しないでください**。
 
@@ -147,7 +148,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
 ## <a name="more-information"></a>詳細情報
 
-- [Active Directory Domain Services の Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-- [Privileged Access Management の MIM 環境の構成](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-- [スクリプトを使用した PAM の構成](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
+- [Active Directory Domain Services の Privileged Access Management](privileged-identity-management-for-active-directory-domain-services.md)
+- [Privileged Access Management の MIM 環境の構成](configuring-mim-environment-for-pam.md)
+- [スクリプトを使用した PAM の構成](sp1-pam-configure-using-scripts.md)
 
