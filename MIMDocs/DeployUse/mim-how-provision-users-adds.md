@@ -238,7 +238,7 @@ FIM サービス管理エージェントを構成するときに、FIM サービ
 
 
 >[!Important]
- 環境内でプロビジョニングが有効になっていることを確認します。 これは、「Using Windows PowerShell to Enable Provisioning」 (Windows PowerShell を使用してプロビジョンを有効にする) (Http://go.microsoft.com/FWLink/p/?LinkId=189660) のスクリプトを実行して行うことができます。
+ 環境内でプロビジョニングが有効になっていることを確認します。 これは、「Using Windows PowerShell to Enable Provisioning」 (Windows PowerShell を使用してプロビジョンを有効にする) (http://go.microsoft.com/FWLink/p/?LinkId=189660) のスクリプトを実行して行うことができます。
 
 
 ## <a name="configuring-the-fim-service"></a>FIM サービスの構成
