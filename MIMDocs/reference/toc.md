@@ -40,8 +40,3 @@
 #### [保留中の PAM 要求を取得する](privileged-access-management-get-pending-requests.md)
 #### [保留中の PAM 要求を承認または拒否する](privileged-access-management-approve-reject-pending-request.md)
 #### [PAM セッション情報を取得する](privileged-access-management-get-session-info.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-
