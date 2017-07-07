@@ -32,8 +32,3 @@
 ### [手順 8. PAM 展開の検証](sp1-step8-pam-deployment-verification.md)
 ### [補遺](sp1-pam-deployment-addendum.md)
 # [開発者用リファレンス](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
-
-
-<!--HONumber=Feb17_HO3-->
-
-
