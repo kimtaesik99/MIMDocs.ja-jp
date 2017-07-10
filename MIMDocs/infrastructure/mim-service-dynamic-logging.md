@@ -10,22 +10,24 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
 ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/10/2017
 
 
 
 ---
-# <a name="mim-sp1-4414360--service-dynamic-logging"></a>MIM SP1 (4.4.1436.0)  サービスの動的なログ記録
+<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# MIM SP1 (4.4.1436.0)  サービスの動的なログ記録
 4.4.1436.0 では、新しいログ機能を導入しました。 これにより、管理者およびサポート エンジニアは、管理サービスを再起動しなくてもログ記録を有効にすることができます。
 
 このバージョンをインストールすると、Microsoft.ResourceManagement.Service.exe.config というファイルに次に示す新しい行が含められます。
 
-*    第 6 行: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
-*    第 8 行:  ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
-*    第 266 行``</system.diagnostics> ``
+*   第 6 行: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
+*   第 8 行:  ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
+*   第 266 行``</system.diagnostics> ``
 
 ![強調表示されたセクションは、新しい動的なログ エントリを示します。](media/mim-service-dynamic-logging/screen01.png)
 

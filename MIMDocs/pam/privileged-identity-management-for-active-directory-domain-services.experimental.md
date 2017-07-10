@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-experiment_id: kgremban_images
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
 ms.openlocfilehash: 9a047644d07e3ee3c2d1abfde7753849b5ddc63b
+ms.contentlocale: ja-jp
 ms.lasthandoff: 01/11/2017
 
 ---
 
-# <a name="privileged-access-management-for-active-directory-domain-services"></a>Active Directory Domain Services の Privileged Access Management
+<a id="privileged-access-management-for-active-directory-domain-services" class="xliff"></a>
+# Active Directory Domain Services の Privileged Access Management
 Privileged Access Management (PAM) は、組織の既存の Active Directory 環境内で特権アクセスを制限するのに役立ちます。
 
 ![PAM の手順: 準備、保護、運用、監視 - 図](media/MIM_PIM_SetupProcess.png)
@@ -33,14 +34,16 @@ Privileged Access Management (PAM) は、組織の既存の Active Directory 環
 > [!NOTE]
 > PAM は、Microsoft Identity Manager (MIM) を使用して実装される [Privileged Identity Management](https://azure.microsoft.com/documentation/articles/active-directory-privileged-identity-management-configure/) (PIM) のインスタンスです。
 
-## <a name="what-problems-does-pam-help-solve"></a>PAM で解決できる問題
+<a id="what-problems-does-pam-help-solve" class="xliff"></a>
+## PAM で解決できる問題
 現在、企業は Active Directory 環境内のリソースへのアクセスを大変懸念しています。 特に問題とされるのは、脆弱性に関するニュース、承認されていない特権のエスカレーション、および Pass-the-Hash、Pass-the-Ticket、スピア フィッシング、Kerberos 侵害などを含む他の種類の不正なアクセスです。
 
 今日では、攻撃者はいとも簡単に Domain Admins アカウントの資格情報を取得でき、侵害されてから攻撃を検出することはとても困難です。 PAM の目的は、悪意のあるユーザーがアクセスできる機会を削減しながら、環境の制御と認識を向上させることです。
 
 PAM は攻撃者がネットワークに侵入して特権アカウント アクセスを取得するのを困難にします。 PAM は、ドメインに参加しているコンピューターおよびそのコンピューター上のアプリケーションのアクセスを制御する特権グループに対する保護を強化します。 また、監視、可視性、およびきめ細かい制御を強化することで、特権管理者が誰で何をしているかを組織が認識できるようにします。 PAM により、組織は管理アカウントが環境内でどのように使用されているかを詳細に知ることができます。
 
-## <a name="how-is-pam-set-up"></a>PAM の設定方法
+<a id="how-is-pam-set-up" class="xliff"></a>
+## PAM の設定方法
 PAM は Just-in-Time 管理の原則に基づいており、[Just Enough Administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362) に関連しています。 JEA は Windows PowerShell のツールキットであり、特権アクティビティを実行するためのコマンドのセットと、管理者がこれらのコマンドを実行するための権限を取得できるエンドポイントが定義されています。 JEA では、管理者は、特定の権限を持つユーザーが特定のタスクを実行できることを判断します。 そのタスクを実行する必要があるたびに、対象となるユーザーはそのアクセス許可を有効にします。 特定の期間の経過後、アクセス許可の有効期限が切れるため、ユーザーがアクセス権を盗むことはできません。
 
 PAM のセットアップと操作は 4 つの手順で行います。
@@ -54,7 +57,8 @@ PAM のセットアップと操作は 4 つの手順で行います。
 
 4.  **監視**:PAM は、特権アクセス要求の監査、アラート、レポートを追加します。 特権アクセスの履歴や、アクティビティを実行したユーザーを確認できます。 アクティビティが有効かどうかを判断することができ、元のフォレストの特権グループに直接ユーザーを追加する試みなど、承認されていないアクティビティを簡単に識別できます。 この手順は、悪意のあるソフトウェアを識別するだけでなく、「内部」の攻撃者の追跡のためにも重要です。
 
-## <a name="how-does-pam-work"></a>PAM のしくみ
+<a id="how-does-pam-work" class="xliff"></a>
+## PAM のしくみ
 PAM は、AD DS の新機能 (特にドメイン アカウントの認証と承認について)、および Microsoft Identity Manager の新機能に基づいています。 PAM は、既存の Active Directory 環境から特権アカウントを分離します。 特権アカウントを使用する必要があるを場合は、最初に要求して、承認される必要があります。 承認後、特権アカウントには、ユーザーまたはアプリケーションの現在のフォレストではなく、新しい要塞フォレストの外部プリンシパル グループによってアクセス許可が与えられます。 要塞フォレストを使用することで、組織は、ユーザーが特権グループのメンバーになれるときや、ユーザーが認証を必要とする方法など、制御範囲が広がります。
 
 Active Directory、MIM サービス、およびこのソリューションの他の部分は、高可用性構成にも展開できます。
@@ -77,13 +81,15 @@ PAM には次のような利点があります。
 
 -   **カスタマイズ可能なワークフロー**:MIM ワークフローはさまざまなシナリオに構成することができ、要求元ユーザーまたは要求された役割のパラメーターに基づいて、複数のワークフローを使用できます。
 
-## <a name="how-do-users-request-privileged-access"></a>ユーザーが特権アクセスを要求する方法
+<a id="how-do-users-request-privileged-access" class="xliff"></a>
+## ユーザーが特権アクセスを要求する方法
 次のようなさまざまな方法で、ユーザーは要求を送信できます。  
 - MIM サービスの Web サービス API  
 - REST エンドポイント  
 - Windows PowerShell (`New-PAMRequest`)
 
-## <a name="what-workflows-and-monitoring-options-are-available"></a>使用できるワークフローと監視オプション
+<a id="what-workflows-and-monitoring-options-are-available" class="xliff"></a>
+## 使用できるワークフローと監視オプション
 たとえば、ユーザーは PIM がセットアップされる前に管理グループのメンバーであったものとします。 PIM セットアップの一部として、ユーザーは管理グループから削除され、MIM にポリシーが作成されます。 ポリシーでは、そのユーザーが管理特権を要求し、MFA によって認証された場合、要求が承認され、ユーザー用の独立したアカウントが要塞フォレストの特権グループに追加されます。
 
 要求が承認されると、アクション ワークフローは要塞フォレストの Active Directory と直接通信し、ユーザーをグループに配置します。 たとえば、Jen が管理者に HR データベースを要求すると、Jen の管理アカウントが数秒以内に要塞フォレストの特権グループに追加されます。 そのグループ内の管理アカウントのメンバーシップは、制限時間を過ぎると期限切れになります。 Windows Server Technical Preview では、そのメンバーシップは Active directory において制限時間に関連付けられます。要塞フォレストの Windows Server 2012 R2 では、その制限時間は MIM によって強制されます。
