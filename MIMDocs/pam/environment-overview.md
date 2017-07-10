@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="environment-overview"></a>環境の概要
+<a id="environment-overview" class="xliff"></a>
+# 環境の概要
 
 Privileged Access Management は、共有ネットワーク上で互いに接続された個別のドライブを備えた仮想マシン (VM) と連携します。 これらの仮想マシンは、Windows 8.1、Windows Server 2012 R2、または他のオペレーティング システム プラットフォームでホストできます。
 

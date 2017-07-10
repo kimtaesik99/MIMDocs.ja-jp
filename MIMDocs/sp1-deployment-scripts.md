@@ -16,12 +16,13 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 12c60e12dc5662ff0313e21bb9180b3709969af6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="mim2016-sp1-pam-deployment-scripts"></a>MIM2016 SP1 PAM 展開スクリプト
+<a id="mim2016-sp1-pam-deployment-scripts" class="xliff"></a>
+# MIM2016 SP1 PAM 展開スクリプト
 
 この Service Pack には、PAM の展開を容易にする一連の展開スクリプトが導入されています。 これらのスクリプトは、ダウンロード センターで入手できます。 スクリプトを使用する前に、次の前提条件が使用中の環境に当てはまることを確認してください。
 

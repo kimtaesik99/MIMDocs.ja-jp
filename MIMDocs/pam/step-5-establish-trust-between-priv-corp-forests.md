@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
+<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
+# 手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
 
 >[!div class="step-by-step"]
 [«手順 4](step-4-install-mim-components-on-pam-server.md)
@@ -29,7 +31,8 @@ ms.lasthandoff: 05/02/2017
 
 Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメイン コントローラーを信頼関係でバインドする必要があります。 これにより、PRIV ドメインのユーザーが CORP ドメインのリソースにアクセスできるようになります。
 
-## <a name="connect-each-domain-controller-to-its-counterpart"></a>各ドメイン コントローラーを対応するドメイン コントローラーに接続する
+<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
+## 各ドメイン コントローラーを対応するドメイン コントローラーに接続する
 
 信頼関係を確立する前に、各ドメイン コントローラーで、相手側のドメイン コントローラーと DNS サーバーの IP アドレスに基づいて、相手側の DNS 名解決を構成する必要があります。
 
@@ -47,7 +50,8 @@ Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメ�
 
     ![priv キーのファイル構造 - スクリーンショット](./media/PAM_GS_DNS_Manager.png)
 
-## <a name="establish-trust-on-pamsrv"></a>PAMSRV で信頼関係を確立する
+<a id="establish-trust-on-pamsrv" class="xliff"></a>
+## PAMSRV で信頼関係を確立する
 
 PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確立し、CORP ドメイン コントローラーが PRIV フォレストを信頼するようにします。
 
@@ -69,7 +73,8 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## <a name="give-forests-read-access-to-active-directory"></a>フォレストに Active Directory への読み取りアクセス権を付与する
+<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
+## フォレストに Active Directory への読み取りアクセス権を付与する
 
 既存のフォレストごとに、PRIV 管理者と監視サービスによる AD に対する読み取りアクセス権を有効にします。
 
@@ -92,7 +97,8 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 
     また、出力には "**SID フィルタはこの信頼に対して有効になっていません**" という内容も示されるはずです。 詳細については、「[SID フィルター検疫を無効にする](http://technet.microsoft.com/library/cc772816.aspx)」をご参照ください。
 
-## <a name="start-the-monitoring-and-component-services"></a>監視サービスとコンポーネント サービスを開始する
+<a id="start-the-monitoring-and-component-services" class="xliff"></a>
+## 監視サービスとコンポーネント サービスを開始する
 
 1.  PRIV ドメイン管理者 (PRIV\Administrator) として PAMSRV にサインインします。
 
