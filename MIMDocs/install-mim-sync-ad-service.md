@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: f84fbbdc8de5cfffc8570c52f8298cc69273c3ee
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 4ad41fc9679be702ab17fb5bef5d3efab5ff5adc
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 のインストール: Active Directory と MIM サービスを同期する
+# MIM 2016 のインストール: Active Directory と MIM サービスを同期する
+<a id="install-mim-2016-synchronize-active-directory-and-mim-service" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« MIM サービスおよびポータル](install-mim-service-portal.md)
@@ -33,7 +32,8 @@ ms.lasthandoff: 01/24/2017
 
 既定では、MIM 同期サービス (Sync) にはコネクタが何も構成されていません。  一般的な最初の手順では、MIM 同期を使用して、MIM サービス データベースに、既存の Active Directory アカウントを設定します。 このためには、MIM 同期サービス アプリケーションを使用します。
 
-## <a name="create-the-mim-management-agent"></a>MIM 管理エージェントを作成する
+## MIM 管理エージェントを作成する
+<a id="create-the-mim-management-agent" class="xliff"></a>
 MIM 管理エージェント (MA) は、MIM 同期が MIM サービスに接続するためのコネクタです。 このコネクタを作成するには、[管理エージェントを作成する] ウィザードを使用します。
 
 MIM 管理エージェントを構成するときには、ユーザー アカウントを指定する必要があります。 このドキュメントでは、このアカウントの名前として **MIMMA** を使用します。
@@ -41,7 +41,8 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
 > [!NOTE]
 > MIM 管理エージェントで使用するアカウントは、MIM サービスのインストール時に指定したのと同じアカウントである必要があります。
 
-###<a name="to-create-the-mim-ma"></a>MIM MA を作成するには
+###MIM MA を作成するには
+<a id="to-create-the-mim-ma" class="xliff"></a>
 
 1.  Synchronization Service Manager を開きます。
 
@@ -163,7 +164,8 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
 
 11.  管理エージェントを作成するには、**[拡張機能を構成する]** ページで **[完了]** をクリックします。
 
-## <a name="create-the-ad-management-agent"></a>AD 管理エージェントを作成する
+## AD 管理エージェントを作成する
+<a id="create-the-ad-management-agent" class="xliff"></a>
 Active Directory 管理エージェントは、AD ドメイン サービス用のコネクタです。 このコネクタを作成するには、[管理エージェントを作成する] ウィザードを使用します。
 
 1. [管理エージェントを作成する] ウィザードを開くには、**[操作]** メニューで、**[作成]** をクリックします。
@@ -225,11 +227,13 @@ Active Directory 管理エージェントは、AD ドメイン サービス用�
 12. **[拡張機能を構成する]** ページで、**[完了]** をクリックします。
 
 
-## <a name="create-run-profiles"></a>実行プロファイルの作成
+## 実行プロファイルの作成
+<a id="create-run-profiles" class="xliff"></a>
 
 ADMA および MIMMA コネクタの実行プロファイルを作成します。
 
-### <a name="create-run-profiles-for-the-adma-connector"></a>ADMA コネクタの実行プロファイルの作成
+### ADMA コネクタの実行プロファイルの作成
+<a id="create-run-profiles-for-the-adma-connector" class="xliff"></a>
 
 この表では、ADMA コネクタ用に作成する 5 つの実行プロファイルを示しています。
 
@@ -261,7 +265,8 @@ ADMA コネクタの実行プロファイルを作成するには
 
 5. [実行プロファイルを構成する] ダイアログ ボックスを閉じるには、**[OK]** をクリックします。
 
-### <a name="create-run-profiles-for-the-mimma-connector"></a>MIMMA コネクタの実行プロファイルの作成
+### MIMMA コネクタの実行プロファイルの作成
+<a id="create-run-profiles-for-the-mimma-connector" class="xliff"></a>
 
 この表では、MIMMA コネクタの対応する 5 つの実行プロファイルを示します。
 
@@ -293,7 +298,8 @@ MIMMA コネクタ用のプロファイルを作成するには
 
 5. [実行プロファイルを構成する] ダイアログ ボックスを閉じるには、**[OK]** をクリックします。
 
-## <a name="configure-the-mim-service"></a>MIM サービスの構成
+## MIM サービスの構成
+<a id="configure-the-mim-service" class="xliff"></a>
 
 MIM ポータルを使用して、MIM サービスの AD ユーザー受信同期規則を作成します。
 
@@ -347,10 +353,12 @@ AD ユーザー受信同期規則を作成するには:
 
 8. **[概要]** タブで、**[送信]** をクリックします。
 
-## <a name="initialize-the-testing-environment"></a>テスト環境の初期化
+## テスト環境の初期化
+<a id="initialize-the-testing-environment" class="xliff"></a>
 AD データを使用して MIM 構成のテストを行うには、以下の 4 つの手順を実行する必要があります。
 
-### <a name="enable-provisioning"></a>プロビジョニングを有効にする
+### プロビジョニングを有効にする
+<a id="enable-provisioning" class="xliff"></a>
 
 1. Synchronization Service Manager を開きます。
 
@@ -360,7 +368,8 @@ AD データを使用して MIM 構成のテストを行うには、以下の 4 
 
 4. [オプション] ダイアログ ボックスを閉じるには、**[OK]** をクリックします。
 
-### <a name="initialize-the-mimma"></a>MIMMA を初期化する
+### MIMMA を初期化する
+<a id="initialize-the-mimma" class="xliff"></a>
 
 このコネクタで、完全な同期サイクルを実行します。 サイクル全体は、次の実行プロファイルで構成されます。
 
@@ -385,13 +394,15 @@ AD データを使用して MIM 構成のテストを行うには、以下の 4 
 
     - 実行プロファイルを開始するには、**[OK]** をクリックします。
 
-#### <a name="configure-attribute-flow-precedence"></a>属性フローの優先順位の構成
+#### 属性フローの優先順位の構成
+<a id="configure-attribute-flow-precedence" class="xliff"></a>
 
 構成した同期規則は、MIM コネクタの初期化中にメタバースに取り込まれました。
 
 このコネクタから提供される属性の属性フロー優先順位を調整し、AD 内に既に存在する属性が確実に、メタバースに配置され、その後 MIM サービス データベースにも配置されるようにします。
 
-### <a name="initialize-the-adma"></a>ADMA の初期化
+### ADMA の初期化
+<a id="initialize-the-adma" class="xliff"></a>
 
 Active Directory コネクタを初期化するには、それに対してフル インポートおよび完全な同期を実行する必要があります。 フル インポートでは、AD の既存のオブジェクトがコネクタ領域に取り込まれます。 完全な同期では、同期規則が、MIM コネクタの同期規則と対応するように更新されます。
 
@@ -409,7 +420,8 @@ Active Directory コネクタを初期化するには、それに対してフル
 
     - 実行プロファイルを開始するには、**[OK]** をクリックします。
 
-### <a name="populate-the-mim-service-database"></a>MIM サービス データベースの設定
+### MIM サービス データベースの設定
+<a id="populate-the-mim-service-database" class="xliff"></a>
 
 MIM サービス データベースにオブジェクトを設定するには、MIMMA コネクタで同期サイクルを実行する必要があります。 このサイクルでは以下の操作を行います。
 
@@ -433,4 +445,3 @@ MIM サービス データベースにオブジェクトを設定するには、
 
 >[!div class="step-by-step"]
 [« MIM サービスおよびポータル](install-mim-service-portal.md)
-

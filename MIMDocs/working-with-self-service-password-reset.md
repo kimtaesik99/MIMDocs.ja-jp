@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: bbcfee70c71bc2f1a637327721d015434600c5e0
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="working-with-self-service-password-reset"></a>セルフサービスのパスワード リセットを使用する
+# セルフサービスのパスワード リセットを使用する
+<a id="working-with-self-service-password-reset" class="xliff"></a>
 Microsoft Identity Manager 2016 では、セルフサービス パスワード リセット機能に追加機能が提供されています。 この機能は、いくつかの重要な機能で強化されています。
 
 -   セルフサービス パスワード リセット ポータルおよび Windows ログイン画面で、ユーザーが、パスワードを変更したりサポート管理者を呼び出さなくても、自分のアカウントのロックを解除できるようになりました。 ユーザーは、古いパスワードを入力した、2 か国語コンピューターで間違った言語設定のキーボードを使用した、または他のユーザーのアカウントで既に開かれている共有ワークステーションにログインしようとしたなど、多くの正当な理由でアカウントがロックされることがあります。
@@ -29,14 +28,16 @@ Microsoft Identity Manager 2016 では、セルフサービス パスワード �
 
 -   Microsoft Azure Multi-Factor Authentication (MFA) サービスのサポートが追加されました。 これは、既存の SMS ワンタイム パスワード ゲートまたは新しい電話ゲートに使用できます。
 
-## <a name="azure-for-multi-factor-authentication"></a>多要素認証用の Azure
+## 多要素認証用の Azure
+<a id="azure-for-multi-factor-authentication" class="xliff"></a>
 Microsoft Azure Multi-Factor Authentication は、ユーザーがモバイル アプリ、電話、またはテキスト メッセージを使用してサインイン試行を確認する必要がある認証サービスです。 Microsoft Azure Active Directory での利用が可能で、クラウドとオンプレミスのエンタープライズ アプリケーション用のサービスとして使用できます。
 
 Azure MFA の追加認証メカニズムは、セルフサービス ログイン アシスタント用に MIM で実行されるものなどの既存の認証プロセスを強化できます。
 
 Azure MFA を使用する場合、ユーザーは、アカウントやリソースへのアクセスを回復しようとして自身の ID を確認するためにシステムで認証します。 認証には、SMS または電話を使用できます。   認証の強度が高いほど、アクセスしようとしているユーザーが実際に ID を所有しているユーザーである信頼度が高くなります。 認証されると、ユーザーは古いパスワードを新しいパスワードに変更できます。
 
-## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>MFA を使用してセルフサービス アカウント ロック解除およびパスワード リセットを設定する前提条件
+## MFA を使用してセルフサービス アカウント ロック解除およびパスワード リセットを設定する前提条件
+<a id="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa" class="xliff"></a>
 このセクションでは、Microsoft Identity Manager 2016 および以下のコンポーネントとサービスをダウンロードして展開してあるものとします。
 
 -   Windows Server 2008 R2 以降を指定されたドメイン (「企業」ドメイン) の AD ドメイン サービスおよびドメイン コント ローラーを含む Active Directory サーバーとして設定してあります。
@@ -57,12 +58,14 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 -   SSPR Windows ログイン統合クライアントを含む MIM 2016 アドインおよび拡張機能は、サーバーまたは別のクライアント コンピューターに展開されています。
 
-## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>多要素認証を使用するように MIM を準備する
+## 多要素認証を使用するように MIM を準備する
+<a id="prepare-mim-to-work-with-multi-factor-authentication" class="xliff"></a>
 パスワード リセットおよびアカウント ロック解除機能をサポートするように MIM Sync を構成します。 詳細については、「[FIM のアドインと拡張機能のインストール](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx)」、「[FIM SSPR のインストール](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx)」、「[SSPR 認証ゲート](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx)」、「[SSPR テスト ラボ ガイド](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)」を参照してください。
 
 次のセクションでは、Microsoft Azure Active Directory に Azure MFA プロバイダーを設定します。 この作業の一環として、Azure MFA に接続できるようになるために MFA で必要となる認証情報を含むファイルが生成されます。  続行するには、Azure サブスクリプションが必要です。
 
-### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Azure で多要素認証プロバイダーを登録する
+### Azure で多要素認証プロバイダーを登録する
+<a id="register-your-multi-factor-authentication-provider-in-azure" class="xliff"></a>
 
 1.  [Azure クラシック ポータル](http://manage.windowsazure.com)に移動し、Azure サブスクリプション管理者としてサインインします。
 
@@ -94,7 +97,8 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 11. MIM サービスがインストールされている各システムに、ダウンロードした ZIP ファイルをコピーします。  ZIP ファイルには Azure MFA サービスへの認証に使用されるキー生成情報が含まれていることに注意してください。
 
-### <a name="update-the-configuration-file"></a>構成ファイルを更新する
+### 構成ファイルを更新する
+<a id="update-the-configuration-file" class="xliff"></a>
 
 1. MIM サービスがインストールされているコンピューターに、MIM をインストールしたユーザーとしてサインインします。
 
@@ -120,7 +124,8 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 11. MfaSettings.xml ファイルを同じ名前で同じ場所に保存します。
 
-#### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>電話ゲートまたはワンタイム パスワード SMS ゲートの構成
+#### 電話ゲートまたはワンタイム パスワード SMS ゲートの構成
+<a id="configure-the-phone-gate-or-the-one-time-password-sms-gate" class="xliff"></a>
 
 1.  Internet Explorer を起動して MIM ポータルに移動し、MIM 管理者として認証を行った後、左側のナビゲーション バーにある  **[ワークフロー]** をクリックします。
 
@@ -136,7 +141,8 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 組織のユーザーが、パスワードのリセットに登録できるようになります。  このプロセスの間に、ユーザーは、システムがユーザーに電話する (または SMS メッセージを送信する) 方法がわかるように、会社の電話番号または携帯電話番号を入力します。
 
-#### <a name="register-users-for-password-reset"></a>パスワード リセットにユーザーを登録する
+#### パスワード リセットにユーザーを登録する
+<a id="register-users-for-password-reset" class="xliff"></a>
 
 1.  ユーザーは Web ブラウザーを起動して MIM パスワード リセット登録ポータルに移動します  (通常、このポータルには Windows 認証が構成されています)。  ポータル内で、ユーザーは再びユーザー名とパスワードを入力して身元の確認を行います。
 
@@ -148,14 +154,16 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
     ![MIM 携帯電話検証の画像](media/MIM-SSPR-mobilephoneverification.JPG)
 
-## <a name="how-does-it-work-for-your-users"></a>ユーザーに対する動作方法
+## ユーザーに対する動作方法
+<a id="how-does-it-work-for-your-users" class="xliff"></a>
 すべての構成が済んで動作したので、次に、ユーザーがパスワードを忘れたときのリセット方法を説明します。
 
 ユーザーがパスワード リセットおよびアカウント ロック解除機能を使用する方法は、Windows サインイン画面またはセルフサービス ポータルの 2 種類です。
 
 組織のネットワーク経由で MIM サービスに接続されていて、ドメインに参加しているコンピューターに MIM アドインと拡張機能をインストールすることにより、ユーザーはデスクトップ ログイン操作でパスワードを忘れても回復できます。  手順は以下のとおりです。
 
-#### <a name="windows-desktop-login-integrated-password-reset"></a>Windows デスクトップ ログインに統合されたパスワード リセット
+#### Windows デスクトップ ログインに統合されたパスワード リセット
+<a id="windows-desktop-login-integrated-password-reset" class="xliff"></a>
 
 1.  ユーザーがサインイン画面で間違ったパスワードを複数回入力した場合、**[ログインできませんか?]** をクリックできます。 。
 
@@ -180,7 +188,8 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 6.  ユーザーは新しいパスワードを 2 回入力する必要があります。2 回入力すると、パスワードがリセットされます。
 
-#### <a name="access-from-the-self-service-portal"></a>セルフサービス ポータルからのアクセス
+#### セルフサービス ポータルからのアクセス
+<a id="access-from-the-self-service-portal" class="xliff"></a>
 
 1.  ユーザーは Web ブラウザーを開いて **パスワード リセット ポータル** に移動し、ユーザー名を入力して、 **[次へ]**をクリックします。
 
@@ -204,4 +213,3 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 6.  ユーザーがパスワードのリセットを選択した場合、新しいパスワードを 2 回入力して **[次へ]** をクリックするとパスワードが変更されます。
 
     ![MIM ログイン アシスタントのパスワードのリセットの画像](media/MIM-SSPR-PR1.JPG)
-

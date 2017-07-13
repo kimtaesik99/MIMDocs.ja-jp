@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
 # 手順 1 - ホストと CORP ドメインの準備
+<a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [手順 2 »](step-2-prepare-priv-domain-controller.md)
@@ -32,13 +29,13 @@ ms.lasthandoff: 07/10/2017
 
 Windows Server 2012 R2 以降を実行するドメイン コントローラーを含む既存の Active Directory (AD) ドメイン (お客様がドメイン管理者) を既にお持ちの場合は、そのドメインを代わりに使用できます。  
 
-<a id="prepare-the-corp-domain-controller" class="xliff"></a>
 ## CORP ドメイン コントローラーを準備する
+<a id="prepare-the-corp-domain-controller" class="xliff"></a>
 
 このセクションでは、CORP ドメインのドメイン コントローラーを設定する方法について説明します。 CORP ドメインでは、管理ユーザーは要塞環境によって管理されています。 この例で使用されている CORP ドメインのドメイン ネーム システム (DNS) 名は *contoso.local* です。
 
-<a id="install-windows-server" class="xliff"></a>
 ### Windows Server のインストール
+<a id="install-windows-server" class="xliff"></a>
 
 仮想マシンに Windows Server 2012 R2 か Windows Server 2016 Technical Preview 4 以降をインストールして、*CORPDC* というコンピューターを作成します。
 
@@ -52,8 +49,8 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 5. サーバーが再起動したら、管理者としてサインインします。 [コントロール パネル] に移動します。 更新プログラムを確認し、必要な更新プログラムをインストールするようにコンピューターを構成します。 サーバーを再起動します。
 
-<a id="add-roles-to-establish-a-domain-controller" class="xliff"></a>
 ### ドメイン コントローラーを確立するためにロールを追加する
+<a id="add-roles-to-establish-a-domain-controller" class="xliff"></a>
 
 このセクションでは、Active Directory Domain Services (AD DS)、DNS サーバー、ファイル サーバー (ファイルとストレージ サービス セクションの一部) のロールを追加し、このサーバーを新しいフォレスト contoso.local のドメイン コントローラーに昇格します。
 
@@ -78,8 +75,8 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 4. サーバーが再起動したら、ドメインの管理者として CORPDC にサインインします。 一般的に、ユーザーは CONTOSO\\Administrator で、Windows を CORPDC にインストールしたときに作成されたパスワードを使用します。
 
-<a id="create-a-group" class="xliff"></a>
 ### グループの作成
+<a id="create-a-group" class="xliff"></a>
 
 グループが存在しない場合は、Active Directory での監査用にグループを作成します。 グループの名前は、NetBIOS ドメイン名の後に 3 個のドル記号を付けたものにします (例: *CONTOSO$$$*)。
 
@@ -97,8 +94,8 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 場合によっては、グループが既に存在している可能性があります。ドメインが AD の移行シナリオでも使用されている場合に、これは一般的な現象です。
 
-<a id="create-additional-users-and-groups-for-demonstration-purposes" class="xliff"></a>
 ### デモンストレーション用に追加のユーザーとグループを作成する
+<a id="create-additional-users-and-groups-for-demonstration-purposes" class="xliff"></a>
 
 新しい CORP ドメインを作成した場合、PAM シナリオのデモンストレーション用に追加のユーザーとグループを作成する必要があります。 デモンストレーション用のユーザーやグループを、ドメイン管理者にすることも、AD の adminSDHolder 設定で制御することもできません。
 
@@ -127,8 +124,8 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-<a id="configure-auditing" class="xliff"></a>
 ### 監査を構成する
+<a id="configure-auditing" class="xliff"></a>
 
 それらのフォレストで PAM 構成を確立するには、既存のフォレストでの監査を使用可能にする必要があります。  
 
@@ -156,8 +153,8 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 数分後に、"**コンピューター ポリシーの更新が正常に完了しました**" というメッセージが表示されます。
 
-<a id="configure-registry-settings" class="xliff"></a>
 ### レジストリ設定を構成する
+<a id="configure-registry-settings" class="xliff"></a>
 
 このセクションでは、Privileged Access Management グループの作成に使う SID 履歴移行に必要なレジストリ設定を構成します。
 
@@ -173,16 +170,16 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 これによって、ドメイン コントローラー CORPDC が再起動します。 このレジストリ設定について詳しくは、「[ADMTv2 を使用したフォレスト間の sIDHistory 移行のトラブルシューティングを行う方法](http://support.microsoft.com/kb/322970)」をご覧ください。
 
-<a id="prepare-a-corp-workstation-and-resource" class="xliff"></a>
 ## CORP ワークステーションとリソースを準備する
+<a id="prepare-a-corp-workstation-and-resource" class="xliff"></a>
 
 ドメインに参加しているワークステーション コンピューターをお持ちでない場合は、次の手順に従って準備します。  
 
 > [!NOTE]
 > ドメインに参加しているワークステーションを既にお持ちの場合は、「[デモンストレーション用にリソースを作成する](#create-a-resource-for-demonstration-purposes)」に進みます。
 
-<a id="install-windows-81-or-windows-10-enterprise-as-a-vm" class="xliff"></a>
 ### Windows 8.1 や Windows 10 Enterprise を VM インストールする
+<a id="install-windows-81-or-windows-10-enterprise-as-a-vm" class="xliff"></a>
 
 ソフトウェアがインストールされていない別の新しい仮想マシンに、Windows 8.1 Enterprise か Windows 10 Enterprise をインストールして、コンピューターを *CORPWKSTN* にします。
 
@@ -194,8 +191,8 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 4. コントロール パネルを使用して、CORPWKSTN コンピューターを contoso.local ドメインに参加させます。 Contoso ドメイン管理者の資格情報を提供する必要があります。 これが完了したら、CORPWKSTN コンピューターを再起動します。
 
-<a id="create-a-resource-for-demonstration-purposes" class="xliff"></a>
 ### デモンストレーション用にリソースを作成する
+<a id="create-a-resource-for-demonstration-purposes" class="xliff"></a>
 
 PAM を使ったセキュリティ グループ ベースのアクセス制御のデモンストレーションにはリソースが必要です。  リソースをお持ちでない場合は、デモンストレーション用のファイル フォルダーを使用できます。  これにより、contoso.local ドメインで作成した "Jen" と "CorpAdmins" AD オブジェクトを利用できるようになります。
 
@@ -225,4 +222,3 @@ PAM を使ったセキュリティ グループ ベースのアクセス制御�
 
 >[!div class="step-by-step"]
 [手順 2 »](step-2-prepare-priv-domain-controller.md)
-

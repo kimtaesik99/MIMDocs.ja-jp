@@ -1,5 +1,5 @@
 ---
-title: "手順 1. PRIV ドメインの構成"
+title: "手順 1. Priv ドメインの構成"
 description: "スクリプトによって、Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
 author: barclayn
@@ -12,13 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 24e91ed2f51206b03bec505fc0d28d25128d2c94
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="step-1-configuring-the-priv-domain"></a>手順 1. Priv ドメインの構成
+# 手順 1. Priv ドメインの構成
+<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [手順 2 »](sp1-step2-configuring-corp-domain.md)
@@ -43,9 +44,3 @@ $env:SYSTEMDRIVE\PAM で生成される SIDs.txt を CORPDC の同じフォル�
 
 >[!div class="step-by-step"]
 [手順 2 »](sp1-step2-configuring-corp-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

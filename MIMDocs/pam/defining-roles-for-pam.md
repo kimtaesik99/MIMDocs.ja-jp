@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="define-roles-for-privileged-access-management" class="xliff"></a>
 # Privileged Access Management のロールを定義する
+<a id="define-roles-for-privileged-access-management" class="xliff"></a>
 
 Privileged Access Management では、ジャスト イン タイムのアクセスを必要に応じてアクティブ化できる特権ロールにユーザーを割り当てることができます。 これらのロールは、手動で定義し、要塞環境で確立します。 この記事では、PAM で管理するロールを決定するプロセス、およびそれらに適切なアクセス許可と制限を定義する方法について、順を追って説明します。
 
@@ -36,8 +33,8 @@ Privileged Access Management のロールを定義する最も簡単なアプロ
 
 - Active Directory に保持されているデータの管理 (ユーザーとグループの作成など) に必要なアクセス許可
 
-<a id="identify-roles" class="xliff"></a>
 ## ロールを識別する
+<a id="identify-roles" class="xliff"></a>
 
 PAM で管理するすべてのロールを識別することから始めます。 ワークシートでは、可能性のある各ロールに独自の行があります。
 
@@ -61,8 +58,8 @@ PAM で管理するすべてのロールを識別することから始めます�
 
 - 管理業務と監査業務を切り分けて、管理目的のロールを持つユーザーがその操作中に監査レコードを消去できないようにすることはできますか。
 
-<a id="establish-role-governance-requirements" class="xliff"></a>
 ## ロールのガバナンス要件を確立する
+<a id="establish-role-governance-requirements" class="xliff"></a>
 
 ロールの候補を決定したら、スプレッドシートへの記入を開始します。 組織に関係する要件の列を作成します。 考慮すべき次のような要件があります。
 
@@ -84,8 +81,8 @@ PAM で管理するすべてのロールを識別することから始めます�
 
 - このロールに関連付けられているアプリケーションのアクセス許可 (以下の AD のサンプル一覧を参照) はどれですか。
 
-<a id="select-an-access-method" class="xliff"></a>
 ## アクセス方法を選択する
+<a id="select-an-access-method" class="xliff"></a>
 
 異なるユーザー コミュニティに個別のアクセス ガバナンス要件がある場合、特権アクセス管理システム内の複数のロールに同じアクセス許可が割り当てられていることがあります。 たとえば、組織は、フルタイムの従業員と、別組織に属する外部委託の IT 従業員に対して、異なるポリシーを適用する場合があります。
 
@@ -101,8 +98,8 @@ PAM で管理するすべてのロールを識別することから始めます�
 
 資格情報の盗難や誤用の可能性を懸念している組織のために、「[Azure MFA を使用したアクティブ化](use-azure-mfa-for-activation.md)」のガイドには、ロールを有効にするときに追加のアウトオブバンド チェックを要求するように MIM を構成するための手順が記載されています。
 
-<a id="delegate-active-directory-permissions" class="xliff"></a>
 ## Active Directory アクセス許可を委任する
+<a id="delegate-active-directory-permissions" class="xliff"></a>
 
 Windows Server では、新しいドメインを作成すると、"Domain Admins" などの既定のグループが自動的に作成されます。 これらのグループは簡単に使用開始でき、小規模な組織に適している場合があります。 しかし、大規模な組織や、管理特権をさらに分離する必要がある組織では、Domain Admins のようなグループを空にして、アクセス許可をきめ細かく設定したグループで置き換える必要があります。
 
@@ -113,8 +110,8 @@ Domain Admins グループの制限事項の 1 つは、外部ドメインのユ
 
 Domain Admins などの既定のグループの代わりに、組織は必要なアクセス許可のみを提供する新しいセキュリティ グループを作成し、MIM を使用して、それらのグループ メンバーシップを管理者アカウントに動的に提供することができます。
 
-<a id="service-management-permissions" class="xliff"></a>
 ### サービス管理のアクセス許可
+<a id="service-management-permissions" class="xliff"></a>
 
 次の表に、AD を管理するロールに含めるのに適切なアクセス許可の例を示します。
 
@@ -130,8 +127,8 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 | ゾーンの管理 | Active Directory 内の DNS ゾーンとオブジェクトを作成、削除、変更します。 |
 | 階層 0 の OU の変更 | Active Directory 内の階層 0 の OU と含まれるオブジェクトを変更します。 |
 
-<a id="data-management-permissions" class="xliff"></a>
 ### データ管理のアクセス許可
+<a id="data-management-permissions" class="xliff"></a>
 
 次の表に、AD に保持されているデータを管理または使用するロールに含めるのに適切なアクセス許可の例を示します。
 
@@ -147,15 +144,15 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 | 参加 PC/ローカル管理者                    | すべてのワークステーションのローカル管理者権限を付与します。                               |
 | 参加サーバー/ローカル管理者                   | すべてのサーバーのローカル管理者権限を付与します。                                    |
 
-<a id="example-role-definitions" class="xliff"></a>
 ## ロールの定義の例
+<a id="example-role-definitions" class="xliff"></a>
 
 ロールの定義の選択は、特権アカウントによって管理されているサーバーの階層によって異なります。 また、管理されているアプリケーションの選択によっても異なります。Exchange、SAP などのサード パーティ製エンタープライズ製品のようなアプリケーションでは、多くの場合、委任された管理を目的として独自のロールの定義が追加されているためです。
 
 次のセクションでは、一般的なエンタープライズ シナリオの例を示します。
 
-<a id="tier-0---administrative-forest" class="xliff"></a>
 ### 階層 0 - 管理フォレスト
+<a id="tier-0---administrative-forest" class="xliff"></a>
 
 要塞環境のアカウントに適したロールには次のものが含まれることがあります。
 
@@ -164,8 +161,8 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 - 運用フォレストの管理者であるユーザー
 - 運用フォレスト内のアプリケーションに対する制限された管理権限を委任されたユーザー
 
-<a id="tier-0---enterprise-production-forest" class="xliff"></a>
 ### 階層 0 - エンタープライズ運用フォレスト
+<a id="tier-0---enterprise-production-forest" class="xliff"></a>
 
 階層 0 の運用フォレスト アカウントおよびリソースの管理に適したロールには次のものが含まれることがあります。
 
@@ -182,8 +179,8 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 - 階層 0 のバックアップ管理者
 - 階層 0 のホストに接続されているアウトオブバンドおよびベースボード管理コントローラー (KVM または Lights-Out 管理用) のユーザー
 
-<a id="tier-1" class="xliff"></a>
 ### 階層 1
+<a id="tier-1" class="xliff"></a>
 
 階層 1 のサーバーの管理およびバックアップ用のロールには次のものが含まれることがあります。
 
@@ -205,8 +202,8 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 - クラウド サービス (会社の Web サイトやパブリック DNS など) の管理者
 - HCM、財務、法務システムの管理者
 
-<a id="tier-2" class="xliff"></a>
 ### 階層 2
+<a id="tier-2" class="xliff"></a>
 
 管理者以外のユーザーとコンピューターの管理用ロールには次のものが含まれることがあります。
 
@@ -214,4 +211,3 @@ Domain Admins などの既定のグループの代わりに、組織は必要な
 - ヘルプデスク
 - セキュリティ グループ管理者
 - ワークステーションのデスクサイド サポート
-

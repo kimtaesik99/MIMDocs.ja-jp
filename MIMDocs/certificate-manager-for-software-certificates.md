@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="create-software-certificates-with-certificate-manager"></a>証明書マネージャーを使用してソフトウェア証明書を作成する
+# 証明書マネージャーを使用してソフトウェア証明書を作成する
+<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 ソフトウェア証明書を登録および更新するには、管理者である必要はありません。また、仮想スマート カードも必要ありません。 ある時点で、証明書操作を許可するように求められますが、これは通常の操作です。
 
-## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーでソフトウェア証明書プロファイル テンプレートを作成する
+## MIM 2016 証明書マネージャーでソフトウェア証明書プロファイル テンプレートを作成する
+<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  仮想スマート カードに必要な証明書のテンプレートを作成します。 MMC を開きます。
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/24/2017
 
     1.  **[全般]** タブの表示名フィールドに「 **アーカイブ済み証明書テンプレート**」と入力します。
 
-    2.  b.    **[要求処理]** タブの操作
+    2.  b.  **[要求処理]** タブの操作
 
         1.  **[目的]** を [署名と暗号化] に設定します。
 
@@ -73,7 +73,8 @@ ms.lasthandoff: 01/24/2017
 
     10. 一覧から作成した新しいテンプレート (**アーカイブ済み証明書テンプレート**) を選択し、 **[OK]**をクリックします。
 
-## <a name="create-the-profile-template"></a>プロファイル テンプレートを作成する
+## プロファイル テンプレートを作成する
+<a id="create-the-profile-template" class="xliff"></a>
 
 1.  管理者特権を持つユーザーとして CM ポータルにログインします。
 
@@ -96,4 +97,3 @@ ms.lasthandoff: 01/24/2017
 10. アーカイブされた証明書を再発行する場合は、 **[アーカイブされた証明書の再発行]** の左にあるチェック ボックスをオンにして、 **[OK]**をクリックします。
 
 11. 仮想スマート カード CM を使用している場合、データ収集を使用しないので、データ収集項目を無効にする必要があります。 個々のすべてのポリシーについてデータ収集項目を無効にします。無効にするには、左側のウィンドウでポリシーをクリックしてから、 **[サンプル データ項目]** の横のチェック ボックスをオフにして、 **[データ収集項目の削除]**をクリックします。 **[OK]**をクリックします。
-

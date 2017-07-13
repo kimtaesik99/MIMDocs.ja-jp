@@ -12,14 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="configure-pam-using-scripts"></a>スクリプトを使用した PAM の構成
+# スクリプトを使用した PAM の構成
+<a id="configure-pam-using-scripts" class="xliff"></a>
 
 別々のサーバーに SQL および SharePoint をインストールする場合は、次の手順に従って構成する必要があります。 SQL、SharePoint および PAM コンポーネントが同じコンピューターにインストールされている場合、次の手順は、そのコンピューターから実行する必要があります。
 
@@ -39,11 +39,13 @@ ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
 5. 同じ PAMDeploymentConfig.xml をすべてのコンピューター、CORPDC、PRIVDC、PAM サーバー、SQL Server および SharePoint サーバー上の %SYSTEMDRIVE%\PAM フォルダーにコピーします。
 
 
-## <a name="deployment-worksheet"></a>展開ワークシート
+## 展開ワークシート
+<a id="deployment-worksheet" class="xliff"></a>
 
 続行する前に、PAMDeploymentConfig.xml を更新し、更新されたコピーをすべてのコンピューターに配置します。
 
-### <a name="setup"></a>Setup
+### Setup
+<a id="setup" class="xliff"></a>
 
 |マシン   | 次のユーザーとして実行   |コマンド   |
 |---|---|---|
@@ -55,7 +57,8 @@ ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
 | PAMServer  | ローカル管理者 (ドメインへの参加後は MIM 管理者)  | .\PAMDeployment.ps1 メニュー オプション 5 を選択 (MIM PAM セットアップ)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 メニュー オプション 6 を選択 (PAM 信頼セットアップ) .\PAMDeployment.ps1 メニュー オプション 6 を選択 (PAM 信頼セットアップ) |
 
-### <a name="validation"></a>Validation
+### Validation
+<a id="validation" class="xliff"></a>
 
 |  マシン | 次のユーザーとして実行   | コマンド   |
 |---|---|---|
@@ -68,9 +71,3 @@ ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
 
 >[!div class="step-by-step"]
 [開始 »](sp1-step1-configuring-priv-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

@@ -1,4 +1,3 @@
-
 ---
 title: "Microsoft Identity Manager 2016 のベスト プラクティス | Microsoft ドキュメント"
 description: 
@@ -12,21 +11,19 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
-ms.openlocfilehash: 8a572f06b220f055efb68c5e1b82e379ad3bec8f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/11/2017
-
-
+ms.openlocfilehash: a0d00c7e5d99e43d3fb0b3011a3851f7194bfdf2
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-
-# <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 のベスト プラクティス
+# Microsoft Identity Manager 2016 のベスト プラクティス
+<a id="microsoft-identity-manager-2016-best-practices" class="xliff"></a>
 
 このトピックでは、Microsoft Identity Manager 2016 (MIM) を展開および運用するためのベスト プラクティスを説明します。
 
-## <a name="sql-setup"></a>SQL の設定
+## SQL の設定
+<a id="sql-setup" class="xliff"></a>
 >[!NOTE]
 SQL を実行するサーバーを設定するための次の推奨事項では、FIMService 専用の SQL インスタンスおよび FIMSynchronizationService データベース専用の SQL インスタンスがあることが前提です。 統合環境で FIMService を実行する場合は、構成に適した調整を行う必要があります。
 
@@ -40,11 +37,13 @@ SQL を実行するサーバーを設定するための次の推奨事項では�
 
 -   [Reorganizing and Rebuilding Indexes (インデックスの再編成と再構築)](http://go.microsoft.com/fwlink/?LinkID=188269)
 
-### <a name="presize-data-and-log-files"></a>データ ファイルおよびログ ファイルのサイズを事前設定する
+### データ ファイルおよびログ ファイルのサイズを事前設定する
+<a id="presize-data-and-log-files" class="xliff"></a>
 
 自動拡張には依存しないでください。 代わりに、これらのファイルの拡張は手動で行ってください。 自動拡張は安全のためにオンのままにできますが、データ ファイルの増加には、ユーザーが先を見越した管理を行う必要があります。 MIM データベースのサンプル サイズについては、「[FIM Capacity Planning Guide](http://go.microsoft.com/fwlink/?LinkID=185246)」 (FIM 容量計画ガイド) を参照してください。
 
-### <a name="to-presize-sql-data-and-log-files"></a>SQL のデータ ファイルおよびログ ファイルのサイズを事前設定するには
+### SQL のデータ ファイルおよびログ ファイルのサイズを事前設定するには
+<a id="to-presize-sql-data-and-log-files" class="xliff"></a>
 
 1.  SQL Server Management Studio を起動します。
 
@@ -52,7 +51,8 @@ SQL を実行するサーバーを設定するための次の推奨事項では�
 
 3.  [ファイル] ページで必要なサイズにデータベース ファイルを拡張します。
 
-### <a name="isolate-log-from-data-files"></a>データ ファイルからログを分離する
+### データ ファイルからログを分離する
+<a id="isolate-log-from-data-files" class="xliff"></a>
 
 SQL サーバーのベスト プラクティスに従い、データベースのトランザクション ログ ファイルおよびデータ ログ ファイルを別の物理ディスクに分離してください。
 
@@ -60,7 +60,8 @@ tempdb ファイルを追加作成する
 
 最適なパフォーマンスを得るには、tempdb ファイルに CPU コアあたり 1 つのデータ ファイルを作成することをお勧めします。
 
-### <a name="to-create-additional-tempdb-files"></a>tempdb ファイルを追加作成するには
+### tempdb ファイルを追加作成するには
+<a id="to-create-additional-tempdb-files" class="xliff"></a>
 
 1.  SQL Server Management Studio を起動します。
 
@@ -68,11 +69,13 @@ tempdb ファイルを追加作成する
 
 3.  [ファイル] ページで CPU コアごとにデータ ファイルを 1 つ作成します。 tempdb データとログ ファイルは必ず別のドライブとスピンドルに分けます。
 
-### <a name="ensure-adequate-space-for-log-files"></a>ログ ファイルに十分な容量を確保する
+### ログ ファイルに十分な容量を確保する
+<a id="ensure-adequate-space-for-log-files" class="xliff"></a>
 
 復旧モデルのディスク要件を理解しておくことが重要です。 システムの初期ロード時、ディスク領域の使用を制限するには、単純な復旧モードを使用するのが適切ですが、これでは最後のバックアップ以降に作成されたデータが失われる可能性があります。 完全復旧モードを使用する場合、ディスク容量が大量に使用されてしまうのを防ぐために、トランザクション ログを頻繁にバックアップするなど、バックアップでディスク領域の使用を管理する必要があります。 詳細については、「[Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370)」 (復旧モデルの概要) を参照してください。
 
-### <a name="limit-sql-server-memory"></a>SQL Server のメモリを制限する
+### SQL Server のメモリを制限する
+<a id="limit-sql-server-memory" class="xliff"></a>
 
 SQL サーバー上のメモリ量、および SQL サーバーを他のサービス (つまり、MIM 2016 サービスおよび MIM 2016 同期サービスなど) と共有しているかによって、SQL のメモリ消費を制限したい場合があります。 これは、次の手順で実行できます。
 
@@ -111,26 +114,31 @@ SQL サーバー上のメモリ量、および SQL サーバーを他のサー�
   RECONFIGURE WITH OVERRIDE
   ```
 
-### <a name="backup-and-recovery-configuration"></a>バックアップおよび復旧を構成する
+### バックアップおよび復旧を構成する
+<a id="backup-and-recovery-configuration" class="xliff"></a>
 
 一般的には、データベースのバックアップは各組織のバックアップ ポリシーに従って行います。 ログの増分バックアップが計画されていない場合、データベースは単純な復旧モードに設定する必要があります。 バックアップ戦略を実装したり、これらのモデルに必要なディスク領域を実装したりする前に、さまざまな復旧モデルの影響について、正しく理解しておいてください。 完全復旧モデルでは、ディスク領域が大量に使用されないようにログのバックアップを頻繁に実行する必要があります。 詳細については、「[Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370)」 (復旧モデルの概要) と「[FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)」 (FIM 2010 のバックアップおよび復旧ガイド) を参照してください。
 
-## <a name="create-a-backup-administrator-account-for-the-fimservice-after-installation"></a>インストール後に FIMService 用にバックアップ管理者アカウントを作成する
+## インストール後に FIMService 用にバックアップ管理者アカウントを作成する
+<a id="create-a-backup-administrator-account-for-the-fimservice-after-installation" class="xliff"></a>
 
 
 >[!IMPORTANT]
 FIMService 管理者セットのメンバーには、FIM の展開を操作するのに不可欠な固有のアクセス許可があります。 管理者セットの 1 人としてログオンできない場合、唯一の解決策は、システムの以前のバックアップにロールバックすることです。 この状況を緩和するには、インストール後の構成で他のユーザーを FIM 管理者セットに追加することをお勧めします。
 
-## <a name="fim-service"></a>FIM サービス
+## FIM サービス
+<a id="fim-service" class="xliff"></a>
 
 
-### <a name="configuring-fim-service-service-exchange-mailbox"></a>FIM サービスのサービス Exchange メールボックスを構成する
+### FIM サービスのサービス Exchange メールボックスを構成する
+<a id="configuring-fim-service-service-exchange-mailbox" class="xliff"></a>
 
 次に MIM 2016 サービスのサービス アカウント用に Microsoft Exchange Server を構成するベスト プラクティスを示します。
 
 - 社内からのみ電子メール アドレスを受け付けられるように、サービス アカウントを構成します。 具体的には、サービス アカウントのメールボックスは、外部の SMTP サーバーからメールを受信できないようにします。
 
-#### <a name="to-configure-the-service-account"></a>サービス アカウントを構成するには
+#### サービス アカウントを構成するには
+<a id="to-configure-the-service-account" class="xliff"></a>
 
 1.  Exchange 管理コンソールで、**[FIM サービスのサービス アカウント]** を選択します。
 
@@ -144,10 +152,12 @@ FIMService 管理者セットのメンバーには、FIM の展開を操作す�
 
 -   メールボックスの記憶域のクォータが 5 GB となるようにサービス アカウントを構成します。 最適な結果を得るには、「[Configure Storage Quotas for a Mailbox](http://go.microsoft.com/fwlink/?LinkID=156929)」 (メールボックスの記憶域のクォータの構成) に記載されているベスト プラクティスに従います。
 
-## <a name="mim-portal"></a>MIM ポータル
+## MIM ポータル
+<a id="mim-portal" class="xliff"></a>
 
 
-### <a name="disable-sharepoint-indexing"></a>SharePoint のインデックス作成を無効にする
+### SharePoint のインデックス作成を無効にする
+<a id="disable-sharepoint-indexing" class="xliff"></a>
 
 Microsoft Office SharePoint® のインデックス作成は無効にすることをお勧めします。 インデックスを必要とするドキュメントはなく、インデックスを作成すると、FIM 2010 で多数エラー ログが作成されたり、パフォーマンス上の問題が発生する可能性があります。 SharePoint のインデックス作成を無効にするには
 
@@ -167,7 +177,8 @@ Microsoft Office SharePoint® のインデックス作成は無効にするこ�
 
 8.  [タイマ ジョブの編集] ページで、[無効] をクリックします。
 
-## <a name="mim-2016-initial-data-load"></a>MIM 2016 の初期データをロードする
+## MIM 2016 の初期データをロードする
+<a id="mim-2016-initial-data-load" class="xliff"></a>
 
 このセクションでは、外部システムから FIM 2010 へ初期データをロードする際にパフォーマンスを向上させる手順を示します。 次の手順の多くは、システムの初期作成時に一時的にのみ必要であり、完了時にはリセットする必要があることに注意してください。 これは 1 回限りの操作であり、継続的に同期するものではありません。
 
@@ -177,7 +188,8 @@ FIM 2010 と Active Directory ドメイン サービス (AD DS) 間でユーザ�
 >[!IMPORTANT]
 このガイドの SQL の設定のセクションで説明しているベスト プラクティスに従っていることを確認してください。                                                                                                                                                      |
 
-### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>手順 1: データの初期ロード用に SQL サーバーを構成する
+### 手順 1: データの初期ロード用に SQL サーバーを構成する
+<a id="step-1-configure-the-sql-server-for-initial-data-load" class="xliff"></a>
 最初に大量のデータをロードするとき、一時的にフルテキスト検索をオフにし、MIM 2016 管理エージェント (FIM MA) のエクスポートが完了した後でそれを再度オンにすることで、データベースへの入力時間を短縮できます。
 
 フルテキスト検索を一時的にオフにするには:
@@ -200,18 +212,21 @@ SQL サーバーの復旧モデルに必要なディスク要件を理解して�
 >[!IMPORTANT]
 これらの手順を組み込まないと、ディスク領域が大量に使用されてしまい、領域がなくなる場合があります。 このトピックの詳細については、「[Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370)」 (復旧モデルの概要) を参照してください。 「[The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)」 (FIM のバックアップと復元のガイド) にも追加の情報があります。
 
-### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>手順 2: ロード時に MIM を必要最小限に構成する
+### 手順 2: ロード時に MIM を必要最小限に構成する
+<a id="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process" class="xliff"></a>
 
 初期ロード時には、FIM には管理ポリシー規則やセット定義に必要最小限の構成のみを行います。 データのロードが完了したら、展開に必要な追加のセットを作成します。 アクション ワークフローで [ポリシー更新時に実行] 設定を使用し、それらのポリシーをロードされたデータにさかのぼって適用できます。
 
-### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>手順 3: 外部 ID データを使用して FIM サービスを構成および入力する
+### 手順 3: 外部 ID データを使用して FIM サービスを構成および入力する
+<a id="step-3-configure-and-populate-the-fim-service-with-external-identity-data" class="xliff"></a>
 
 
 ここでは、「How Do I Synchronize Users from Active Directory 
 
 Domain Services to FIM」 (グループを Active Directory ドメイン サービスから FIM に同期する方法) ガイドで説明する手順に従い、システムに Active Directory のユーザーを構成し、同期する方法を説明します。 グループ情報を同期する必要がある場合のその進め方の手順については、「How Do I Synchronize Groups from Active Directory Domain Services to FIM」 (グループを Active Directory ドメイン サービスから FIM に同期する方法) ガイドを参照してください。
 
-#### <a name="synchronization-and-export-sequences"></a>シーケンスを同期およびエクスポートする
+#### シーケンスを同期およびエクスポートする
+<a id="synchronization-and-export-sequences" class="xliff"></a>
 
 パフォーマンスを最適化するには、同期の実行後にエクスポートを行います。これにより、コネクタ スペースで多数のエクスポート操作が保留になります。
 
@@ -227,14 +242,16 @@ Domain Services to FIM」 (グループを Active Directory ドメイン サー�
 
 4.  すべての影響を受けるターゲット管理エージェントで、ステージングされたエクスポート操作を使用し差分インポートします。
 
-### <a name="step-4-apply-your-full-mim-configuration"></a>手順 4: 完全な MIM 構成を適用する
+### 手順 4: 完全な MIM 構成を適用する
+<a id="step-4-apply-your-full-mim-configuration" class="xliff"></a>
 
 
 データの初期ロードが完了したら、展開に MIM の完全な構成を適用する必要があります。
 
 シナリオに応じ、これは、追加のセット、MPR、およびワークフローを作成することを含みます。 システム内の既存のすべてのオブジェクトにさかのぼって適用する必要のあるすべてのポリシーには、アクション ワークフローで [ポリシー更新時に実行] を使用し、ロードされたデータにそれらのポリシーをさかのぼって適用します。
 
-### <a name="step-5-reconfigure-sql-to-previous-settings"></a>手順 5: 以前の設定に SQL を再構成する
+### 手順 5: 以前の設定に SQL を再構成する
+<a id="step-5-reconfigure-sql-to-previous-settings" class="xliff"></a>
 
 
 SQL は標準の設定に変更する必要があります。 以下は、必要な操作の例です。
@@ -253,31 +270,38 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = AUTO
 
 単純な復旧モードに切り替える場合は、組織のバックアップ ポリシーに従って、バックアップのスケジュールを必ず再構成してください。 FIM のバックアップ スケジュールの詳細については、「[FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)」 (FIM バックアップと復元のガイド) を参照してください。
 
-## <a name="configuration-migration"></a>構成を移行する
+## 構成を移行する
+<a id="configuration-migration" class="xliff"></a>
 
 
-### <a name="avoid-changing-display-names"></a>表示名は変更しないようにする
+### 表示名は変更しないようにする
+<a id="avoid-changing-display-names" class="xliff"></a>
 
 MPR など、オブジェクトの種類の多くで、syncproduction.ps1 スクリプトは 2 つのシステム間の唯一のアンカー属性として表示名を使用します。 その結果、既存の MPR の表示名を変更すると、既存の MPR が削除され、新しい MPR が作成されます。 これは、移行手順で、その結合条件が変更された MPR を正しく結合できないために発生します。 この問題を回避するには、カスタム属性をすべての構成オブジェクトの種類とバインドし、その属性を結合条件として使用します。 これにより、移行手順に影響せずに表示名を変更できます。
 
-### <a name="avoid-changing-the-content-of-intermediate-files"></a>中間ファイルの内容を変更しないようにする
+### 中間ファイルの内容を変更しないようにする
+<a id="avoid-changing-the-content-of-intermediate-files" class="xliff"></a>
 
 下位レベルのオブジェクトのファイル形式とアプリケーション プログラミング インターフェイス (API) は公開されており、開発者による操作もサポートされていますが、移行時は中間形式の内容は変更しないことをお勧めします。 ただし、changes.xml から ImportObjects 全体を削除するか、pilot.xml で検索または置換操作を実行して、実稼働環境の DNS 情報のバージョン番号やパイロットのドメイン ネーム システム (DNS) 情報を置き換える必要がある場合があります。
 
-### <a name="ensure-that-the-version-number-is-correct-in-pilotxml-when-migrating-across-versions"></a>異なるバージョン間で移行を行うときバージョン番号が pilot.xml で正しいことを確認する
+### 異なるバージョン間で移行を行うときバージョン番号が pilot.xml で正しいことを確認する
+<a id="ensure-that-the-version-number-is-correct-in-pilotxml-when-migrating-across-versions" class="xliff"></a>
 
 異なるバージョン間での移行は非推奨またはサポート対象外ですが、pilot.xml でパイロット バージョンの番号を実稼働バージョンの番号に置き換え、実行することができます。 特に WorkflowDefinition と 
 
 ActivityInformationConfiguration のオブジェクトは、実稼働環境のワークフロー アクティビティを正確に参照するためにバージョン番号を必要とします。 バージョン番号を置き換えないと、Compare-FIMConfig コマンドレットにより WorkflowDefinitions の拡張可能なオブジェクトのマークアップ言語 (XOML) 属性間に違いがあることが識別され、パイロットのバージョン番号が移行されます。 バージョン番号が不正な場合、実稼働環境の FIM サービスがワークフロー アクティビティを開始できない場合があります。
 
-### <a name="avoid-cyclic-references"></a>循環参照を回避する
+### 循環参照を回避する
+<a id="avoid-cyclic-references" class="xliff"></a>
 
 一般に、循環参照は、MIM 構成では推奨されません。
 ただし、セット A がセット B を参照し、セット B もセット A を参照するなど、循環は発生することがあります。循環参照の問題を回避するには、互いを参照しないように、セット A またはセット B の設定の定義を変更する必要があります。 それから移行プロセスを再開します。 循環参照があり、その結果 Compare-FIMConfig コマンドレットでエラーが発生する場合、手動で循環を絶つ必要があります。 Compare-FIMConfig コマンドレットは優先順位順で変更の一覧を出力するので、構成オブジェクトの参照の間で循環が存在していない必要があります。
 
-## <a name="security"></a>セキュリティ
+## セキュリティ
+<a id="security" class="xliff"></a>
 
-### <a name="mim-ma-account"></a>MIM MA アカウント
+### MIM MA アカウント
+<a id="mim-ma-account" class="xliff"></a>
 
 MIM MA アカウントは、サービス アカウントとは見なされておらず、通常のユーザー アカウントである必要があります。 このアカウントは、FIM 同期サービスのサービス アカウントが権限を借用できるようにローカルにログオンできる必要があります。
 
@@ -289,7 +313,8 @@ MIM MA アカウントでローカルにログオンできるようにするに�
 
 3.  [ローカル ログオンを許可する] で FIM MA アカウントが明示的に指定されていることを確認するか、既にアクセス許可があるグループの 1 つに追加します。
 
-### <a name="fim-synchronization-service-and-fim-services-accounts"></a>FIM 同期サービスおよび FIM サービス アカウント
+### FIM 同期サービスおよび FIM サービス アカウント
+<a id="fim-synchronization-service-and-fim-services-accounts" class="xliff"></a>
 
 安全な方法で MIM サーバー コンポーネントを実行しているサーバーを構成するには、サービス アカウントを制限する必要があります。 MIM MA アカウントを有効にする前の手順を使用して、FIM 同期サービスおよび FIM サービス アカウントに、次の制限を設定します。
 
@@ -306,11 +331,13 @@ FIM 同期サービスのサービス アカウントは、FIM 同期サービ�
 >[!IMPORTANT]
  両方のサービス アカウントに同じアカウントを使用するオプションを選択して、FIM サービスと FIM 同期サービスを分離した場合、ネットワーク上の mms 同期サービス サーバーからこのコンピューターへ拒否アクセス権は設定できません。 アクセスが拒否されると、構成を変更してパスワードを管理するために FIM サービスが FIM 同期サービスと通信できなくなります。
 
-### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>キオスクのようなコンピューターに展開されるパスワードのリセットにより、仮想メモリのページファイルがクリアされるようにローカルのセキュリティが設定される必要がある
+### キオスクのようなコンピューターに展開されるパスワードのリセットにより、仮想メモリのページファイルがクリアされるようにローカルのセキュリティが設定される必要がある
+<a id="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile" class="xliff"></a>
 
 キオスクにするワークステーションに FIM パスワードのリセットを展開した場合、シャットダウン: 仮想メモリのページファイル ローカル セキュリティ ポリシー設定をオンにして、未承認のユーザーがプロセス メモリの機密情報を使用できないようにすることを推奨します。
 
-### <a name="implementing-ssl-for-the-fim-portal"></a>FIM ポータル用に SSL を実装する
+### FIM ポータル用に SSL を実装する
+<a id="implementing-ssl-for-the-fim-portal" class="xliff"></a>
 
 クライアントとサーバー間のトラフィックをセキュリティで保護するには、FIM ポータル サーバーで Secure Socket Layer (SSL) を使用することを強くお勧めします。
 
@@ -378,7 +405,8 @@ SSL を実装するには:
 
 31. [スタート] ボタン、[ファイル名を指定して実行] を順にクリックし、「iisreset」と入力して [OK] をクリックします。
 
-## <a name="performance"></a>パフォーマンス
+## パフォーマンス
+<a id="performance" class="xliff"></a>
 
 パフォーマンスを最適にするには、次の構成を行います。
 
@@ -386,16 +414,20 @@ SSL を実装するには:
 
 -   FIM 2010 R2 のポータル サイトで SharePoint のインデックス作成をオフにします。 詳細については、この文書の「SharePoint のインデックス作成を無効にする」セクションを参照してください。
 
-## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>機能別のベスト プラクティス (これを削除してこのセクションを閉じ、3 に対し、ヘッダー 2 レベルでは具体的な機能のみにしたいです)
+## 機能別のベスト プラクティス (これを削除してこのセクションを閉じ、3 に対し、ヘッダー 2 レベルでは具体的な機能のみにしたいです)
+<a id="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3" class="xliff"></a>
 
 
-### <a name="request-management"></a>要求管理
+### 要求管理
+<a id="request-management" class="xliff"></a>
 
 既定で、MIM 2016 は、関連付けられている承認、承認応答、およびワークフロー インスタンスがある完了した要求を含む、有効期限が切れたシステム オブジェクトを 30 日間間隔で削除します。 組織でより長い要求履歴が必要な場合、MIM から要求をエクスポートし、それを補助データベースに保存し、30 日の期間を超過しても保持します。 30 日間の要求の削除期間は構成可能ですが、この期間を長くするとシステム内の追加のオブジェクトによりパフォーマンスが悪化する場合があります。
 
-### <a name="management-policy-rules"></a>管理ポリシーの規則
+### 管理ポリシーの規則
+<a id="management-policy-rules" class="xliff"></a>
 
-#### <a name="use-the-appropriate-mpr-type"></a>適切な MPR の種類を使用する
+#### 適切な MPR の種類を使用する
+<a id="use-the-appropriate-mpr-type" class="xliff"></a>
 
 MIM には、Request と Set Transition の 2 種類の MPR が用意されています。
 
@@ -413,44 +445,53 @@ MIM には、Request と Set Transition の 2 種類の MPR が用意されて�
 
 >[メモ] 詳細については、「[Designing Business Policy Rules](http://go.microsoft.com/fwlink/?LinkID=183691)」 (ビジネス ポリシー規則の設計) を参照してください。
 
-#### <a name="only-enable-mprs-as-necessary"></a>必要に応じてのみ MPR は有効にする
+#### 必要に応じてのみ MPR は有効にする
+<a id="only-enable-mprs-as-necessary" class="xliff"></a>
 
 構成を適用する場合、アクセス許可は最小限のみ適用するという原則に従ってください。 MPR は FIM の展開のアクセス ポリシーを制御します。 多くのユーザーが使用する機能のみを有効にします。 たとえば、すべてのユーザーが FIM をグループ管理に使用するとは限らないので、関連付けられているグループ管理の MPR は無効にする必要があります。 既定で FIM は、管理者以外の多くのアクセス許可が無効になって出荷されます。
 
-#### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>組み込みの MPR は直接変更するのではなく複製する
+#### 組み込みの MPR は直接変更するのではなく複製する
+<a id="duplicate-built-in-mprs-instead-of-directly-modifying" class="xliff"></a>
 
 組み込みの MPR を変更する必要がある場合、必要な構成で新しい MPR を作成し、組み込みの MPR をオフにします。 これにより、アップグレード手順で導入される組み込みの MPR に対する今後の変更は、システム構成に悪い影響を与えないことが保証されます。
 
-#### <a name="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs"></a>エンドユーザーのアクセス許可には、ユーザーのビジネス ニーズに合わせた明示的な属性リストを使用する必要がある
+#### エンドユーザーのアクセス許可には、ユーザーのビジネス ニーズに合わせた明示的な属性リストを使用する必要がある
+<a id="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs" class="xliff"></a>
 
 明示的な属性のリストを使用すると、属性がオブジェクトに追加されるとき、アクセス許可のないユーザーに偶発的に権限を割り当ててしまうのを防ぎます。
 管理者は、アクセスを削除しようとするのではなく、新しい属性に明示的にアクセスを付与する必要があります。
 
 データへのアクセスは、ユーザーのビジネス ニーズの範囲にする必要があります。 たとえば、グループのメンバーには、メンバーであるグループのフィルター属性へのアクセスは必要ありません。 フィルターにより、ユーザーが通常はアクセスできない組織のデータが、意図せず公開されてしまうことがあります。
 
-#### <a name="mprs-should-reflect-effective-permissions-in-the-system"></a>MPR ではシステムの有効なアクセス許可を反映する必要がある
+#### MPR ではシステムの有効なアクセス許可を反映する必要がある
+<a id="mprs-should-reflect-effective-permissions-in-the-system" class="xliff"></a>
 
 ユーザーが使用できない属性のアクセス許可は付与しないようにします。 たとえば、objectType などのコア リソースの属性へのアクセス許可は付与しないようにする必要があります。 MPR にかかわらず、作成後にリソースの種類を変更することはシステムで拒否されます。
 
-#### <a name="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs"></a>MPR で明示的な属性を使用する場合、読み取りのアクセス許可は変更および作成のアクセス権とは別にする必要がある
+#### MPR で明示的な属性を使用する場合、読み取りのアクセス許可は変更および作成のアクセス権とは別にする必要がある
+<a id="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs" class="xliff"></a>
 
 MPR で明示的に属性を指定する場合、作成および変更に必要な属性は、読み取りに使用できるものとは通常は異なります。 たとえば、作成または変更はシステム属性には指定できないのに対し、読み取りは Creator または objectId などのシステム属性に付与できます。
 
-#### <a name="create-permissions-should-be-separate-from-modify-permissions-when-using-explicit-attributes-in-rules"></a>規則で明示的な属性を使用するとき、作成のアクセス許可は変更のアクセス権とは別にする必要がある
+#### 規則で明示的な属性を使用するとき、作成のアクセス許可は変更のアクセス権とは別にする必要がある
+<a id="create-permissions-should-be-separate-from-modify-permissions-when-using-explicit-attributes-in-rules" class="xliff"></a>
 
 Create 操作では、ユーザーは操作の一環で、objectType を選択する必要があります。 これは、作成操作後には変更できないコア システム属性です。
 
-#### <a name="use-one-request-mpr-for-all-attributes-with-the-same-access-requirements"></a>同じアクセス要件を持つすべての属性で 1 つの要求 MPR を使用する
+#### 同じアクセス要件を持つすべての属性で 1 つの要求 MPR を使用する
+<a id="use-one-request-mpr-for-all-attributes-with-the-same-access-requirements" class="xliff"></a>
 
 変更される可能性のない同じアクセス要件を持つ属性は、効率化のために 1 つの要求 MPR に結合することができます。
 
-#### <a name="avoid-giving-unrestricted-access-even-to-selected-principal-groups"></a>選択したプリンシパル グループにも無制限のアクセスは与えないようにする
+#### 選択したプリンシパル グループにも無制限のアクセスは与えないようにする
+<a id="avoid-giving-unrestricted-access-even-to-selected-principal-groups" class="xliff"></a>
 
 FIM ではアクセス許可は、肯定アサーションとして定義されます。 FIM では拒否のアクセス許可はサポートしていないため、リソースに無制限のアクセスを与えると、アクセス許可の除外の作成が複雑になります。 ベスト プラクティスとしては、必要なアクセス許可のみを提供します。
 
 >[!NOTE]
 以下に、権利のセクションが続きます。 レベル 5 のヘッダーを作成しないように、どのように結合したらよいか考えています。
-#### <a name="use-tmprs-to-define-custom-entitlements"></a>カスタムの権利の定義に TMPR を使用する
+#### カスタムの権利の定義に TMPR を使用する
+<a id="use-tmprs-to-define-custom-entitlements" class="xliff"></a>
 
 カスタムの権利の定義には RMPR の代わりに Set Transition MPR (TMPR) を使用してください。
 TMPR は、権利の割り当てや削除に、定義済みの遷移セット、ロールおよびそれに伴うワークフロー アクティビティで定義したメンバーシップに基づいて、状態ベースのモデルを提供しています。 TMPR は、移行して入ってくるリソースに 1 つ、そして移行して出るリソースに 1 つ、ペアで常に定義する必要があります。 さらに、各遷移 MPR は、アクティビティをプロビジョニングおよびプロビジョニング解除するために、別のワークフローを含む必要があります。
@@ -458,26 +499,31 @@ TMPR は、権利の割り当てや削除に、定義済みの遷移セット、
 >[!NOTE]
 すべてのプロビジョニング解除のワークフローでは、[ポリシー更新時に実行] 属性を True に設定する必要があります。
 
-#### <a name="enable-the-set-transition-in-mpr-last"></a>Set Transition In MPR は最後に有効にする
+#### Set Transition In MPR は最後に有効にする
+<a id="enable-the-set-transition-in-mpr-last" class="xliff"></a>
 
 TMPR のペアを作成する場合、Set Transition In MPR は最後にオンにします。 この順序によって、Out MPR をオンにする前に、In MPR がオンになっているとき、リソースがセットに追加され削除される場合、それが権利に残されることがないことが保証されます。
 
-#### <a name="workflows-in-tmpr-should-check-target-resource-state-first"></a>TMPR のワークフローでは、ターゲット リソースの状態を最初に確認する必要がある
+#### TMPR のワークフローでは、ターゲット リソースの状態を最初に確認する必要がある
+<a id="workflows-in-tmpr-should-check-target-resource-state-first" class="xliff"></a>
 
 プロビジョニングのワークフローでは、ターゲット リソースが権利に従って既にプロビジョニングされているかを最初に確認する必要があります。 そのような場合、何も実行されないはずです。
 
 プロビジョニング解除のワークフローでは、最初に対象のリソースがプロビジョニングされたかどうかを確認する必要があります。 プロビジョニングされている場合、ターゲットのリソースをプロビジョニング解除します。
 そうでない場合、何も行いません。
 
-#### <a name="select-run-on-policy-update-for-tmprs"></a>TMPR に [ポリシー更新時に実行] を選択する
+#### TMPR に [ポリシー更新時に実行] を選択する
+<a id="select-run-on-policy-update-for-tmprs" class="xliff"></a>
 
 これにより、ポリシーの更新が実装され、TMPR に関連付けられているアクション ワークフローで [ポリシー更新時に実行] を使用したとき、正しいプロビジョニングの動作が適用されることを保証します。 これにより、ポリシーの定義の変更によって、遷移セットの新しいメンバーにアクション ワークフローが適用されることが保証されます。
 
-#### <a name="avoid-associating-the-same-entitlement-with-two-different-transition-sets"></a>2 つの異なる遷移セットに同じ権利を関連付けないようにする
+#### 2 つの異なる遷移セットに同じ権利を関連付けないようにする
+<a id="avoid-associating-the-same-entitlement-with-two-different-transition-sets" class="xliff"></a>
 
 同じ権利に 2 つの異なる遷移セットを関連付けると、リソースが 1 つのセットから別のリソースに移動したとき、権利の不要な失効と再付与が発生します。 ベスト プラクティスとして、1 つのセットに関連する権利を必要とするすべてのリソースが含まれるようにします。 これにより、遷移セットとワークフローを付与する権利との間に 1 対 1 の関係があることが保証されます。
 
-#### <a name="use-an-appropriate-sequence-of-operations-when-removing-entitlements-in-the-system"></a>システムで権利を削除するとき、正しい順序で行う
+#### システムで権利を削除するとき、正しい順序で行う
+<a id="use-an-appropriate-sequence-of-operations-when-removing-entitlements-in-the-system" class="xliff"></a>
 
 システムで権利を削除するときに使用する手順の順序によって、操作の結果が 2 とおりになる場合があります。 希望する影響がどちらの順序であるか理解しておいてください。
 
@@ -497,7 +543,8 @@ TMPR のペアを作成する場合、Set Transition In MPR は最後にオン�
 
 3.  セットが空になるように、T-Set フィルターを削除するか、変更します。 セットと TMPR の関連付けが解除されたので、プロビジョニング解除のワークフローは適用されません。
 
-### <a name="sets"></a>設定
+### 設定
+<a id="sets" class="xliff"></a>
 
 セットのベスト プラクティスを適用する場合、管理容易性と今後の管理のしやすさから最適化が与える影響を考慮する必要があります。
 これらの推奨事項を適用する前に、予想される稼働環境の規模で適切なテスティングを行い、パフォーマンスと管理容易性のバランスを判断する必要があります。
@@ -506,69 +553,85 @@ TMPR のペアを作成する場合、Set Transition In MPR は最後にオン�
 以下のすべてのガイドラインは動的なセットと動的なグループに該当します。
 
 
-#### <a name="minimize-the-use-of-dynamic-nesting"></a>動的なネストの使用を最低限にする
+#### 動的なネストの使用を最低限にする
+<a id="minimize-the-use-of-dynamic-nesting" class="xliff"></a>
 
 これは、別のセットの ComputedMember 属性を参照するセットのフィルターを意味します。 セットを入れ子にする一般的な理由は、多数のセットにメンバーシップの条件が重複しないようにするためです。 このアプローチを取ることにより、セットの管理が容易になる一方、パフォーマンスとのトレードオフがあります。 セット自体を入れ子にするのではなく、入れ子になったセットのメンバーシップ条件を複製することにより、パフォーマンスは最適にできます。
 
 機能要件を満たすためにセットを入れ子にすることが避けられない場合があります。 セットを入れ子にする主な状況は次のとおりです。 たとえば、フルタイム従業員所有者なしですべてのグループのセットを定義するには、セットの入れ子は `/Group[not(Owner =
 /Set[ObjectID = ‘X’]/ComputedMember]` のように使用する必要があります (ここで 'X' はすべて正社員のセットの ObjectID です)。
 
-#### <a name="minimize-the-use-of-negative-conditions"></a>否定条件の使用を最小限に抑える
+#### 否定条件の使用を最小限に抑える
+<a id="minimize-the-use-of-negative-conditions" class="xliff"></a>
 
 否定条件とは、`!=`、`not()`、`\<`、`\<=` などの演算子や関数を使用するメンバーシップ条件です。 可能な場合、パフォーマンスを最適化するには、否定条件ではなく、複数の肯定的な条件を使用して希望の条件を表現します。
 
-#### <a name="minimize-the-use-of-membership-conditions-based-on-multivalued-reference-attributes"></a>複数の値を持つ参照属性を使用してメンバーシップ条件の使用を最小限にする
+#### 複数の値を持つ参照属性を使用してメンバーシップ条件の使用を最小限にする
+<a id="minimize-the-use-of-membership-conditions-based-on-multivalued-reference-attributes" class="xliff"></a>
 
 複数の値がある参照属性を使用して条件を使用することは最小限にする必要があります。このようなセットが多数ある場合、メンバーシップ条件で使用される属性の操作上のパフォーマンスに影響する可能性があります。
 
-### <a name="password-reset"></a>パスワード リセット
+### パスワード リセット
+<a id="password-reset" class="xliff"></a>
 
-#### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>パスワードのリセットに使用する、キオスクのようなコンピューターでは、仮想メモリのページファイルがクリアされるようにローカルのセキュリティを設定する
+#### パスワードのリセットに使用する、キオスクのようなコンピューターでは、仮想メモリのページファイルがクリアされるようにローカルのセキュリティを設定する
+<a id="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile" class="xliff"></a>
 
 キオスクを想定したワークステーションに FIM 2010 パスワードのリセットを展開するとき、シャットダウン:クリア仮想メモリ ページファイル ローカル セキュリティ ポリシー設定をオンにし、未承認のユーザーがプロセス メモリの機密情報を使用できないようにすることを推奨します。
 
-#### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>ログオンしているコンピューターでユーザーは常にパスワードのリセットを登録する必要がある
+#### ログオンしているコンピューターでユーザーは常にパスワードのリセットを登録する必要がある
+<a id="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to" class="xliff"></a>
 
 ユーザーが Web ポータルを使用してパスワードのリセットを登録する場合、FIM 2010 では常に、Web サイトにログオンしているユーザーに関係なく、ログオン ユーザーの代わりに登録を開始します。 ユーザーはログオンしているコンピューターで常にパスワードのリセットを登録する必要があります。
 
-#### <a name="do-not-set-the-avoidpdconwan-registry-key-to-true"></a>AvoidPdcOnWan レジストリ キーは True に設定しない
+#### AvoidPdcOnWan レジストリ キーは True に設定しない
+<a id="do-not-set-the-avoidpdconwan-registry-key-to-true" class="xliff"></a>
 
 MIM 2016 パスワードのリセットを使用する場合は、AvoidPdcOnWan レジストリ キーを true に設定しないでください。
 
 レジストリ キーを true に設定した場合、ユーザーはパスワード ゲートを経て、プライマリ ドメイン コント ローラー (PDC) でパスワードをリセットして、ログオンしようとすることになります。 このレジストリ キーのため、ローカルのドメイン コントローラーは PDC で二次認証を行わず、ログオン要求を拒否します。 何度も拒否されると、ユーザーはドメインからロックアウトされ、サポートに連絡しなければならなくなります。
 
-#### <a name="do-not-turn-on-logging-of-clear-text-passwords"></a>クリア テキストのパスワードのログ記録を有効にしない
+#### クリア テキストのパスワードのログ記録を有効にしない
+<a id="do-not-turn-on-logging-of-clear-text-passwords" class="xliff"></a>
 
 サービス レベルの診断トレースを Windows 
 
 Communication Foundation (WCF) でオンにするとき、クリア テキストのパスワードを記録できます。 このオプションは既定では無効になっており、実稼働環境では有効にすることは推奨されません。 これらのパスワードは、ユーザーがパスワードのリセットを登録するときに、暗号化された Simple Object Access Protocol (SOAP) メッセージで、クリア テキストの要素として表示されます。 詳細については、「[メッセージ ログの構成](http://go.microsoft.com/fwlink/?LinkID=168572)」を参照してください。
 
-#### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>パスワードのリセット操作に認証ワークフローをマップしない
+#### パスワードのリセット操作に認証ワークフローをマップしない
+<a id="do-not-map-an-authorization-workflow-to-the-password-reset-process" class="xliff"></a>
 
 パスワードのリセット操作には、認証ワークフローはアタッチしないようにしてください。
 パスワードのリセットでは、応答は同期される必要がありますが、承認アクティビティなどのアクティビティを含む承認ワークフローでは非同期です。
 
-#### <a name="do-not-map-multiple-action-activities-to-password-reset"></a>パスワードのリセットに複数のアクション アクティビティをマップしない
+#### パスワードのリセットに複数のアクション アクティビティをマップしない
+<a id="do-not-map-multiple-action-activities-to-password-reset" class="xliff"></a>
 
 パスワードのリセット操作には、1 つ以上のアクション アクティビティを含むワークフローはアタッチしないでください。 このシナリオ例は、2 度目の AD DS パスワード リセット アクティビティをパスワード リセット MPR にアタッチする場合です。 このシナリオはサポートされていません。
 
-#### <a name="require-reregistration-when-adding-removing-or-changing-the-order-of-activities-in-an-existing-workflow"></a>既存のワークフローでアクティビティの順番を追加、削除または変更する場合には再登録が必要
+#### 既存のワークフローでアクティビティの順番を追加、削除または変更する場合には再登録が必要
+<a id="require-reregistration-when-adding-removing-or-changing-the-order-of-activities-in-an-existing-workflow" class="xliff"></a>
 
 既存のワークフローで認証アクティビティを追加、削除したり、その順序を変更する場合、常に再登録を要求するオプションを選択します。 ワークフローにアクティビティが追加されたり、そこから削除された後、ユーザーが再登録される前に、パスワードのリセット認証を試行した場合、望ましくない影響がある場合があります。
 
-### <a name="portal-configuration-and-resource-control-display-configuration"></a>ポータルの構成とリソース コントロールの表示構成
+### ポータルの構成とリソース コントロールの表示構成
+<a id="portal-configuration-and-resource-control-display-configuration" class="xliff"></a>
 
-#### <a name="consider-adding-a-privacy-disclaimer-to-the-user-profile-page"></a>ユーザーのプロファイル ページにプライバシーに関する免責事項を追加することを検討してください。
+#### ユーザーのプロファイル ページにプライバシーに関する免責事項を追加することを検討してください。
+<a id="consider-adding-a-privacy-disclaimer-to-the-user-profile-page" class="xliff"></a>
 
 MIM では、既定で一部のユーザー プロファイル情報が他のユーザーに表示される場合があります。 管理者は、ユーザーへの礼儀として、ユーザー プロファイルのページに企業のポリシーと一致するカスタムテキストを追加することを検討してください。 MIM のポータル ページにカスタム テキストを追加する方法の詳細については、「[Configuring and Customizing the FIM Portal](http://go.microsoft.com/fwlink/?LinkID=165848)」 (FIM ポータルの構成およびカスタマイズ) を参照してください。
 
-### <a name="schema"></a>Schema
+### Schema
+<a id="schema" class="xliff"></a>
 
-#### <a name="do-not-delete-person-or-group-resource-types"></a>Person または Group の種類のリソースは削除しない
+#### Person または Group の種類のリソースは削除しない
+<a id="do-not-delete-person-or-group-resource-types" class="xliff"></a>
 
 Person または Group の種類のリソースは Core の種類のリソースとしてマークされていませんが、リソース自体またはそれらに割り当てられた属性は削除すべきではありません。 MIM ポータルのユーザー インターフェイス (UI) では Person または Group のリソースの種類とその属性が存在している必要があります。
 
-#### <a name="do-not-modify-the-core-attributes"></a>Core 属性は変更しない
+#### Core 属性は変更しない
+<a id="do-not-modify-the-core-attributes" class="xliff"></a>
 
 すべてのリソースの種類には 13 の Core 属性が割り当てられています。 いかなる種類のリソースへも関係は変更しないでください。 13 の Core 属性は次のとおりです。
 
@@ -600,27 +663,33 @@ Person または Group の種類のリソースは Core の種類のリソース
 
 そのリソースの監査要件がまだある場合、そのスキーマ リソースは削除しないようにする必要があります。
 
-#### <a name="making-regular-expressions-case-insensitive"></a>正規表現の大文字小文字を区別する
+#### 正規表現の大文字小文字を区別する
+<a id="making-regular-expressions-case-insensitive" class="xliff"></a>
 
 FIM では、正規表現の一部の大文字と小文字を区別すると便利な場合があります。 ?!: を使用すると、グループ内の大文字小文字は無視できます。 たとえば従業員の種類では、次を使用します。
 
 `\^(?!:contractor\|full time employee)%.`
 
-#### <a name="calculation-of-the-member-attribute"></a>メンバー属性の計算
+#### メンバー属性の計算
+<a id="calculation-of-the-member-attribute" class="xliff"></a>
 
 同期エンジンに公開されるメンバー属性は、実際に ComputedMembers にマッピングされています。 これは、条件を使用するメンバーと手動で選択されたメンバーの組み合わせです。 (Filter、ExplicitMembers および ComputedMembers の) 3 つの属性をすべて追加した場合でも、メンバー属性の動的な計算、グループとセット以外の種類のリソースでは起こりません。
 
-#### <a name="leading-and-trailing-spaces-in-strings-are-ignored"></a>文字列の先頭と末尾の空白は無視される
+#### 文字列の先頭と末尾の空白は無視される
+<a id="leading-and-trailing-spaces-in-strings-are-ignored" class="xliff"></a>
 
 FIM では、先頭と末尾にスペースを入れ文字列を入力できますが、FIM システムではこれらのスペースは無視されます。 先頭と末尾にスペースを入れ文字列を送信すると、同期エンジンと Web サービスではそれらのスペースは無視されます。
 
-#### <a name="empty-strings-do-not-equal-null"></a>空の文字列は Null と同じではない
+#### 空の文字列は Null と同じではない
+<a id="empty-strings-do-not-equal-null" class="xliff"></a>
 
 FIM のこのリリースでは、空の文字列は Null と同等ではありません。 空の文字列の入力は有効な値と見なされます。 存在しない場合、Null と見なされます。
 
-### <a name="workflow-and-request-processing"></a>ワークフローおよび要求の処理
+### ワークフローおよび要求の処理
+<a id="workflow-and-request-processing" class="xliff"></a>
 
-#### <a name="do-not-delete-default-workflows-that-are-shipped-with-mim-2016"></a>MIM 2016 に同梱されている既定のワークフローは削除しない
+#### MIM 2016 に同梱されている既定のワークフローは削除しない
+<a id="do-not-delete-default-workflows-that-are-shipped-with-mim-2016" class="xliff"></a>
 
 FIM 2010 では次のワークフローが同梱されており、削除されるべきではありません。
 
@@ -646,15 +715,17 @@ FIM 2010 では次のワークフローが同梱されており、削除され�
 
 -   登録に必要なシステム ワークフロー
 
-#### <a name="do-not-run-two-or-more-approvalactivities-in-parallel"></a>2 つ以上の ApprovalActivities を並列で実行しない
+#### 2 つ以上の ApprovalActivities を並列で実行しない
+<a id="do-not-run-two-or-more-approvalactivities-in-parallel" class="xliff"></a>
 
 2 つ以上の ApprovalActivities は並列に実行しないようにする必要があります。 実行すると、承認のフェーズで要求が動かなくなってしまう可能性があります。 複数の承認には、より多数の承認者を承認に含めるか、2 つのアクティビティを連続して並べます。
 
-#### <a name="authorization-activities-should-not-modify-mim-resources-data"></a>承認アクティビティでは MIM リソース データは変更されない
+#### 承認アクティビティでは MIM リソース データは変更されない
+<a id="authorization-activities-should-not-modify-mim-resources-data" class="xliff"></a>
 
 承認ワークフローのワークフローの一環として、関数エバリュエーター アクティビティなど、MIM リソースを変更するアクティビティを使用するのは避けてください。 処理の承認ポイントで要求がコミットされていないため、ID 情報に対して行われるすべての変更は、要求が拒否されている可能性があるにもかかわらず、適用されます。
 
-### <a name="understanding-fim-service-partitions"></a>FIM サービス パーティションを理解する
+### FIM サービス パーティションを理解する
+<a id="understanding-fim-service-partitions" class="xliff"></a>
 
 FIM の目的は、さまざまな FIM クライアントで開始される、FIM 同期サービスや構成済みのビジネス ポリシーに応じたセルフ サービス コンポーネントなどの要求を処理することです。 仕様により、各 FIM サービス インスタンスは、FIM サービスのパーティションとも呼ばれる、1 つ以上の FIM サービス インスタンスで構成されている論理グループに属します。 すべての要求の処理に FIM サービスを 1 つのみ使用している場合、処理の遅延が発生する可能性があります。 一部の処理はセルフ サービスの操作に適した既定のタイムアウト値を超過する場合があります。 この問題を解決するには、FIM サービスのパーティションが助けとなる場合があります。 その他の情報については、「Understanding FIM Service Partitions」 (FIM サービス パーティションを理解する) を参照してください。
-

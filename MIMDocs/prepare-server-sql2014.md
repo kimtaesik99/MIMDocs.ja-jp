@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 3a40bf3bd5251ef101b25cc29251f33062e44cdc
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 105d2320ed5a0d610e8e6c5f459366680e3f8a77
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-sql-server-2014"></a>ID 管理サーバー: SQL Server 2014 のセットアップ
+# ID 管理サーバー: SQL Server 2014 のセットアップ
+<a id="set-up-an-identity-management-server-sql-server-2014" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
@@ -32,7 +31,8 @@ ms.lasthandoff: 01/24/2017
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
 
-## <a name="install-sql-server-2014-standard-edition"></a>**SQL Server 2014 Standard Edition** をインストールします。
+## **SQL Server 2014 Standard Edition** をインストールします。
+<a id="install-sql-server-2014-standard-edition" class="xliff"></a>
 
 1. ドメイン管理者として **PowerShell** を起動します。
 
@@ -47,4 +47,3 @@ ms.lasthandoff: 01/24/2017
 >[!div class="step-by-step"]  
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
 [SharePoint »](prepare-server-sharepoint.md)
-

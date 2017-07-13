@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
-ms.lasthandoff: 02/07/2017
-
-
+ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="enroll-smart-cards-for-non-administrators"></a>非管理者のスマート カードの登録
+# 非管理者のスマート カードの登録
+<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 ユーザーがコンピューターのローカル管理者ではない場合、既定では、そのコンピューターにスマート カードを登録できません。 この制限を回避するには、次の手順を実行します。
 
-## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
+## MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
+<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  **appx ファイルを展開する**
 
@@ -94,4 +94,3 @@ ms.lasthandoff: 02/07/2017
 7.  **管理者以外のアカウントで CM アプリをインストールする**
 
 8.  **CM アプリを起動して仮想スマート カードを登録する**
-

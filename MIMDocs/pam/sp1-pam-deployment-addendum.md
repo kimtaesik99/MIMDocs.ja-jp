@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: f69fe68dc63323c0945a4902e34ea8153f938c02
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="pam-deployment-scripts-addendum"></a>PAM 展開スクリプトの補遺:
+# PAM 展開スクリプトの補遺:
+<a id="pam-deployment-scripts-addendum" class="xliff"></a>
 
-## <a name="addendum-1-setting-up-the-priv-domain"></a>補遺 1 PRIV ドメインのセットアップ
+## 補遺 1 PRIV ドメインのセットアップ
+<a id="addendum-1-setting-up-the-priv-domain" class="xliff"></a>
 
 圧縮ファイルを $env:SYSTEMDRIVE\PAM に解凍した後、PRIV フォレストの詳細を指定するよう PAMDeploymentConfig.xml を編集します。 DNSName、NetbiosName、DC 名、データベース/ログのパスと Sysvol のパスを更新してください。 Domain と ForestMode も更新してください。 Windows Server Technical Preview 5 をテストする場合は、DomainMode と ForestMode を WinThreshold に設定してください。
 
@@ -38,7 +40,8 @@ DC は、完了した後に自動的に再起動します。 ディレクトリ 
   * パスワードには、大文字が 1 文字以上含まれている
   * パスワードには、数字または特殊文字が 1 文字以上含まれている
 
-## <a name="addendum-2-setting-up-the-corp-domain"></a>補遺 2 CORP ドメインのセットアップ
+## 補遺 2 CORP ドメインのセットアップ
+<a id="addendum-2-setting-up-the-corp-domain" class="xliff"></a>
 
 PAM を使い始めたばかりでテスト環境をセットアップする場合、スクリプトでも CORP ドメインを構成できます。 圧縮ファイルを $env:SYSTEMDRIVE\PAM フォルダーに解凍した後、PAMDeploymentConfig.xml を編集し、CORP フォレストの詳細を追加します。 DNSName、NetbiosName、DC 名、データベース/ログのパス、および Sysvol のパスを更新します。 機能レベルが Windows Server 2012 R2 以上である必要があります。
 
@@ -50,7 +53,8 @@ PAM を使い始めたばかりでテスト環境をセットアップする場�
 
 ドメイン コントローラーは、完了後に自動的に再起動します。
 
-## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>補遺 3 CORP クライアントをセットアップし、検証を行う
+## 補遺 3 CORP クライアントをセットアップし、検証を行う
+<a id="addendum-3-setting-up-a-corp-client-to-do-the-validation" class="xliff"></a>
 
 構成ファイルの ClientBinaryLocation は、setup.exe が格納されている場所を指す必要があります。
 ローカル管理者としてクライアントにログインし、管理者特権の PowerShell ウィンドウで次のコマンドを実行します。
@@ -68,12 +72,7 @@ PAM を使い始めたばかりでテスト環境をセットアップする場�
 
 上の手順 8 に進みます。
 
-## <a name="addendum-4-if-something-goes-wrong"></a>補遺 4 問題が発生した場合
+## 補遺 4 問題が発生した場合
+<a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
 
 すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に電子メールで [mim2016@microsoft.com](mailto:mim2016@microsoft.com) に送信してください。
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

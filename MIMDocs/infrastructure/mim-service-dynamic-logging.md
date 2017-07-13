@@ -10,17 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
 ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
 # MIM SP1 (4.4.1436.0)  サービスの動的なログ記録
+<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
 4.4.1436.0 では、新しいログ機能を導入しました。 これにより、管理者およびサポート エンジニアは、管理サービスを再起動しなくてもログ記録を有効にすることができます。
 
 このバージョンをインストールすると、Microsoft.ResourceManagement.Service.exe.config というファイルに次に示す新しい行が含められます。
@@ -53,4 +50,3 @@ ms.lasthandoff: 07/10/2017
 トレースの内容を表示するには、[サービス トレース ビューアー ツール](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx) を使用します。
 
  ![サービス トレース ビューアーのスクリーンショット](media/mim-service-dynamic-logging/screen04.png)
-
