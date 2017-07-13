@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 1114be2ce13ca012582676803eb1dc29cadae596
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-sharepoint"></a>ID 管理サーバー: SharePoint のセットアップ
+# ID 管理サーバー: SharePoint のセットアップ
+<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -33,7 +32,8 @@ ms.lasthandoff: 01/24/2017
 > - パスワード - **Pass@word1**
 
 
-## <a name="install-sharepoint-foundation-2013-with-sp1"></a>**SharePoint Foundation 2013 with SP1** をインストールします。
+## **SharePoint Foundation 2013 with SP1** をインストールします。
+<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
 
 > [!NOTE]
 > 前提条件となるものをインストーラーがダウンロードできるように、インターネット接続が必要です。 コンピューターがインターネット接続を提供していない仮想ネットワーク上にある場合は、インターネットへの接続を提供するコンピューターへの追加ネットワーク インターフェイスを追加します。 これはインストール完了後に無効にすることができます。
@@ -60,7 +60,8 @@ ms.lasthandoff: 01/24/2017
 
 4.  インストールが完了したら、ウィザードを実行します。
 
-## <a name="run-the-wizard-to-configure-sharepoint"></a>ウィザードを実行して SharePoint を構成する
+## ウィザードを実行して SharePoint を構成する
+<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
 
 **SharePoint 製品構成ウィザード**で説明されている手順に従って、MIM と連動するように SharePoint を構成します。
 
@@ -80,7 +81,8 @@ ms.lasthandoff: 01/24/2017
 
 8. **[サイト コレクションを作成しています]** ウィンドウで、 **[スキップ]**をクリックします。  次に、 **[完了]**をクリックします。
 
-## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>MIM ポータルをホストするように SharePoint を準備する
+## MIM ポータルをホストするように SharePoint を準備する
+<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
 
 > [!NOTE]
 > 初めは、SSL は構成されていません。 このポータルへのアクセスを有効にする前に、SSL またはそれと同等のものを構成します。
@@ -134,4 +136,3 @@ ms.lasthandoff: 01/24/2017
 >[!div class="step-by-step"]  
 [« SQL Server 2014](prepare-server-sql2014.md)
 [Exchange Server »](prepare-server-exchange.md)
-

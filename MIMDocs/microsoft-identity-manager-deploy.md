@@ -12,17 +12,14 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: fa200bb18871387420743af64ca196565397e5d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="deploy-mim-2016" class="xliff"></a>
 # MIM 2016 の展開
+<a id="deploy-mim-2016" class="xliff"></a>
 このセクションの記事では、これまでに FIM または MIM が展開されていない新規のサーバー上に、エンド ユーザー セルフ サービス シナリオのために Microsoft Identity Manager (MIM) 2016 を展開するための手順を提供します。
 
 > [!NOTE]
@@ -32,23 +29,22 @@ Privileged Access Management のシナリオは、専用拠点のフォレスト
 
 MIM 2016 を展開するためのプロセスは、その前身である FIM 2010 R2 のプロセスによく似ています。 FIM のドキュメントを参照する必要がある場合は、「[Forefront Identity Manager 2010 R2 Deployment Guide](https://technet.microsoft.com/library/jj134310)」(Forefront Identity Manager 2010 R2 展開ガイド) をご覧ください。
 
-<a id="first-prepare-a-domain" class="xliff"></a>
 ## 1: ドメインを準備する
+<a id="first-prepare-a-domain" class="xliff"></a>
 MIM は Active Directory (AD) と連動するため、次の手順に従って AD ドメイン コントローラーを構成します。
 - [ドメインのセットアップ](preparing-domain.md)
 
-<a id="next-prepare-an-identity-management-server" class="xliff"></a>
 ## 2: ID 管理サーバーを準備する
+<a id="next-prepare-an-identity-management-server" class="xliff"></a>
 自分のドメインを配置して構成したら、会社の ID 管理サーバーを準備します。 これには、次のセットアップが含まれます。
 - [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (オプション)
 
-<a id="finally-install-microsoft-identity-manager-2016-components" class="xliff"></a>
 ## 3: Microsoft Identity Manager 2016 コンポーネントをインストールする
+<a id="finally-install-microsoft-identity-manager-2016-components" class="xliff"></a>
 ドメインとサーバーをセットアップしたら、MIM コンポーネントをインストールし、AD と同期するように構成することができます。
 - [MIM 同期サービス](install-mim-sync.md)
 - [MIM サービスおよびポータル](install-mim-service-portal.md)
 - [Active Directory と MIM サービス データベースを同期する](install-mim-sync-ad-service.md)
-

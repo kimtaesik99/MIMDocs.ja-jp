@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: a0241964edb21ca4bf938ae84693b9947f6e2efb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>ID 管理サーバー: Windows Server 2012 R2 のセットアップ
+# ID 管理サーバー: Windows Server 2012 R2 のセットアップ
+<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« ドメインの準備](preparing-domain.md)
@@ -32,7 +31,8 @@ ms.lasthandoff: 01/24/2017
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
 
-## <a name="join-windows-server-2012-r2-to-your-domain"></a>Windows Server 2012 R2 をドメインに参加させる
+## Windows Server 2012 R2 をドメインに参加させる
+<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
 
 8 GB 以上の RAM を備えた Windows Server 2012 R2 コンピューターで開始します。 インストール時に、"Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64" エディションを指定します。
 
@@ -63,7 +63,8 @@ ms.lasthandoff: 01/24/2017
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## <a name="configure-the-server-security-policy"></a>サーバーのセキュリティ ポリシーを構成する
+## サーバーのセキュリティ ポリシーを構成する
+<a id="configure-the-server-security-policy" class="xliff"></a>
 
 新しく作成したアカウントがサービスとして実行されるように、サーバー セキュリティ ポリシーを設定します。
 
@@ -94,7 +95,8 @@ ms.lasthandoff: 01/24/2017
 12. [ローカル セキュリティ ポリシー] ウィンドウを閉じます。
 
 
-## <a name="change-the-iis-windows-authentication-mode"></a>IIS Windows 認証モードを変更する
+## IIS Windows 認証モードを変更する
+<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
 
 1.  PowerShell ウィンドウを開きます。
 
@@ -109,4 +111,3 @@ ms.lasthandoff: 01/24/2017
 >[!div class="step-by-step"]  
 [« ドメインの準備](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
-

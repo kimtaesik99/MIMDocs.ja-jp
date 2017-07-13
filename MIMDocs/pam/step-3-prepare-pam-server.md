@@ -13,24 +13,21 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-3--prepare-a-pam-server" class="xliff"></a>
 # 手順 3: PAM サーバーの準備
+<a id="step-3--prepare-a-pam-server" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [«手順 2](step-2-prepare-priv-domain-controller.md)
 [手順 4 »](step-4-install-mim-components-on-pam-server.md)
 
-<a id="install-windows-server-2012-r2" class="xliff"></a>
 ## Windows Server 2012 R2 のインストール
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 3 番目の仮想マシンに、Windows Server 2012 R2 (具体的には Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64) をインストールし、「*PAMSRV*」とします。 このコンピューターには SQL Server と SharePoint 2013 がインストールされるので、少なくとも 8 GB の RAM が必要です。
 
 1. **Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64** を選択します。
@@ -50,8 +47,8 @@ ms.lasthandoff: 07/10/2017
 7.  サーバーが再起動したら、管理者としてログインし、[コントロール パネル] を開き、PAMSRV を PRIV ドメイン (priv.contoso.local) に参加させます。  この操作を行うには、PRIV ドメイン管理者 (PRIV\Administrator) のユーザー名と資格情報を提供する必要があります。 ウェルカム メッセージが表示されたら、ダイアログ ボックスを閉じて、このサーバーを再起動します。
 
 
-<a id="add-the-web-server-iis-and-application-server-roles" class="xliff"></a>
 ### Web サーバー (IIS) とアプリケーション サーバーの役割を追加する
+<a id="add-the-web-server-iis-and-application-server-roles" class="xliff"></a>
 Web サーバー (IIS) およびアプリケーション サーバーの役割、.NET Framework 3.5 の機能、Windows PowerShell 用の Active Directory モジュール、SharePoint に必要なその他の機能を追加します。
 
 1.  PRIV ドメイン管理者 (PRIV\Administrator) としてサインインし、PowerShell を起動します。
@@ -66,8 +63,8 @@ Web サーバー (IIS) およびアプリケーション サーバーの役割�
     Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-<a id="configure-the-server-security-policy" class="xliff"></a>
 ### サーバーのセキュリティ ポリシーを構成する
+<a id="configure-the-server-security-policy" class="xliff"></a>
 新しく作成したアカウントがサービスとして実行されるように、サーバー セキュリティ ポリシーを構成します。
 
 1.  **ローカル セキュリティ ポリシー** プログラムを起動します。   
@@ -91,8 +88,8 @@ Web サーバー (IIS) およびアプリケーション サーバーの役割�
 16. **[追加]** をクリックし、ドメインの *PRIV* にユーザーとして「*SharePoint*と入力し、ウィザードの次の画面で **[このユーザーを管理者として追加する]** をクリックします。  
 17. [コントロール パネル] を閉じます。  
 
-<a id="change-the-iis-configuration" class="xliff"></a>
 ### IIS の構成を変更する
+<a id="change-the-iis-configuration" class="xliff"></a>
 アプリケーションで Windows 認証モードを使うように IIS 構成を変更する方法は 2 つあります。 MIMAdmin としてサインインしていることを確認し、次のオプションのいずれかに従います。
 
 PowerShell を使う場合:
@@ -110,8 +107,8 @@ PowerShell を使う場合:
 3. **overrideModeDefault** の値を *[許可]* に変更します  
 4. ファイルを保存し、PowerShell コマンド `iisreset /START` で IIS を再起動します。
 
-<a id="install-sql-server" class="xliff"></a>
 ## SQL Server のインストール
+<a id="install-sql-server" class="xliff"></a>
 SQL Server がまだ要塞環境に存在しない場合は、SQL Server 2012 (Service Pack 1 以降) か SQL Server 2014 のいずれかをインストールします。 次の手順は、SQL 2014 であることを前提としています。
 
 1. MIMAdmin としてサインインしていることを確認します。
@@ -122,8 +119,8 @@ SQL Server がまだ要塞環境に存在しない場合は、SQL Server 2012 (S
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
 
-<a id="install-sharepoint-foundation-2013" class="xliff"></a>
 ## SharePoint Foundation 2013 をインストールします。
+<a id="install-sharepoint-foundation-2013" class="xliff"></a>
 
 SharePoint Foundation 2013 SP1 のインストーラーを使用して、SharePoint のソフトウェア必須コンポーネントを PAMSRV にインストールします。
 
@@ -142,8 +139,8 @@ SharePoint の必須コンポーネントがインストールされた後に、
 4.  **完全なサーバー** の種類を選択します。  
 5.  インストールが完了したら、ウィザードの実行を選択します。  
 
-<a id="configure-sharepoint" class="xliff"></a>
 ### SharePoint を構成する
+<a id="configure-sharepoint" class="xliff"></a>
 [SharePoint 製品構成ウィザード] を実行して SharePoint を構成します。
 
 1.  [サーバー ファームへの接続] タブで、**[新しいサーバー ファームの作成]** に移動します。  
@@ -156,8 +153,8 @@ SharePoint の必須コンポーネントがインストールされた後に、
 8.  既存の管理アカウント (PRIV\SharePoint) を使用し、オプションのサービスをオフにして無効にし、**[次へ]** をクリックします。  
 9. [サイト コレクションを作成しています] ウィンドウが表示されたら、**[スキップ]** をクリックし、**[完了]** をクリックします。  
 
-<a id="create-a-sharepoint-foundation-2013-web-application" class="xliff"></a>
 ## SharePoint Foundation 2013 Web アプリケーションを作成する
+<a id="create-a-sharepoint-foundation-2013-web-application" class="xliff"></a>
 ウィザードが完了したら、PowerShell を使用して、MIM ポータルをホストする SharePoint Foundation 2013 Web アプリケーションを作成します。 このチュートリアルはデモンストレーション用であるため、SSL は使用できません。
 
 1.  [SharePoint 2013 管理シェル] を右クリックし、**[管理者として実行]** をクリックして、次の PowerShell スクリプトを実行します。
@@ -172,8 +169,8 @@ SharePoint の必須コンポーネントがインストールされた後に、
 > [!NOTE]
 > 次の手順で使うため、[SharePoint 2013 管理シェル] ウィンドウを開いたままにしておきます。
 
-<a id="create-a-sharepoint-site-collection" class="xliff"></a>
 ## SharePoint サイト コレクションを作成する
+<a id="create-a-sharepoint-site-collection" class="xliff"></a>
 次に、その Web アプリケーションに関連付けられた SharePoint サイト コレクションを作成して、MIM ポータルをホストします。
 
 1.  **[SharePoint 2013 管理シェル]** をまだ起動していない場合は、それを起動し、次の PowerShell スクリプトを実行します
@@ -198,15 +195,15 @@ SharePoint の必須コンポーネントがインストールされた後に、
     Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
     ```
 
-<a id="change-update-settings" class="xliff"></a>
 ## 更新プログラムの設定を変更する
+<a id="change-update-settings" class="xliff"></a>
 
 1. [コントロール パネル] を開き、**[Windows Update]** に移動し、**[設定の変更]** をクリックします。  
 2. Microsoft Updates で、Windows Update と他の製品の更新プログラムを受信するように設定を変更します。  
 3. 新しい更新プログラムを確認し、保留中の重要な更新プログラムをインストールしてから、次に進みます。
 
-<a id="set-the-website-as-the-local-intranet" class="xliff"></a>
 ## Web サイトをローカル イントラネットとして設定する
+<a id="set-the-website-as-the-local-intranet" class="xliff"></a>
 
 1. Internet Explorer を起動し、新しい Web ブラウザーのタブを開く
 2. http://pamsrv.priv.contoso.local:82/ にアクセスし、PRIV\MIMAdmin としてサインインします。  「MIM ポータル」という名前の空の SharePoint サイトが表示されます。  
@@ -214,8 +211,8 @@ SharePoint の必須コンポーネントがインストールされた後に、
 
 サインインに失敗した場合は、[手順 2](step-2-prepare-priv-domain-controller.md) で前に作成した Kerberos SPN の更新が必要となる可能性があります。
 
-<a id="start-the-sharepoint-administration-service" class="xliff"></a>
 ## SharePoint 管理サービスを開始する
+<a id="start-the-sharepoint-administration-service" class="xliff"></a>
 
 **SharePoint Administration** サービスがまだ実行されていない場合は、**[サービス]** ([管理ツール] 内にある) を使って起動します。
 
@@ -224,4 +221,3 @@ SharePoint の必須コンポーネントがインストールされた後に、
 >[!div class="step-by-step"]
 [«手順 2](step-2-prepare-priv-domain-controller.md)
 [手順 4 »](step-4-install-mim-components-on-pam-server.md)
-

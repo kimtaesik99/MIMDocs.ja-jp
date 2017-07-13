@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="understand-the-components-of-pam" class="xliff"></a>
 # PAM のコンポーネントについて理解する
+<a id="understand-the-components-of-pam" class="xliff"></a>
 
 Privileged Access Management は、日常的に使用するユーザー アカウントとは切り離された管理アクセス権を保持しています。 このソリューションは、次の並列フォレストに依存しています。
 
@@ -43,4 +40,3 @@ PAM 用に構成される MIM ソリューションには、次のコンポー�
 その結果、ユーザーが PowerShell コマンドレットを使用して昇格を要求し、その要求が承認されると、MIM サービスは PRIV フォレストにあるそのユーザーのアカウントを PRIV フォレスト内のグループに追加します。 ユーザーが特権アカウントを使用してログインする場合、ユーザーの Kerberos トークンには CORP フォレスト内のグループのセキュリティ識別子 (SID) と同じ SID が含まれます。 CORP フォレストは、PRIV フォレストを信頼するように構成されているため、CORP フォレスト内のリソースへのアクセスに使用されている管理者特権のアカウントが表示されます。Kerberos グループ メンバーシップをチェックするリソースに対しては、そのリソースのセキュリティ グループのメンバーとします。 これは、Kerberos フォレスト間認証を介して提供されます。
 
 また、これらのメンバーシップは期間が限定されています。そのため、事前に構成された間隔を置いた後、ユーザーの管理者アカウントは PRIV フォレスト内のグループのメンバーではなくなります。 結果として、そのアカウントを使用して、その他のリソースにアクセスすることはできなくなります。
-

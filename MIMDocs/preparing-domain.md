@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: e16bcc36fe4bccb621ba4d649aa0b015f2adbcdd
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: bd9c0da17c97cfc15023ad624a249e0f4a2d0825
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-a-domain"></a>ドメインのセットアップ
+# ドメインのセットアップ
+<a id="set-up-a-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -29,7 +28,8 @@ Microsoft Identity Manger (MIM) は、Active Directory (AD) ドメインと連�
 
 この記事では、ドメインと MIM を連携させるために必要な手順について説明します。
 
-## <a name="create-user-accounts-and-groups"></a>ユーザー アカウントとグループを作成する
+## ユーザー アカウントとグループを作成する
+<a id="create-user-accounts-and-groups" class="xliff"></a>
 
 MIM 展開のすべてのコンポーネントには、ドメインでの個別の ID が必要です。  これには MIM サービスと MIM 同期サービス、SharePoint、および SQL などの MIM コンポーネントが含まれます。
 
@@ -92,4 +92,3 @@ MIM 展開のすべてのコンポーネントには、ドメインでの個別�
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
-

@@ -13,17 +13,14 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 # 手順 4 - PAM サーバーとワークステーションに MIM コンポーネントをインストールする
+<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [«手順 3](step-3-prepare-pam-server.md)
@@ -37,8 +34,8 @@ PAMSRV で、MIM サービスおよびポータル、サンプル ポータル W
 
 MIM をダウンロードした場合は、新しいフォルダーに MIM のインストール アーカイブを展開します。
 
-<a id="run-the-service-and-portal-install-program" class="xliff"></a>
-##  サービスおよびポータルのインストール プログラムを実行します。  
+##  サービスおよびポータルのインストール プログラムを実行します。
+<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
 
 インストーラーのガイドラインに従って、インストールを完了します。
 
@@ -102,8 +99,8 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 インストールが完了して、サーバーは再起動したら、MIM ポータルがアクティブであることと、ユーザーが MIM で自分のオブジェクト リソースを表示できることを確認します。
 
-<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 ## MIM ポータル管理ポリシー規則のセットアップ
+<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 
 1. PAMSRV が再起動したら、PRIV\Administrator としてサインインします。
 
@@ -119,8 +116,8 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 7. この管理ポリシー規則を選択し、**[ポリシーを無効にする]** をオフにして **[OK]** をクリックし、**[送信]** をクリックします。
 
-<a id="verify-the-firewall-connections" class="xliff"></a>
 ## ファイアウォール接続の確認
+<a id="verify-the-firewall-connections" class="xliff"></a>
 
 ファイアウォールが TCP ポート 5725、5726、8086、8090 との受信接続を許可していることを確認します。
 
@@ -137,8 +134,8 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 8.  "priv.contoso.local" および [ドメイン ネットワーク] として表示されたアクティブなネットワークがあることを確認します。  
 9. **[コントロール パネル]**を閉じます。
 
-<a id="set-up-the-sample-web-application" class="xliff"></a>
 ## サンプル Web アプリケーションのセットアップ
+<a id="set-up-the-sample-web-application" class="xliff"></a>
 
 このセクションでは、MIM PAM REST API のサンプル Web アプリケーションをインストールして構成します。
 
@@ -174,8 +171,8 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 7.  (省略可能) ユーザーが REST API に対して認証できることを確認します。 PAMSRV で管理者として Web ブラウザーを開きます。  Web サイト URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/ にアクセスし、必要に応じて認証し、ダウンロードが実行されることを確認します。
 
-<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 ## MIM PAM Requestor コマンドレットをインストールします。
+<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 
 手順 1 で構成したワークステーションに MIM PAM Requestor コマンドレットをインストールします。
 
@@ -198,4 +195,3 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 >[!div class="step-by-step"]
 [«手順 3](step-3-prepare-pam-server.md)
 [手順 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-

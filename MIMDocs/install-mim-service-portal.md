@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016: MIM サービスおよびポータルのインストール
+# MIM 2016: MIM サービスおよびポータルのインストール
+<a id="install-mim-2016-mim-service-and-portal" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« MIM 同期サービス](install-mim-sync.md)
@@ -36,7 +35,8 @@ ms.lasthandoff: 01/24/2017
 最後の手順で MIM インストール パッケージをセットアップしなかった場合は、Microsoft Identity Manager 2016 コンポーネントをインストールしてから次の手順に進みます。
 
 
-## <a name="configure-mim-service-and-portal-for-installation"></a>インストールするために MIM サービスおよびポータルを構成する
+## インストールするために MIM サービスおよびポータルを構成する
+<a id="configure-mim-service-and-portal-for-installation" class="xliff"></a>
 
 1. アンパックした **サービスおよびポータル** サブフォルダから **MIM サービスおよびポータルのインストーラー**を実行します。
 
@@ -78,7 +78,8 @@ ms.lasthandoff: 01/24/2017
 
 16. ファイアウォールのポート 5725 および 5726 を開くためのチェック ボックスをオンにし、さらに、すべての認証されたユーザーに MIM ポータルへのアクセス権を付与するためのチェック ボックスを選択します。
 
-## <a name="configure-mim-password-registration-portal"></a>MIM パスワード登録ポータルを構成する
+## MIM パスワード登録ポータルを構成する
+<a id="configure-mim-password-registration-portal" class="xliff"></a>
 
 1.  SSPR 登録用のサービス アカウント名を *contoso\MIMSSPR* に、そのパスワードを *Pass@word1* に設定します。
 
@@ -90,7 +91,8 @@ ms.lasthandoff: 01/24/2017
 
 4. 次の MIM パスワード登録ポータルの構成画面で、パスワード登録ポータルの [MIM サービス サーバーのアドレス] に *http://CorpIDM.contoso.local* を指定します。
 
-## <a name="configure-mim-password-reset-portal"></a>MIM パスワード リセット ポータルを構成する
+## MIM パスワード リセット ポータルを構成する
+<a id="configure-mim-password-reset-portal" class="xliff"></a>
 
 1.  SSPR 登録用のサービス アカウント名を *Contoso\MIMSSPRService* に、そのパスワードを *Pass@word1* に設定します。
 
@@ -102,7 +104,8 @@ ms.lasthandoff: 01/24/2017
 
 4. 次の MIM パスワード登録ポータルの構成画面で、パスワード リセット ポータルの [MIM サービス サーバーのアドレス] に *CorpIDname  http://CorpIDname.domain.local* を指定します。
 
-## <a name="install-mim-service-and-portal"></a>MIM サービスおよびポータルのインストール
+## MIM サービスおよびポータルのインストール
+<a id="install-mim-service-and-portal" class="xliff"></a>
 
 インストール前のすべての定義が準備できたら、**[インストール]** をクリックして、選択した**サービスおよびポータル** コンポーネントのインストールを開始します。
 
@@ -150,4 +153,3 @@ ms.lasthandoff: 01/24/2017
 >[!div class="step-by-step"]  
 [« MIM 同期サービス](install-mim-sync.md)
 [データベースを同期する »](install-mim-sync-ad-service.md)
-

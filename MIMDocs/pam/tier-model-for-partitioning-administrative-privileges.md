@@ -12,29 +12,26 @@ ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
 # 管理者特権のパーティション分割の階層モデル
+<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
 
 今日の脅威に直面した環境では、攻撃者がシステムへのアクセス権を取得するかどうかは問題ではなく、いつそうなるかが問題です。 つまり、社内のセキュリティは強力な境界の防御と同様に重要です。 この記事では、危険度の高いゾーンから高い特権のアクティビティを隔離することによって、特権の昇格から保護するためのセキュリティ モデルについて説明します。 このモデルは、ベスト プラクティスとセキュリティの原則に従いながら、優れたユーザー エクスペリエンスを実現します。
 
-<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
 ## Active Directory フォレストにおける特権の昇格
+<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
 
 Windows Server Active Directory (AD) フォレストに対して永続的な管理者特権を与えられているユーザー、サービス、アプリケーションのアカウントにより、組織の任務と業務に多大なリスクが発生します。 これらのアカウントは攻撃者のターゲットとされることがあり、侵害されると、攻撃者はドメイン内の他のサーバーやアプリケーションに接続する権限を持つことになります。
 
 階層モデルは、管理するリソースに基づいて管理者の間に区分を設けます。 ユーザー ワークステーションを制御する管理者は、アプリケーションを制御する管理者やエンタープライズ ID を管理する管理者から分離されています。 このモデルについては、「[Securing privileged access reference material (特権を持つアクセスのセキュリティ強化に関する参考資料)](http://aka.ms/tiermodel)」をご覧ください。
 
-<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
 ## ログオン制限による資格情報の公開の制限
+<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
 
 管理者アカウントの資格情報が盗難されるリスクを軽減するには、一般に管理作業を変更して、攻撃者への公開を制限する必要があります。 最初の手順として、組織は次を実行することをお勧めします。
 
@@ -64,4 +61,3 @@ Windows Server Active Directory (AD) フォレストに対して永続的な管�
 - アカウントが専用管理者フォレスト内にある場合、認証の選択
 
 次の記事「[Planning a bastion environment (要塞環境の計画)](planning-bastion-environment.md)」では、Microsoft Identity Manager に専用管理フォレストを追加し、管理者アカウントを確立する方法について説明します。
-

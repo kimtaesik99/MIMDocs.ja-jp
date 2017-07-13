@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="environment-overview" class="xliff"></a>
 # 環境の概要
+<a id="environment-overview" class="xliff"></a>
 
 Privileged Access Management は、共有ネットワーク上で互いに接続された個別のドライブを備えた仮想マシン (VM) と連携します。 これらの仮想マシンは、Windows 8.1、Windows Server 2012 R2、または他のオペレーティング システム プラットフォームでホストできます。
 
@@ -34,4 +31,3 @@ Privileged Access Management は、共有ネットワーク上で互いに接続
 
 > [!NOTE]
 > 現在の MIM のカスタマー テクニカル プレビュー (CTP) は、以前の CTP のデータベースまたはディレクトリの内容と互換性がありません。 以前に PAM またはその他のシナリオに対して MIM を評価している場合、そのテストで使用した仮想マシンをバックアップしてアーカイブし、これまでに MIM シナリオに使用していない新しい仮想マシン イメージで展開を開始してください。
-

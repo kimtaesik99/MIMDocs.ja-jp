@@ -1,6 +1,6 @@
 ---
-title: "PAM の障害復旧 | Microsoft Docs"
-description: "高可用性と障害復旧を実現するために Privileged Access Management を構成する方法について説明します。"
+title: "PAM のディザスター リカバリー | Microsoft Docs"
+description: "高可用性とディザスター リカバリーを実現するために Privileged Access Management を構成する方法について説明します。"
 keywords: 
 author: billmath
 ms.author: billmath
@@ -12,25 +12,22 @@ ms.technology: active-directory-domain-services
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 2fab9af837ed11b1f2f7f32c9ced6d79c8cc9d00
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
+# 要塞環境の高可用性とディザスター リカバリーの考慮事項
 <a id="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment" class="xliff"></a>
-# 要塞環境の高可用性と障害復旧の考慮事項
-この記事では、Privileged Access Management (PAM) に対し Active Directory Domain Services (AD DS) と Microsoft Identity Manager 2016 (MIM) を展開する際の高可用性と障害復旧に関する考慮事項を説明します。
+この記事では、Privileged Access Management (PAM) に対し Active Directory Domain Services (AD DS) と Microsoft Identity Manager 2016 (MIM) を展開する際の高可用性とディザスター リカバリーに関する考慮事項を説明します。
 
 企業は、Windows Server、SQL Server、Active Directory でのワークロードの高可用性と障害復旧に重点を置いています。 しかし、Privileged Access Management の要塞環境における信頼性の高い可用性も重要です。 要塞環境は、ユーザーが管理者ロールを果たすためにそのコンポーネントと対話するので、組織の IT インフラストラクチャの重要な部分です。 高可用性に関する全般的な情報については、ホワイト ペーパー「[Microsoft High Availability Overview (Microsoft の高可用性の概要)](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc)」をダウンロードできます。
 
+## 高可用性とディザスター リカバリーのシナリオ
 <a id="high-availability-and-disaster-recovery-scenarios" class="xliff"></a>
-## 高可用性と障害復旧のシナリオ
 
-高可用性と障害復旧を計画する場合は、以下の質問を考慮してください。
+高可用性とディザスター リカバリーを計画する場合は、以下の質問を考慮してください。
 
 - どの機能が停止により影響を受ける可能性がありますか。
 - どの機能がビジネスや IT 運用に不可欠ですか。
@@ -49,50 +46,50 @@ ms.lasthandoff: 07/10/2017
 
 それでは、これらの要塞フォレストの各機能を順に見ていきましょう。
 
-<a id="trust-establishment" class="xliff"></a>
 ### 信頼関係の確立
+<a id="trust-establishment" class="xliff"></a>
 
 既存のフォレストのドメインと要塞環境のフォレスト間には、フォレストの信頼関係が必要です。 これは、要塞環境へのユーザーの認証で既存のフォレストのリソースを管理できるようにするためです。 たとえば、以前のバージョンの Windows Server 上の既存のドメインからユーザーの移行を許可するために、追加の構成が必要な場合があります。
 
 信頼関係の確立には、既存のフォレストのドメイン コントローラーだけでなく、要塞環境の MIM コンポーネントと AD コンポーネントがオンラインであることが必要です。  信頼関係の確立中にこれらのいずれかが停止した場合は、停止が解消されると管理者は再試行できます。  既存のフォレストのドメイン コントローラーまたは要塞環境が停止の後に復旧している場合、MIM には、信頼関係が引き続き有効であることを確認するために使用できる PowerShell コマンドレット `Test-PAMTrust` と `Test-PAMDomainConfiguration` が含まれます。
 
-<a id="user-and-group-migration" class="xliff"></a>
 ### ユーザーとグループの移行
+<a id="user-and-group-migration" class="xliff"></a>
 
 信頼関係が確立されると、要塞環境にシャドウ グループと、それらのグループおよび承認者のメンバーのユーザー アカウントを作成できます。 これにより、それらのユーザーが特権ロールをアクティブ化して、有効なグループ メンバーシップを再取得できるようになります。
 
 ユーザーとグループの移行には、既存のフォレストのドメイン コントローラーだけでなく、要塞環境の MIM コンポーネントと AD コンポーネントがオンラインであることが必要です。   既存のフォレストのドメイン コントローラーが到達できない場合は、他のユーザーとグループを要塞環境に追加することはできませんが、既存のユーザーとグループには影響はありません。 移行中にコンポーネントのいずれかが停止した場合は、停止が解消されると管理者は再試行できます。
 
-<a id="mim-administration" class="xliff"></a>
 ### MIM 管理
+<a id="mim-administration" class="xliff"></a>
 ユーザーとグループを移行すると、管理者は MIM でロールの割り当てをさらに構成して、ロールへのアクティブ化の候補としてユーザーをリンクすることができます。  承認と Azure MFA のための MIM ポリシーを構成することもできます。  
 
 MIM 管理では、要塞環境の MIM コンポーネントと AD コンポーネントがオンラインである必要があります。
 
-<a id="privileged-role-activation" class="xliff"></a>
 ### 特権ロールのアクティブ化
+<a id="privileged-role-activation" class="xliff"></a>
 ユーザーが特権ロールをアクティブ化するときは、要塞環境のドメインに対して認証し、MIM に要求を送信する必要があります。  MIM には、SOAP と REST の API に加え、PowerShell と Web ページのユーザー インターフェイスが含まれています。
 
 特権ロールのアクティブ化では、要塞環境の MIM コンポーネントと AD コンポーネントがオンラインである必要があります。  また、MIM を選択したロールの[アクティブ化に Azure MFA](use-azure-mfa-for-activation.md) を使用するように構成する場合は、Azure MFA サービスへの接続にインターネット アクセスが必要です。
 
-<a id="resource-management" class="xliff"></a>
 ### リソースの管理
+<a id="resource-management" class="xliff"></a>
 ユーザーが正常にロールにアクティブ化されると、ドメイン コントローラーは既存のドメインのドメイン コントローラーで使用できる Kerberos チケットを生成でき、ユーザーの新しい一時的なグループ メンバーシップを認識します。
 
 リソース管理では、リソース ドメインのドメイン コントローラーと要塞環境のドメイン コントローラーがオンラインであることが必要です。  ユーザーがアクティブ化されると、Kerberos チケットを発行するために、MIM または SQL が要塞環境でオンラインである必要はありません。  (要塞環境の機能レベルとして Windows Server 2012 R2 を使用すると、一時的なグループ メンバーシップを終了するために MIM がオンラインである必要がありますのでご注意ください。)
 
-<a id="monitoring-of-users-and-groups-in-the-existing-forest" class="xliff"></a>
 ### 既存のフォレストでのユーザーとグループの監視
+<a id="monitoring-of-users-and-groups-in-the-existing-forest" class="xliff"></a>
 MIM には、既存のドメインのユーザーとグループを定期的に確認し、その結果に応じて MIM データベースと AD を更新する PAM 監視サービスも含まれています。  このサービスは、ロールのアクティブ化のため、またはリソース管理中にオンラインにする必要はありません。
 
 監視では、既存のフォレストのドメイン コントローラーだけでなく、要塞環境の MIM コンポーネントと AD コンポーネントがオンラインであることが必要です。  
 
-<a id="deployment-options" class="xliff"></a>
 ## 展開オプション
+<a id="deployment-options" class="xliff"></a>
 [環境の概要](environment-overview.md)では、高可用性を対象としていないテクノロジの学習に適した基本的なトポロジを例示しています。 このセクションでは、1 つのサイトを持つ組織だけでなく、複数の既存のサイトを持つ組織向けに、高可用性を提供するためにそのトポロジ上で拡張する方法について説明します。
 
-<a id="networking" class="xliff"></a>
 ### ネットワーク
+<a id="networking" class="xliff"></a>
 
 要塞環境内のコンピューター間のネットワーク トラフィックは、別の物理ネットワークまたは仮想ネットワークを使用するなどにより、既存のネットワークから分離する必要があります。  要塞環境のリスクによっては、コンピューター間で独立して物理的な相互接続を行うことが必要な場合もあります。  特定のフェールオーバー クラスター テクノロジでは、ネットワーク インターフェイスに関して追加の要件があります。
 
@@ -103,8 +100,8 @@ MIM には、既存のドメインのユーザーとグループを定期的に�
 - 既存のフォレストのドメインを監視する MIM
 - 既存のフォレストにあるメール サーバー経由で電子メールを送信する MIM。
 
-<a id="minimal-high-availability-topologies" class="xliff"></a>
 ### 最小の高可用性トポロジ
+<a id="minimal-high-availability-topologies" class="xliff"></a>
 組織は、次の制約に応じて、高可用性が必要な要塞環境内の機能を選択できます。
 
 - 要塞環境で提供されるすべての機能に対する高可用性には、少なくとも 2 台のドメイン コントローラーが必要です。  
@@ -122,10 +119,10 @@ MIM には、既存のドメインのユーザーとグループを定期的に�
 
 負荷状態下でパフォーマンスを向上させるため、または以下に示すような地理的な冗長性のために、追加のサーバーをこれらの各機能に対して構成することができます。
 
-<a id="deployments-supporting-multiple-sites" class="xliff"></a>
 ### 複数のサイトをサポートする展開
+<a id="deployments-supporting-multiple-sites" class="xliff"></a>
 複数のサイト間で展開されているリソースに対する適切な展開トポロジの選択は、次の 3 つの要因によって異なります。  
-- 高可用性と障害復旧の目的とリスク  
+- 高可用性とディザスター リカバリーの目的とリスク  
 - 要塞環境をホストするためのハードウェアの機能  
 - 各サイトの管理作業モデル。
 
@@ -133,7 +130,7 @@ MIM には、既存のドメインのユーザーとグループを定期的に�
 
 ![複数のサイト トポロジでの単一の要塞 - 図](media/bastion2.png)
 
-サイト全体の高可用性と障害復旧では、各サイトで要塞環境のコンポーネントを展開して、共通の PRIV ディレクトリと共通の SQL データベースを共有することもできます。  このトポロジでは、ネットワーク リンクが損傷した場合、各サイトのユーザーは独立して操作を続行できます。
+サイト全体の高可用性とディザスター リカバリーでは、各サイトで要塞環境のコンポーネントを展開して、共通の PRIV ディレクトリと共通の SQL データベースを共有することもできます。  このトポロジでは、ネットワーク リンクが損傷した場合、各サイトのユーザーは独立して操作を続行できます。
 
 ![複数のサイト トポロジでの複数の要塞 - 図](media/bastion3.png)
 
@@ -149,8 +146,8 @@ MIM には、既存のドメインのユーザーとグループを定期的に�
 
 ![複数のサイト トポロジでの複雑な要塞 - 図](media/bastion6.png)
 
-<a id="hosted-bastion-environment" class="xliff"></a>
 ### ホストされている要塞環境
+<a id="hosted-bastion-environment" class="xliff"></a>
 一部の組織では、組織の既存のサイトから独立した要塞環境を確立することも検討されています。 要塞環境ソフトウェアは、組織のネットワーク内または外部のホスティング プロバイダーのいずれかの仮想化プラットフォームでホストすることができます。  このアプローチを評価するときには、次の点に注意してください。
 
 - 既存のドメインからの攻撃を防止するために、要塞環境の管理は、既存のドメインの管理アカウントから分離する必要があります。
@@ -158,24 +155,24 @@ MIM には、既存のドメインのユーザーとグループを定期的に�
 - Active Directory Domain Services の仮想化された展開には、「[仮想化ドメイン コントローラーの展開と構成](https://technet.microsoft.com/library/jj574223.aspx)」で説明されているように、仮想化プラットフォームの特定の機能が必要です。
 - MIM サービス用の SQL Server の高可用性の展開には、以下の「[SQL Server データベース記憶域](#sql-server-database-storage)」セクションに記載されている特殊な記憶域の構成が必要です。  一部のホスティング プロバイダーでは、現在、SQL Server フェールオーバー クラスターに適したディスク構成を持つ Windows Server ホスティングを提供していない場合があります。
 
-<a id="deployment-preparation-and-recovery-procedures" class="xliff"></a>
 ## 展開準備と復旧手順
-要塞環境の高可用性と障害復旧に対応した展開の準備では、Windows Server Active Directory、SQL Server と共有記憶域上のそのデータベース、および MIM サービスとその PAM コンポーネントをインストールする方法を検討する必要があります。
+<a id="deployment-preparation-and-recovery-procedures" class="xliff"></a>
+要塞環境の高可用性とディザスター リカバリーに対応した展開の準備では、Windows Server Active Directory、SQL Server と共有記憶域上のそのデータベース、および MIM サービスとその PAM コンポーネントをインストールする方法を検討する必要があります。
 
-<a id="windows-server" class="xliff"></a>
 ### Windows Server
+<a id="windows-server" class="xliff"></a>
 Windows Server には、高可用性のための組み込み機能が用意されており、複数のコンピューターがフェールオーバー クラスターとして連携することができます。 クラスター化されたサーバーは、物理ケーブルとソフトウェアによって接続されます。 クラスター ノードに障害が発生した場合、他のノードがサービスの提供を開始します。このプロセスを "フェールオーバー" といいます。   詳細については、「[フェールオーバー クラスタリングの概要](https://technet.microsoft.com/library/hh831579.aspx)」をご参照ください。
 
 要塞環境内のオペレーティング システムとアプリケーションが、セキュリティの問題に関する更新プログラムを受信することを確認してください。 これらの更新プログラムの一部では、サーバーの再起動が必要になる場合があるため、サーバー全体で更新プログラムが適用される時間を調整して、長時間停止するのを回避します。 1 つのアプローチとして、Windows Server フェールオーバー クラスター内のサーバーに対して[クラスター対応更新](https://technet.microsoft.com/library/hh831694.aspx)を使用する方法があります。
 
 要塞環境内のサーバーは、ドメインに参加して、ドメイン サービスに依存します。 これらのサーバーが、誤って DNS などのサービス用の特定のドメイン コントローラーに依存して構成されないようにしてください。
 
-<a id="bastion-environment-active-directory" class="xliff"></a>
 ### 要塞環境の Active Directory
-Windows Server Active Directory Domain Services には、ネイティブで高可用性と障害復旧のサポートが含まれています。
+<a id="bastion-environment-active-directory" class="xliff"></a>
+Windows Server Active Directory Domain Services には、ネイティブで高可用性とディザスター リカバリーのサポートが含まれています。
 
-<a id="preparation" class="xliff"></a>
 #### 準備
+<a id="preparation" class="xliff"></a>
 特権アクセス管理の典型的な運用環境では、要塞環境に少なくとも 2 台のドメイン コントローラーが含まれています。 要塞環境での最初のドメイン コントローラーを設定するための手順は、展開の記事の手順 2「[PRIV ドメイン コントローラーを準備する](step-2-prepare-priv-domain-controller.md)」に記載されています。
 
 追加のドメイン コントローラーを追加する手順は、「[Windows Server 2012 のレプリカ ドメイン コントローラーを既存のドメインにインストールする (レベル 200)](https://technet.microsoft.com/library/jj574134.aspx)」をご参照ください。  
@@ -183,8 +180,8 @@ Windows Server Active Directory Domain Services には、ネイティブで高�
 >[!NOTE]
 > ドメイン コントローラーが Hyper-V などの仮想化プラットフォーム上でホストされる場合は、「[仮想化ドメイン コントローラーの展開と構成](https://technet.microsoft.com/library/jj574223.aspx)」の注意事項をご確認ください。
 
-<a id="recovery" class="xliff"></a>
 #### 復元
+<a id="recovery" class="xliff"></a>
 停止後、他のサーバーを再起動する前に、少なくとも 1 台のドメイン コントローラーが要塞環境で使用できるようにしておきます。
 
 「[操作マスターのしくみ](https://technet.microsoft.com/library/cc780487.aspx)」で説明しているように、Active Directory はドメイン内で、フレキシブル シングル マスター操作 (FSMO) のロールをドメイン コントローラー全体に分散します。  ドメイン コントローラーが失敗した場合、そのドメイン コントローラーに割り当てられていた 1 つ以上の[ドメイン コントローラーのロール](https://technet.microsoft.com/library/cc786438.aspx)を転送することが必要な場合があります。
@@ -193,33 +190,33 @@ Windows Server Active Directory Domain Services には、ネイティブで高�
 
 また、要塞環境に参加しているコンピューターの DNS 設定、およびそのドメイン コントローラーと信頼関係のある CORP ドメイン内のドメイン コントローラーを確認して、そのドメイン コントローラー コンピューターの IP アドレスに依存してハード コーディングされていないことを確認することもお勧めします。
 
-<a id="sql-server-database-storage" class="xliff"></a>
 ### SQL Server データベース記憶域
+<a id="sql-server-database-storage" class="xliff"></a>
 高可用性の展開では SQL Server フェールオーバー クラスターが必要であり、SQL Server フェールオーバー クラスター インスタンスはデータベースとログの記憶のために、すべてのノード間の共有記憶域に依存しています。 共有記憶域は、Windows Server フェールオーバー クラスタリングのクラスター ディスク、記憶域ネットワーク (SAN) 上のディスク、または SMB サーバー上のファイル共有の形式にすることができます。  なお、これらは要塞環境専用にしてください。要塞環境の保全性が脅かされる可能性があるため、要塞環境以外の他のワークロードと記憶域を共有することは推奨されません。
 
-<a id="sql-server" class="xliff"></a>
 ### SQL Server
+<a id="sql-server" class="xliff"></a>
 MIM サービスには、要塞環境での SQL Server の展開が必要です。   高可用性のために、フェールオーバー クラスター インスタンス (FCI) を使用して SQL を展開できます。 スタンドアロン インスタンスでの場合と異なり、FCI では、SQL Server の高可用性は FCI 内に冗長ノードがあることによって保護されます。 障害が発生した場合や予定されていたアップグレードを行う場合は、リソース グループの所有権は別の Windows Server フェールオーバー クラスター ノードに移動します。
 
-高可用性ではなく障害復旧のサポートのみが必要な場合は、フェールオーバー クラスタリングの代わりに、ログ配布、トランザクション レプリケーション、スナップショット レプリケーション、またはデータベース ミラーリングを使用できます。   
+高可用性ではなくディザスター リカバリーのサポートのみが必要な場合は、フェールオーバー クラスタリングの代わりに、ログ配布、トランザクション レプリケーション、スナップショット レプリケーション、またはデータベース ミラーリングを使用できます。   
 
-<a id="preparation" class="xliff"></a>
 #### 準備
+<a id="preparation" class="xliff"></a>
 要塞環境に SQL Server をインストールするときは、CORP フォレストにあるすべての既存の SQL Server から独立している必要があります。  さらに、SQL Server は、ドメイン コントローラーのサーバーとは異なる、専用サーバーに展開することをお勧めします。
 詳細については、SQL Server ガイドの「[AlwaysOn フェールオーバー クラスター インスタンス](https://msdn.microsoft.com/library/ms189134.aspx)」をご参照ください。
 
-<a id="recovery" class="xliff"></a>
 #### 復元
-SQL Server がログ配布を使用して障害復旧用に構成されていた場合は、復旧中に SQL Server を更新するアクションを実行する必要があります。  さらに、各 MIM サービス インスタンスを再起動する必要があります。
+<a id="recovery" class="xliff"></a>
+SQL Server がログ配布を使用してディザスター リカバリー用に構成されていた場合は、復旧中に SQL Server を更新するアクションを実行する必要があります。  さらに、各 MIM サービス インスタンスを再起動する必要があります。
 
 SQL Server が失敗したか、または SQL Server と MIM サービス間の接続が失われた場合は、SQL Server を復元した後、各 MIM サービスを再起動することをお勧めします。  これにより、MIM サービスが SQL Server への接続を確実に再確立します。
 
-<a id="mim-service" class="xliff"></a>
 ### MIM サービス
+<a id="mim-service" class="xliff"></a>
 アクティブ化要求の処理には、MIM サービスが必要です。  アクティブ化要求の受信中に、MIM サービスをホストしているコンピューターをメンテナンスのために休止させるために、複数の MIM サービス コンピューターを展開できます。  ユーザーがグループに追加されると、MIM サービスは Kerberos 操作に含まれなくなるのでご注意ください。  
 
-<a id="preparation" class="xliff"></a>
 #### 準備
+<a id="preparation" class="xliff"></a>
 MIM サービスは PRIV ドメインに参加している複数のサーバー上に展開することをお勧めします。
 高可用性については、Windows Server のドキュメントで「[フェールオーバー クラスタリングのハードウェア要件と記憶域オプション](https://technet.microsoft.com/library/jj612869.aspx)」および「[Windows Server 2012 フェールオーバー クラスターの作成](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx)」をご参照ください。
 
@@ -232,23 +229,22 @@ MIM サービスは PRIV ドメインに参加している複数のサーバー�
 
 MIM サービスが要求を受信すると、サービス パーティション名はその要求の属性として保存されます。   その後は、同じサービス パーティション名を持つ他の MIM サービス インストールのみが、その要求と対話することを許可されます。  このため、PAM シナリオに手動の承認または長く続く他の要求処理が含まれている場合は、各 MIM サービスにその構成ファイル内の同じ `servicePartitionName` 属性があることを確認してください。
 
-<a id="recovery" class="xliff"></a>
 #### 復元
+<a id="recovery" class="xliff"></a>
 停止後、MIM サービスを再起動する前に、少なくとも 1 つの Active Directory ドメイン コントローラーと SQL Server が要塞環境で使用できるようにしておきます。  
 
 ワークフロー インスタンスは、ワークフロー インスタンスを開始した MIM サービス サーバーと同じサービス パーティション名とサービス名を持つ MIM サービス サーバーでのみ完了できます。  要求を処理中の MIM サービスをホストしているときに、特定のコンピューターが失敗し、そのコンピューターがサービスに戻れない場合は、MIM サービスを新しいコンピューターにインストールする必要があります。 インストール後に新しい MIM サービスで、*resourcemanagementservice.exe.config* ファイルを編集して、新しい MIM 展開の `serviceName` 属性と `servicePartitionName` 属性に、失敗したコンピューターと同じホスト名とサービス パーティション名を設定します。
 
-<a id="mim-pam-components" class="xliff"></a>
 ### MIM PAM コンポーネント
+<a id="mim-pam-components" class="xliff"></a>
 MIM サービスおよびポータルのインストーラーには、PowerShell モジュールと 2 つのサービスを含む、追加の PAM コンポーネントも組み込まれています。
 
-<a id="preparation" class="xliff"></a>
 #### 準備
+<a id="preparation" class="xliff"></a>
 Privileged Access Management コンポーネントは、MIM サービスがインストールされている要塞環境内の各コンピューターにインストールする必要があります。  これらは、後で追加することはできません。
 
-<a id="recovery" class="xliff"></a>
 #### 復元
+<a id="recovery" class="xliff"></a>
 停止から復旧した後、MIM サービスが少なくとも 1 つのサーバー上で実行されていることを確認します。  次に `net start "PAM Monitoring service"` を使用して、MIM PAM 監視サービスもそのサーバーで実行されていることを確認してします。
 
 要塞環境フォレストの機能レベルが Windows Server 2012 R2 の場合は、コマンド `net start "PAM Component service"` を使用して、MIM PAM コンポーネント サービスもそのサーバーで実行されていることを確認します。
-

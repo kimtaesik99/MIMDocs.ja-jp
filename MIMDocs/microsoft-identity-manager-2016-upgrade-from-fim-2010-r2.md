@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
-ms.lasthandoff: 02/13/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Forefront Identity Manager 2010 R2 からのアップグレード
+# Forefront Identity Manager 2010 R2 からのアップグレード
+<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
 
 現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の 3 ステップです:
 
@@ -37,7 +36,8 @@ ms.lasthandoff: 02/13/2017
 - ローカルおよび環境に関するすべての前提条件 (SQL Server、Exchange Server、SharePoint Services など) は FIM 2010 R2 用に構成されている
 
 
-## <a name="preparation"></a>準備
+## 準備
+<a id="preparation" class="xliff"></a>
 
 1.  FIM サービス データベース、FIM Sync データベース、FIM Sync、サービスの構成とソフトウェアをバックアップします。
 
@@ -45,7 +45,8 @@ ms.lasthandoff: 02/13/2017
 
 3.  MIM ソフトウェアをダウンロードまたは展開します。
 
-## <a name="upgrade-the-synchronization-service"></a>同期サービスをアップグレードする
+## 同期サービスをアップグレードする
+<a id="upgrade-the-synchronization-service" class="xliff"></a>
 
 1.  FIM 2010 R2 同期サービス (“Sync”) が展開されているサーバーに管理者としてログインします。
 
@@ -83,7 +84,8 @@ ms.lasthandoff: 02/13/2017
 
 13. **同期サービス** が再起動します。
 
-## <a name="upgrade-the-service-and-portal"></a>サービスおよびポータルをアップグレードする
+## サービスおよびポータルをアップグレードする
+<a id="upgrade-the-service-and-portal" class="xliff"></a>
 
 1.  FIM 2010 R2 のサービスおよびポータルが展開されているサーバーに管理者としてログインします。
 
@@ -139,7 +141,8 @@ ms.lasthandoff: 02/13/2017
 
 14. MIM ポータルをインストールする場合は、現在 FIM ポータルがホストされている SharePoint サイト コレクションの URL を提供します。 **[次へ]**をクリックします。
 
-## <a name="install-the-mim-password-registration-portal"></a>MIM パスワード登録ポータルをインストールする
+## MIM パスワード登録ポータルをインストールする
+<a id="install-the-mim-password-registration-portal" class="xliff"></a>
 
 1. MIM パスワード登録ポータルをインストールする場合は、パスワード登録ポータルの要求された URL を提供します。 **[次へ]**をクリックします。
 
@@ -169,7 +172,8 @@ ms.lasthandoff: 02/13/2017
 
     2.  このポータルにエクストラネットおよびイントラネットのユーザーがアクセスできるようにするか、または前に FIM パスワード リセットに構成したようにイントラネット ユーザーのみに許可するかを決定します。
 
-## <a name="install-the-mim-password-reset-portal"></a>MIM パスワード リセット ポータルをインストールする
+## MIM パスワード リセット ポータルをインストールする
+<a id="install-the-mim-password-reset-portal" class="xliff"></a>
 
 1. MIM パスワード リセット ポータルをインストールする場合は、MIM パスワード リセットのアクセスの詳細と資格情報を提供します。
 
@@ -189,7 +193,8 @@ ms.lasthandoff: 02/13/2017
 
     2.  エクストラネット ユーザーとイントラネット ユーザーがこのポータルにアクセスできるか、またはイントラネット ユーザーのみかを指定します。
 
-## <a name="finish-installation-and-upgrade"></a>インストールの完了とアップグレード
+## インストールの完了とアップグレード
+<a id="finish-installation-and-upgrade" class="xliff"></a>
 
 1. すべての構成の定義が正常に完了すると、インストール ページが表示されます。 **[インストール]** をクリックして、MIM サービスおよびポータルのインストールとアップグレードを開始します。
 
@@ -202,4 +207,3 @@ ms.lasthandoff: 02/13/2017
 注: FIM のアドインおよび拡張機能がユーザーの SSPR 用のコンピューターに現在展開されている場合、FIM のアドインおよび拡張機能をすべて MIM 2016 にアップグレードするまで、パスワードのリセットに新しい MFA 電話ゲートを構成しないでください。  FIM 2010 と FIM 2010 R2 のアドインと拡張機能は新しいゲートを認識しないため、エラーが返され、ユーザーはパスワードのリセットを完了できません。
 
 Microsoft Identity Manager 2016 SP1 のアップグレード ガイダンスについては、次の [Microsoft Identity Manager 2016 Service Pack 1 アップグレード パッケージ](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)に関する記事をご覧ください。
-

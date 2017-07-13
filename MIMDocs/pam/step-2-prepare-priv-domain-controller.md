@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 # 手順 2 - PRIV ドメイン コントローラーの準備
+<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [<< 手順 1](step-1-prepare-corp-domain.md)
@@ -30,13 +27,13 @@ ms.lasthandoff: 07/10/2017
 
 この手順では、管理者の認証のために要塞環境を提供する新しいドメインを作成します。  このフォレストには、少なくとも 1 つのドメイン コントローラーと、少なくとも 1 つのメンバー サーバーが必要です。 メンバー サーバーは、後ほど、次の手順で構成します。
 
-<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 ## 新しい Privileged Access Management ドメイン コントローラーの作成
+<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 
 このセクションでは、新しいフォレストのドメイン コントローラーとして機能する仮想マシンをセットアップします
 
-<a id="install-windows-server-2012-r2" class="xliff"></a>
 ### Windows Server 2012 R2 のインストール
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 ソフトウェアがインストールされていない別の新しい仮想マシンに、Windows Server 2012 R2 をインストールして、コンピューター "PRIVDC" にします。
 
 1. Windows Server の (アップグレードではなく) カスタム インストールを選択して実行します。 インストール時に、**[Windows Server 2012 R2 Standard (GUI 使用サーバー) x64]** を指定します。**Data Center または Server Core** は選択_しないでください_。
@@ -49,8 +46,8 @@ ms.lasthandoff: 07/10/2017
 
 5. サーバーが再起動したら、管理者としてサインインします。 [コントロール パネル] を使用して、更新を確認し、必要な更新をインストールするようにコンピューターを構成します。 これにはサーバーの再起動が必要になる場合があります。
 
-<a id="add-roles" class="xliff"></a>
 ### ロールの追加
+<a id="add-roles" class="xliff"></a>
 Active Directory ドメイン サービス (AD DS) と DNS サーバーのロールを追加します。
 
 1. 管理者として PowerShell を起動します。
@@ -63,8 +60,8 @@ Active Directory ドメイン サービス (AD DS) と DNS サーバーのロー
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
   ```
 
-<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 ### SID 履歴の移行のためにレジストリ設定を構成する
+<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 
 PowerShell を起動し、次のコマンドを入力して、セキュリティ アカウント マネージャー (SAM) データベースに対するリモート プロシージャ コール (RPC) アクセスを許可するようにソース ドメインを構成します。
 
@@ -72,15 +69,15 @@ PowerShell を起動し、次のコマンドを入力して、セキュリティ
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
-<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 ## 新しい Privileged Access Management フォレストの作成
+<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 
 次に、サーバーを新しいフォレストのドメイン コントローラーに昇格します。
 
 このドキュメントでは、priv.contoso.local という名前を新しいフォレストのドメイン名として使います。  フォレストの名前は重要ではないため、組織内の既存のフォレスト名の下位である必要はありません。 ただし、新しいフォレストのドメイン名と NetBIOS 名は、組織内の他のドメインと重複せず、一意である必要があります。  
 
-<a id="create-a-domain-and-forest" class="xliff"></a>
 ### ドメインとフォレストの作成
+<a id="create-a-domain-and-forest" class="xliff"></a>
 
 1. PowerShell ウィンドウで次のコマンドを入力して、新しいドメインを作成します。  また、このコマンドでは、前の手順で作成した上位ドメイン (contoso.local) に DNS 委任も作成します。  DNS の構成を後で行う場合は、`CreateDNSDelegation -DNSDelegationCredential $ca` パラメーターを省略してください。
 
@@ -96,8 +93,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 フォレストの作成が完了すると、サーバーは自動的に再起動します。
 
-<a id="create-user-and-service-accounts" class="xliff"></a>
 ### ユーザーおよびサービス アカウントの作成
+<a id="create-user-and-service-accounts" class="xliff"></a>
 MIM サービスおよびポータル セットアップのユーザー アカウントとサービス アカウントを作成します。 これらのアカウントは priv.contoso.local ドメインのユーザー コンテナーに入れられます。
 
 1. サーバーの再起動後、PRIVDC にドメイン管理者 (PRIV\\Administrator) としてサインインします。
@@ -168,8 +165,8 @@ MIM サービスおよびポータル セットアップのユーザー アカ�
   Add-ADGroupMember "Domain Admins" MIMService
   ```
 
-<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 ### 監査およびログオン権限の構成
+<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 
 PAM 構成がフォレストをまたいで確立されるように監査を設定する必要があります。  
 
@@ -218,8 +215,8 @@ PAM 構成がフォレストをまたいで確立されるように監査を設�
   1 分後に、「コンピューター ポリシーの更新が正常に完了しました。」というメッセージが表示され、更新が完了します。
 
 
-<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 ### PRIVDC で DNS 名の転送を構成する
+<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 
 PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォレストを認識するように DNS 名の転送を構成します。
 
@@ -236,8 +233,8 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
 > [!NOTE]
 > 他のフォレストは、PRIV フォレストに対する DNS クエリをこのドメイン コントローラーにルーティングできる必要もあります。  複数の既存の Active Directory フォレストがある場合は、それらの各フォレストに DNS 条件付きフォワーダーを追加する必要もあります。
 
-<a id="configure-kerberos" class="xliff"></a>
 ### Kerberos の構成
+<a id="configure-kerberos" class="xliff"></a>
 
 1. PowerShell を使用して SPN を追加することにより、SharePoint、PAM REST API、MIM サービスが Kerberos 認証を使えるようにします。
 
@@ -251,8 +248,8 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
 > [!NOTE]
 > このドキュメントの次のステップでは、1 台のコンピューターに MIM 2016 サーバー コンポーネントをインストールする方法について説明します。 高可用性のためにもう 1 台のサーバーを追加する場合は、「[FIM 2010: Kerberos Authentication Setup (Kerberos 認証のセットアップ)](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx)」の説明に従って、追加の Kerberos 構成を用意する必要があります。
 
-<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 ### MIM サービス アカウントにアクセス許可を与える委任を構成する
+<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 
 ドメイン管理者として PRIVDC で次の手順を実行します。
 
@@ -295,13 +292,13 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
   ```
 20. これらの変更が反映されるように、PRIVDC サーバーを再起動します。
 
-<a id="prepare-a-priv-workstation" class="xliff"></a>
 ## PRIV ワークステーションの準備
+<a id="prepare-a-priv-workstation" class="xliff"></a>
 
 PRIV リソースのメンテナンス (MIM など) を実行するために PRIV ドメインに参加できるワークステーション コンピューターがまだない場合は、次の手順に従ってワークステーションを準備します。  
 
-<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 ### Windows 8.1 または Windows 10 Enterprise をインストールする
+<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 
 ソフトウェアがインストールされていない別の新しい仮想マシンに、Windows 8.1 Enterprise または Windows 10 Enterprise をインストールして、コンピューターを *"PRIVWKSTN"* にします。
 
@@ -320,4 +317,3 @@ PRIV リソースのメンテナンス (MIM など) を実行するために PRI
 >[!div class="step-by-step"]
 [<< 手順 1](step-1-prepare-corp-domain.md)
 [手順 3 >>](step-3-prepare-pam-server.md)
-
