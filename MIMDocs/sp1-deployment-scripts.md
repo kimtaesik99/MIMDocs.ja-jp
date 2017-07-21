@@ -5,21 +5,20 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 12c60e12dc5662ff0313e21bb9180b3709969af6
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: ae8f6a87f57c95e073b40d3cda944c71f1bf7247
+ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
-# MIM2016 SP1 PAM 展開スクリプト
-<a id="mim2016-sp1-pam-deployment-scripts" class="xliff"></a>
+# <a name="mim2016-sp1-pam-deployment-scripts"></a>MIM2016 SP1 PAM 展開スクリプト
 
 この Service Pack には、PAM の展開を容易にする一連の展開スクリプトが導入されています。 これらのスクリプトは、ダウンロード センターで入手できます。 スクリプトを使用する前に、次の前提条件が使用中の環境に当てはまることを確認してください。
 
@@ -31,6 +30,6 @@ ms.lasthandoff: 07/13/2017
 5. 検証オプション用に、この手順を実行する専用のクライアント コンピューターが存在するものとします。
 
 >[!NOTE]
->スクリプトの実行に関する問題が発生した場合は、ログの確認が必要になる場合があります。 すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に電子メールで mim2016@microsoft.com に送信してください。
+>スクリプトの実行に関する問題が発生した場合は、ログの確認が必要になる場合があります。 すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に、お客様のサポート ケースに追加してください。
 
 PAM 展開スクリプトを使用する準備ができたら、 「[スクリプトを使用した PAM の構成](./pam/sp1-pam-configure-using-scripts.md)」に進んでください。
