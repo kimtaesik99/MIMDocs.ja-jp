@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# MIM 2016 のインストール: MIM 同期サービス
-<a id="install-mim-2016-mim-synchronization-service" class="xliff"></a>
+# <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016 のインストール: MIM 同期サービス
 
 >[!div class="step-by-step"]
 [« Exchange Server](prepare-server-exchange.md)
@@ -37,8 +36,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
 2. MIM インストール パッケージを展開するか、MIM イメージ DVD をマウントします。
 
-## MIM 2016 同期サービスのインストール
-<a id="install-mim-2016-synchronization-service" class="xliff"></a>
+## <a name="install-mim-2016-synchronization-service"></a>MIM 2016 同期サービスのインストール
 
 1. 展開した MIM インストール フォルダー内で、 **同期サービス** のフォルダーに移動します。
 

@@ -17,8 +17,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# Microsoft Identity Manager 2016 のパスワード管理
-<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
+# <a name="microsoft-identity-manager-2016-password-management"></a>Microsoft Identity Manager 2016 のパスワード管理
 
 複数のユーザー アカウントのパスワード管理は、複数のデータ ソースがあるエンタープライズ環境の管理の中でも複雑な作業の 1 つです。 Microsoft Identity Manager 2016 (MIM) には、2 つのパスワード管理ソリューションがあります。
 
@@ -40,8 +39,7 @@ ms.lasthandoff: 07/13/2017
 
 -   MIM 操作とは関係なく、リアルタイムでパスワード管理操作を実行する。
 
-## パスワードの拡張機能
-<a id="password-extensions" class="xliff"></a>
+## <a name="password-extensions"></a>パスワードの拡張機能
 
 ディレクトリ サーバーの管理エージェントは、パスワードの変更と設定操作を既定でサポートしています。 ファイルベース、データベース、拡張可能な接続管理エージェントの場合、既定ではパスワードの変更と設定操作をサポートしていませんが、.NET パスワード拡張機能のダイナミックリンク ライブラリ (DLL) を作成できます。
 .NET パスワード拡張機能の DLL は、このような管理エージェントのいずれかに対してパスワードの変更または設定の呼び出しが開始されるたびに呼び出されます。 管理エージェントのパスワード拡張機能の設定は、Synchronization Service Manager で構成します。 パスワード拡張機能の構成の詳細については、「FIM Developer Reference」 (FIM 開発者向けリファレンス) を参照してください。
@@ -58,8 +56,7 @@ ms.lasthandoff: 07/13/2017
 |                                                                           | Microsoft SQL Server                                                                               |
 |                                                                           | Oracle データベース                                                                                    |
 
-## パスワードの同期
-<a id="password-synchronization" class="xliff"></a>
+## <a name="password-synchronization"></a>パスワードの同期
 
 
 パスワードの同期は、Active Directory ドメイン上のパスワード変更通知サービス (PCNS) と連携します。また、Active Directory から実行されたパスワードの変更を、接続されている他のデータ ソースに自動的に反映できます。 MIM は、Active Directory ドメイン コントローラーからのパスワード変更通知をリッスンするリモート プロシージャ コール (RPC) サーバーとして実行することで、この処理を実行しています。 パスワード変更要求が受信され、認証されると、MIM によって処理され、適切な管理エージェントに反映されます。
@@ -85,8 +82,7 @@ PCNS は各 Active Directory ドメイン コントローラーで実行され�
 -   **パスワード拡張機能の DLL** - パスワード拡張機能の DLL には、データベース、拡張可能な接続、またはファイルベースの管理エージェント用の規則の拡張機能を利用して、パスワードの設定または変更操作を実装する機能があります。
     実装するには、"export_password" というエクスポートのみの暗号化された属性を作成します。この属性は接続されるディレクトリに実際には存在しませんが、規則の拡張機能をプロビジョニングするときにアクセスおよび設定できます。また、エクスポート属性フローで使用できます。 パスワード拡張機能の構成の詳細については、「[FIM Developer Reference](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx)」 (FIM 開発者向けリファレンス) を参照してください。
 
-## パスワード同期の準備
-<a id="preparing-for-password-synchronization" class="xliff"></a>
+## <a name="preparing-for-password-synchronization"></a>パスワード同期の準備
 
 MIM および Active Directory 環境のパスワード同期をセットアップする前に、以下を確認してください。
 
@@ -110,8 +106,7 @@ MIM および Active Directory 環境のパスワード同期をセットアッ�
 
 パスワード同期のセットアップについては、「Using Password Synchronization」 (パスワード同期の使用) を参照してください。
 
-## パスワード同期プロセス
-<a id="password-synchronization-process" class="xliff"></a>
+## <a name="password-synchronization-process"></a>パスワード同期プロセス
 
 Active Directory ドメイン コントローラーのパスワードの変更を他の接続済みデータ ソースと同期するプロセスを次の図に示します。
 
@@ -127,8 +122,7 @@ Active Directory ドメイン コントローラーのパスワードの変更�
 
 6.  MIM は、テーブルの結合情報を使用して、パスワードの変更を受信する管理エージェントを判断し、パスワードの変更をその管理エージェントにプッシュします。
 
-## パスワード同期のセキュリティ
-<a id="password-synchronization-security" class="xliff"></a>
+## <a name="password-synchronization-security"></a>パスワード同期のセキュリティ
 
 以下のパスワード同期のセキュリティに関する懸案事項は対応されています。
 
@@ -142,8 +136,7 @@ Active Directory ドメイン コントローラーのパスワードの変更�
 
 -   セキュリティで保護されたパスワード キュー - PCNS パスワード キューに格納されているパスワードは、配信されるまで暗号化された状態です。
 
-## パスワード同期エラーの回復シナリオ
-<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
+## <a name="password-synchronization-error-recovery-scenarios"></a>パスワード同期エラーの回復シナリオ
 
 ユーザーがパスワードを変更するたびに、エラーなしで変更が同期されるのが理想的です。 以下のシナリオでは、一般的な同期エラーから MIM を回復する方法について説明します。
 
@@ -165,8 +158,7 @@ Active Directory ドメイン コントローラーのパスワードの変更�
 | 6927  | エラー       | パスワードがターゲット システムのパスワード ポリシーを満たしていないため、パスワード同期の設定操作は失敗しました。                                      |
 | 6928  | エラー       | ターゲット管理エージェントのパスワード拡張機能は、パスワードの設定操作をサポートするように構成されていないため、パスワード同期の設定操作は失敗しました。 |
 
-## ユーザーベースのパスワード変更管理
-<a id="user-based-password-change-management" class="xliff"></a>
+## <a name="user-based-password-change-management"></a>ユーザーベースのパスワード変更管理
 
 MIM には、パスワードのリセットに Windows Management Instrumentation (WMI) を使用する 2 つの Web アプリケーションがあります。 パスワード同期と同様に、パスワード管理は、Management Agent Designer で管理エージェントを構成するときにアクティブ化します。 パスワード管理と WMI については、「MIM Developer Reference」 (MIM 開発者向けリファレンス) を参照してください。
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# ステップ 6: Privileged Access Managment へのグループの移行
-<a id="step-6--transition-a-group-to-privileged-access-management" class="xliff"></a>
+# <a name="step-6--transition-a-group-to-privileged-access-management"></a>ステップ 6: Privileged Access Managment へのグループの移行
 
 >[!div class="step-by-step"]
 [« 手順 5 ](step-5-establish-trust-between-priv-corp-forests.md)

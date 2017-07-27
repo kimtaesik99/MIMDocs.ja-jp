@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 2. CORP ドメインの構成
-<a id="step-2-configuring-the-corp-domain" class="xliff"></a>
+# <a name="step-2-configuring-the-corp-domain"></a>手順 2. CORP ドメインの構成
 
 >[!div class="step-by-step"]
 [<< 手順 1](sp1-step1-configuring-priv-domain.md)

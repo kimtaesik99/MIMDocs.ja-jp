@@ -8,8 +8,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# Microsoft Identity Manager のドキュメント
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
+# <a name="microsoft-identity-manager-documentation"></a>Microsoft Identity Manager のドキュメント
 
 Microsoft Identity Manager 2016 では、複数のオンプレミスの認証ストアを Active Directory、LDAP、Oracle、およびその他のアプリケーションを Azure Active Directory とｐシームレスにブリッジすることで Microsoft の ID およびアクセス管理ソリューションをまとめてバインドします。 これにより、オンプレミスの LOB アプリケーションに一貫したエクスペリエンスが提供されます。
 

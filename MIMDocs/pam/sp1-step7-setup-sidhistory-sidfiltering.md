@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 7. SID 履歴/SID フィルターのセットアップ
-<a id="step-7-set-up-sid-historysid-filtering" class="xliff"></a>
+# <a name="step-7-set-up-sid-historysid-filtering"></a>手順 7. SID 履歴/SID フィルターのセットアップ
 
 >[!div class="step-by-step"]
 [« 手順 6](sp1-step6-setup-pam-trust.md)

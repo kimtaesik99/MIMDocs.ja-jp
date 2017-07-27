@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 3. SQL の構成
-<a id="step-3-configuring-sql" class="xliff"></a>
+# <a name="step-3-configuring-sql"></a>手順 3. SQL の構成
 
 >[!div class="step-by-step"]
 [«手順 2](sp1-step2-configuring-corp-domain.md)

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# Forefront Identity Manager 2010 R2 からのアップグレード
-<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Forefront Identity Manager 2010 R2 からのアップグレード
 
 現在 Forefront Identity Manager (FIM) 2010 R2 をご利用で、Microsoft Identity Manager (MIM) 2016 にアップグレードしたい場合は、この記事を参照してください。 アップグレードは次の 3 ステップです:
 
@@ -36,8 +35,7 @@ ms.lasthandoff: 07/13/2017
 - ローカルおよび環境に関するすべての前提条件 (SQL Server、Exchange Server、SharePoint Services など) は FIM 2010 R2 用に構成されている
 
 
-## 準備
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>準備
 
 1.  FIM サービス データベース、FIM Sync データベース、FIM Sync、サービスの構成とソフトウェアをバックアップします。
 
@@ -45,8 +43,7 @@ ms.lasthandoff: 07/13/2017
 
 3.  MIM ソフトウェアをダウンロードまたは展開します。
 
-## 同期サービスをアップグレードする
-<a id="upgrade-the-synchronization-service" class="xliff"></a>
+## <a name="upgrade-the-synchronization-service"></a>同期サービスをアップグレードする
 
 1.  FIM 2010 R2 同期サービス (“Sync”) が展開されているサーバーに管理者としてログインします。
 
@@ -84,8 +81,7 @@ ms.lasthandoff: 07/13/2017
 
 13. **同期サービス** が再起動します。
 
-## サービスおよびポータルをアップグレードする
-<a id="upgrade-the-service-and-portal" class="xliff"></a>
+## <a name="upgrade-the-service-and-portal"></a>サービスおよびポータルをアップグレードする
 
 1.  FIM 2010 R2 のサービスおよびポータルが展開されているサーバーに管理者としてログインします。
 
@@ -141,8 +137,7 @@ ms.lasthandoff: 07/13/2017
 
 14. MIM ポータルをインストールする場合は、現在 FIM ポータルがホストされている SharePoint サイト コレクションの URL を提供します。 **[次へ]**をクリックします。
 
-## MIM パスワード登録ポータルをインストールする
-<a id="install-the-mim-password-registration-portal" class="xliff"></a>
+## <a name="install-the-mim-password-registration-portal"></a>MIM パスワード登録ポータルをインストールする
 
 1. MIM パスワード登録ポータルをインストールする場合は、パスワード登録ポータルの要求された URL を提供します。 **[次へ]**をクリックします。
 
@@ -172,8 +167,7 @@ ms.lasthandoff: 07/13/2017
 
     2.  このポータルにエクストラネットおよびイントラネットのユーザーがアクセスできるようにするか、または前に FIM パスワード リセットに構成したようにイントラネット ユーザーのみに許可するかを決定します。
 
-## MIM パスワード リセット ポータルをインストールする
-<a id="install-the-mim-password-reset-portal" class="xliff"></a>
+## <a name="install-the-mim-password-reset-portal"></a>MIM パスワード リセット ポータルをインストールする
 
 1. MIM パスワード リセット ポータルをインストールする場合は、MIM パスワード リセットのアクセスの詳細と資格情報を提供します。
 
@@ -193,8 +187,7 @@ ms.lasthandoff: 07/13/2017
 
     2.  エクストラネット ユーザーとイントラネット ユーザーがこのポータルにアクセスできるか、またはイントラネット ユーザーのみかを指定します。
 
-## インストールの完了とアップグレード
-<a id="finish-installation-and-upgrade" class="xliff"></a>
+## <a name="finish-installation-and-upgrade"></a>インストールの完了とアップグレード
 
 1. すべての構成の定義が正常に完了すると、インストール ページが表示されます。 **[インストール]** をクリックして、MIM サービスおよびポータルのインストールとアップグレードを開始します。
 

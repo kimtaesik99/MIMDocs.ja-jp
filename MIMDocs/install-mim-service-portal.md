@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# MIM 2016: MIM サービスおよびポータルのインストール
-<a id="install-mim-2016-mim-service-and-portal" class="xliff"></a>
+# <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016: MIM サービスおよびポータルのインストール
 
 >[!div class="step-by-step"]
 [« MIM 同期サービス](install-mim-sync.md)
@@ -35,8 +34,7 @@ ms.lasthandoff: 07/13/2017
 最後の手順で MIM インストール パッケージをセットアップしなかった場合は、Microsoft Identity Manager 2016 コンポーネントをインストールしてから次の手順に進みます。
 
 
-## インストールするために MIM サービスおよびポータルを構成する
-<a id="configure-mim-service-and-portal-for-installation" class="xliff"></a>
+## <a name="configure-mim-service-and-portal-for-installation"></a>インストールするために MIM サービスおよびポータルを構成する
 
 1. アンパックした **サービスおよびポータル** サブフォルダから **MIM サービスおよびポータルのインストーラー**を実行します。
 
@@ -78,8 +76,7 @@ ms.lasthandoff: 07/13/2017
 
 16. ファイアウォールのポート 5725 および 5726 を開くためのチェック ボックスをオンにし、さらに、すべての認証されたユーザーに MIM ポータルへのアクセス権を付与するためのチェック ボックスを選択します。
 
-## MIM パスワード登録ポータルを構成する
-<a id="configure-mim-password-registration-portal" class="xliff"></a>
+## <a name="configure-mim-password-registration-portal"></a>MIM パスワード登録ポータルを構成する
 
 1.  SSPR 登録用のサービス アカウント名を *contoso\MIMSSPR* に、そのパスワードを *Pass@word1* に設定します。
 
@@ -91,8 +88,7 @@ ms.lasthandoff: 07/13/2017
 
 4. 次の MIM パスワード登録ポータルの構成画面で、パスワード登録ポータルの [MIM サービス サーバーのアドレス] に *http://CorpIDM.contoso.local* を指定します。
 
-## MIM パスワード リセット ポータルを構成する
-<a id="configure-mim-password-reset-portal" class="xliff"></a>
+## <a name="configure-mim-password-reset-portal"></a>MIM パスワード リセット ポータルを構成する
 
 1.  SSPR 登録用のサービス アカウント名を *Contoso\MIMSSPRService* に、そのパスワードを *Pass@word1* に設定します。
 
@@ -104,8 +100,7 @@ ms.lasthandoff: 07/13/2017
 
 4. 次の MIM パスワード登録ポータルの構成画面で、パスワード リセット ポータルの [MIM サービス サーバーのアドレス] に *CorpIDname  http://CorpIDname.domain.local* を指定します。
 
-## MIM サービスおよびポータルのインストール
-<a id="install-mim-service-and-portal" class="xliff"></a>
+## <a name="install-mim-service-and-portal"></a>MIM サービスおよびポータルのインストール
 
 インストール前のすべての定義が準備できたら、**[インストール]** をクリックして、選択した**サービスおよびポータル** コンポーネントのインストールを開始します。
 

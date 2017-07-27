@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 4. SharePoint の構成
-<a id="step-4-configuring-sharepoint" class="xliff"></a>
+# <a name="step-4-configuring-sharepoint"></a>手順 4. SharePoint の構成
 
 >[!div class="step-by-step"]
 [«手順 3](sp1-step3-installing-configuring-sql.md)

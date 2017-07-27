@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# MIM SP1 (4.4.1436.0)  サービスの動的なログ記録
-<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# <a name="mim-sp1-4414360--service-dynamic-logging"></a>MIM SP1 (4.4.1436.0)  サービスの動的なログ記録
 4.4.1436.0 では、新しいログ機能を導入しました。 これにより、管理者およびサポート エンジニアは、管理サービスを再起動しなくてもログ記録を有効にすることができます。
 
 このバージョンをインストールすると、Microsoft.ResourceManagement.Service.exe.config というファイルに次に示す新しい行が含められます。

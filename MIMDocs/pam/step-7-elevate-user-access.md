@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 7 - ユーザーのアクセスを昇格する
-<a id="step-7--elevate-a-users-access" class="xliff"></a>
+# <a name="step-7--elevate-a-users-access"></a>手順 7 - ユーザーのアクセスを昇格する
 
 >[!div class="step-by-step"]
 [« 手順 6](step-6-transition-group-to-pam.md)
@@ -27,8 +26,7 @@ ms.lasthandoff: 07/13/2017
 
 この手順では、MIM 経由でロールへのアクセスをユーザーが要求する方法を説明します。
 
-## Jen が特権付きリソースにアクセスできないことを確認する
-<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
+## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Jen が特権付きリソースにアクセスできないことを確認する
 昇格された特権なしでは、Jen は CORP フォレスト内の特権付きリソースにアクセスできません。
 
 1. CORPWKSTN からサインアウトして、キャッシュされたすべての開いている接続を削除します。
@@ -37,8 +35,7 @@ ms.lasthandoff: 07/13/2017
 4. コマンド「`dir \\corpwkstn\corpfs`」を入力します。 エラー メッセージ "**アクセスが拒否されました**" が表示されます。
 5. コマンド プロンプト ウィンドウを開いたままにしておきます。
 
-## MIM から特権アクセスを要求します。
-<a id="request-privileged-access-from-mim" class="xliff"></a>
+## <a name="request-privileged-access-from-mim"></a>MIM から特権アクセスを要求します。
 1. CORPWKSTN で CONTOSO\Jen のまま、次のコマンドを入力します。
 
     ```
@@ -67,8 +64,7 @@ ms.lasthandoff: 07/13/2017
 
 6. PRIV.Jen アカウントのパスワードを入力します。 新しいコマンド プロンプト ウィンドウが表示されます。
 
-## 昇格されたアクセス権を検証します。
-<a id="validate-the-elevated-access" class="xliff"></a>
+## <a name="validate-the-elevated-access"></a>昇格されたアクセス権を検証します。
 新しく開かれたウィンドウで、次のコマンドを入力します。
 
 ```
@@ -78,8 +74,7 @@ dir \\corpwkstn\corpfs
 
 dir コマンドが失敗し、"**アクセスが拒否されました**" というエラー メッセージが表示された場合は、信頼関係を再度確認します。
 
-## 特権ロールをアクティブ化する
-<a id="activate-the-privileged-role" class="xliff"></a>
+## <a name="activate-the-privileged-role"></a>特権ロールをアクティブ化する
 PAM のサンプル ポータルを使用して特権アクセスを要求することで昇格します。
 
 1. CORPWKSTN で、CORP\Jen としてサインインしていることを確認します。
@@ -99,8 +94,7 @@ PAM のサンプル ポータルを使用して特権アクセスを要求する
 > [!Note]
 > この環境では、PAM REST API を使用するアプリケーションを開発する方法も学習することができます (「[Privileged Access Management REST API リファレンス](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference)」をご参照ください)。
 
-## [概要]
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>[概要]
 このチュートリアルの手順を完了すると、ユーザー特権を限られた時間だけ昇格し、別の特権アカウントで保護されたリソースへのアクセスをユーザーに許可する、Privileged Access Managment のシナリオを実際に行ったことになります。 昇格セッションの有効期限が切れると、その特権アカウントでは保護されたリソースにアクセスできなくなります。 どのセキュリティ グループが特権ロールを持つかについての決定は、PAM 管理者が調整します。 アクセス権が Privileged Access Managment システムに移行されると、元のユーザー アカウントを使用してアクセス可能だったものが、要求によって使用可能になる特別な特権アカウントでサインインしないとアクセスできなくなります。 その結果、高い特権を持つグループのグループ メンバーが、限られた時間だけ有効になります。
 
 >[!div class="step-by-step"]

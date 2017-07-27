@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# ドメイン コントローラーに MIM パスワード変更通知サービスを展開する
-<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>ドメイン コントローラーに MIM パスワード変更通知サービスを展開する
 
-## パスワード変更通知サービスをインストールする
-<a id="install-the-password-change-notification-service" class="xliff"></a>
+## <a name="install-the-password-change-notification-service"></a>パスワード変更通知サービスをインストールする
 パスワード変更通知サービス (PCNS) をドメイン コントローラーにインストールすると、MIM は、別のベンダーのディレクトリ サーバーなどの他のシステムにパスワードを同期できます。 パスワード同期のためには、各ドメイン コントローラー サーバーに PCNS をインストールします。
 
 1.  Active Directory ドメイン サービスの役割を持つ Windows Server 搭載サーバーに、ドメイン管理者としてログインします。
@@ -57,6 +55,5 @@ ms.lasthandoff: 07/13/2017
 
 14. コンピューターを再起動し、MIM パスワード変更通知サービスに対する構成の変更を有効にします。 表示されるポップアップ ウィンドウで **[はい]** をクリックしても、後で再起動してもかまいません。
 
-## パスワード変更通知サービスを構成する
-<a id="configuring-the-password-change-notification-service" class="xliff"></a>
+## <a name="configuring-the-password-change-notification-service"></a>パスワード変更通知サービスを構成する
 ドメイン管理者として DC サーバーに再接続した後、*C:\Program Files\Microsoft Password Change Notification* に移動します。 *pcnscfg.exe* を実行します。

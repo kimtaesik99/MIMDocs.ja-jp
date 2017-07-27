@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# MIM 2016 のインストール: Active Directory と MIM サービスを同期する
-<a id="install-mim-2016-synchronize-active-directory-and-mim-service" class="xliff"></a>
+# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 のインストール: Active Directory と MIM サービスを同期する
 
 >[!div class="step-by-step"]
 [« MIM サービスおよびポータル](install-mim-service-portal.md)
@@ -32,8 +31,7 @@ ms.lasthandoff: 07/13/2017
 
 既定では、MIM 同期サービス (Sync) にはコネクタが何も構成されていません。  一般的な最初の手順では、MIM 同期を使用して、MIM サービス データベースに、既存の Active Directory アカウントを設定します。 このためには、MIM 同期サービス アプリケーションを使用します。
 
-## MIM 管理エージェントを作成する
-<a id="create-the-mim-management-agent" class="xliff"></a>
+## <a name="create-the-mim-management-agent"></a>MIM 管理エージェントを作成する
 MIM 管理エージェント (MA) は、MIM 同期が MIM サービスに接続するためのコネクタです。 このコネクタを作成するには、[管理エージェントを作成する] ウィザードを使用します。
 
 MIM 管理エージェントを構成するときには、ユーザー アカウントを指定する必要があります。 このドキュメントでは、このアカウントの名前として **MIMMA** を使用します。
@@ -41,8 +39,7 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
 > [!NOTE]
 > MIM 管理エージェントで使用するアカウントは、MIM サービスのインストール時に指定したのと同じアカウントである必要があります。
 
-###MIM MA を作成するには
-<a id="to-create-the-mim-ma" class="xliff"></a>
+###<a name="to-create-the-mim-ma"></a>MIM MA を作成するには
 
 1.  Synchronization Service Manager を開きます。
 
@@ -164,8 +161,7 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
 
 11.  管理エージェントを作成するには、**[拡張機能を構成する]** ページで **[完了]** をクリックします。
 
-## AD 管理エージェントを作成する
-<a id="create-the-ad-management-agent" class="xliff"></a>
+## <a name="create-the-ad-management-agent"></a>AD 管理エージェントを作成する
 Active Directory 管理エージェントは、AD ドメイン サービス用のコネクタです。 このコネクタを作成するには、[管理エージェントを作成する] ウィザードを使用します。
 
 1. [管理エージェントを作成する] ウィザードを開くには、**[操作]** メニューで、**[作成]** をクリックします。
@@ -227,13 +223,11 @@ Active Directory 管理エージェントは、AD ドメイン サービス用�
 12. **[拡張機能を構成する]** ページで、**[完了]** をクリックします。
 
 
-## 実行プロファイルの作成
-<a id="create-run-profiles" class="xliff"></a>
+## <a name="create-run-profiles"></a>実行プロファイルの作成
 
 ADMA および MIMMA コネクタの実行プロファイルを作成します。
 
-### ADMA コネクタの実行プロファイルの作成
-<a id="create-run-profiles-for-the-adma-connector" class="xliff"></a>
+### <a name="create-run-profiles-for-the-adma-connector"></a>ADMA コネクタの実行プロファイルの作成
 
 この表では、ADMA コネクタ用に作成する 5 つの実行プロファイルを示しています。
 
@@ -265,8 +259,7 @@ ADMA コネクタの実行プロファイルを作成するには
 
 5. [実行プロファイルを構成する] ダイアログ ボックスを閉じるには、**[OK]** をクリックします。
 
-### MIMMA コネクタの実行プロファイルの作成
-<a id="create-run-profiles-for-the-mimma-connector" class="xliff"></a>
+### <a name="create-run-profiles-for-the-mimma-connector"></a>MIMMA コネクタの実行プロファイルの作成
 
 この表では、MIMMA コネクタの対応する 5 つの実行プロファイルを示します。
 
@@ -298,8 +291,7 @@ MIMMA コネクタ用のプロファイルを作成するには
 
 5. [実行プロファイルを構成する] ダイアログ ボックスを閉じるには、**[OK]** をクリックします。
 
-## MIM サービスの構成
-<a id="configure-the-mim-service" class="xliff"></a>
+## <a name="configure-the-mim-service"></a>MIM サービスの構成
 
 MIM ポータルを使用して、MIM サービスの AD ユーザー受信同期規則を作成します。
 
@@ -353,12 +345,10 @@ AD ユーザー受信同期規則を作成するには:
 
 8. **[概要]** タブで、**[送信]** をクリックします。
 
-## テスト環境の初期化
-<a id="initialize-the-testing-environment" class="xliff"></a>
+## <a name="initialize-the-testing-environment"></a>テスト環境の初期化
 AD データを使用して MIM 構成のテストを行うには、以下の 4 つの手順を実行する必要があります。
 
-### プロビジョニングを有効にする
-<a id="enable-provisioning" class="xliff"></a>
+### <a name="enable-provisioning"></a>プロビジョニングを有効にする
 
 1. Synchronization Service Manager を開きます。
 
@@ -368,8 +358,7 @@ AD データを使用して MIM 構成のテストを行うには、以下の 4 
 
 4. [オプション] ダイアログ ボックスを閉じるには、**[OK]** をクリックします。
 
-### MIMMA を初期化する
-<a id="initialize-the-mimma" class="xliff"></a>
+### <a name="initialize-the-mimma"></a>MIMMA を初期化する
 
 このコネクタで、完全な同期サイクルを実行します。 サイクル全体は、次の実行プロファイルで構成されます。
 
@@ -394,15 +383,13 @@ AD データを使用して MIM 構成のテストを行うには、以下の 4 
 
     - 実行プロファイルを開始するには、**[OK]** をクリックします。
 
-#### 属性フローの優先順位の構成
-<a id="configure-attribute-flow-precedence" class="xliff"></a>
+#### <a name="configure-attribute-flow-precedence"></a>属性フローの優先順位の構成
 
 構成した同期規則は、MIM コネクタの初期化中にメタバースに取り込まれました。
 
 このコネクタから提供される属性の属性フロー優先順位を調整し、AD 内に既に存在する属性が確実に、メタバースに配置され、その後 MIM サービス データベースにも配置されるようにします。
 
-### ADMA の初期化
-<a id="initialize-the-adma" class="xliff"></a>
+### <a name="initialize-the-adma"></a>ADMA の初期化
 
 Active Directory コネクタを初期化するには、それに対してフル インポートおよび完全な同期を実行する必要があります。 フル インポートでは、AD の既存のオブジェクトがコネクタ領域に取り込まれます。 完全な同期では、同期規則が、MIM コネクタの同期規則と対応するように更新されます。
 
@@ -420,8 +407,7 @@ Active Directory コネクタを初期化するには、それに対してフル
 
     - 実行プロファイルを開始するには、**[OK]** をクリックします。
 
-### MIM サービス データベースの設定
-<a id="populate-the-mim-service-database" class="xliff"></a>
+### <a name="populate-the-mim-service-database"></a>MIM サービス データベースの設定
 
 MIM サービス データベースにオブジェクトを設定するには、MIMMA コネクタで同期サイクルを実行する必要があります。 このサイクルでは以下の操作を行います。
 
