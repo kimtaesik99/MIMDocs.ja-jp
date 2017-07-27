@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# ID 管理サーバー: SQL Server 2014 のセットアップ
-<a id="set-up-an-identity-management-server-sql-server-2014" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-sql-server-2014"></a>ID 管理サーバー: SQL Server 2014 のセットアップ
 
 >[!div class="step-by-step"]
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
 
-## **SQL Server 2014 Standard Edition** をインストールします。
-<a id="install-sql-server-2014-standard-edition" class="xliff"></a>
+## <a name="install-sql-server-2014-standard-edition"></a>**SQL Server 2014 Standard Edition** をインストールします。
 
 1. ドメイン管理者として **PowerShell** を起動します。
 

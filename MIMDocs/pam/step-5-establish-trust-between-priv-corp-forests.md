@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
-<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
+# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
 
 >[!div class="step-by-step"]
 [«手順 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,8 +27,7 @@ ms.lasthandoff: 07/13/2017
 
 Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメイン コントローラーを信頼関係でバインドする必要があります。 これにより、PRIV ドメインのユーザーが CORP ドメインのリソースにアクセスできるようになります。
 
-## 各ドメイン コントローラーを対応するドメイン コントローラーに接続する
-<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>各ドメイン コントローラーを対応するドメイン コントローラーに接続する
 
 信頼関係を確立する前に、各ドメイン コントローラーで、相手側のドメイン コントローラーと DNS サーバーの IP アドレスに基づいて、相手側の DNS 名解決を構成する必要があります。
 
@@ -47,8 +45,7 @@ Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメ�
 
     ![priv キーのファイル構造 - スクリーンショット](./media/PAM_GS_DNS_Manager.png)
 
-## PAMSRV で信頼関係を確立する
-<a id="establish-trust-on-pamsrv" class="xliff"></a>
+## <a name="establish-trust-on-pamsrv"></a>PAMSRV で信頼関係を確立する
 
 PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確立し、CORP ドメイン コントローラーが PRIV フォレストを信頼するようにします。
 
@@ -70,8 +67,7 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## フォレストに Active Directory への読み取りアクセス権を付与する
-<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
+## <a name="give-forests-read-access-to-active-directory"></a>フォレストに Active Directory への読み取りアクセス権を付与する
 
 既存のフォレストごとに、PRIV 管理者と監視サービスによる AD に対する読み取りアクセス権を有効にします。
 
@@ -94,8 +90,7 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 
     また、出力には "**SID フィルタはこの信頼に対して有効になっていません**" という内容も示されるはずです。 詳細については、「[SID フィルター検疫を無効にする](http://technet.microsoft.com/library/cc772816.aspx)」をご参照ください。
 
-## 監視サービスとコンポーネント サービスを開始する
-<a id="start-the-monitoring-and-component-services" class="xliff"></a>
+## <a name="start-the-monitoring-and-component-services"></a>監視サービスとコンポーネント サービスを開始する
 
 1.  PRIV ドメイン管理者 (PRIV\Administrator) として PAMSRV にサインインします。
 

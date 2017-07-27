@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# PAM のコンポーネントについて理解する
-<a id="understand-the-components-of-pam" class="xliff"></a>
+# <a name="understand-the-components-of-pam"></a>PAM のコンポーネントについて理解する
 
 Privileged Access Management は、日常的に使用するユーザー アカウントとは切り離された管理アクセス権を保持しています。 このソリューションは、次の並列フォレストに依存しています。
 

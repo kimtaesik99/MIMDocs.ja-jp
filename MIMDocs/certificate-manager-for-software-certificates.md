@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 証明書マネージャーを使用してソフトウェア証明書を作成する
-<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
+# <a name="create-software-certificates-with-certificate-manager"></a>証明書マネージャーを使用してソフトウェア証明書を作成する
 ソフトウェア証明書を登録および更新するには、管理者である必要はありません。また、仮想スマート カードも必要ありません。 ある時点で、証明書操作を許可するように求められますが、これは通常の操作です。
 
-## MIM 2016 証明書マネージャーでソフトウェア証明書プロファイル テンプレートを作成する
-<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーでソフトウェア証明書プロファイル テンプレートを作成する
 
 1.  仮想スマート カードに必要な証明書のテンプレートを作成します。 MMC を開きます。
 
@@ -73,8 +71,7 @@ ms.lasthandoff: 07/13/2017
 
     10. 一覧から作成した新しいテンプレート (**アーカイブ済み証明書テンプレート**) を選択し、 **[OK]**をクリックします。
 
-## プロファイル テンプレートを作成する
-<a id="create-the-profile-template" class="xliff"></a>
+## <a name="create-the-profile-template"></a>プロファイル テンプレートを作成する
 
 1.  管理者特権を持つユーザーとして CM ポータルにログインします。
 

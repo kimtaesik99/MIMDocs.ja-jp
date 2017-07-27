@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# ドメインのセットアップ
-<a id="set-up-a-domain" class="xliff"></a>
+# <a name="set-up-a-domain"></a>ドメインのセットアップ
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -28,8 +27,7 @@ Microsoft Identity Manger (MIM) は、Active Directory (AD) ドメインと連�
 
 この記事では、ドメインと MIM を連携させるために必要な手順について説明します。
 
-## ユーザー アカウントとグループを作成する
-<a id="create-user-accounts-and-groups" class="xliff"></a>
+## <a name="create-user-accounts-and-groups"></a>ユーザー アカウントとグループを作成する
 
 MIM 展開のすべてのコンポーネントには、ドメインでの個別の ID が必要です。  これには MIM サービスと MIM 同期サービス、SharePoint、および SQL などの MIM コンポーネントが含まれます。
 

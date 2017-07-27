@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 1. Priv ドメインの構成
-<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
+# <a name="step-1-configuring-the-priv-domain"></a>手順 1. Priv ドメインの構成
 
 >[!div class="step-by-step"]
 [手順 2 »](sp1-step2-configuring-corp-domain.md)

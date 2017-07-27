@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# ディレクトリへの接続
-<a id="connect-to-your-directories" class="xliff"></a>
+# <a name="connect-to-your-directories"></a>ディレクトリへの接続
 
 コネクタは、特定の接続先データ ソースと Microsoft Identity Manager (MIM) との間を結びます。 コネクタは、接続先データ ソースから MIM へとデータを移動します。 MIM 内のデータが修正されると、コネクタはデータを接続先データ ソースへとエクスポートし、MIM との同期を確保することもできます。 一般的に、各接続先ディレクトリに対して、1 つ以上のコネクタが存在します。
 
@@ -27,8 +26,7 @@ Forefront Identity Manager では、コネクタは管理エージェントと�
 
 この記事は MIM に含まれているコネクタについて記載していますが、Extensible Connectivity 2.0 用コネクタでは、さらに他のデータ ソースへの接続も可能になります。 一部のパートナーは、この方法で独自のコネクタを作成しています。コネクタの全リストについては、wiki の「[FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx)」をご覧ください。
 
-## MIM 2016 でサポートされているコネクタ
-<a id="supported-connectors-in-mim-2016" class="xliff"></a>
+## <a name="supported-connectors-in-mim-2016"></a>MIM 2016 でサポートされているコネクタ
 
 | 名前 | サポートされている接続先データ ソースのバージョン |
 | ---- | ----------------------------------------------- |
@@ -55,7 +53,6 @@ Forefront Identity Manager では、コネクタは管理エージェントと�
 | 固定幅テキスト ファイル | 固定幅テキスト ファイル |
 | LDAP データ交換形式 (LDIF) | LDAP データ交換形式 (LDIF) |
 
-## 関連項目
-<a id="related-topics" class="xliff"></a>
+## <a name="related-topics"></a>関連項目
 
 [FIM 2010 R2 の管理エージェント](https://technet.microsoft.com/library/jj133885.aspx)

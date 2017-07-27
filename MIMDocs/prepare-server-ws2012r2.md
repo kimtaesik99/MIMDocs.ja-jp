@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# ID 管理サーバー: Windows Server 2012 R2 のセットアップ
-<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>ID 管理サーバー: Windows Server 2012 R2 のセットアップ
 
 >[!div class="step-by-step"]
 [« ドメインの準備](preparing-domain.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
 
-## Windows Server 2012 R2 をドメインに参加させる
-<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Windows Server 2012 R2 をドメインに参加させる
 
 8 GB 以上の RAM を備えた Windows Server 2012 R2 コンピューターで開始します。 インストール時に、"Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64" エディションを指定します。
 
@@ -63,8 +61,7 @@ ms.lasthandoff: 07/13/2017
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## サーバーのセキュリティ ポリシーを構成する
-<a id="configure-the-server-security-policy" class="xliff"></a>
+## <a name="configure-the-server-security-policy"></a>サーバーのセキュリティ ポリシーを構成する
 
 新しく作成したアカウントがサービスとして実行されるように、サーバー セキュリティ ポリシーを設定します。
 
@@ -95,8 +92,7 @@ ms.lasthandoff: 07/13/2017
 12. [ローカル セキュリティ ポリシー] ウィンドウを閉じます。
 
 
-## IIS Windows 認証モードを変更する
-<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
+## <a name="change-the-iis-windows-authentication-mode"></a>IIS Windows 認証モードを変更する
 
 1.  PowerShell ウィンドウを開きます。
 

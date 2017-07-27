@@ -19,6 +19,5 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# MIM 2016 のリリース ノート
-<a id="release-notes-for-mim-2016" class="xliff"></a>
+# <a name="release-notes-for-mim-2016"></a>MIM 2016 のリリース ノート
 この時点でリリース ノートはありません。

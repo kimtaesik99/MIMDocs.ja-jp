@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 5. PAM のインストール/構成
-<a id="step-5-installingconfiguring-pam" class="xliff"></a>
+# <a name="step-5-installingconfiguring-pam"></a>手順 5. PAM のインストール/構成
 
 >[!div class="step-by-step"]
 [«手順 4](sp1-step4-configuring-sharepoint.md)

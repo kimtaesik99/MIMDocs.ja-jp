@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 8. PAM 展開の検証
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>手順 8. PAM 展開の検証
 
 >[!div class="step-by-step"]
 [« 手順 7](sp1-step7-setup-sidhistory-sidfiltering.md)

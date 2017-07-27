@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 非管理者のスマート カードの登録
-<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
+# <a name="enroll-smart-cards-for-non-administrators"></a>非管理者のスマート カードの登録
 ユーザーがコンピューターのローカル管理者ではない場合、既定では、そのコンピューターにスマート カードを登録できません。 この制限を回避するには、次の手順を実行します。
 
-## MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
-<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>MIM 2016 証明書マネージャーで管理者以外のスマート カードの更新を有効にします
 
 1.  **appx ファイルを展開する**
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# 手順 6. PAM 信頼のセットアップ
-<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
+# <a name="step-6-set-up-the-pam-trust"></a>手順 6. PAM 信頼のセットアップ
 
 >[!div class="step-by-step"]
 [« 手順 5](sp1-step5-configuring-pam.md)

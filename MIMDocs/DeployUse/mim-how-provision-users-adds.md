@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# AD DS にユーザーをプロビジョニングする方法
-<a id="how-do-i-provision-users-to-ad-ds" class="xliff"></a>
+# <a name="how-do-i-provision-users-to-ad-ds"></a>AD DS にユーザーをプロビジョニングする方法
 
 適用対象: Microsoft Identity Manager 2016 SP1 (MIM)
 
@@ -25,20 +24,17 @@ ID 管理システムの基本要件の 1 つは、外部システムにリソ�
 
 このガイドでは、Microsoft® Identity Manager (MIM) 2016 から Active Directory® ドメイン サービス (AD DS) へのユーザーのプロビジョニング処理に関係する主要な構成要素について説明します。また、シナリオが期待どおりに機能しているかの確認方法についての説明、MIM 2016 を使用して Active Directory ユーザーを管理するための推奨事項、追加情報のリストも提供します。
 
-## 作業を開始する準備
-<a id="before-you-begin" class="xliff"></a>
+## <a name="before-you-begin"></a>作業を開始する準備
 
 
 このセクションには、このドキュメントのスコープに関する情報も含まれています。 一般に、「～する方法」のガイドは、関連する『[ファースト ステップ ガイド](http://go.microsoft.com/FWLink/p/?LinkId=190486)』で説明されている、オブジェクトと MIM を同期するプロセスについて、基本的な経験がある読者を対象としています。
 
-### 対象ユーザー
-<a id="audience" class="xliff"></a>
+### <a name="audience"></a>対象ユーザー
 
 
 このガイドは、既に MIM 同期プロセスのしくみについての基本的な知識があり、実地体験と、特定のシナリオに関するより詳細な概念情報を得ることに興味がある情報技術 (IT) プロフェッショナルを対象としています。
 
-### 前提条件となる知識
-<a id="prerequisite-knowledge" class="xliff"></a>
+### <a name="prerequisite-knowledge"></a>前提条件となる知識
 
 
 このドキュメントでは、MIM の実行中のインスタンスへのアクセス権があることと、次のドキュメントで説明されている単純な同期のシナリオを構成した経験があることを前提としています。
@@ -49,37 +45,32 @@ ID 管理システムの基本要件の 1 つは、外部システムにリソ�
 
 このドキュメントの内容は、これらの概要ドキュメントの延長としての機能に限定されます。
 
-### スコープ
-<a id="scope" class="xliff"></a>
+### <a name="scope"></a>スコープ
 
 
 このドキュメントで紹介するシナリオは、基本的なラボ環境の要件に対応するために簡略化されています。 主な目的は、説明されている概念とテクノロジを読者に理解してもらうことです。
 
 このドキュメントは、MIM を使用した AD DS でのグループ管理を含むソリューションを開発するのに役立ちます。
 
-### 時間の要件
-<a id="time-requirements" class="xliff"></a>
+### <a name="time-requirements"></a>時間の要件
 
 
 このドキュメントの手順を完了するには、90 から 120 分必要です。
 
 この予想時間は、テスト環境が既に構成されていていることを前提としており、テスト環境のセットアップに必要な時間は含まれていません。
 
-### サポートの入手
-<a id="getting-support" class="xliff"></a>
+### <a name="getting-support"></a>サポートの入手
 
 
 このドキュメントの内容について質問がある場合、または話し合いたい一般的なフィードバックがある場合は、[Forefront Identity Manager 2010 フォーラム](http://go.microsoft.com/FWLink/p/?LinkId=189654)にメッセージを投稿してください。
 
-## シナリオの説明
-<a id="scenario-description" class="xliff"></a>
+## <a name="scenario-description"></a>シナリオの説明
 
 
 Fabrikam という架空の企業は、MIM を使用して、会社の AD DS 内のユーザー アカウントを管理することを計画しています。 このプロセスの一環として、Fabrikam 社は AD DS にユーザーをプロビジョニングする必要があります。 初期テストを開始するため、Fabrikam 社は MIM と AD DS で構成される基本的なラボ環境をインストールしました。
 このラボ環境で Fabrikam 社は MIM ポータルで手動で作成したユーザーで構成されるシナリオをテストします。 このシナリオの目的は、定義済みのパスワードを使用して有効化したユーザーとして AD DS にユーザーをプロビジョニングすることです。
 
-## シナリオの設計
-<a id="scenario-design" class="xliff"></a>
+## <a name="scenario-design"></a>シナリオの設計
 
 
 このガイドを使用するには、次の 3 つのアーキテクチャ コンポーネントが必要です。
@@ -99,8 +90,7 @@ Fabrikam という架空の企業は、MIM を使用して、会社の AD DS 内
 >[!NOTE]
 MIM のセットアップの詳細については、[FIM のインストール ガイド](http://go.microsoft.com/FWLink/p/?LinkId=165845)を参照してください。
 
-## シナリオのコンポーネントの一覧
-<a id="scenario-components-list" class="xliff"></a>
+## <a name="scenario-components-list"></a>シナリオのコンポーネントの一覧
 
 
 次の表に、このガイドのシナリオの一部であるコンポーネントを一覧表示します。
@@ -118,8 +108,7 @@ MIM のセットアップの詳細については、[FIM のインストール �
 
 
 
-## シナリオの手順
-<a id="scenario-steps" class="xliff"></a>
+## <a name="scenario-steps"></a>シナリオの手順
 
 
 次の図は、このガイドで取り上げるシナリオの構成要素を示しています。
@@ -127,22 +116,19 @@ MIM のセットアップの詳細については、[FIM のインストール �
 ![シナリオの手順](media/how-provision-users-adds/image013.png)
 
 
-## 外部システムの構成
-<a id="configuring-the-external-systems" class="xliff"></a>
+## <a name="configuring-the-external-systems"></a>外部システムの構成
 
 
 このセクションには、MIM 環境外で作成する必要があるリソースの作成方法も含まれています。
 
-### 手順 1: OU を作成する
-<a id="step-1-create-the-ou" class="xliff"></a>
+### <a name="step-1-create-the-ou"></a>手順 1: OU を作成する
 
 
 プロビジョニングされているサンプル ユーザーのコンテナーとして OU が必要です。 OU の作成の詳細については、「[新しい組織単位 (OU) を作成する](http://go.microsoft.com/FWLink/p/?LinkId=189655)」を参照してください。
 
 AD DS に MIMObjects という名前の OU を作成します。
 
-### 手順 2: Active Directory ユーザー アカウントを作成する
-<a id="step-2-create-the-active-directory-user-accounts" class="xliff"></a>
+### <a name="step-2-create-the-active-directory-user-accounts"></a>手順 2: Active Directory ユーザー アカウントを作成する
 
 このガイドのシナリオでは、次の 2 つの Active Directory ユーザー アカウントが必要です。
 
@@ -153,14 +139,12 @@ AD DS に MIMObjects という名前の OU を作成します。
 どちらの場合も、通常のユーザー アカウントを作成するには十分です。 両方のアカウントの特定の要件の詳細については、このドキュメントで後述します。 ユーザーの作成の詳細については、「[新しいユーザー アカウントを作成する](http://go.microsoft.com/FWLink/p/?LinkId=189656)」を参照してください。
 
 
-## FIM 同期サービスの構成
-<a id="configuring-the-fim-synchronization-service" class="xliff"></a>
+## <a name="configuring-the-fim-synchronization-service"></a>FIM 同期サービスの構成
 
 
 このセクションの構成手順では、FIM 同期サービス マネージャーを起動する必要があります。
 
-### 管理エージェントを作成する
-<a id="creating-the-management-agents" class="xliff"></a>
+### <a name="creating-the-management-agents"></a>管理エージェントを作成する
 
 このガイドのシナリオでは、次の 2 つの管理エージェントを作成する必要があります。
 
@@ -168,8 +152,7 @@ AD DS に MIMObjects という名前の OU を作成します。
 
 -   **Fabrikam FIMMA**: FIM サービス管理エージェント用の管理エージェント
 
-### 手順 3: Fabrikam ADMA 管理エージェントを作成する
-<a id="step-3-create-the-fabrikam-adma-management-agent" class="xliff"></a>
+### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>手順 3: Fabrikam ADMA 管理エージェントを作成する
 
 AD DS 用の管理エージェントを構成するときに、AD DS とのデータ交換で管理エージェントによって使用されるアカウントを指定する必要があります。 通常のユーザー アカウントを使用する必要があります。 ただし、AD DS からデータをインポートするには、アカウントに DirSync コントロールからの変更をポーリングする権限が必要です。 管理エージェントで AD DS にデータをエクスポートする場合は、ターゲットの OU に対して十分な権限をアカウントに付与する必要があります。 このトピックの詳細については、「[Configuring the ADMA Account](http://go.microsoft.com/FWLink/p/?LinkId=189657)」 (ADMA アカウントの構成) を参照してください。
 
@@ -200,8 +183,7 @@ AD DS アカウントのパスワードを設定するときに、有効なア�
 >[!Note]
 ExpectedRulesList 属性用に構成された属性フロー ルールのインポートがあることを確認します。
 
-### 手順 4: Fabrikam FIMMA 管理エージェントを作成する
-<a id="step-4-create-the-fabrikam-fimma-management-agent" class="xliff"></a>
+### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>手順 4: Fabrikam FIMMA 管理エージェントを作成する
 
 FIM サービス管理エージェントを構成するときに、FIM サービスとのデータ交換で管理エージェントによって使用されるアカウントを指定する必要があります。
 
@@ -232,8 +214,7 @@ FIM サービス管理エージェントを構成するときに、FIM サービ
 >[!NOTE]
  ExpectedRulesList 属性用に構成された属性フロー ルールのインポートがあることを確認します。
 
-### 手順 5: 実行プロファイルを作成する
-<a id="step-5-create-the-run-profiles" class="xliff"></a>
+### <a name="step-5-create-the-run-profiles"></a>手順 5: 実行プロファイルを作成する
 
 次の表に、このガイドのシナリオのために作成する必要がある実行プロファイルの一覧を示します。
 
@@ -253,8 +234,7 @@ FIM サービス管理エージェントを構成するときに、FIM サービ
  環境内でプロビジョニングが有効になっていることを確認します。 これは、「Using Windows PowerShell to Enable Provisioning」 (Windows PowerShell を使用してプロビジョンを有効にする) (http://go.microsoft.com/FWLink/p/?LinkId=189660) のスクリプトを実行して行うことができます。
 
 
-## FIM サービスの構成
-<a id="configuring-the-fim-service" class="xliff"></a>
+## <a name="configuring-the-fim-service"></a>FIM サービスの構成
 
 
 このガイドのシナリオのため、次の図に示すように、プロビジョニング ポリシーを構成する必要があります。
@@ -265,8 +245,7 @@ FIM サービス管理エージェントを構成するときに、FIM サービ
 
 FIM サービスを構成するには、Windows Internet Explorer® で http://localhost/identitymanagement にアクセスします。 MIM ポータル ページで、プロビジョニング ポリシーを作成するには、[管理] セクションから関連ページに移動します。 構成を確認するには、「[Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661)」 (Windows PowerShell を使用してプロビジョニング ポリシーの構成を文書化する) のスクリプトを実行する必要があります
 
-### 手順 6: 同期規則を作成する
-<a id="step-6-create-the-synchronization-rule" class="xliff"></a>
+### <a name="step-6-create-the-synchronization-rule"></a>手順 6: 同期規則を作成する
 
 次の表に、必要な Fabrikam プロビジョニングの同期規則の構成を示します。 次の表のデータに従い、同期規則を作成します。
 
@@ -317,8 +296,7 @@ FIM サービスを構成するには、Windows Internet Explorer® で http://l
  >[!NOTE]
  重要 送信先としての DN を持つ属性フローに [初期フローのみ] が選択されていることを確認します。                                                                          
 
-### 手順 7: ワークフローを作成する
-<a id="step-7-create-the-workflow" class="xliff"></a>
+### <a name="step-7-create-the-workflow"></a>手順 7: ワークフローを作成する
 
 AD のプロビジョニング ワークフローの目的は、Fabrikam のプロビジョニング同期規則をリソースに追加することです。 次の表に構成を示します。  次の表のデータに従って、ワークフローを作成します。
 
@@ -337,8 +315,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 
 
-### 手順 8: MPR を作成する
-<a id="step-8-create-the-mpr" class="xliff"></a>
+### <a name="step-8-create-the-mpr"></a>手順 8: MPR を作成する
 
 必要な MPR はセット移行の種類で、リソースがすべての契約社員のセットのメンバーになったときにトリガーします。 次の表に構成を示します。  次の表のデータに従って、ワークフローを作成します。
 
@@ -363,8 +340,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 
 
-## 環境の初期化
-<a id="initializing-your-environment" class="xliff"></a>
+## <a name="initializing-your-environment"></a>環境の初期化
 
 
 初期化フェーズの目的は次のとおりです。
@@ -373,8 +349,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 -   Active Directory 構造を Active Directory コネクタ スペースに取り込む。
 
-### 手順 9: 実行プロファイルを実行する
-<a id="step-9-run-the-run-profiles" class="xliff"></a>
+### <a name="step-9-run-the-run-profiles"></a>手順 9: 実行プロファイルを実行する
 
 次の表に、初期化フェーズの一部である実行プロファイルを一覧表示します。  次の表に従って実行プロファイルを実行します。
 
@@ -393,8 +368,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 >[!NOTE]
 送信同期規則がメタバースに正常に投影されていることを確認する必要があります。
 
-## 構成のテスト
-<a id="testing-the-configuration" class="xliff"></a>
+## <a name="testing-the-configuration"></a>構成のテスト
 
 
 このセクションの目的は、実際の構成をテストすることです。 構成をテストするには、次の手順を実行します。
@@ -407,8 +381,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 4.  ユーザーが AD DS に存在することを確認します。
 
-### 手順 10: MIM でサンプル ユーザーを作成する
-<a id="step-10-create-a-sample-user-in-mim" class="xliff"></a>
+### <a name="step-10-create-a-sample-user-in-mim"></a>手順 10: MIM でサンプル ユーザーを作成する
 
 
 次の表にサンプル ユーザーのプロパティの一覧を示します。 次の表のデータに基づいてサンプル ユーザーを作成します。
@@ -424,8 +397,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 
 
-### サンプル ユーザーのプロビジョニングの前提条件を確認する
-<a id="verify-the-provisioning-requisites-of-the-sample-user" class="xliff"></a>
+### <a name="verify-the-provisioning-requisites-of-the-sample-user"></a>サンプル ユーザーのプロビジョニングの前提条件を確認する
 
 
 サンプル ユーザーを AD DS にプロビジョニングするには、2 つの前提条件を満たす必要があります。
@@ -434,16 +406,14 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 2.  ユーザーが送信同期規則のスコープ内にあるように設定していること。
 
-### 手順 11: ユーザーがすべての契約社員のメンバーであることを確認する
-<a id="step-11-verify-the-user-is-a-member-of-all-contractors" class="xliff"></a>
+### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>手順 11: ユーザーがすべての契約社員のメンバーであることを確認する
 
 ユーザーがすべての契約社員のセットのメンバーであるかどうかを確認するには、セットを開き、[メンバーの表示] をクリックします。
 
 ![ユーザーがすべての契約社員のメンバーであることを確認する](media/how-provision-users-adds/image022.jpg)
 
 
-### 手順 12: ユーザーが送信同期規則のスコープ内にあることを確認する
-<a id="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule" class="xliff"></a>
+### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>手順 12: ユーザーが送信同期規則のスコープ内にあることを確認する
 
 ユーザーが同期規則のスコープ内にあるかどうかを確認するには、ユーザーのプロパティ ページを開き、[プロビジョニング] タブで [予期される規則一覧] 属性を確認します。 [予期される規則一覧] 属性で AD ユーザーの
 
@@ -455,8 +425,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 
 
-### 手順 13: サンプル グループを同期する
-<a id="step-13-synchronize-the-sample-group" class="xliff"></a>
+### <a name="step-13-synchronize-the-sample-group"></a>手順 13: サンプル グループを同期する
 
 
 テスト オブジェクトに対して最初の同期サイクルを開始する前に、テスト計画で実行される各実行プロファイルの後に予想されるオブジェクトの状態を追跡する必要があります。 テスト計画には、オブジェクトの一般的な状態 (作成済み、更新済み、または削除済み) の横に、想定している属性値も含める必要があります。
@@ -528,15 +497,13 @@ FIM では、エクスポートを実行するたびに、次の差分インポ�
 >[!IMPORTANT]
 各実行プロファイルは、エラーなく正常に実行される必要があります。
 
-### 手順 14: AD DS でプロビジョニングされたユーザーを確認する
-<a id="step-14-verify-the-provisioned-user-in-ad-ds" class="xliff"></a>
+### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>手順 14: AD DS でプロビジョニングされたユーザーを確認する
 
 サンプル ユーザーが AD DS にプロビジョニングされていることを確認するには、FIMObjects OU を開きます。 Britta Simon が FIMObjects OU に配置されているはずです。
 
 ![ユーザーの確認は FIMObjects OU で行う](media/how-provision-users-adds/image033.jpg)
 
-[概要]
-<a id="summary" class="xliff"></a>
+<a name="summary"></a>[概要]
 =======
 
 このドキュメントの目的は、MIM のユーザーを AD DS と同期するための主な構成要素を紹介することです。 最初のテストでは、タスクを完了するために必要な最小限の属性を使用して開始し、一般的な手順が期待どおりに機能したら、シナリオにさらに属性を追加します。 複雑さを最小レベルに維持することで、トラブルシューティングのプロセスを簡略化します。
@@ -549,12 +516,10 @@ ExpectedRulesList 属性を持つオブジェクトで行うと、孤立した E
 同期ターゲットとして AD DS を含む一般的な同期のシナリオでは、MIM はオブジェクトのすべての属性にとって信頼できません。 たとえば、FIM を使用して AD DS 内のユーザー オブジェクトを管理する場合、少なくとも、ドメインと objectSID 属性は AD DS 管理エージェントによって提供される必要があります。
 ユーザーが FIM ポータルにログオンできるようにする場合は、アカウント名、ドメイン、および objectSID 属性が必要です。 AD DS からこれらの属性を入力するには、AD DS のコネクタ スペースに追加の受信同期規則が必要です。 属性値の複数のソースを持つオブジェクトを管理する場合は、属性フローの優先順位を正しく構成する必要があります。 属性フローの優先順位が正しく構成されていない場合、同期エンジンによって属性値の入力がブロックされます。 属性フローの優先順位の詳細については、「[About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675)」 (属性フローの優先順位について) の記事を参照してください。
 
-関連項目
-<a id="see-also" class="xliff"></a>
+<a name="see-also"></a>関連項目
 =========
 
-その他のリソース
-<a id="other-resources" class="xliff"></a>
+<a name="other-resources"></a>その他のリソース
 ---------------
 
 [Active Directory で FIM を使用してアカウントを有効または無効にする](http://go.microsoft.com/FWLink/p/?LinkId=189670)

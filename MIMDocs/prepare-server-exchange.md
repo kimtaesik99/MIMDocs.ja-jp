@@ -18,15 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# ID 管理サーバー: Exchange のセットアップ
-<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-exchange"></a>ID 管理サーバー: Exchange のセットアップ
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM 同期サービス »](install-mim-sync.md)
 
-## Microsoft Exchange Server を展開する
-<a id="deploy-microsoft-exchange-server" class="xliff"></a>
+## <a name="deploy-microsoft-exchange-server"></a>Microsoft Exchange Server を展開する
 電子メールを送受信するように MIM を構成する場合、またはメールボックスをプロビジョニングする場合は、Exchange が環境に存在する必要があります。 Exchange をまだ展開していない場合は、評価のために試用版をインストールできます。
 
 1. Microsoft Office 2010 Filter Packs - Version 2.0 と Microsoft Office 2010 Filter Packs - Version 2.0 SP1 をダウンロードしてインストールします

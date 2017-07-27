@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# Windows Server 2016 を使用した MIM PAM の展開
-<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
+# <a name="deploy-mim-pam-with-windows-server-2016"></a>Windows Server 2016 を使用した MIM PAM の展開
 
 
 このシナリオでは、MIM 2016 SP1 で Windows Server 2016 の機能を “PRIV” フォレストのドメイン コントローラーとして利用できるようにします。  このシナリオを構成すると、ユーザーの Kerberos チケットは、ロールのアクティブ化の残りの時間に期間が限定されます。 
@@ -25,8 +24,7 @@ ms.lasthandoff: 07/13/2017
 >[!Note]
 Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プレビューは、この MIM リリースには使用できません。
 
-## 準備
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>準備
 
 ラボ環境には少なくとも 2 つの VM が必要です。
 
@@ -143,8 +141,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
 -   項目 5 (信頼関係の確認) は、**CORP ドメインと PRIV ドメインの両方が Windows Server 2016 ドメインの機能レベルである場合は必要ありません**。
 
-## 詳細情報
-<a id="more-information" class="xliff"></a>
+## <a name="more-information"></a>詳細情報
 
 - [Active Directory Domain Services の Privileged Access Management](privileged-identity-management-for-active-directory-domain-services.md)
 - [Privileged Access Management の MIM 環境の構成](configuring-mim-environment-for-pam.md)
