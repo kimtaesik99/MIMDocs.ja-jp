@@ -5,21 +5,20 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 5718ec64fff049cb8717e4cbb36784c8f4ee4db3
+ms.sourcegitcommit: c13f814ce753e1fdacc7d0814087f59542e5098f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/26/2017
 ---
-# スクリプトを使用した PAM の構成
-<a id="configure-pam-using-scripts" class="xliff"></a>
+# <a name="configure-pam-using-scripts"></a>スクリプトを使用した PAM の構成
 
 別々のサーバーに SQL および SharePoint をインストールする場合は、次の手順に従って構成する必要があります。 SQL、SharePoint および PAM コンポーネントが同じコンピューターにインストールされている場合、次の手順は、そのコンピューターから実行する必要があります。
 
@@ -27,25 +26,24 @@ ms.lasthandoff: 07/13/2017
 
 手順:
 
-1. すべてのコンピューターで、圧縮ファイル "PAMDeploymentScripts.zip" を %SYSTEMDRIVE%\PAM フォルダーに解凍します。
-2. いずれかのマシンで、**PAMDeploymentConfig.xml** ファイルを開き、次の表またはこの XML ファイル自体に記載されたガイダンスを使用して、詳細を更新します。 CORP および PRIV フォレストは既にセットアップされているため、更新する必要があるのは、**DNSName** と **NetbiosName** だけです。
-3. Roles セクションで、**サービス アカウント**、**コンピューターの詳細**、および SQL、SharePoint および MIM の役割の**インストール バイナリの場所**を更新します。
+1. ダウンロードする [PAM 展開スクリプト](https://www.microsoft.com/download/details.aspx?id=53941)
+2. すべてのコンピューターで、圧縮ファイル "PAMDeploymentScripts.zip" を %SYSTEMDRIVE%\PAM フォルダーに解凍します。
+3. いずれかのマシンで、**PAMDeploymentConfig.xml** ファイルを開き、次の表またはこの XML ファイル自体に記載されたガイダンスを使用して、詳細を更新します。 CORP および PRIV フォレストは既にセットアップされているため、更新する必要があるのは、**DNSName** と **NetbiosName** だけです。
+4. Roles セクションで、**サービス アカウント**、**コンピューターの詳細**、および SQL、SharePoint および MIM の役割の**インストール バイナリの場所**を更新します。
     1. MIM バイナリの場所は、"Service and Portal" フォルダーが含まれるディレクトリを指す必要があります。 クライアント バイナリの場所は、"Add-ins and Extensions.msi" フォルダーが含まれるディレクトリを指す必要があります。
 
-4. PRIVOnly 環境の場合は、PRIVOnly タグを True に設定する必要があります。
+5. PRIVOnly 環境の場合は、PRIVOnly タグを True に設定する必要があります。
     1. PRIVOnly 環境では、PRIV ドメインの **DNSName** と **NetbiosName** を更新して、CORP ドメインと一致させます。 既定のテンプレート ファイルは CORP および PRIV 構成を前提としているため、SQL、SharePoint、および MIM がインストールされるコンピューターに対して、コンピューターのサフィックスが正しいことを確認します。
     2. PRIVOnly 環境の詳細についてはここをクリックします。
 
-5. 同じ PAMDeploymentConfig.xml をすべてのコンピューター、CORPDC、PRIVDC、PAM サーバー、SQL Server および SharePoint サーバー上の %SYSTEMDRIVE%\PAM フォルダーにコピーします。
+6. 同じ PAMDeploymentConfig.xml をすべてのコンピューター、CORPDC、PRIVDC、PAM サーバー、SQL Server および SharePoint サーバー上の %SYSTEMDRIVE%\PAM フォルダーにコピーします。
 
 
-## 展開ワークシート
-<a id="deployment-worksheet" class="xliff"></a>
+## <a name="deployment-worksheet"></a>展開ワークシート
 
 続行する前に、PAMDeploymentConfig.xml を更新し、更新されたコピーをすべてのコンピューターに配置します。
 
-### Setup
-<a id="setup" class="xliff"></a>
+### <a name="setup"></a>Setup
 
 |マシン   | 次のユーザーとして実行   |コマンド   |
 |---|---|---|
@@ -57,8 +55,7 @@ ms.lasthandoff: 07/13/2017
 | PAMServer  | ローカル管理者 (ドメインへの参加後は MIM 管理者)  | .\PAMDeployment.ps1 メニュー オプション 5 を選択 (MIM PAM セットアップ)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 メニュー オプション 6 を選択 (PAM 信頼セットアップ) .\PAMDeployment.ps1 メニュー オプション 6 を選択 (PAM 信頼セットアップ) |
 
-### Validation
-<a id="validation" class="xliff"></a>
+### <a name="validation"></a>Validation
 
 |  マシン | 次のユーザーとして実行   | コマンド   |
 |---|---|---|
