@@ -5,18 +5,18 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/16/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 03a0e6e90c1d0059872c4d37c88cb6f4f4095bac
+ms.sourcegitcommit: 451c3ddda84758c87b8eb0359dac4043af52865f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016: MIM サービスおよびポータルのインストール
 
@@ -62,13 +62,13 @@ ms.lasthandoff: 07/13/2017
 
 10. 現在の構成ではサービス アカウントがセキュリティ保護されていないことを警告するメッセージが表示されます。
 
-11. 同期サーバーの場所の既定値をそのまま使用し、MIM 管理エージェント アカウントに *contoso\MIMsync* を指定します。
+11. 同期サーバーの場所の既定値をそのまま使用し、MIM 管理エージェント アカウントに *contoso\MIMMA* を指定します。
 
     ![MIM サービスおよびポータル イメージを構成する](media/MIM-Install13.png)
 
 12. MIM ポータルの MIM サービス サーバー アドレスとして、*CORPIDM* (このコンピューターの名前) を指定します。
 
-13. SharePoint サイト コレクション URL に *http://CorpIDM.contoso.local:82* を指定します。
+13. SharePoint サイト コレクション URL に *http://CorpIDM.contoso.local* を指定します。
 
 14. パスワード登録 URL に *http://CorpIDM.contoso.local:8080* を指定します。
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 07/13/2017
 
 インストールが完了したら、MIM ポータルがアクティブであることを確認します。
 
-1. Internet Explorer を起動し、*http://corpidm.contoso.local:82/identitymanagement* 上の MIM ポータルに接続します。 このページに初めてアクセスする場合、少し時間がかかることがあります。
+1. Internet Explorer を起動し、*http://corpidm.contoso.local/identitymanagement* 上の MIM ポータルに接続します。 このページに初めてアクセスする場合、少し時間がかかることがあります。
 
     - 必要に応じて、Internet Explorer に対して *contoso\Administrator* として認証します。
 
