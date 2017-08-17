@@ -5,18 +5,18 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ca5dafb78899e286aff6d2e767ad1509a6439e65
-ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
+ms.openlocfilehash: b3cdc1a71b6e9eb14a132429ea66bb4ab33fe3c4
+ms.sourcegitcommit: 0a78e39976cd03225a8e24a508e9ee23585e67cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 Microsoft Identity Manager (MIM) 2016 は、[FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx) の ID およびアクセス管理機能を基盤としています。 FIM 2010 R2 と同様、MIM は、組織内のユーザー、資格情報、ポリシー、およびアクセスの管理に役立ちます。  また MIM 2016 にはハイブリッド対応環境と特権アクセス管理機能が加わっており、新しいプラットフォームもサポートします。
@@ -32,4 +32,7 @@ Privileged Identity Management は、機密性の高いリソースに対して�
 MIM では、Active Directory を管理するため、オンプレミスの Privileged Identity Management ソリューションをサポートしています。 概要については、「[Privileged Access Management の使用](./pam/privileged-identity-management-for-active-directory-domain-services.md)」をご覧ください。
 
 ## <a name="related-topics"></a>関連項目
-Microsoft Identity Manager は、その前身である Forefront Identity Manager に密接に関連しています。 現在も FIM を使用している場合や、追加のドキュメントを参照する必要がある場合は、[FIM 2010 R2 のドキュメントのロードマップ](https://technet.microsoft.com/library/jj133885.aspx)をご覧ください。
+
+- Microsoft Identity Manager は、その前身である Forefront Identity Manager に密接に関連しています。 現在も FIM を使用している場合や、追加のドキュメントを参照する必要がある場合は、[FIM 2010 R2 のドキュメントのロードマップ](https://technet.microsoft.com/library/jj133885.aspx)をご覧ください。
+- [MIM を展開する際のトポロジに関する考慮事項](topology-considerations.md)
+- [容量計画ガイド](capacity-planning-guide.md)
