@@ -5,16 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 60b28497f6abba14bd186cf2e2f2ce69b08693bc
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 21a2fb4459f46fe0dea89ff016aa77358f940c24
+ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/19/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>AD DS にユーザーをプロビジョニングする方法
 
@@ -415,7 +415,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 ### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>手順 12: ユーザーが送信同期規則のスコープ内にあることを確認する
 
-ユーザーが同期規則のスコープ内にあるかどうかを確認するには、ユーザーのプロパティ ページを開き、[プロビジョニング] タブで [予期される規則一覧] 属性を確認します。 [予期される規則一覧] 属性で AD ユーザーの
+ユーザーが同期規則のスコープ内にあるかどうかを確認するには、ユーザーのプロパティ ページを開き、[プロビジョニング] タブで [予期される規則一覧] 属性を確認します。[予期される規則一覧] 属性で AD ユーザーの
 
 送信同期規則が一覧表示されている必要があります。 次のスクリーン ショットは、[予期される規則一覧] 属性の例を示しています。
 
