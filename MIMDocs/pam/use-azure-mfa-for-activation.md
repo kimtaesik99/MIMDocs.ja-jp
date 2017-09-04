@@ -2,31 +2,32 @@
 title: "Azure MFA を使用した PAM のアクティブ化 | Microsoft Docs"
 description: "ユーザーが Privileged Access Management でロールをアクティブ化すると、Azure MFA が第 2 のセキュリティ層として設定されます。"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: dd77c0135bee40a90f3ea9fd5c1b2771cbc21793
+ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA を使用したアクティブ化
+
 PAM ロールを構成するときは、ロールのアクティブ化を要求するユーザーを承認する方法を選択できます。 PAM の認証アクティビティの実装には、以下の選択肢があります。
 
 - ロールの所有者の承認
-- Azure 多要素認証 (MFA)
+- [Azure 多要素認証 (MFA)](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 
 どちらのチェックも有効ではない場合、候補ユーザーは各自のロールに対して自動的にアクティブになります。
 
-Microsoft Azure Multi-Factor Authentication (MFA) は、ユーザーがモバイル アプリ、電話、またはテキスト メッセージを使用してサインイン試行を確認する必要がある認証サービスです。 Microsoft Azure Active Directory での利用が可能で、クラウドとオンプレミスのエンタープライズ アプリケーション用のサービスとして使用できます。 PAM のシナリオでは、Azure MFA には、候補ユーザーが以前 Windows PRIV ドメインに対して使用していた認証方法に関係なく、認証で使用できる追加の認証メカニズムがあります。
+Microsoft Azure Multi-Factor Authentication (MFA) は、ユーザーがモバイル アプリ、電話、またはテキスト メッセージを使用してサインイン試行を確認する必要がある認証サービスです。 Microsoft Azure Active Directory での利用が可能で、クラウドとオンプレミスのエンタープライズ アプリケーション用のサービスとして使用できます。 PAM のシナリオでは、Azure MFA には、追加の認証メカニズムがあります。 ユーザーが以前に Windows PRIV ドメインで使用していた認証方法に関係なく、認証で Azure MFA を使用できます。
 
 ## <a name="prerequisites"></a>必要条件
 
@@ -39,7 +40,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 
 ## <a name="creating-an-azure-mfa-provider"></a>Azure MFA プロバイダーの作成
 
-ここでは、Microsoft Azure Active Directory に Azure MFA プロバイダーを設定します。  すでに Azure MFA をスタンドアロンで使用している場合、または Azure Active Directory Premium を使用して構成している場合は、次のセクションに進んでください。
+ここでは、Microsoft Azure Active Directory に Azure MFA プロバイダーを設定します。  既に Azure MFA をスタンドアロンで使用している場合、または Azure Active Directory Premium を使用して構成している場合は、次のセクションに進んでください。
 
 1.  Web ブラウザーを開いて、Azure サブスクリプション管理者として [Azure クラシック ポータル](https://manage.windowsazure.com)に接続します。
 
@@ -76,27 +77,27 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 
 1.  MIM サービスがインストールされているコンピューターで、管理者または MIM をインストールしたユーザーとしてサインインします。
 
-2.  `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service\\MfaCerts` などの MIM サービスがインストールされたディレクトリの下に、新しいディレクトリ フォルダーを作成します。
+2.  ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts``` などの MIM サービスがインストールされたディレクトリの下に、新しいディレクトリ フォルダーを作成します。
 
-3.  Windows エクスプローラーを使用して、前のセクションでダウンロードした ZIP ファイルの **pf\\certs** フォルダーに移動し、**cert\_key.p12** ファイルを新しいディレクトリにコピーします。
+3.  エクスプローラーを使用して、前のセクションでダウンロードした ZIP ファイルの ```pf\certs``` フォルダーに移動します。 ファイル ```cert\_key.p12``` を新しいディレクトリにコピーします。
 
-4.  Windows エクスプローラーを使用して、ZIP の **pf** フォルダーに移動し、ファイル **pf\_auth.cs** を Wordpad などのテキスト エディターで開きます。
+4.  エクスプローラーを使用して、ZIP の ```pf``` フォルダーに移動し、ファイル ```pf\_auth.cs``` を Wordpad などのテキスト エディターで開きます。
 
-5.  3 つのパラメーター **LICENSE\_KEY**、**GROUP\_KEY**、**CERT\_PASSWORD** を検索します。
+5. ```LICENSE\_KEY```、```GROUP\_KEY```、```CERT\_PASSWORD``` の 3 つのパラメーターを探します。
 
 ![pf\_auth.cs ファイルの値のコピー - スクリーン ショット](media/PAM-Azure-MFA-Activation-Image-2.png)
 
-6.  メモ帳を使用して、`C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service` にある **MfaSettings.xml** を開きます。
+6. メモ帳を使用して、```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service``` にある **MfaSettings.xml** を開きます。
 
-7.  pf\_auth.cs ファイルの LICENSE\_KEY、GROUP\_KEY、および CERT\_PASSWORD の各パラメーターの値を、MfaSettings.xml ファイル内で対応するそれぞれの xml 要素にコピーします。
+7. pf\_auth.cs ファイルの LICENSE\_KEY、GROUP\_KEY、および CERT\_PASSWORD の各パラメーターの値を、MfaSettings.xml ファイル内で対応するそれぞれの xml 要素にコピーします。
 
-8.  **<CertFilePath>** XML 要素で、先ほど抽出した cert\_key.p12 ファイルの完全パス名を指定します。
+8. **<CertFilePath>** XML 要素で、先ほど抽出した cert\_key.p12 ファイルの完全パス名を指定します。
 
-9.  **<username>** 要素にユーザー名を入力します。
+9. **<username>** 要素にユーザー名を入力します。
 
-10.  **<DefaultCountryCode>** 要素にユーザーがダイヤルする国コード (たとえば米国およびカナダの場合は 1) を入力します。 この値は、ユーザーが登録している電話番号に国コードがない場合に使用されます。 ユーザーの電話番号に、組織で構成された国コードとは異なるコードがある場合は、その国コードを登録する電話番号に含める必要があります。
+10. **<DefaultCountryCode>** 要素にユーザーがダイヤルする国コード (たとえば米国およびカナダの場合は 1) を入力します。 この値は、ユーザーが登録している電話番号に国コードがない場合に使用されます。 ユーザーの電話番号に、組織で構成された国コードとは異なるコードがある場合は、その国コードを登録する電話番号に含める必要があります。
 
-11.  MIM サービス フォルダー `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service` に **MfaSettings.xml** を保存して上書きします。 
+11. MIM サービス フォルダー ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service``` に **MfaSettings.xml** を保存して上書きします。
 
 > [!NOTE]
 > プロセスの最後に、ファイル **MfaSettings.xml** またはそのコピー、あるいは ZIP ファイルが読み取り可能ではないことを確認します。
@@ -109,16 +110,15 @@ Azure MFA を必要とするロールをアクティブ化するユーザーに�
 
 2 つ目は、`Set-PAMUser` コマンドにより、MIM サービス データベース内の電話番号属性を更新する方法です。 たとえば、次の内容は、MIM サービス内の既存の PAM ユーザーの電話番号を置換します。 そのディレクトリ エントリは変更されません。
 
-```
+```PowerShell
 Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 ```
-
 
 ## <a name="configure-pam-roles-for-azure-mfa"></a>Azure MFA 用に PAM ロールを構成する
 
 PAM ロールの候補ユーザーすべての電話番号を MIM サービス データベースに格納すると、Azure MFA を必要とするようにロールを構成できます。 これは、`New-PAMRole` コマンドまたは `Set-PAMRole` コマンドを使用して行います。 例:
 
-```
+```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 ```
 
@@ -147,3 +147,8 @@ Privileged Access Management のイベント ログには、次のイベント�
 5.  時間の範囲を選択して、追加のレポート列の **[名前]** の隣のチェックボックスをオンにします。 **[CSV にエクスポート]**をクリックします。
 
 6.  レポートが生成されたら、それをポータルで表示したり、MFA レポートが大きい場合は CSV ファイルにダウンロードしたりすることができます。 **AUTH TYPE** 列の **SDK** の値は、PAM のアクティブ化要求と関連する行を示します。これは MIM またはその他のオンプレミス ソフトウェアから送信されたイベントです。 **USERNAME** フィールドは、MIM サービス データベース内のユーザー オブジェクトの GUID です。 呼び出しが失敗すると、**AUTHD** 列の値は **No** となり、**CALL RESULT** 列には失敗理由の詳細が格納されます。
+
+## <a name="next-steps"></a>次の手順
+
+- [Azure Multi-Factor Authentication とは](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [無料の Azure アカウントを今すぐ作成しましょう](https://azure.microsoft.com/free/)
