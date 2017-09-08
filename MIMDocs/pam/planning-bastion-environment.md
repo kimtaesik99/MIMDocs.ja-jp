@@ -12,11 +12,11 @@ ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b459906f0c8d2c631e9b63813e208c9098ea5a4e
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
+ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/02/2017
 ---
 # <a name="planning-a-bastion-environment"></a>要塞環境の計画
 
@@ -195,7 +195,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 7. [グループ ポリシー管理エディター] ウィンドウと [グループ ポリシー管理] ウィンドウを閉じます。 PowerShell ウィンドウを起動し、次のように入力して、監査の設定を適用します。
 
     ```
-    gpupdate /force /target:computere
+    gpupdate /force /target:computer
     ```
 
 「コンピューター ポリシーの更新が正常に完了しました。」というメッセージが 数分後に表示されます。
