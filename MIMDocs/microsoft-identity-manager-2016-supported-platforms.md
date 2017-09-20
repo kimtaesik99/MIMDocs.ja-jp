@@ -5,7 +5,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: femila
-ms.date: 07/13/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,11 +13,11 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: f2b2bb2c9144e8624bf2a7780093f3d4e553747f
-ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
+ms.openlocfilehash: 36de40afac0c612bb8233f2cdbc53d97c96d8db1
+ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="supported-platforms-for-mim-2016"></a>MIM 2016 でサポートされるプラットフォーム
 
@@ -51,7 +51,8 @@ ms.lasthandoff: 07/14/2017
 | | 証明機関 | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | MIM CM データベース | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | **MIM Certificate Management** (アプリケーション) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| **MIM Certificate Management** (クライアントと Bulk クライアント) | Windows | Windows 7 |
+| **MIM Certificate Management** (Bulk クライアント) | Windows | Windows 7 |
+| **MIM Certificate Management** (Client ActiveX ベースのスマート カード) | Windows | Windows 7 </br> Windows 8 </br> Windows 8.1 </br> Windows 10 |
 | **MIM BHOLD スイート** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | BHOLD データベース | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
 | | メール サーバー (省略可能) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
