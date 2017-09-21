@@ -2,21 +2,21 @@
 title: "要塞環境の計画 | Microsoft Docs"
 description: 
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
-ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
+ms.openlocfilehash: 16ad83ab9a0fbe2b93428cf318b5ef138e2f3783
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="planning-a-bastion-environment"></a>要塞環境の計画
 
@@ -166,7 +166,7 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 既存ドメインにグループを用意する必要があります。その名前は NetBIOS ドメイン名の後ろにドル記号を 3 つ付けて作ります。たとえば、「*CONTOSO$$$*」のようになります。 グループの範囲は「*ドメイン ローカル*」に、グループの種類は「*セキュリティ*」にする必要があります。 この措置は、このドメインのグループと同じセキュリティ ID を持つグループを専用管理フォレストで作成するために必要です。 このグループを作成するには、既存ドメインの管理者が既存ドメインに参加しているワークステーションで次の PowerShell コマンドを実行します。
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -194,7 +194,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 7. [グループ ポリシー管理エディター] ウィンドウと [グループ ポリシー管理] ウィンドウを閉じます。 PowerShell ウィンドウを起動し、次のように入力して、監査の設定を適用します。
 
-    ```
+    ```cmd
     gpupdate /force /target:computer
     ```
 
@@ -204,7 +204,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 ドメイン コントローラーで、ローカル セキュリティ機関 (LSA) のために要塞環境からの TCP/IP 接続による RPC を許可する必要があります。 以前のバージョンの Windows Server の場合、LSA の TCP/IP のサポートをレジストリで有効にする必要があります。
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -212,7 +212,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 `New-PAMDomainConfiguration` コマンドレットを管理ドメイン内の MIM サービスのコンピューターで実行する必要があります。 このコマンドのパラメーターは、既存ドメインのドメイン名とそのドメインの管理者の資格情報です。
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 

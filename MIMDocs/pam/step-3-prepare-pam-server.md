@@ -2,10 +2,10 @@
 title: "PAM の展開、手順 3 – PAM サーバー | Microsoft Docs"
 description: "Privileged Access Management の展開に備えて、SQL と SharePoint の両方をホストする PAM サーバーを準備します。"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,11 +13,11 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-3--prepare-a-pam-server"></a>手順 3: PAM サーバーの準備
 
@@ -26,6 +26,7 @@ ms.lasthandoff: 07/13/2017
 [手順 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 のインストール
+
 3 番目の仮想マシンに、Windows Server 2012 R2 (具体的には Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64) をインストールし、「*PAMSRV*」とします。 このコンピューターには SQL Server と SharePoint 2013 がインストールされるので、少なくとも 8 GB の RAM が必要です。
 
 1. **Windows Server 2012 R2 Standard (GUI 搭載サーバー) x64** を選択します。
@@ -46,13 +47,14 @@ ms.lasthandoff: 07/13/2017
 
 
 ### <a name="add-the-web-server-iis-and-application-server-roles"></a>Web サーバー (IIS) とアプリケーション サーバーの役割を追加する
+
 Web サーバー (IIS) およびアプリケーション サーバーの役割、.NET Framework 3.5 の機能、Windows PowerShell 用の Active Directory モジュール、SharePoint に必要なその他の機能を追加します。
 
 1.  PRIV ドメイン管理者 (PRIV\Administrator) としてサインインし、PowerShell を起動します。
 
 2.  次のコマンドを入力します。 .NET Framework 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー上のサイド バイ サイド (SxS) フォルダー (例: “d:\Sources\SxS\”) にあります。
 
-    ```
+    ```PowerShell
     import-module ServerManager
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,
     rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,
@@ -61,6 +63,7 @@ Web サーバー (IIS) およびアプリケーション サーバーの役割�
     ```
 
 ### <a name="configure-the-server-security-policy"></a>サーバーのセキュリティ ポリシーを構成する
+
 新しく作成したアカウントがサービスとして実行されるように、サーバー セキュリティ ポリシーを構成します。
 
 1.  **ローカル セキュリティ ポリシー** プログラムを起動します。   
@@ -68,45 +71,49 @@ Web サーバー (IIS) およびアプリケーション サーバーの役割�
 3.  詳細ウィンドウで、 **[サービスとしてログオン]**を右クリックして、 **[プロパティ]**を選択します。  
 4.  **[ユーザーまたはグループの追加]** をクリックして、[ユーザーとグループ名] に「*priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer*」と入力します。 **[名前の確認]** をクリックし、**[OK]** をクリックします。  
 
-5.  **[OK]** をクリックし、[プロパティ] ウィンドウを閉じます。  
+5.  **[OK]** をクリックし、[プロパティ] ウィンドウを閉じます。
 6.  詳細ウィンドウで、**[ネットワークからのこのコンピューターへのアクセスを拒否する]**を右クリックし、**[プロパティ]** を選択します。  
 7.  **[ユーザーまたはグループの追加]** をクリックして、[ユーザーとグループ名] に「*priv\mimmonitor; priv\MIMService; priv\mimcomponent*」と入力し、**[OK]** をクリックします。  
-8.  **[OK]** をクリックし、[プロパティ] ウィンドウを閉じます。  
+8.  **[OK]** をクリックし、[プロパティ] ウィンドウを閉じます。
 
 9. 詳細ウィンドウで、**[ローカルでのログオンを拒否する]**を右クリックして、**[プロパティ]** を選択します。  
 10. **[ユーザーまたはグループの追加]** をクリックして、[ユーザーとグループ名] に「*priv\mimmonitor; priv\MIMService; priv\mimcomponent*」と入力し、**[OK]** をクリックします。  
 11. **[OK]** をクリックし、[プロパティ] ウィンドウを閉じます。  
 12. [ローカル セキュリティ ポリシー] ウィンドウを閉じます。  
 
-13. [コントロール パネル] を開き、**[ユーザー アカウント]** に切り替えます。  
-14. **[他のユーザーにこのコンピューターへのアクセスを許可]**をクリックします。  
+13. [コントロール パネル] を開き、**[ユーザー アカウント]** に切り替えます。
+14. **[他のユーザーにこのコンピューターへのアクセスを許可]**をクリックします。
 15. **[追加]** をクリックし、ドメインの *PRIV* にユーザーとして「*MIMADMIN*」と入力し、ウィザードの次の画面で **[このユーザーを管理者として追加する]** をクリックします。  
 16. **[追加]** をクリックし、ドメインの *PRIV* にユーザーとして「*SharePoint*と入力し、ウィザードの次の画面で **[このユーザーを管理者として追加する]** をクリックします。  
-17. [コントロール パネル] を閉じます。  
+17. [コントロール パネル] を閉じます。
 
 ### <a name="change-the-iis-configuration"></a>IIS の構成を変更する
+
 アプリケーションで Windows 認証モードを使うように IIS 構成を変更する方法は 2 つあります。 MIMAdmin としてサインインしていることを確認し、次のオプションのいずれかに従います。
 
 PowerShell を使う場合:
-1.  [PowerShell] を右クリックし、**[管理者として実行]** を選択します。  
-2.  IIS を停止し、次のコマンドを使用して、アプリケーションのホスト設定のロックを解除します。  
-    ```
+
+1.  [PowerShell] を右クリックし、**[管理者として実行]** を選択します。
+2.  IIS を停止し、次のコマンドを使用して、アプリケーションのホスト設定のロックを解除します。
+    ```CMD
     iisreset /STOP
     C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
     iisreset /START
     ```
 
-メモ帳などのテキスト エディターを使う場合:   
-1. ファイル **C:\Windows\System32\inetsrv\config\applicationHost.config** を開きます   
+メモ帳などのテキスト エディターを使う場合:
+
+1. ファイル **C:\Windows\System32\inetsrv\config\applicationHost.config** を開きます
 2. そのファイルの 82 行目まで下にスクロールします。 **overrideModeDefault** のタグ値は **<section name="windowsAuthentication" overrideModeDefault="Deny" />** にする必要があります  
 3. **overrideModeDefault** の値を *[許可]* に変更します  
 4. ファイルを保存し、PowerShell コマンド `iisreset /START` で IIS を再起動します。
 
 ## <a name="install-sql-server"></a>SQL Server のインストール
+
 SQL Server がまだ要塞環境に存在しない場合は、SQL Server 2012 (Service Pack 1 以降) か SQL Server 2014 のいずれかをインストールします。 次の手順は、SQL 2014 であることを前提としています。
 
 1. MIMAdmin としてサインインしていることを確認します。
-2. [PowerShell] を右クリックし、**[管理者として実行]** を選択します。   
+2. [PowerShell] を右クリックし、**[管理者として実行]** を選択します。
 3. SQL Server セットアップ プログラムがあるディレクトリに移動します。  
 4. 次のコマンドを入力します。  
     ```
@@ -133,6 +140,7 @@ SharePoint の必須コンポーネントがインストールされた後に、
 5.  インストールが完了したら、ウィザードの実行を選択します。  
 
 ### <a name="configure-sharepoint"></a>SharePoint を構成する
+
 [SharePoint 製品構成ウィザード] を実行して SharePoint を構成します。
 
 1.  [サーバー ファームへの接続] タブで、**[新しいサーバー ファームの作成]** に移動します。  
@@ -146,13 +154,14 @@ SharePoint の必須コンポーネントがインストールされた後に、
 9. [サイト コレクションを作成しています] ウィンドウが表示されたら、**[スキップ]** をクリックし、**[完了]** をクリックします。  
 
 ## <a name="create-a-sharepoint-foundation-2013-web-application"></a>SharePoint Foundation 2013 Web アプリケーションを作成する
+
 ウィザードが完了したら、PowerShell を使用して、MIM ポータルをホストする SharePoint Foundation 2013 Web アプリケーションを作成します。 このチュートリアルはデモンストレーション用であるため、SSL は使用できません。
 
 1.  [SharePoint 2013 管理シェル] を右クリックし、**[管理者として実行]** をクリックして、次の PowerShell スクリプトを実行します。
 
-    ```
+    ```PowerShell
     $dbManagedAccount = Get-SPManagedAccount -Identity PRIV\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"            -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
     ```
 
 2. Windows クラシックの認証方法が使用されることを警告するメッセージが表示されます。また、最後のコマンドが返されるまで数分かかる場合があります。  完了すると、新しいポータルの URL を示す出力が返されます。
@@ -161,11 +170,12 @@ SharePoint の必須コンポーネントがインストールされた後に、
 > 次の手順で使うため、[SharePoint 2013 管理シェル] ウィンドウを開いたままにしておきます。
 
 ## <a name="create-a-sharepoint-site-collection"></a>SharePoint サイト コレクションを作成する
+
 次に、その Web アプリケーションに関連付けられた SharePoint サイト コレクションを作成して、MIM ポータルをホストします。
 
 1.  **[SharePoint 2013 管理シェル]** をまだ起動していない場合は、それを起動し、次の PowerShell スクリプトを実行します
 
-    ```
+    ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
     $w = Get-SPWebApplication http://pamsrv.priv.contoso.local:82
     New-SPSite -Url $w.Url -Template $t -OwnerAlias PRIV\MIMAdmin                -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias PRIV\BackupAdmin
@@ -178,7 +188,7 @@ SharePoint の必須コンポーネントがインストールされた後に、
 
 2.  **[SharePoint 2013 管理シェル]** で次の PowerShell コマンドを実行します。 SharePoint サーバー側 Viewstate と SharePoint タスク「**正常性解析ジョブ (時間単位、Microsoft SharePoint Foundation Timer、すべてのサーバー)**」を無効にします。
 
-    ```
+    ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
     $contentService.ViewStateOnServer = $false;
     $contentService.Update();

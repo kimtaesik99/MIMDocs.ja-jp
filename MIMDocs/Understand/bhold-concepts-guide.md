@@ -5,15 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/06/2017
+ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 0db8c2ebaee204c929dc7345ac6858fff6b0993b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 45054799cdc8bbe6d39fa2beb28e69d13cace031
+ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Microsoft BHOLD Suite 概念ガイド
 
@@ -47,8 +47,8 @@ RBAC のもう 1 つの利点は、職務の分離 (SoD) を定義して適用�
 BHOLD Suite では、組織内のロールを指定して編成し、ユーザーをロールにマップし、適切なアクセス許可をロールにマップすることができます。 この体制はロール モデルと呼ばれ、含まれる次の 5 種類のオブジェクトを結び付けています。 
 
 - 組織単位
-- ユーザー
-- ロール
+- Users
+- 役割
 - アクセス許可
 - アプリケーション
 
@@ -73,7 +73,7 @@ BHOLD ロール モデルの組織単位を、Active Directory Domain Services (
 
 OrgUnit は、BHOLD Core Web ポータルまたは BHOLD Model Generator を使って BHOLD Suite で作成できます。
 
-#### <a name="users"></a>ユーザー
+#### <a name="users"></a>Users
 
 前述のように、すべてのユーザーは少なくとも 1 つの組織単位 (OrgUnit) に属していなければなりません。 組織単位はユーザーをロールと関連付ける主要なメカニズムなので、ほとんどの組織では、ロールとユーザーの関連付けを容易にするため、特定のユーザーは複数の OrgUnit に属します。 ただし、場合によっては、ユーザーが属している OrgUnit とは別に、ロールをユーザーと関連付けることが必要になることがあります。 したがって、ユーザーにロールを直接割り当てることも、ユーザーが属している OrgUnit からロールを取得することもできます。
 
@@ -83,7 +83,7 @@ OrgUnit は、BHOLD Core Web ポータルまたは BHOLD Model Generator を使�
 
 FIM 同期サービスを使わずに BHOLD でユーザーを直接作成できます。 これは、運用環境またはテスト環境でロールをモデル化するときに役立ちます。 また、外部のユーザー (下請業者の従業員など) にロールを割り当てることで、従業員データベースに追加することなく IT リソースへのアクセスを許可することもできます。ただし、このようなユーザーは、BHOLD のセルフサービス機能を使うことはできません。
 
-#### <a name="roles"></a>ロール
+#### <a name="roles"></a>役割
 
 前に説明したように、ロールベースのアクセス制御 (RBAC) モデルでは、アクセス許可は個々のユーザーではなくロールに関連付けられます。 これにより、ユーザーごとにアクセス許可を付与または禁止するのではなく、ユーザーのロールを変更することによって、ユーザーの職務遂行に必要なアクセス許可を各ユーザーに付与できます。 つまり、アクセス許可の割り当てに IT 部門が関わる必要はなく、業務の管理の一部として行うことができます。 異なるシステムにアクセスするための複数のアクセス許可を 1 つのロールに直接またはサブロールを使って集約でき、IT 部門がユーザーのアクセス許可の管理に関与する必要性がさらに減ります。
 
@@ -213,9 +213,9 @@ BHOLD Analytics ポータルでは、特定のポリシーまたはポリシー 
 
 ルールでは、次の要素セットのいずれかをテストできます。
 
-- ユーザー
+- Users
 - 組織単位
-- ロール
+- 役割
 - アクセス許可
 - アプリケーション
 - [アカウント]
@@ -341,3 +341,7 @@ Forefront Identity Manager 2010 および Forefront Identity Manager 2010 R2 の
 重要なこととして、MIM ポータルに対する BHOLD の拡張機能は、セルフサービス ロール、ワークフロー管理、レポート作成をサポートします。 他の BHOLD 管理機能および構成証明は、MIM ポータルから個別にホストされる BHOLD モジュールの Web ポータルによって提供されます。
 
 ## <a name="next-steps"></a>次のステップ
+
+- [BHOLD インストール ガイド](../deploy-use/bhold-installation-guide.md)
+- [BHOLD 開発者用リファレンス](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD のバージョン履歴](../reference/version-bhold-history.md)

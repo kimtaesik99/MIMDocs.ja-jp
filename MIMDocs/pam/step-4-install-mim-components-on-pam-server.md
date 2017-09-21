@@ -2,10 +2,10 @@
 title: "PAM の展開、手順 4 – MIM のインストール | Microsoft Docs"
 description: "Privileged Access Management サーバーとワークステーションに MIM サービスとポータルをインストールして構成します。"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: barclayn
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,18 +13,17 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: b69dfc39da63ec523fb09a58661b5f8367e6042c
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>手順 4 - PAM サーバーとワークステーションに MIM コンポーネントをインストールする
 
 >[!div class="step-by-step"]
 [«手順 3](step-3-prepare-pam-server.md)
 [手順 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-
 
 PAMSRV で、MIM サービスおよびポータル、サンプル ポータル Web アプリケーションをインストールできるように、PRIV\Administrator としてサインインします。
 
@@ -33,7 +32,7 @@ PAMSRV で、MIM サービスおよびポータル、サンプル ポータル W
 
 MIM をダウンロードした場合は、新しいフォルダーに MIM のインストール アーカイブを展開します。
 
-##  <a name="run-the-service-and-portal-install-program"></a>サービスおよびポータルのインストール プログラムを実行します。  
+## <a name="run-the-service-and-portal-install-program"></a>サービスおよびポータルのインストール プログラムを実行します。
 
 インストーラーのガイドラインに従って、インストールを完了します。
 
@@ -140,13 +139,13 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 3.  "MIM Privileged Access Management Example Portal"というサイト名で、物理パスが "C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Privileged Access Management Portal" で、ポートが 8090 の新しい Web サイトを IIS で作成します。  この処理は、次の PowerShell コマンドで実行できます。
 
-  ```
+  ```PowerShell
   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
   ```
 
-4.  サンプル Web アプリケーションがユーザーを MIM PAM REST API にリダイレクトできるようにセットアップします。 メモ帳などのテキスト エディターを使って、ファイル **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config** を編集します。 **system.webServer** セクションに、次の行を追加します。
+4.  サンプル Web アプリケーションがユーザーを MIM PAM REST API にリダイレクトできるようにセットアップします。 メモ帳などのテキスト エディターを使って、ファイル **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config** を編集します。**system.webServer** セクションに、次の行を追加します。
 
-  ```
+  ```XML
   <httpProtocol>
     <customHeaders>
       <add name="Access-Control-Allow-Credentials" value="true"  />
@@ -160,7 +159,7 @@ MIM をダウンロードした場合は、新しいフォルダーに MIM の�
 
 6.  これらの変更を有効にするために、次のコマンドで IIS を再起動します。
 
-  ```
+  ```cmd
   iisreset
   ```
 

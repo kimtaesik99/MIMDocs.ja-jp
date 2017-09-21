@@ -2,28 +2,27 @@
 title: "PAM の展開、手順 5 – フォレスト リンク | Microsoft Docs"
 description: "PRIV 内の特権を持つユーザーが CORP 内のリソースに引き続きアクセスできるように、PRIV フォレストと CORP フォレストとの間に信頼関係を確立します。"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>手順 5 - PRIV フォレストと CORP フォレスト間に信頼関係を確立する
 
 >[!div class="step-by-step"]
 [«手順 4](step-4-install-mim-components-on-pam-server.md)
 [手順 6 »](step-6-transition-group-to-pam.md)
-
 
 Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメイン コントローラーを信頼関係でバインドする必要があります。 これにより、PRIV ドメインのユーザーが CORP ドメインのリソースにアクセスできるようになります。
 
@@ -36,7 +35,7 @@ Contoso.local などの CORP ドメインごとに、PRIV と CONTOSO のドメ�
 
 2.  既存の CORP ドメイン コントローラーが名前を PRIV フォレストにルーティングできることを確認します。 CORPDC などの PRIV フォレスト外部の各ドメイン コントローラーで、PowerShell を起動し、次のコマンドを入力します。
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     出力が、正しい IP アドレスを持つ PRIV ドメインのネームサーバー レコードを示すことを確認します。
@@ -55,14 +54,14 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 
 3.  既存の各フォレストに対して、次の PowerShell コマンドを入力します。 CORP ドメイン管理者 (CONTOSO\Administrator) の資格情報を求める画面が表示されたら、資格情報を入力します。
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  既存のフォレストの各ドメインに対して、次の PowerShell コマンドを入力します。 CORP ドメイン管理者 (CONTOSO\Administrator) の資格情報を求める画面が表示されたら、資格情報を入力します。
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -80,9 +79,9 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 7.  一般的なタスクの一覧で、**[すべてのユーザー情報の読み取り]** を選択し、**[次へ]**、**[完了]** の順にクリックします。  
 8.  [Active Directory ユーザーとコンピューター] を閉じます。
 
-9.  PowerShell ウィンドウを開きます。  
-10.  `netdom` を使用して、SID 履歴が有効で、SID フィルターが無効であることを確認します。 次のように入力します。  
-    ```
+9.  PowerShell ウィンドウを開きます。
+10.  `netdom` を使用して、SID 履歴が有効で、SID フィルターが無効であることを確認します。 次のように入力します。
+    ```cmd
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
@@ -98,7 +97,7 @@ PAMSRV で、CORPDC などの各ドメインとの一方向の信頼関係を確
 
 3.  次の PowerShell コマンドを入力します。
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```

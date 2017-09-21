@@ -5,16 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 61987d5b259830be0cf0bc12832a853e24e9c282
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 2473ef1c3d6fc5350d60d81bd508296a33343f01
+ms.sourcegitcommit: 58d6c628d3bb770669348b987cf8f52ec0576132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Microsoft Identity Manager Certificate Manager 2016 (MIM CM) の展開
 
@@ -54,8 +54,7 @@ MIM 2016 でサポートされるプラットフォームの詳細について�
 
 ## <a name="pre-deployment-steps"></a>展開前の手順
 
-MIM CM 構成ウィザードでは、構成を正常に完了するため、進行中に情報の提供が求められます。 展開前の手順は (不完全な文章)
-
+MIM CM 構成ウィザードでは、構成を正常に完了するため、進行中に情報の提供が求められます。 
 ![](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>スキーマの拡張
@@ -525,7 +524,7 @@ CORPCM にログインする前に、構成ウィザードの **Domain Admins、
 
 14. コンソール ツリーで、[**セキュリティ**] を展開して [**ログイン**] をクリックします。
 
-15. [**ログイン**] を右クリックして、[ **新しいログイン**] をクリックします。
+15. [ **ログイン**] を右クリックして、[ **新しいログイン**] をクリックします。
 
 16. [**全般**] ページの [**ログイン名**] ボックスに、「**contoso\\CORPCA\$**」と入力します。 [**Windows 認証**] を選択します。 既定のデータベースは **FIMCertificateManagement** です。
 
@@ -573,9 +572,9 @@ CORPCM にログインする前に、構成ウィザードの **Domain Admins、
 
 6. [**contoso-CORPCA-CA のプロパティ**] ダイアログ ボックスで [**OK**] をクリックします。
 
-7. **contoso-CA CORPCA**** を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの停止**] をクリックします。 Active Directory Certificate Services が停止するのを待ちます。
+7. **contoso-CA CORPCA*** *を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの停止**] をクリックします。 Active Directory Certificate Services が停止するのを待ちます。
 
-8. **contoso-CA CORPCA**** を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの開始**] をクリックします。
+8. **contoso-CA CORPCA*** *を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの開始**] をクリックします。
 
 9. **証明機関**コンソールを最小化します。
 
@@ -645,11 +644,11 @@ CORPCM にログインする前に、構成ウィザードの **Domain Admins、
 
 - [**contoso-CORPCA-CA のプロパティ**] ダイアログ ボックスで [**OK**] をクリックします。
 
-- **contoso-CA CORPCA**** を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの停止**] をクリックします。
+- **contoso-CA CORPCA*** *を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの停止**] をクリックします。
 
 - Active Directory Certificate Services が停止するのを待ちます。
 
-- **contoso-CA CORPCA**** を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの開始**] をクリックします。
+- **contoso-CA CORPCA*** *を右クリックして、[**すべてのタスク**] をポイントし、[**サービスの開始**] をクリックします。
 
 - **証明機関**コンソールを閉じます。
 
