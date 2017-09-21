@@ -2,27 +2,26 @@
 title: "PAM の展開、手順 1 - CORP ドメイン | Microsoft Docs"
 description: "Privileged Identity Manager で管理する既存の ID または新規の ID を使用して CORP ドメインを準備する"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>手順 1 - ホストと CORP ドメインの準備
 
 >[!div class="step-by-step"]
 [手順 2 »](step-2-prepare-priv-domain-controller.md)
-
 
 この手順では、要塞環境をホストする準備をします。 さらに、必要に応じて、要塞環境で管理する ID を使って、ドメイン コントローラーとメンバー ワークステーションを新しいドメインとフォレスト (*CORP* フォレスト) に作成します。 この CORP フォレストは、管理対象のリソースを持つ既存のフォレストをシミュレートします。 このドキュメントには、保護対象となるサンプルのリソース (ファイル共有) が含まれます。
 
@@ -57,7 +56,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 2. 次のコマンドを入力します。
 
-  ```
+  ```PowoerShell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -67,7 +66,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
   セーフ モードの管理者パスワードを使用するように求められます。 DNS 委任や暗号化の設定に対する警告メッセージが表示されます。 これは正常です。
 
-3. フォレストの作成が完了したら、サインアウトします。 サーバーは自動的に再起動します。
+3. フォレストの作成が完了したら、サインアウトします。サーバーは自動的に再起動します。
 
 4. サーバーが再起動したら、ドメインの管理者として CORPDC にサインインします。 一般的に、ユーザーは CONTOSO\\Administrator で、Windows を CORPDC にインストールしたときに作成されたパスワードを使用します。
 
@@ -81,7 +80,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 2. 次のコマンドを入力し、"CONTOSO" をドメインの NetBIOS 名に置き換えます。
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -102,7 +101,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 2. 次のコマンドを入力します。 パスワード「Pass@word1」を別のパスワード文字列に置き換えます。
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -140,7 +139,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 8. 監査の設定を適用するには、[PowerShell] ウィンドウを起動し、次のように入力します。
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -154,7 +153,7 @@ Windows Server 2012 R2 以降を実行するドメイン コントローラー�
 
 2. 次のコマンドを入力して、リモート プロシージャ コール (RPC) のセキュリティ アカウント マネージャー (SAM) データベースへのアクセスを許可するようにソース ドメインを構成します。
 
-  ```
+  ```PowerShell
   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
   Restart-Computer
@@ -193,7 +192,7 @@ PAM を使ったセキュリティ グループ ベースのアクセス制御�
 
 4. 次のコマンドを入力します。
 
-  ```
+  ```PowerShell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins

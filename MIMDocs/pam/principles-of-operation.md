@@ -2,21 +2,21 @@
 title: "PAM のコンポーネントについて理解する | Microsoft Docs"
 description: "Privileged Access Management は一部のコンポーネントを MIM と共有します。固有のコンポーネントもいくつかあります。 これらの連携方法について説明します。"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>PAM のコンポーネントについて理解する
 
@@ -27,7 +27,7 @@ Privileged Access Management は、日常的に使用するユーザー アカ�
 
 PAM 用に構成される MIM ソリューションには、次のコンポーネントが含まれます。  
 
-- **MIM サービス**: 特権アカウントの管理や昇格要求の処理など、ID やアクセス管理操作を実行するためのビジネス ロジックを実装します。   
+- **MIM サービス**: 特権アカウントの管理や昇格要求の処理など、ID やアクセス管理操作を実行するためのビジネス ロジックを実装します。
 - **MIM ポータル**: SharePoint 2013 でホストされる SharePoint ベースのポータルであり、管理者の管理および構成 UI を提供します。
 - **MIM サービス データベース**: SQL Server 2012 または 2014 に格納されています。MIM サービスで必要な ID データとメタデータを保持します。
 - **PAM 監視サービス**および **PAM コンポーネント サービス**: 権限付きアカウントのライフ サイクルを管理し、グループ メンバーシップのライフ サイクルの PRIV AD を補助します。

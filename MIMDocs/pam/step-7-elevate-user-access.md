@@ -2,21 +2,21 @@
 title: "PAM の展開、手順 7 – ユーザー アクセス | Microsoft Docs"
 description: "最後の手順として、Privileged Access Management の展開が成功したことを確認できるように、特権を持つユーザーに一時的なアクセス権を付与します。"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-7--elevate-a-users-access"></a>手順 7 - ユーザーのアクセスを昇格する
 
@@ -27,6 +27,7 @@ ms.lasthandoff: 07/13/2017
 この手順では、MIM 経由でロールへのアクセスをユーザーが要求する方法を説明します。
 
 ## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Jen が特権付きリソースにアクセスできないことを確認する
+
 昇格された特権なしでは、Jen は CORP フォレスト内の特権付きリソースにアクセスできません。
 
 1. CORPWKSTN からサインアウトして、キャッシュされたすべての開いている接続を削除します。
@@ -36,9 +37,10 @@ ms.lasthandoff: 07/13/2017
 5. コマンド プロンプト ウィンドウを開いたままにしておきます。
 
 ## <a name="request-privileged-access-from-mim"></a>MIM から特権アクセスを要求します。
+
 1. CORPWKSTN で CONTOSO\Jen のまま、次のコマンドを入力します。
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -48,7 +50,7 @@ ms.lasthandoff: 07/13/2017
     > [!NOTE]
     > これらのコマンドを実行すると、以降のすべての手順は時間の影響を受けます。
 
-    ```
+    ```PowerShell
     Import-module MIMPAM
     $r = Get-PAMRoleForRequest | ? { $_.DisplayName –eq "CorpAdmins" }
     New-PAMRequest –role $r
@@ -58,7 +60,7 @@ ms.lasthandoff: 07/13/2017
 4. 完了したら、PowerShell ウィンドウを閉じます。
 5. DOS コマンド ウィンドウで、次のコマンドを入力します。
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 07/13/2017
 ## <a name="validate-the-elevated-access"></a>昇格されたアクセス権を検証します。
 新しく開かれたウィンドウで、次のコマンドを入力します。
 
-```
+```cmd
 whoami /groups
 dir \\corpwkstn\corpfs
 ```
@@ -75,12 +77,13 @@ dir \\corpwkstn\corpfs
 dir コマンドが失敗し、"**アクセスが拒否されました**" というエラー メッセージが表示された場合は、信頼関係を再度確認します。
 
 ## <a name="activate-the-privileged-role"></a>特権ロールをアクティブ化する
+
 PAM のサンプル ポータルを使用して特権アクセスを要求することで昇格します。
 
 1. CORPWKSTN で、CORP\Jen としてサインインしていることを確認します。
 2. DOS コマンド ウィンドウで、次のコマンドを入力します。
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local "c:\program files\Internet Explorer\iexplore.exe"
     ```
 
@@ -95,6 +98,7 @@ PAM のサンプル ポータルを使用して特権アクセスを要求する
 > この環境では、PAM REST API を使用するアプリケーションを開発する方法も学習することができます (「[Privileged Access Management REST API リファレンス](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference)」をご参照ください)。
 
 ## <a name="summary"></a>[概要]
+
 このチュートリアルの手順を完了すると、ユーザー特権を限られた時間だけ昇格し、別の特権アカウントで保護されたリソースへのアクセスをユーザーに許可する、Privileged Access Managment のシナリオを実際に行ったことになります。 昇格セッションの有効期限が切れると、その特権アカウントでは保護されたリソースにアクセスできなくなります。 どのセキュリティ グループが特権ロールを持つかについての決定は、PAM 管理者が調整します。 アクセス権が Privileged Access Managment システムに移行されると、元のユーザー アカウントを使用してアクセス可能だったものが、要求によって使用可能になる特別な特権アカウントでサインインしないとアクセスできなくなります。 その結果、高い特権を持つグループのグループ メンバーが、限られた時間だけ有効になります。
 
 >[!div class="step-by-step"]
