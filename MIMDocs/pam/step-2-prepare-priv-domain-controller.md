@@ -2,21 +2,21 @@
 title: "PAM の展開、手順 2 - PRIV DC | Microsoft Docs"
 description: "Privileged Access Management が分離される要塞環境が提供されるように、PRIV ドメイン コント ローラーを準備します。"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/14/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: de3392648f187ce6007bba332c0f191d32980c94
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>手順 2 - PRIV ドメイン コントローラーの準備
 
@@ -31,6 +31,7 @@ ms.lasthandoff: 07/13/2017
 このセクションでは、新しいフォレストのドメイン コントローラーとして機能する仮想マシンをセットアップします
 
 ### <a name="install-windows-server-2012-r2"></a>Windows Server 2012 R2 のインストール
+
 ソフトウェアがインストールされていない別の新しい仮想マシンに、Windows Server 2012 R2 をインストールして、コンピューター "PRIVDC" にします。
 
 1. Windows Server の (アップグレードではなく) カスタム インストールを選択して実行します。 インストール時に、**[Windows Server 2012 R2 Standard (GUI 使用サーバー) x64]** を指定します。**Data Center または Server Core** は選択_しないでください_。
@@ -44,13 +45,14 @@ ms.lasthandoff: 07/13/2017
 5. サーバーが再起動したら、管理者としてサインインします。 [コントロール パネル] を使用して、更新を確認し、必要な更新をインストールするようにコンピューターを構成します。 これにはサーバーの再起動が必要になる場合があります。
 
 ### <a name="add-roles"></a>ロールの追加
+
 Active Directory ドメイン サービス (AD DS) と DNS サーバーのロールを追加します。
 
 1. 管理者として PowerShell を起動します。
 
 2. Windows Server Active Directory インストールの準備として、次のコマンドを入力します。
 
-  ```
+  ```PowerShell
   import-module ServerManager
 
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -60,7 +62,7 @@ Active Directory ドメイン サービス (AD DS) と DNS サーバーのロー
 
 PowerShell を起動し、次のコマンドを入力して、セキュリティ アカウント マネージャー (SAM) データベースに対するリモート プロシージャ コール (RPC) アクセスを許可するようにソース ドメインを構成します。
 
-```
+```PowerShell
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
@@ -74,9 +76,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 1. PowerShell ウィンドウで次のコマンドを入力して、新しいドメインを作成します。  また、このコマンドでは、前の手順で作成した上位ドメイン (contoso.local) に DNS 委任も作成します。  DNS の構成を後で行う場合は、`CreateDNSDelegation -DNSDelegationCredential $ca` パラメーターを省略してください。
 
-  ```
+  ```PowerShell
   $ca= get-credential
-
   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
   ```
 
@@ -87,13 +88,14 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 フォレストの作成が完了すると、サーバーは自動的に再起動します。
 
 ### <a name="create-user-and-service-accounts"></a>ユーザーおよびサービス アカウントの作成
+
 MIM サービスおよびポータル セットアップのユーザー アカウントとサービス アカウントを作成します。 これらのアカウントは priv.contoso.local ドメインのユーザー コンテナーに入れられます。
 
 1. サーバーの再起動後、PRIVDC にドメイン管理者 (PRIV\\Administrator) としてサインインします。
 
 2. PowerShell を起動し、次のコマンドを入力します。 パスワード 'Pass@word1' は一例ですので、アカウントでは別のパスワードを使用してください。
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
@@ -159,7 +161,7 @@ MIM サービスおよびポータル セットアップのユーザー アカ�
 
 ### <a name="configure-auditing-and-logon-rights"></a>監査およびログオン権限の構成
 
-PAM 構成がフォレストをまたいで確立されるように監査を設定する必要があります。  
+PAM 構成がフォレストをまたいで確立されるように監査を設定する必要があります。
 
 1. ドメイン管理者 (PRIV\\Administrator) としてサインインしていることを確認します。
 
@@ -199,7 +201,7 @@ PAM 構成がフォレストをまたいで確立されるように監査を設�
 
 19. 管理者として PowerShell ウィンドウを起動し、次のコマンドを入力してグループ ポリシー設定からドメイン コント ローラーを更新します。
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -216,7 +218,7 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
 
   前の手順で 1 つのドメイン contoso.local を作成した場合は、CORPDC コンピューターの仮想ネットワークの IP アドレスに *10.1.1.31* を指定します。
 
-  ```
+  ```PowerShell
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
@@ -227,7 +229,7 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
 
 1. PowerShell を使用して SPN を追加することにより、SharePoint、PAM REST API、MIM サービスが Kerberos 認証を使えるようにします。
 
-  ```
+  ```cmd
   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
   setspn -S http/pamsrv PRIV\SharePoint
   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
@@ -241,25 +243,24 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
 
 ドメイン管理者として PRIVDC で次の手順を実行します。
 
-1. **[Active Directory ユーザーとコンピューター]**を起動します。  
-2. **[priv.contoso.local]** ドメインを右クリックし、**[制御の委任]** を選びます。  
-3. [選択されたユーザーとグループ] タブで、**[追加]** をクリックします。  
-4. [ユーザー、コンピューター、またはグループの選択] ウィンドウで、「*mimcomponent; mimmonitor; mimservice*」と入力し、**[名前の確認]** をクリックします。 名前に下線が引かれたら、**[OK]**、**[次へ]** の順にクリックします。  
+1. **[Active Directory ユーザーとコンピューター]**を起動します。
+2. **[priv.contoso.local]** ドメインを右クリックし、**[制御の委任]** を選びます。
+3. [選択されたユーザーとグループ] タブで、**[追加]** をクリックします。
+4. [ユーザー、コンピューター、またはグループの選択] ウィンドウで、「*mimcomponent; mimmonitor; mimservice*」と入力し、**[名前の確認]** をクリックします。 名前に下線が引かれたら、**[OK]**、**[次へ]** の順にクリックします。
 5. 共通タスクの一覧で、**[ユーザー アカウントの作成、削除、および管理]**、**[グループのメンバーシップの変更]** の順に選択し、**[次へ]**、**[完了]** の順にクリックします。
 
-6. もう一度、**[priv.contoso.local]** ドメインを右クリックして、**[制御の委任]** を選択します。  
+6. もう一度、**[priv.contoso.local]** ドメインを右クリックして、**[制御の委任]** を選択します。
 7. [選択されたユーザーとグループ] タブで、**[追加]** をクリックします。  
-8. [ユーザー、コンピューター、またはグループの選択] ウィンドウで、「*MIMAdmin*」と入力し、**[名前の確認]** をクリックします。 名前に下線が引かれたら、**[OK]**、**[次へ]** の順にクリックします。  
-9. **[カスタム タスク]**を選択して **[このフォルダー]**に適用し、 **[全般]**アクセス許可をオンにします。    
-10. アクセス許可の一覧で、次の項目を選択します。  
-  - **読み取り**  
-  - **書き込み**  
-  - **すべての子オブジェクトの作成**  
-  - **すべての子オブジェクトの削除**  
-  - **すべてのプロパティの読み取り**  
-  - **すべてのプロパティの書き込み**  
-  - **SID 履歴の移行**  
-  **[次へ]** 、 **[完了]**の順にクリックします。
+8. [ユーザー、コンピューター、またはグループの選択] ウィンドウで、「*MIMAdmin*」と入力し、**[名前の確認]** をクリックします。 名前に下線が引かれたら、**[OK]**、**[次へ]** の順にクリックします。
+9. **[カスタム タスク]**を選択して **[このフォルダー]**に適用し、 **[全般]**アクセス許可をオンにします。
+10. アクセス許可の一覧で、次の項目を選択します。
+  - **読み取り**
+  - **書き込み**
+  - **すべての子オブジェクトの作成**
+  - **すべての子オブジェクトの削除**
+  - **すべてのプロパティの読み取り**
+  - **すべてのプロパティの書き込み**
+  - **SID 履歴の移行****[次へ]**、**[完了]** の順にクリックします。
 
 11. さらにもう一度、**[priv.contoso.local]** ドメインを右クリックして、**[制御の委任]** を選択します。  
 12. [選択されたユーザーとグループ] タブで、**[追加]** をクリックします。  
@@ -269,15 +270,17 @@ PRIVDC で PowerShell を使って、PRIV ドメインが他の既存のフォ�
 16. [Active Directory ユーザーとコンピューター] を閉じます。
 
 17. コマンド プロンプトを開きます。  
-18. PRIV ドメインで管理者 SD 所有者オブジェクトのアクセス制御リストを確認します。 たとえば、自分のドメインが "priv.contoso.local" の場合は、次のコマンドを入力します  
-  ```
+18. PRIV ドメインで管理者 SD 所有者オブジェクトのアクセス制御リストを確認します。 たとえば、自分のドメインが "priv.contoso.local" の場合は、次のコマンドを入力します
+  ```cmd
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
-19. 必要に応じてアクセス制御リストを更新し、この ACL によって保護されているグループのメンバーシップを MIM サービスと MIM コンポーネント サービスが更新できるようにします。  次のコマンドを入力します。  
-  ```
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
-  ```
+19. 必要に応じてアクセス制御リストを更新し、この ACL によって保護されているグループのメンバーシップを MIM サービスと MIM コンポーネント サービスが更新できるようにします。  次のコマンドを入力します。
+
+```cmd
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+```
+
 20. これらの変更が反映されるように、PRIVDC サーバーを再起動します。
 
 ## <a name="prepare-a-priv-workstation"></a>PRIV ワークステーションの準備
