@@ -18,7 +18,7 @@
 ### [サーバーのセットアップ: SharePoint](prepare-server-sharepoint.md)
 ### [サーバーのセットアップ: Exchange](prepare-server-exchange.md)
 ### [MIM のインストール: 同期](install-mim-sync.md)
-### [MIM のインストール: サービスとポータル](install-mim-service-portal.md)
+### [MIM サービスとポータルをインストールします。](install-mim-service-portal.md)
 ### [MIM のインストール: 同期データベース](install-mim-sync-ad-service.md)
 ## [Forefront Identity Manager 2012 R2 からのアップグレード](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
 ## [MIM 証明書管理のインストール](./deploy-use/mim-cm-deploy.md)
@@ -125,6 +125,7 @@
 #### [保留中の PAM 要求を承認または拒否する](./reference/privileged-access-management-approve-reject-pending-request.md)
 #### [PAM セッション情報を取得する](./reference/privileged-access-management-get-session-info.md)
 ## テクニカル リファレンス
+### [Microsoft Identity Manager 2016 SP1 用語](./reference/mim-2016-sp1-terms.md)
 ### [リソース コントロールの表示構成 XML のリファレンス](./reference/rcd-configuration-xml-reference.md)
 ### [管理エージェントの実行エラー コード](./reference/maerrorcodes.md)
 ### [Microsoft Identity Manager 2016 関数リファレンス](./reference/mim2016-functions-reference.md)
