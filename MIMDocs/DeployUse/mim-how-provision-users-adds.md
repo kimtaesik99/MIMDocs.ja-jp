@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 21a2fb4459f46fe0dea89ff016aa77358f940c24
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 0e039c0b05cc9088a6934c07ead09fb5250f8a81
+ms.sourcegitcommit: 81ad3ede52c3a4308b806c0c8a3fd42b5f5965b0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>AD DS にユーザーをプロビジョニングする方法
 
@@ -294,7 +294,7 @@ FIM サービスを構成するには、Windows Internet Explorer® で http://l
 
 
  >[!NOTE]
- 重要 送信先としての DN を持つ属性フローに [初期フローのみ] が選択されていることを確認します。                                                                          
+送信先としての DN を持つ属性フローに [初期フローのみ] が選択されていることを確認します。                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>手順 7: ワークフローを作成する
 
@@ -408,7 +408,7 @@ AD のプロビジョニング ワークフローの目的は、Fabrikam のプ�
 
 ### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>手順 11: ユーザーがすべての契約社員のメンバーであることを確認する
 
-ユーザーがすべての契約社員のセットのメンバーであるかどうかを確認するには、セットを開き、[メンバーの表示] をクリックします。
+ユーザーがすべての契約社員のセットのメンバーであるかどうかを確認するには、セットを開き、メンバーの表示をクリックします。
 
 ![ユーザーがすべての契約社員のメンバーであることを確認する](media/how-provision-users-adds/image022.jpg)
 
