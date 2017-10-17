@@ -63,7 +63,7 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
 
     -   ユーザー名: mimma
 
-    -   パスワード: Pass@word
+    -   パスワード: Pass@word 
 
     -   ドメイン: contoso
 
