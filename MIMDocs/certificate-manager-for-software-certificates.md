@@ -3,20 +3,20 @@ title: "証明書マネージャーでテンプレートを使用して証明書
 description: "証明書マネージャーを使用して、プロファイル テンプレートでソフトウェア証明書を作成および更新する方法について説明します。"
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: aebf5af709f4f775ce13be49d8f9075a94e864a2
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>証明書マネージャーを使用してソフトウェア証明書を作成する
 ソフトウェア証明書を登録および更新するには、管理者である必要はありません。また、仮想スマート カードも必要ありません。 ある時点で、証明書操作を許可するように求められますが、これは通常の操作です。

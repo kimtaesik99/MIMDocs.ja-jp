@@ -3,20 +3,20 @@ title: "Microsoft Identity Manager 2016 の展開に必要な手順 | Microsoft 
 description: "Microsoft Identity Manager 2016 を展開するためのすべての手順を、ポータルを構成する環境を準備するところから説明します。"
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/27/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fa200bb18871387420743af64ca196565397e5d5
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 2730c41d9b95d3c6e44c12dc734a0e9e13792a32
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-mim-2016"></a>MIM 2016 の展開
 このセクションの記事では、これまでに FIM または MIM が展開されていない新規のサーバー上に、エンド ユーザー セルフ サービス シナリオのために Microsoft Identity Manager (MIM) 2016 を展開するための手順を提供します。
