@@ -3,20 +3,20 @@ title: "展開用のトポロジ ガイド | Microsoft Docs"
 description: "MIM 2016 コンポーネントを理解し、これらを環境内に展開する方法についての提案を得ます。"
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 07/13/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1695cc2df766df3c38a0e1393f6f974102f9fd36
-ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
+ms.openlocfilehash: e257a2e64225a4bc545d8a9384167819412e939b
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="topology-considerations"></a>トポロジに関する考慮事項
 Microsoft Identity Manager (MIM) コンポーネントは、同じサーバー上または複数の構成の複数のサーバー間に展開することができます。 展開用に選択したトポロジは、MIM で達成できるパフォーマンスに影響します。 この記事では、実装を検討できる複数の展開トポロジについて説明します。
