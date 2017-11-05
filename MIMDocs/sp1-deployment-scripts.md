@@ -5,29 +5,28 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 07/13/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: ae8f6a87f57c95e073b40d3cda944c71f1bf7247
-ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
+ms.openlocfilehash: 77a222c0a36f4e244a5114eddfc0edadb168d1cd
+ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="mim2016-sp1-pam-deployment-scripts"></a>MIM2016 SP1 PAM 展開スクリプト
 
-この Service Pack には、PAM の展開を容易にする一連の展開スクリプトが導入されています。 これらのスクリプトは、ダウンロード センターで入手できます。 スクリプトを使用する前に、次の前提条件が使用中の環境に当てはまることを確認してください。
+この Service Pack には、PAM の展開を容易にする一連の展開スクリプトが導入されています。 これらのスクリプトは、ダウンロード センターで入手できます。 スクリプトの使用を試みる前に、次の要件が満たされていることを確認してください。
 
-重要な前提条件:
-1. すべてのコンピューターのオペレーティング システムが、Windows Server 2012 R2 以上です。 Windows Server 2016 Technical Preview 5 を試す場合は、TP5 ビルドを使用して PRIV ドメイン コント ローラーをインストールする必要があります。
-2. DNS は、ドメイン コントローラーとコンポーネントのサーバー間での名前解決が自動となるように構成する必要があります。
+1. すべてのサーバーのオペレーティング システムが、Windows Server 2012 R2 以上である必要があります。
+2. ドメイン コントローラーとコンポーネント サーバーの間の名前解決が有効であるように、DNS が構成されている必要があります。
 3. インストール バイナリは、SQL、SharePoint、および MIM のインストールで指定したサーバーのローカルで使用可能にする必要があります。
 4. この環境には、次の 3 つ専用 (物理または仮想) コンピューターがあり、別々に CORPDC、PRIVDC、PAMSERVER を実行しています。
-5. 検証オプション用に、この手順を実行する専用のクライアント コンピューターが存在するものとします。
+5. 検証オプションの場合は、専用のワークステーションが必要です。
 
 >[!NOTE]
 >スクリプトの実行に関する問題が発生した場合は、ログの確認が必要になる場合があります。 すべてのスクリプト ログは、%AppData%\MIMPAMInstall に保存されます。 フォルダーを Zip ファイルに圧縮して、操作およびエラーの詳細と共に、お客様のサポート ケースに追加してください。
