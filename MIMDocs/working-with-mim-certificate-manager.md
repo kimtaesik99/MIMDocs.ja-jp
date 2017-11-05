@@ -3,50 +3,54 @@ title: "MIM Certificate Manager Windows アプリケーションの展開 | Micr
 description: "Certificate Manager アプリを展開して、ユーザーが独自のアクセス権を管理できるようにする方法について説明します。"
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/16/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: e472d7cdc07aa19464aa1f18447d8c5dc7d0f0ba
+ms.sourcegitcommit: 1e0626a366a41d610e6a117cdf684241eb65ec63
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/17/2017
 ---
-# <a name="working-with-the-mim-certificate-manager"></a>MIM Certificate Manager の操作
-MIM 2016 と Certificate Manager を起動して実行している場合、MIM Certificate Manager Windows ストア アプリケーションをデプロイして、ユーザーが物理スマート カード、仮想スマート カード、およびソフトウェアの証明書を簡単に管理できるようにすることができます。 MIM CM アプリを展開する手順は次のとおりです。
+# <a name="mim-certificate-manager-windows-store-application-deployment"></a>MIM Certificate Manager Windows ストア アプリケーションの展開
 
-1.  証明書テンプレートを作成する。
+MIM 2016 と Certificate Manager を稼働状態にした後は、MIM Certificate Manager Windows ストア アプリケーションを展開することができます。 この Windows ストア アプリケーションを使って、ユーザーは物理スマート カード、仮想スマート カード、およびソフトウェア証明書を管理できます。 MIM CM アプリを展開する手順は次のとおりです。
 
-2.  プロファイル テンプレートを作成する。
+1. 証明書テンプレートを作成する。
 
-3.  アプリを準備する。
+2. プロファイル テンプレートを作成する。
 
-4.  SCCM または Intune を使用してアプリを展開する。
+3. アプリを準備する。
+
+4. SCCM または Intune を使用してアプリを展開する。
 
 ## <a name="create-a-certificate-template"></a>証明書テンプレートを作成する
+
 CM アプリに証明書テンプレートを作成します。通常と同じ方法で作成できますが、証明書テンプレートがバージョン 3 以降であることを確認する必要があります。
 
-1.  AD CS (証明書サーバー) を実行しているサーバーにログインします。
+1. AD CS (証明書サーバー) を実行しているサーバーにログインします。
 
-2.  MMC を開きます。
+2. MMC を開きます。
 
-3.  **[ファイル] &gt; [スナップインの追加と削除]** をクリックします。
+3. **[ファイル] &gt; [スナップインの追加と削除]** をクリックします。
 
-4.  [利用できるスナップイン] の一覧で、**[証明書テンプレート]** をクリックして、**[追加]** をクリックします。
+4. [利用できるスナップイン] の一覧で、**[証明書テンプレート]** をクリックして、**[追加]** をクリックします。
 
-5.  MMC の **[コンソール ルート]** の下に、 **[証明書テンプレート]** が表示されます。 ダブル クリックすると、すべての利用可能な証明書テンプレートが表示されます。
+5. MMC の **[コンソール ルート]** の下に、 **[証明書テンプレート]** が表示されます。 ダブル クリックすると、すべての利用可能な証明書テンプレートが表示されます。
 
-6.  **[スマートカード ログオン]** テンプレートを右クリックして、**[テンプレートの複製]** をクリックします。
+6. **[スマートカード ログオン]** テンプレートを右クリックして、**[テンプレートの複製]** をクリックします。
 
-7.  [互換性] タブの [証明機関] の下で [Windows Server 2008] を選択し、[証明書の受信者] の下で [Windows 8.1/Windows Server 2012 R2] を選択します。
-    これは、バージョン 3 (以降) の証明書テンプレートがあることを確認し、Certificate Manager アプリでバージョン 3 のみを確実に使用するために非常に重要な手順です。 バージョンは証明書テンプレートを初めて作成して保存するときに設定されるため、この方法で証明書テンプレートを作成していない場合は、正しいバージョンに変更する方法はなく、続行する前に、新しいテンプレートを作成する必要があります。
+7. [互換性] タブの [証明機関] で [Windows Server 2008] を選びます。 [証明書の受信者] で [Windows 8.1/Windows Server 2012 R2] を選びます。 テンプレートのバージョンは、証明書テンプレートを最初に作成して保存するときに設定されます。 この方法で証明書テンプレートを作成しなかった場合、正しいバージョンに変更する方法はありません。
 
+    >[!NOTE]
+    この手順は、バージョン 3 (以降) の証明書テンプレートがあることを確認するために非常に重要です。 Certificate Manager アプリではバージョン 3 のテンプレートだけが動作します。
+    
 8.  **[全般]** タブの **[表示名]** フィールドで、アプリの UI に表示する名前 ( **仮想スマート カード ログオン**など) を入力します。
 
 9. **[要求処理]** タブで、 **[目的]** を **[署名と暗号化]** に設定し、**[実行する処理…]** の下で **[登録中にユーザーにメッセージを表示する]**を選択します。
@@ -69,11 +73,12 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 16. 一覧から作成した新しいテンプレートを選択し、 **[OK]**をクリックします。
 
 ## <a name="create-a-profile-template"></a>プロファイル テンプレートを作成する
+
 プロファイル テンプレートを作成する際に、必ずテンプレートを vSC の作成/破棄およびデータ コレクションの削除に設定します。 CM アプリは収集したデータを処理できないため、次の手順で無効にすることが重要です。
 
 1.  管理者特権を持つユーザーとして CM ポータルにログインします。
 
-2.  [管理] &gt; [プロファイル テンプレートの管理] を選択し、MIM CM サンプル スマート カードのログオン プロファイル テンプレートの横にあるチェック ボックスをオンにして、選択したプロファイル テンプレートの [コピー] をクリックします。
+2.  [管理] &gt; [プロファイル テンプレートの管理] に移動します。 **MIM CM サンプル スマート カードのログオン プロファイル テンプレート**のチェック ボックスをオンにして、[選択したプロファイル テンプレートのコピー] をクリックします。
 
 3.  プロファイル テンプレートの名前を入力し、 **[OK]**をクリックします。
 
@@ -91,32 +96,33 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 10. 左側のウィンドウで、**[書き換えポリシー] &gt; [全般設定の変更]** をクリックします。 **[書き換えたカードの再利用]** を選択し、 **[OK]**をクリックします。
 
-11. それぞれすべてのポリシーに対するデータ収集項目を無効にする必要があります。これを行うには、左側のウィンドウでポリシーをクリックしてから、 **[サンプル データ項目]** の横のチェック ボックスをオンにして、 **[データ収集項目の削除]**をクリックします。 **[OK]**をクリックします。
+11. 左側のウィンドウでポリシーをクリックして、すべてのポリシーのデータ収集項目を無効にする必要があります。 その後、**[サンプル データ項目]** チェック ボックスをオンにし、**[データ収集項目の削除]** をクリックして、**[OK]** をクリックする必要があります。
 
 ## <a name="prepare-the-cm-app-for-deployment"></a>CM アプリの展開を準備する
 
-1.  コマンド プロンプトで次のコマンドを実行して、アプリをアンパックして、appx という名前の新しいサブフォルダーにコンテンツを展開し、元のファイルを変更しないように、コピーを作成します。
+1. コマンド プロンプトで、次のコマンドを実行してアプリをアンパックします。 appx という名前の新しいサブフォルダーにコンテンツが抽出され、元のファイルを変更しないように、コピーが作成されます。
 
-    ```
+    ```cmd
     makeappx unpack /l /p <app package name>.appx /d ./appx
     ren <app package name>.appx <app package name>.appx.original
     cd appx
     ```
 
-2.  appx フォルダー内で、CustomDataExample.xml ファイルの名前を Custom.data に変更します。
+2. appx フォルダー内で、CustomDataExample.xml ファイルの名前を Custom.data に変更します。
 
-3.  Custom.data ファイルを開き、必要に応じてパラメーターを変更します。
+3. Custom.data ファイルを開き、必要に応じてパラメーターを変更します。
 
     |||
     |-|-|
     |MIMCM URL|CM の構成に使用したポータルの FQDN です。 例: https://mimcmServerAddress/certificatemanagement|
-    |ADFS URL|AD FS を使用する場合は、自身の AD FS URL を挿入します。 例: https://adfsServerSame/adfs|
+    |ADFS URL|AD FS を使用する場合は、自身の AD FS URL を挿入します。 例: https://adfsServerSame/adfs </br> ADFS が使用されていない場合は、空の文字列をこの設定に構成します。  ```<ADFS URL=""/>``` のようにします。 |
     |PrivacyUrl|証明書の登録のために収集されたユーザーの詳細の用途を説明する Web ページへの URL を含めることができます。|
     |SupportMail|サポートの問題のために電子メール アドレスを含めることができます。|
     |LobComplianceEnable|これは true または false に設定できます。 既定では true に設定されています。|
     |MinimumPinLength|既定では 6 に設定されています。|
     |NonAdmin|これは true または false に設定できます。 既定では false に設定されています。 これは、コンピューター上の管理者ではないユーザーが証明書の登録と更新をできるようにする場合にのみ変更します。|
-
+>[!IMPORTANT]
+ADFS URL の値を指定する必要があります。 値を指定しないと、最新アプリは最初の使用でエラーになります。
 4.  ファイルを保存してエディターを終了します。
 
 5.  パッケージに署名すると、署名ファイルが 1 つ作成されるため、AppxSignature.p7x という名前の元の署名ファイルを削除する必要があります。
@@ -131,13 +137,13 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 10. コマンド プロンプトで次のコマンドを実行し、.appx ファイルを再パックして署名します。
 
-    ```
+    ```cmd
     cd ..
     makeappx pack /l /d .\appx /p <app package name>.appx
     ```
     ここで、アプリのパッケージ名は、コピーを作成したときに使用したのと同じ名前です。
 
-    ```
+    ```cmd
     signtool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.ap
     px
     ```
@@ -145,13 +151,13 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
 
 11. AD FS 認証を使用するには:
 
-    -   仮想スマート カード アプリケーションを開きます。 これにより、次の手順に必要な値が見つけやすくなります。
+    -  仮想スマート カード アプリケーションを開きます。 これにより、次の手順に必要な値が見つけやすくなります。
 
-    -   アプリケーションをクライアントとして AD FS サーバーに追加して、サーバー上で CM を構成するには、AD FS サーバーで Windows PowerShell を開き、コマンド `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`を実行します。
+    -  アプリケーションをクライアントとして AD FS サーバーに追加して、サーバー上で CM を構成するには、AD FS サーバーで Windows PowerShell を開き、コマンド `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`を実行します。
 
         ConfigureMimCMClientAndRelyingParty.ps1 スクリプトを以下に示します。
 
-        ```
+       ```PowerShell
         # HELP
 
         <#
@@ -242,13 +248,22 @@ CM アプリに証明書テンプレートを作成します。通常と同じ�
         Write-Host "RP Trust for MIM CM Service has been created"
         ```
 
-    -   redirectUri と serverFQDN の値を更新します。
+    - redirectUri と serverFQDN の値を更新します。
 
-    -   仮想スマート カード アプリケーションで redirectUri を検索するには、アプリケーションの設定パネルを開き、 **[設定]**をクリックすると、リダイレクト URI が、AD FS サーバーのアドレス バーの下に一覧表示されます。 URI は、ADFS サーバーのアドレスが構成されている場合にのみ表示されます。
+    - 仮想スマート カード アプリケーションで redirectUri を検索するには、アプリケーションの設定パネルを開き、 **[設定]**をクリックすると、リダイレクト URI が、AD FS サーバーのアドレス バーの下に一覧表示されます。 URI は、ADFS サーバーのアドレスが構成されている場合にのみ表示されます。
 
-    -   ServerFQDN は MIMCM サーバーのフル コンピューター名のみです。
+    - ServerFQDN は MIMCM サーバーのフル コンピューター名のみです。
 
-    -   **ConfigureMIimCMClientAndRelyingParty.ps1** のスクリプトのヘルプについては、 `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`を実行します。
+    - **ConfigureMIimCMClientAndRelyingParty.ps1** スクリプトのヘルプを見るには、次のように実行します。 </br> 
+    ```Powershell
+     get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
+    ```
 
 ## <a name="deploy-the-app"></a>アプリを展開する
+
 CM アプリをセットアップする際には、ダウンロード センターでファイル MIMDMModernApp_&lt;バージョン&gt;_AnyCPU_Test.zip をダウンロードして、すべてのコンテンツを抽出します。 .appx ファイルはインストーラーです。 Windows ストア アプリを展開する通常の方法で展開できます。[System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)を使用したり、[Intune](https://technet.microsoft.com/library/dn613839.aspx) を使用してアプリをサイドロードして、ユーザーがポータル サイトを使用してアクセスしなければならないようにしたり、ユーザーが自身のマシンに直接プッシュされるようにすることができます。
+
+## <a name="next-steps"></a>次のステップ
+
+- [構成プロファイル テンプレート](https://technet.microsoft.com/library/cc708656)
+- [スマート カード アプリケーションの管理](https://technet.microsoft.com/library/cc708681)
