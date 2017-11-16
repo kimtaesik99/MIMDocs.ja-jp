@@ -9,11 +9,11 @@ ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 45054799cdc8bbe6d39fa2beb28e69d13cace031
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Microsoft BHOLD Suite 概念ガイド
 
@@ -342,6 +342,6 @@ Forefront Identity Manager 2010 および Forefront Identity Manager 2010 R2 の
 
 ## <a name="next-steps"></a>次のステップ
 
-- [BHOLD インストール ガイド](../deploy-use/bhold-installation-guide.md)
+- [BHOLD インストール ガイド](bhold-installation-guide.md)
 - [BHOLD 開発者用リファレンス](../reference/mim2016-bhold-developer-reference.md)
 - [BHOLD のバージョン履歴](../reference/version-bhold-history.md)
