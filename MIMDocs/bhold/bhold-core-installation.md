@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-core-installation"></a>BHOLD コアのインストール
 
@@ -132,7 +132,7 @@ BHOLD コア セットアップが完了したら、Windows ファイアウォ�
 
 ユーザーがリモート コンピューターの Web ブラウザーを使用して BHOLD にアクセスする場合は、BHOLD コアのインストール時に指定した Web サイト ポートへの受信接続を許可するように、BHOLD コア サーバーの Windows ファイアウォールを構成する必要があります。
 
-この手順を実行するには、ローカル コンピューターの管理者グループのメンバーである必要があります。
+この手順を実行するには、ローカル コンピュータの管理者グループのメンバである必要があります。
 
 #### <a name="to-permit-incoming-connections-to-the-bhold-website"></a>BHOLD Web サイトへの受信接続を許可するには
 
