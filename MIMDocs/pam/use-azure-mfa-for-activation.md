@@ -3,22 +3,26 @@ title: "Azure MFA を使用した PAM のアクティブ化 | Microsoft Docs"
 description: "ユーザーが Privileged Access Management でロールをアクティブ化すると、Azure MFA が第 2 のセキュリティ層として設定されます。"
 keywords: 
 author: barclayn
-ms.author: barclayn
+ms.author: fimguy
 manager: mbaldwin
-ms.date: 08/31/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: dd77c0135bee40a90f3ea9fd5c1b2771cbc21793
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: 4accb4c1db90f11c18917012b9a3ab4966ea6496
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA を使用したアクティブ化
+>[!IMPORTANT]
+Azure Multi-factor Authentication ソフトウェア開発キットの廃止予定が発表されました。 Azure MFA SDK は、既存のお客様向けに 2018 年 10 月 1 日の提供終了日までサポートされます。 新規および現在のお客様は、それ以降 Azure クラシック ポータルから SDK をダウンロードできなくなります。 ダウンロードするには、Azure カスタマー サポートに連絡して、生成された MFA サービス資格情報のパッケージを受け取る必要があります。 <br> Microsoft 開発チームは、MFA Server SDK との統合により、MFA の変更を計画しています。この変更は、2018 年初頭に予定されている修正プログラムに含まれる予定です。
+
+
 
 PAM ロールを構成するときは、ロールのアクティブ化を要求するユーザーを承認する方法を選択できます。 PAM の認証アクティビティの実装には、以下の選択肢があります。
 
@@ -40,7 +44,7 @@ MIM で Azure MFA を使用するには、次の項目が必要です。
 
 ## <a name="creating-an-azure-mfa-provider"></a>Azure MFA プロバイダーの作成
 
-ここでは、Microsoft Azure Active Directory に Azure MFA プロバイダーを設定します。  既に Azure MFA をスタンドアロンで使用している場合、または Azure Active Directory Premium を使用して構成している場合は、次のセクションに進んでください。
+ここでは、Microsoft Azure Active Directory に Azure MFA プロバイダーを設定します。  すでに Azure MFA をスタンドアロンで使用している場合、または Azure Active Directory Premium を使用して構成している場合は、次のセクションに進んでください。
 
 1.  Web ブラウザーを開いて、Azure サブスクリプション管理者として [Azure クラシック ポータル](https://manage.windowsazure.com)に接続します。
 

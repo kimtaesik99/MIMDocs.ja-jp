@@ -2,11 +2,11 @@
 layout: LandingPage
 title: "Microsoft Identity Manager のドキュメント | Microsoft ドキュメント"
 description: "Microsoft Identity Manager を使用する方法について学習します。"
-ms.openlocfilehash: c49fbae1892bfa0207a1615d11e600fe21d638c8
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 14bfdf808072f236a17431cf4e0634bf287c3a65
+ms.sourcegitcommit: f95369a51ec5edae076505b3b0059f878cdf6e96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Microsoft Identity Manager のドキュメント
 
@@ -71,7 +71,7 @@ Microsoft Identity Manager 2016 では、複数のオンプレミスの認証ス
 ---
 <br>
 >[!Warning]
-Forefront Identity Manager (FIM) のメイン ストリーム サポートは 2017/10/10 に終了します。 Microsoft Identity Manager 2016 に[アップグレード](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)してください。 詳細情報: </br>  - FIM ライフ サイクルに関する情報は[ここ](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)で提供されています。 </br> - ID 製品のパブリック リリースについては、「[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)」(Microsoft ID ソフトウェア: パブリック リリース ビルド バージョン) というタイトルの投稿を参照してください。
+Forefront Identity Manager (FIM) のメインストリーム サポートは 2017/10/10 に終了しました。 Microsoft Identity Manager 2016 に[アップグレード](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)してください。 詳細情報: </br>  - FIM ライフ サイクルに関する情報は[ここ](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)で提供されています。 </br> - ID 製品のパブリック リリースについては、「[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)」(Microsoft ID ソフトウェア: パブリック リリース ビルド バージョン) というタイトルの投稿を参照してください。
 
 <h2>リファレンス</h2>
 <ul class="panelContent cardsFTitle">
