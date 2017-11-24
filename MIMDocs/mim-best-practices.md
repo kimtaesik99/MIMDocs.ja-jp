@@ -5,17 +5,17 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 11/15/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 7f56882bf005de6c888997c1bf6a9e2feaea410c
+ms.sourcegitcommit: 42253562ac2f9ed689e9db9d0c470213b7926883
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 のベスト プラクティス
 
@@ -90,7 +90,7 @@ SQL サーバー上のメモリ量、および SQL サーバーを他のサー�
   WITH OVERRIDE
   ```
 
-  この例は、SQL サーバーを再構成して、メモリの使用を 12 GB 未満にします。
+  この例では、SQL サーバーを再構成して、メモリの使用を 12 GB 未満にします。
 
 4.  次のクエリを使用して、設定を確認します。
 
@@ -108,13 +108,16 @@ SQL サーバー上のメモリ量、および SQL サーバーを他のサー�
 
 ### <a name="backup-and-recovery-configuration"></a>バックアップおよび復旧を構成する
 
-一般的には、データベースのバックアップは各組織のバックアップ ポリシーに従って行います。 ログの増分バックアップが計画されていない場合、データベースは単純な復旧モードに設定する必要があります。 バックアップ戦略を実装したり、これらのモデルに必要なディスク領域を実装したりする前に、さまざまな復旧モデルの影響について、正しく理解しておいてください。 完全復旧モデルでは、ディスク領域が大量に使用されないようにログのバックアップを頻繁に実行する必要があります。 詳細については、「[Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370)」 (復旧モデルの概要) と「[FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)」 (FIM 2010 のバックアップおよび復旧ガイド) を参照してください。
+一般的に、バックアップと復旧の計画を策定するには、データベース管理者と連携する必要があります。 以下のような点が推奨されます。
+- データベースのバックアップは、組織のバックアップ ポリシーに従って行います。 
+- ログの増分バックアップが計画されていない場合、データベースは単純な復旧モードに設定する必要があります。 
+- バックアップ計画を実装する前に、さまざまな復旧モデルの影響について理解しておきます。 これらのモデルのディスク領域の要件を確認してください。 完全復旧モデルでは、ディスク領域が大量に使用されないようにログのバックアップを頻繁に実行する必要があります。 
 
-## <a name="create-a-backup-administrator-account-for-the-fimservice-after-installation"></a>インストール後に FIMService 用にバックアップ管理者アカウントを作成する
+詳細については、「[Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370)」 (復旧モデルの概要) と「[FIM 2010 Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)」 (FIM 2010 のバックアップおよび復旧ガイド) を参照してください。
 
+## <a name="create-a-backup-administrator-account-for-the-fim-service-after-installation"></a>インストール後に FIM サービス用にバックアップ管理者アカウントを作成する
 
->[!IMPORTANT]
-FIMService 管理者セットのメンバーには、FIM の展開を操作するのに不可欠な固有のアクセス許可があります。 管理者セットの 1 人としてログオンできない場合、唯一の解決策は、システムの以前のバックアップにロールバックすることです。 この状況を緩和するには、インストール後の構成で他のユーザーを FIM 管理者セットに追加することをお勧めします。
+FIM サービス管理者セットのメンバーには、MIM の展開を操作するのに不可欠な、固有のアクセス許可があります。 管理者セットのひとりとしてログオンできない場合、唯一の解決策は、システムの以前のバックアップにロールバックすることです。 この状況を緩和するには、インストール後の構成で他のユーザーを FIM 管理者セットに追加することをお勧めします。
 
 ## <a name="fim-service"></a>FIM サービス
 
@@ -144,7 +147,7 @@ FIMService 管理者セットのメンバーには、FIM の展開を操作す�
 
 ### <a name="disable-sharepoint-indexing"></a>SharePoint のインデックス作成を無効にする
 
-Microsoft Office SharePoint® のインデックス作成は無効にすることをお勧めします。 インデックスを必要とするドキュメントはなく、インデックスを作成すると、FIM 2010 で多数エラー ログが作成されたり、パフォーマンス上の問題が発生する可能性があります。 SharePoint のインデックス作成を無効にするには
+Microsoft Office SharePoint® のインデックス作成は無効にすることをお勧めします。 インデックスを作成する必要のあるドキュメントはありません。 インデックスを作成すると、多量のエラー ログ エントリが発生します。また、MIM でパフォーマンスの問題が発生する可能性があります。 SharePoint のインデックス作成を無効にするには、以下の手順に従います。
 
 1.  MIM 2016 ポータルをホストするサーバーで、[スタート] をクリックします。
 
@@ -164,16 +167,16 @@ Microsoft Office SharePoint® のインデックス作成は無効にするこ�
 
 ## <a name="mim-2016-initial-data-load"></a>MIM 2016 の初期データをロードする
 
-このセクションでは、外部システムから FIM 2010 へ初期データをロードする際にパフォーマンスを向上させる手順を示します。 次の手順の多くは、システムの初期作成時に一時的にのみ必要であり、完了時にはリセットする必要があることに注意してください。 これは 1 回限りの操作であり、継続的に同期するものではありません。
+このセクションでは、外部システムから MIM に初期データをロードする際にパフォーマンスを向上させる手順を示します。 次の手順の多くは、システムの初期作成時にのみ実行されるものであることを理解しておくことが重要です。 ロードの完了時にはリセットする必要があります。 これは 1 回限りの操作であり、継続的に同期するものではありません。
 
 >[!NOTE]
-FIM 2010 と Active Directory ドメイン サービス (AD DS) 間でユーザーを同期する方法の詳細については、FIM のドキュメントの「[How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277)」 (Active Directory から FIM へユーザーを同期する方法) を参照してください。
+MIM と Active Directory Domain Services (AD DS) 間でユーザーを同期する方法の詳細については、FIM のドキュメントの「[How do I Synchronize Users from Active Directory to FIM (Active Directory から FIM にユーザーを同期する方法)](http://go.microsoft.com/fwlink/?LinkID=188277)」をご覧ください。
 
 >[!IMPORTANT]
-このガイドの SQL の設定のセクションで説明しているベスト プラクティスに従っていることを確認してください。                                                                                                                                                      |
+このガイドの SQL の設定のセクションで説明しているベスト プラクティスに従っていることを確認してください。 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>手順 1: データの初期ロード用に SQL サーバーを構成する
-最初に大量のデータをロードするとき、一時的にフルテキスト検索をオフにし、MIM 2016 管理エージェント (FIM MA) のエクスポートが完了した後でそれを再度オンにすることで、データベースへの入力時間を短縮できます。
+データの初期ロードのプロセスには、時間がかかる場合があります。 最初に大量のデータをロードするときは、一時的にフルテキスト検索をオフにし、MIM 2016 管理エージェント (FIM MA) のエクスポートが完了した後でそれを再度オンにすることで、データベースへの入力時間を短縮できます。
 
 フルテキスト検索を一時的にオフにするには:
 
@@ -184,12 +187,9 @@ FIM 2010 と Active Directory ドメイン サービス (AD DS) 間でユーザ�
 3.  次の SQL ステートメントを実行します。
 
 ```SQL
-ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING =
-MANUAL
+ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
-
-SQL サーバーの復旧モデルに必要なディスク要件を理解していることが重要です。 バックアップ スケジュールによっては、システムの初期ロード時に、ディスク領域の使用を制限する、単純な復旧モードを使用することを検討してください。しかし、データ損失の観点からの影響は理解しておく必要があります。 完全復旧モードを使用する場合は、大量のディスク領域が、トランザクション ログの頻繁なバックアップによって占有されてしまうのを防ぐために、バックアップでディスクの使用量を管理する必要があります。
 
 >[!IMPORTANT]
 これらの手順を組み込まないと、ディスク領域が大量に使用されてしまい、領域がなくなる場合があります。 このトピックの詳細については、「[Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370)」 (復旧モデルの概要) を参照してください。 「[The FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864)」 (FIM のバックアップと復元のガイド) にも追加の情報があります。
@@ -200,16 +200,11 @@ SQL サーバーの復旧モデルに必要なディスク要件を理解して�
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>手順 3: 外部 ID データを使用して FIM サービスを構成および入力する
 
-ここでは、「How Do I Synchronize Users from Active Directory 
-
-Domain Services to FIM」 (グループを Active Directory ドメイン サービスから FIM に同期する方法) ガイドで説明する手順に従い、システムに Active Directory のユーザーを構成し、同期する方法を説明します。 グループ情報を同期する必要がある場合のその進め方の手順については、「How Do I Synchronize Groups from Active Directory Domain Services to FIM」 (グループを Active Directory ドメイン サービスから FIM に同期する方法) ガイドを参照してください。
+ここでは、「How Do I Synchronize Users from Active Directory Domain Services to FIM (Active Directory Domain Services から FIM にユーザーを同期する方法)」のガイドで説明されている手順に従って、システムを構成し、Active Directory からユーザーを同期させる必要があります。 グループ情報を同期する必要がある場合は、そのプロセスの手順について、「[How Do I Synchronize Groups from Active Directory Domain Services to FIM (グループを Active Directory Domain Services から FIM に同期する方法)](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx)」ガイドをご覧ください。
 
 #### <a name="synchronization-and-export-sequences"></a>シーケンスを同期およびエクスポートする
 
-パフォーマンスを最適化するには、同期の実行後にエクスポートを行います。これにより、コネクタ スペースで多数のエクスポート操作が保留になります。
-
-次いで、確認のインポートを、影響を受けるコネクタ スペースに関連付けられている管理エージェントで実行します。 たとえば、データの初期ロードの一環として、同期実行プロファイルをいくつかの管理エージェントで実行する必要がある場合、同期を実行するたびに、エクスポートを行い、差分インポートを実行します。
-
+パフォーマンスを最適化するには、同期の実行後にエクスポートを行います。これにより、コネクタ スペースで多数のエクスポート操作が保留になります。 次いで、確認のインポートを、影響を受けるコネクタ スペースに関連付けられている管理エージェントで実行します。 たとえば、データの初期ロードの一環として、同期実行プロファイルをいくつかの管理エージェントで実行する必要がある場合、同期を実行するたびに、エクスポートを行い、差分インポートを実行します。
 初期化のサイクルの一部である各ソース管理エージェントに対して、次の手順を実行します。
 
 1.  ソース管理エージェントでフル インポートを実行します。
@@ -320,7 +315,7 @@ SSL を実装するには:
 
 7.  ファイルを任意の場所に保存します。 この場所へは、以降の手順でアクセスする必要があります。
 
-8.  Windows Internet Explorer® で https://servername/certsrv を開きます。 サーバー名を、証明書を発行するサーバー名に置き換えます。
+8.  https://servername/certsrv を参照します。 サーバー名を、証明書を発行するサーバー名に置き換えます。
 
 9.  [Request a new Certificate (新しい証明書の要求)] をクリックします。
 
@@ -374,7 +369,7 @@ SSL を実装するには:
 
 -   この文書の SQL の設定セクションの説明に従って、SQL の設定のベスト プラクティスを適用します。
 
--   FIM 2010 R2 のポータル サイトで SharePoint のインデックス作成をオフにします。 詳細については、この文書の「SharePoint のインデックス作成を無効にする」セクションを参照してください。
+-   MIM のポータル サイトで SharePoint のインデックス作成をオフにします。 詳細については、この文書の「SharePoint のインデックス作成を無効にする」セクションを参照してください。
 
 ## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>機能別のベスト プラクティス (これを削除してこのセクションを閉じ、3 に対し、ヘッダー 2 レベルでは具体的な機能のみにしたいです)
 
@@ -392,7 +387,7 @@ MIM には、Request と Set Transition の 2 種類の MPR が用意されて�
 -  Request MPR (RMPR)
 
   - リソースに対する作成、読み取り、更新、または削除 (CRUD) 操作のアクセス制御ポリシー (認証、承認、およびアクション) を定義するために使用されます。
-  - FIM のターゲット リソースに対して CRUD 操作が発行されたときに適用されます。
+  - MIM のターゲット リソースに対して CRUD 操作が発行されたときに適用されます。
   - 範囲は、CRUD が要求した規則に該当する、規則で定義されている一致する基準に限定されています。
 
 - Set Transition MPR (TMPR)
@@ -404,7 +399,7 @@ MIM には、Request と Set Transition の 2 種類の MPR が用意されて�
 
 #### <a name="only-enable-mprs-as-necessary"></a>必要に応じてのみ MPR は有効にする
 
-構成を適用する場合、アクセス許可は最小限のみ適用するという原則に従ってください。 MPR は FIM の展開のアクセス ポリシーを制御します。 多くのユーザーが使用する機能のみを有効にします。 たとえば、すべてのユーザーが FIM をグループ管理に使用するとは限らないので、関連付けられているグループ管理の MPR は無効にする必要があります。 既定で FIM は、管理者以外の多くのアクセス許可が無効になって出荷されます。
+構成を適用する場合、アクセス許可は最小限のみ適用するという原則に従ってください。 MPR は MIM の展開のアクセス ポリシーを制御します。 多くのユーザーが使用する機能のみを有効にします。 たとえば、すべてのユーザーが MIM をグループ管理に使用するとは限らないので、関連付けられているグループ管理の MPR は無効にする必要があります。 既定で MIM は、管理者以外の多くのアクセス許可が無効になって出荷されます。
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>組み込みの MPR は直接変更するのではなく複製する
 組み込みの MPR を変更する必要がある場合、必要な構成で新しい MPR を作成し、組み込みの MPR をオフにします。 これにより、アップグレード手順で導入される組み込みの MPR に対する今後の変更は、システム構成に悪い影響を与えないことが保証されます。
@@ -431,7 +426,7 @@ Create 操作では、ユーザーは操作の一環で、objectType を選択�
 
 #### <a name="avoid-giving-unrestricted-access-even-to-selected-principal-groups"></a>選択したプリンシパル グループにも無制限のアクセスは与えないようにする
 
-FIM ではアクセス許可は、肯定アサーションとして定義されます。 FIM では拒否のアクセス許可はサポートしていないため、リソースに無制限のアクセスを与えると、アクセス許可の除外の作成が複雑になります。 ベスト プラクティスとしては、必要なアクセス許可のみを提供します。
+MIM ではアクセス許可は、肯定アサーションとして定義されます。 MIM では拒否のアクセス許可はサポートしていないため、リソースに無制限のアクセスを与えると、アクセス許可の除外の作成が複雑になります。 ベスト プラクティスとしては、必要なアクセス許可のみを提供します。
 
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>カスタムの権利の定義に TMPR を使用する
 
@@ -470,7 +465,7 @@ TMPR のペアを作成する場合、Set Transition In MPR は最後にオン�
 
 3.  T-Out MPR を無効にします。
 
-権利は削除するが、現在のメンバーをそのままにする場合 (たとえば、権利の管理に FIM を使用するのをやめる):
+権利は削除するが、現在のメンバーをそのままにする場合 (たとえば、権利の管理に MIM を使用するのをやめる):
 
 1.  T-In MPR を無効にします。 これにより新たに付与されることを回避できます。
 
@@ -504,11 +499,11 @@ TMPR のペアを作成する場合、Set Transition In MPR は最後にオン�
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>パスワードのリセットに使用する、キオスクのようなコンピューターでは、仮想メモリのページファイルがクリアされるようにローカルのセキュリティを設定する
 
-キオスクを想定したワークステーションに FIM 2010 パスワードのリセットを展開するとき、シャットダウン:クリア仮想メモリ ページファイル ローカル セキュリティ ポリシー設定をオンにし、未承認のユーザーがプロセス メモリの機密情報を使用できないようにすることを推奨します。
+キオスクを想定したワークステーションに MIM パスワードのリセットを展開するとき、シャットダウン:クリア仮想メモリ ページファイル ローカル セキュリティ ポリシー設定をオンにし、未承認のユーザーがプロセス メモリの機密情報を使用できないようにすることを推奨します。
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>ログオンしているコンピューターでユーザーは常にパスワードのリセットを登録する必要がある
 
-ユーザーが Web ポータルを使用してパスワードのリセットを登録する場合、FIM 2010 では常に、Web サイトにログオンしているユーザーに関係なく、ログオン ユーザーの代わりに登録を開始します。 ユーザーはログオンしているコンピューターで常にパスワードのリセットを登録する必要があります。
+ユーザーが Web ポータルを使用してパスワードのリセットを登録する場合、MIM では常に、Web サイトにログオンしているユーザーに関係なく、ログオン ユーザーの代わりに登録を開始します。 ユーザーはログオンしているコンピューターで常にパスワードのリセットを登録する必要があります。
 
 #### <a name="do-not-set-the-avoidpdconwan-registry-key-to-true"></a>AvoidPdcOnWan レジストリ キーは True に設定しない
 
@@ -580,7 +575,7 @@ Person または Group の種類のリソースは Core の種類のリソース
 
 #### <a name="making-regular-expressions-case-insensitive"></a>正規表現の大文字小文字を区別する
 
-FIM では、正規表現の一部の大文字と小文字を区別すると便利な場合があります。 ?!: を使用すると、グループ内の大文字小文字は無視できます。 たとえば従業員の種類では、次を使用します。
+MIM では、正規表現の一部で大文字と小文字を区別すると便利な場合があります。 ?!: を使用すると、グループ内の大文字小文字は無視できます。 たとえば従業員の種類では、次を使用します。
 
 `\^(?!:contractor\|full time employee)%.`
 
@@ -590,17 +585,17 @@ FIM では、正規表現の一部の大文字と小文字を区別すると便�
 
 #### <a name="leading-and-trailing-spaces-in-strings-are-ignored"></a>文字列の先頭と末尾の空白は無視される
 
-FIM では、先頭と末尾にスペースを入れ文字列を入力できますが、FIM システムではこれらのスペースは無視されます。 先頭と末尾にスペースを入れ文字列を送信すると、同期エンジンと Web サービスではそれらのスペースは無視されます。
+MIM では、先頭と末尾にスペースを入れて文字列を入力できますが、MIM システムではこれらのスペースは無視されます。 先頭と末尾にスペースを入れ文字列を送信すると、同期エンジンと Web サービスではそれらのスペースは無視されます。
 
 #### <a name="empty-strings-do-not-equal-null"></a>空の文字列は Null と同じではない
 
-FIM のこのリリースでは、空の文字列は Null と同等ではありません。 空の文字列の入力は有効な値と見なされます。 存在しない場合、Null と見なされます。
+MIM のこのリリースでは、空の文字列は Null と同等ではありません。 空の文字列の入力は有効な値と見なされます。 存在しない場合、Null と見なされます。
 
 ### <a name="workflow-and-request-processing"></a>ワークフローおよび要求の処理
 
 #### <a name="do-not-delete-default-workflows-that-are-shipped-with-mim-2016"></a>MIM 2016 に同梱されている既定のワークフローは削除しない
 
-FIM 2010 では次のワークフローが同梱されており、削除されるべきではありません。
+MIM では次のワークフローが同梱されており、削除されるべきではありません。
 
 -   有効期限のワークフロー
 
@@ -634,4 +629,11 @@ FIM 2010 では次のワークフローが同梱されており、削除され�
 
 ### <a name="understanding-fim-service-partitions"></a>FIM サービス パーティションを理解する
 
-FIM の目的は、さまざまな FIM クライアントで開始される、FIM 同期サービスや構成済みのビジネス ポリシーに応じたセルフ サービス コンポーネントなどの要求を処理することです。 仕様により、各 FIM サービス インスタンスは、FIM サービスのパーティションとも呼ばれる、1 つ以上の FIM サービス インスタンスで構成されている論理グループに属します。 すべての要求の処理に FIM サービスを 1 つのみ使用している場合、処理の遅延が発生する可能性があります。 一部の処理はセルフ サービスの操作に適した既定のタイムアウト値を超過する場合があります。 この問題を解決するには、FIM サービスのパーティションが助けとなる場合があります。 その他の情報については、「Understanding FIM Service Partitions」 (FIM サービス パーティションを理解する) を参照してください。
+MIM の目的は、さまざまな MIM クライアントで開始される、FIM 同期サービスや構成済みのビジネス ポリシーに応じたセルフ サービス コンポーネントなどの要求を処理することです。 仕様により、各 FIM サービス インスタンスは、FIM サービスのパーティションとも呼ばれる、1 つ以上の FIM サービス インスタンスで構成されている論理グループに属します。 すべての要求の処理に FIM サービスを 1 つのみ使用している場合、処理の遅延が発生する可能性があります。 一部の処理はセルフ サービスの操作に適した既定のタイムアウト値を超過する場合があります。 この問題を解決するには、FIM サービスのパーティションが助けとなる場合があります。
+
+その他の情報については、「[Understanding FIM Service Partitions (FIM サービス パーティションを理解する)](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx)」をご覧ください。
+
+## <a name="next-steps"></a>次の手順
+- [FIM バックアップおよび復元ガイド](http://go.microsoft.com/fwlink/?LinkID=165864)
+- [Active Directory から FIM へのユーザーの同期方法](http://go.microsoft.com/fwlink/?LinkID=188277) 
+- [復旧モデルの概要](http://go.microsoft.com/fwlink/?LinkID=185370)

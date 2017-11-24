@@ -12,15 +12,15 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4accb4c1db90f11c18917012b9a3ab4966ea6496
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 1fb012034685257d35ba4f8a79468145187ae5b6
+ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-azure-mfa-for-activation"></a>Azure MFA を使用したアクティブ化
 >[!IMPORTANT]
-Azure Multi-factor Authentication ソフトウェア開発キットの廃止予定が発表されました。 Azure MFA SDK は、既存のお客様向けに 2018 年 10 月 1 日の提供終了日までサポートされます。 新規および現在のお客様は、それ以降 Azure クラシック ポータルから SDK をダウンロードできなくなります。 ダウンロードするには、Azure カスタマー サポートに連絡して、生成された MFA サービス資格情報のパッケージを受け取る必要があります。 <br> Microsoft 開発チームは、MFA Server SDK との統合により、MFA の変更を計画しています。この変更は、2018 年初頭に予定されている修正プログラムに含まれる予定です。
+Azure Multi-factor Authentication ソフトウェア開発キットの廃止予定が発表されました。 Azure MFA SDK は、既存のお客様向けに 2018 年 11 月 14 日の提供終了日までサポートされます。 新規および現在のお客様は、それ以降 Azure クラシック ポータルから SDK をダウンロードできなくなります。 ダウンロードするには、Azure カスタマー サポートに連絡して、生成された MFA サービス資格情報のパッケージを受け取る必要があります。 <br> Microsoft 開発チームは、MFA Server SDK との統合により、MFA の変更を計画しています。この変更は、2018 年初頭に予定されている修正プログラムに含まれる予定です。
 
 
 
@@ -33,7 +33,7 @@ PAM ロールを構成するときは、ロールのアクティブ化を要求�
 
 Microsoft Azure Multi-Factor Authentication (MFA) は、ユーザーがモバイル アプリ、電話、またはテキスト メッセージを使用してサインイン試行を確認する必要がある認証サービスです。 Microsoft Azure Active Directory での利用が可能で、クラウドとオンプレミスのエンタープライズ アプリケーション用のサービスとして使用できます。 PAM のシナリオでは、Azure MFA には、追加の認証メカニズムがあります。 ユーザーが以前に Windows PRIV ドメインで使用していた認証方法に関係なく、認証で Azure MFA を使用できます。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 MIM で Azure MFA を使用するには、次の項目が必要です。
 
@@ -152,7 +152,7 @@ Privileged Access Management のイベント ログには、次のイベント�
 
 6.  レポートが生成されたら、それをポータルで表示したり、MFA レポートが大きい場合は CSV ファイルにダウンロードしたりすることができます。 **AUTH TYPE** 列の **SDK** の値は、PAM のアクティブ化要求と関連する行を示します。これは MIM またはその他のオンプレミス ソフトウェアから送信されたイベントです。 **USERNAME** フィールドは、MIM サービス データベース内のユーザー オブジェクトの GUID です。 呼び出しが失敗すると、**AUTHD** 列の値は **No** となり、**CALL RESULT** 列には失敗理由の詳細が格納されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Azure Multi-Factor Authentication とは](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [無料の Azure アカウントを今すぐ作成しましょう](https://azure.microsoft.com/free/)
