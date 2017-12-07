@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 263752678e75267d6f58fe3fcb28975984f62f70
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
+ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>非管理者のスマート カードの登録
 ユーザーがコンピューターのローカル管理者ではない場合、既定では、そのコンピューターにスマート カードを登録できません。 この制限を回避するには、次の手順を実行します。
@@ -63,7 +63,7 @@ ms.lasthandoff: 10/12/2017
 
     `makeappx pack /l /d .\appx /p <app package name>.appx`
 
-    s`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
+    `signtool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
 
 4.  プロファイル テンプレートと MIM サーバーを構成する最初の管理キーの追加を複製する
 
