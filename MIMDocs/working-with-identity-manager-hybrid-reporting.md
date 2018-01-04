@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cf8395583dcfcc2a84237bad80b6a4ca40ce166c
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 17745bfdba831364d32bc2786cc2a38191fe6cc7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Identity Manager ハイブリッド レポートの操作 - パブリック プレビュー (更新)
 
@@ -50,11 +50,11 @@ Azure AD で使用可能な最初の 3 つの Microsoft Identity Manager (MIM) �
 
 | 要件 | 説明 |
 | --- | --- |
-| Azure AD プレミアム | ハイブリッド レポートは Azure AD Premium の機能であり、Azure AD Premium が必要です。 </br></br>詳細については、[Azure AD Premium の概要](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium)に関するページをご覧ください </br>30 日間の無料評価版を開始するには、[評価版の開始](https://azure.microsoft.com/trial/get-started-active-directory/)に関するページをご覧ください |
-| Azure AD のグローバル管理者で評価版を開始する必要がある |既定では、グローバル管理者のみが、エージェントをインストールおよび構成し、評価版の開始、ポータルへのアクセス、Azure 内のすべての操作を実行できます。 </br></br>**重要:** エージェントのインストールに使用するアカウントは、職場または学校のアカウントである必要があります。 Microsoft アカウントは使用できません。 詳細については、「[Azure への組織としてのサインアップ](https://docs.microsoft.com/en-us/azure/active-directory/sign-up-organization)」をご覧ください |
+| Azure AD プレミアム | ハイブリッド レポートは Azure AD Premium の機能であり、Azure AD Premium が必要です。 </br></br>詳細については、[Azure AD Premium の概要](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)に関するページをご覧ください </br>30 日間の無料評価版を開始するには、[評価版の開始](https://azure.microsoft.com/trial/get-started-active-directory/)に関するページをご覧ください |
+| Azure AD のグローバル管理者で評価版を開始する必要がある |既定では、グローバル管理者のみが、エージェントをインストールおよび構成し、評価版の開始、ポータルへのアクセス、Azure 内のすべての操作を実行できます。 </br></br>**重要:** エージェントのインストールに使用するアカウントは、職場または学校のアカウントである必要があります。 Microsoft アカウントは使用できません。 詳細については、「[Azure への組織としてのサインアップ](https://docs.microsoft.com/azure/active-directory/sign-up-organization)」をご覧ください |
 | Microsoft Identity Manager ハイブリッド エージェントが各対象の MIM サービス サーバーにインストールされている | ハイブリッド レポートは、データを受信して、監視機能と分析機能を提供するために、対象のサーバーにエージェントをインストールして構成する必要があります </br>|
 | Azure サービス エンドポイントへの送信接続 | エージェントのインストール時および実行時には、エージェントが Azure サービス エンドポイントに接続できる必要があります。 ファイアウォールの使用時に送信接続がブロックされた場合は、次のエンドポイントが許可リストに追加されていることを確認します。 </br></br><li>&#42;.blob.core.windows.net </li><li>&#42;.servicebus.windows.net - ポート: 5671 </li><li>&#42;.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li> |
-|IP アドレスに基づく送信接続 | ファイアウォールのフィルター処理に基づく IP アドレスについては、[Azure の IP 範囲](https://www.microsoft.com/en-us/download/details.aspx?id=41653)に関するページをご覧ください。|
+|IP アドレスに基づく送信接続 | ファイアウォールのフィルター処理に基づく IP アドレスについては、[Azure の IP 範囲](https://www.microsoft.com/download/details.aspx?id=41653)に関するページをご覧ください。|
 | 送信トラフィックの SSL インスペクションが、フィルター処理されている、または無効になっている | エージェントの登録ステップまたはデータのアップロード操作は、ネットワーク層で送信トラフィックの SSL インスペクションまたは SSL ターミネーションがある場合、失敗する可能性があります。 |
 | エージェントを実行しているサーバーのファイアウォール ポート。 |エージェントを Azure サービス エンドポイントと通信させるために、次のファイアウォール ポートを開いておく必要があります。</br></br><li>TCP ポート 443</li><li>TCP ポート 5671</li> |
 | IE セキュリティ強化が有効になっている場合、次の Web サイトを許可する |IE セキュリティ強化が有効になっている場合、エージェントをインストールするサーバーで、次の Web サイトを許可する必要があります。</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Azure Active Directory によって信頼される組織のフェデレーション サーバー。 例: https://sts.contoso.com</li> |

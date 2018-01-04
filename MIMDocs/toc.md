@@ -93,6 +93,7 @@
 #### [Sample Rest の Web サービス コネクタ ワークフロー ガイド](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
 #### [Web サービス コネクタ の Rest Sample App Service](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
 #### [Web Service Connector の構成オプション](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [Web サービス コネクタのインポート](./reference/microsoft-identity-manager-2016-ma-ws-import.md)
 ### BHOLD
 #### [BHOLD 開発者用リファレンス](./reference/mim2016-bhold-developer-reference.md) 
 ### [Certificate Management REST API リファレンス](./reference/certificate-management-rest-api-reference.md)
