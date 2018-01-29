@@ -1,22 +1,19 @@
 ---
 title: "PAM の展開、手順 7 – ユーザー アクセス | Microsoft Docs"
 description: "最後の手順として、Privileged Access Management の展開が成功したことを確認できるように、特権を持つユーザーに一時的なアクセス権を付与します。"
-keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="step-7--elevate-a-users-access"></a>手順 7 - ユーザーのアクセスを昇格する
 
@@ -38,7 +35,12 @@ ms.lasthandoff: 09/14/2017
 
 ## <a name="request-privileged-access-from-mim"></a>MIM から特権アクセスを要求します。
 
-1. CORPWKSTN で CONTOSO\Jen のまま、次のコマンドを入力します。
+> [!NOTE]
+> このワークステーションは特権ワークステーション (PAW) にすることをお勧めします。  詳細については、[PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) に関するページをご覧ください。
+
+1. PRIVWKSTN で、PRIV\priv.jen としてログオンします。
+2. **[開始]**、**[実行]** をクリックして、「**PowerShell.exe**」と入力します。
+3. 次のコマンドを入力します。
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
