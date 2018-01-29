@@ -5,18 +5,18 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: bhu
-ms.date: 09/26/2017
+ms.date: 1/24/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 99e98f3f9cb5e68fde0e3018856bf613c082325d
-ms.sourcegitcommit: ba4cd133f7b49752c5470c9fc46e7e302cc99b49
+ms.openlocfilehash: 1e100a686f009d1a2290d7965fe36eea819148be
+ms.sourcegitcommit: fab9f21eea15d2024f11a59fc9e43db15bd215c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="connect-to-your-directories"></a>ディレクトリへの接続
 
@@ -28,7 +28,7 @@ Forefront Identity Manager では、コネクタは管理エージェントと�
 
 ## <a name="supported-connectors-in-mim-2016-sp1"></a>MIM 2016 SP1 でサポートされているコネクタ
 
-| 名前 | サポートされている接続先データ ソースのバージョン |
+| 名前 | 接続データ ソースのサポートされるバージョンと技術情報関連リンク |
 | ---- | ----------------------------------------------- |
 | Active Directory ドメイン サービス | Active Directory 2012、2016 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
@@ -43,10 +43,11 @@ Forefront Identity Manager では、コネクタは管理エージェントと�
 | Oracle (以前の Sun と Netscape) Directory Servers | Sun Directory Server 6.x、7.x、Oracle 11 |
 | [Windows PowerShell Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn640417.aspx) | Windows PowerShell 2.0 以上 |
 | [Microsoft Azure Active Directory Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn511001.aspx) | Microsoft Azure Active Directory |
-| [Generic LDAP Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | LDAP v3 server (RFC 4510 準拠) |
+| [Generic LDAP Connector for FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [LDAP v3 サーバー (RFC 4510 準拠)](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
+| [FIM 2010 R2 および MIM 用 Generic SQL コネクタ](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [このコネクタはすべての 64 ビット ODBC ドライバーでサポート](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
 | [Connector for Lotus Domino](https://msdn.microsoft.com/en-us/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
 | [SharePoint Services Connector for FIM 2010 R2 Technical Reference](https://msdn.microsoft.com/en-us/library/dn511003.aspx) | User Profile Service アプリケーション (UPA) 付き SharePoint server 2013 または 2016 |
-| [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | SAP ECC 5.0 または 6.0、Oracle PeopleSoft 9.1、Oracle eBusiness 12.1 |
+| [Connector for Web Services](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 または 6.0、Oracle PeopleSoft 9.1、Oracle eBusiness 12.1](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [Attribute-Value Pair Text File](https://technet.microsoft.com/en-us/library/cc708644(v=ws.10).aspx) | 属性値ペア テキスト ファイル |
 | [Delimited Text File](https://technet.microsoft.com/en-us/library/cc720612(v=ws.10).aspx) | 区切りテキスト ファイル |
 | [Directory Services Markup Language (DSML)](https://technet.microsoft.com/en-us/library/cc720660(v=ws.10).aspx) | ディレクトリ サービス マークアップ言語 (DSML) 2.0 |
