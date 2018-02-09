@@ -11,6 +11,7 @@
 ## [展開トポロジ](topology-considerations.md)
 ## [PAM 展開を計画する](./pam/environment-overview.md)
 # [展開と使用](microsoft-identity-manager-deploy.md)
+## [推奨されない機能](microsoft-identity-manager-2016-deprecated-features.md)
 ## [初回展開](microsoft-identity-manager-deploy.md)
 ### [ドメインのセットアップ](preparing-domain.md)
 ### [サーバーのセットアップ: Windows Server](prepare-server-ws2012r2.md)
