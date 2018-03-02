@@ -3,22 +3,21 @@ title: "Identity Manager 2016 を使用して Azure でハイブリッド レポ
 description: "オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。"
 keywords: 
 author: fimguy
-ms.author: barclayn
+ms.author: davidste
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 2/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a96d79d6773a72c813d0cd76de26ea40d28769e1
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: e135cc5066220765d97568b3a1e1b984a876b2a2
+ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="work-with-hybrid-reporting-in-identity-manager-public-preview-refresh"></a>Identity Manager でのハイブリッド レポートの操作 - パブリック プレビュー (更新)
+# <a name="work-with-hybrid-reporting-in-identity-manager"></a>Identity Manager のハイブリッド レポートを使用する
 
 この記事では、オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。
 
@@ -42,7 +41,7 @@ Azure Active Directory (Azure AD) で使用可能な最初の 3 つの Microsoft
 
 ## <a name="prerequisites"></a>必要条件
 
-* Identity Manager 2016 RTM または SP1 Identity Manager サービス。
+* Identity Manager 2016 SP1 Identity Manager サービス、推奨ビルド [4.4.1749.0](https://support.microsoft.com/en-us/help/4050936/hotfix-rollup-package-build-4-4-1749-0-for-microsoft-identity-manager)。
 
 * 使用するディレクトリ内にある、ライセンス付与された管理者のいる Azure AD Premium テナント。
 
