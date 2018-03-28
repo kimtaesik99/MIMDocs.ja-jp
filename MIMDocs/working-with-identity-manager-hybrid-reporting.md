@@ -1,7 +1,7 @@
 ---
-title: "Identity Manager 2016 を使用して Azure でハイブリッド レポートを操作する | Microsoft Docs"
-description: "オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。"
-keywords: 
+title: Identity Manager 2016 を使用して Azure でハイブリッド レポートを操作する | Microsoft Docs
+description: オンプレミスとクラウド データを Azure のハイブリッド レポートに結合する方法と、これらのレポートを管理および表示する方法について説明します。
+keywords: ''
 author: fimguy
 ms.author: davidste
 manager: mbaldwin
@@ -59,7 +59,7 @@ Identity Manager ハイブリッド レポートを使用するための要件�
 |IP アドレスに基づく送信接続 | ファイアウォールでの IP アドレスに基づくフィルター処理については、[Azure の IP 範囲](https://www.microsoft.com/download/details.aspx?id=41653)に関するページをご覧ください。|
 | 送信トラフィックの SSL インスペクションがフィルター処理されている、または無効になっている | ネットワーク層で送信トラフィックの SSL インスペクションまたは SSL ターミネーションがある場合、エージェントの登録手順またはデータのアップロード操作が失敗する可能性があります。 |
 | エージェントを実行しているサーバーのファイアウォール ポート | Azure サービス エンドポイントと通信するには、エージェントが次のファイアウォール ポートを開いておく必要があります。<ul><li>TCP ポート 443</li><li>TCP ポート 5671</li></ul> |
-| Internet Explorer のセキュリティ強化が有効になっている場合は特定の Web サイトを許可する |Internet Explorer のセキュリティ強化が有効になっている場合、エージェントがインストールされたサーバーで次の Web サイトを許可する必要があります。<ul><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Azure Active Directory から信頼されている組織のフェデレーション サーバー (たとえば、 https://sts.contoso.com)。</li></ul> |
+| Internet Explorer のセキュリティ強化が有効になっている場合は特定の Web サイトを許可する |Internet Explorer のセキュリティ強化が有効になっている場合、エージェントがインストールされたサーバーで次の Web サイトを許可する必要があります。<ul><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Azure Active Directory から信頼されている組織のフェデレーション サーバー (たとえば、 https://sts.contoso.com) 。</li></ul> |
 </BR>
 
 ## <a name="install-identity-manager-reporting-agent-in-azure-ad"></a>Azure AD への Identity Manager レポート エージェントのインストール
