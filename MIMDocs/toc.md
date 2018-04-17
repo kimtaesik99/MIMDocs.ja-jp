@@ -144,3 +144,4 @@
 ## バージョン履歴
 ### [MIM のバージョン履歴](./reference/version-history.md)
 ### [BHOLD のバージョン履歴](./reference/version-bhold-history.md)
+### [コネクタのバージョン リリース履歴](./reference/microsoft-identity-manager-2016-connector-version-history.md)
