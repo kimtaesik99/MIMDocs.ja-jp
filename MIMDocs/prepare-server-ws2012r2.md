@@ -1,7 +1,7 @@
 ---
-title: "MIM 2016 向けの Windows Server 2012 R2 の構成 | Microsoft Docs"
-description: "MIM 2016 と連動するように Windows Server 2012 RS を準備するための手順と最小要件を説明します。"
-keywords: 
+title: MIM 2016 向けの Windows Server 2012 R2 の構成 | Microsoft Docs
+description: MIM 2016 と連動するように Windows Server 2012 RS を準備するための手順と最小要件を説明します。
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,10 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 76a59292da97583887020c89025add77c7a64c80
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>ID 管理サーバー: Windows Server 2012 R2 のセットアップ
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 10/12/2017
 [SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
-> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
+> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 次に例を示します。
 > - ドメイン コントローラー名 - **mimservername**
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
@@ -69,21 +69,21 @@ ms.lasthandoff: 10/12/2017
 
 2. **[ローカル ポリシー]、[ユーザー権利の割り当て]** の順に移動します。
 
-3. 詳細ウィンドウで、 **[サービスとしてログオン]**を右クリックして、 **[プロパティ]**を選択します。
+3. 詳細ウィンドウで、 **[サービスとしてログオン]** を右クリックして、 **[プロパティ]** を選択します。
 
     ![ローカル セキュリティ ポリシーの画像](media/MIM-DeployWS3.png)
 
-4. **[ユーザーまたはグループの追加]**をクリックし、テキスト ボックスに「`contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`」と入力し、**[名前の確認]** をクリックして **[OK]** をクリックします。
+4. **[ユーザーまたはグループの追加]** をクリックし、テキスト ボックスに「`contoso\MIMSync; contoso\MIMMA; contoso\MIMService; contoso\SharePoint; contoso\SqlServer; contoso\MIMSSPR`」と入力し、**[名前の確認]** をクリックして **[OK]** をクリックします。
 
 5. **[OK]** をクリックして、**[サービスとしてログオン]** プロパティ ウィンドウを閉じます。
 
-6.  詳細ウィンドウで、**[ネットワークからのこのコンピューターへのアクセスを拒否する]**を右クリックし、**[プロパティ]** を選択します。
+6.  詳細ウィンドウで、**[ネットワークからのこのコンピューターへのアクセスを拒否する]** を右クリックし、**[プロパティ]** を選択します。
 
 7. **[ユーザーまたはグループの追加]** をクリックし、テキスト ボックスに「`contoso\MIMSync; contoso\MIMService`」と入力し、**[OK]** をクリックします。
 
 8. **[OK]** をクリックして、**[ネットワーク経由でコンピューターへアクセスを拒否する]** プロパティ ウィンドウを閉じます。
 
-9. 詳細ウィンドウで、**[ローカルでのログオンを拒否する]**を右クリックして、**[プロパティ]** を選択します。
+9. 詳細ウィンドウで、**[ローカルでのログオンを拒否する]** を右クリックして、**[プロパティ]** を選択します。
 
 10. **[ユーザーまたはグループの追加]** をクリックし、テキスト ボックスに「`contoso\MIMSync; contoso\MIMService`」と入力し、**[OK]** をクリックします。
 

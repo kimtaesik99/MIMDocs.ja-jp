@@ -1,7 +1,7 @@
 ---
-title: "Microsoft Identity Manager 2016 向けの SQL Server の構成 | Microsoft Docs"
-description: "MIM 2016 インストールの準備で SQL Server 2014 をインストールします。"
-keywords: 
+title: Microsoft Identity Manager 2016 向けの SQL Server の構成 | Microsoft Docs
+description: MIM 2016 インストールの準備で SQL Server 2014 をインストールします。
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,10 @@ ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 8a33e09719b8c806de43531d12ea4b65b5cb443a
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2014"></a>ID 管理サーバー: SQL Server 2014 のセットアップ
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 10/12/2017
 [SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
+> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 次に例を示します。
 > - ドメイン コントローラー名 - **mimservername**
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
