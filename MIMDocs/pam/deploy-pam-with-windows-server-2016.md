@@ -1,7 +1,7 @@
 ---
-title: "Windows Server 2016 を使用した MIM Privileged Access Management の展開 | Microsoft Docs"
-description: "Server 2016 を使用した Privileged Access Management の展開の詳細"
-keywords: 
+title: Windows Server 2016 を使用した MIM Privileged Access Management の展開 | Microsoft Docs
+description: Server 2016 を使用した Privileged Access Management の展開の詳細
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.assetid: 
-ms.openlocfilehash: 8827a8b6d49672a7860c9265efac5f0881a2c018
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.assetid: ''
+ms.openlocfilehash: 6088afccec45d1353233a32828353149bcf24740
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Windows Server 2016 を使用した MIM PAM の展開
 
@@ -75,7 +75,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
   -   委任を構成した後、サーバーを再起動する前に、MIM 管理者と MIM サービス アカウントに対してシャドウのプリンシパルの作成および更新を承認します。
 
-     a. PowerShell ウィンドウを起動し、「ADSIEdit」と入力します。
+     」を参照します。 PowerShell ウィンドウを起動し、「ADSIEdit」と入力します。
 
      b. [操作] メニューの [接続先] をクリックします。 接続ポイントの設定で、名前付けコンテキストを [既定の名前付けコンテキスト] から [構成] に変更し、[OK] をクリックします。
 
@@ -91,7 +91,7 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
 
  -   委任を構成した後、サーバーを再起動する前に、MIM 管理者に対して認証ポリシーの作成および更新を承認します。
 
-     a.  管理者特権の**コマンド プロンプト**を起動して次のコマンドを入力し、4 つの行のそれぞれで “mimadmin” を MIM 管理者アカウントの名前に置き換えます。
+     」を参照します。  管理者特権の**コマンド プロンプト**を起動して次のコマンドを入力し、4 つの行のそれぞれで “mimadmin” を MIM 管理者アカウントの名前に置き換えます。
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
@@ -130,13 +130,13 @@ Windows Server 2016 の Technical Preview 5 よりも前のテクニカル プ�
     -   信頼関係を確立した後、PRIV\\Administrator として PRIVDC にログオンし、PowerShell を起動して次のコマンドを入力します。
   ```
     netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
 
      netdom trust contoso.local /domain:priv.contoso.local /quarantine:no
-     /usero:contoso\\administrator /passwordo:Pass\@word1  
+     /usero:contoso\administrator /passwordo:Pass@word1  
 
      netdom trust contoso.local /domain:priv.contoso.local /enablepimtrust:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
   ```
 
 -   項目 5 (信頼関係の確認) は、**CORP ドメインと PRIV ドメインの両方が Windows Server 2016 ドメインの機能レベルである場合は必要ありません**。
