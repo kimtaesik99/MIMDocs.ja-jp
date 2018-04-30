@@ -11,11 +11,12 @@
 ## [展開トポロジ](topology-considerations.md)
 ## [PAM 展開を計画する](./pam/environment-overview.md)
 # [展開と使用](microsoft-identity-manager-deploy.md)
-## [推奨されない機能](microsoft-identity-manager-2016-deprecated-features.md)
+## 
+  [非推奨の機能](microsoft-identity-manager-2016-deprecated-features.md)
 ## [初回展開](microsoft-identity-manager-deploy.md)
 ### [ドメインのセットアップ](preparing-domain.md)
-### [サーバーのセットアップ: Windows Server](prepare-server-ws2012r2.md)
-### [サーバーのセットアップ: SQL](prepare-server-sql2014.md)
+### [サーバーのセットアップ: Windows Server](prepare-server-ws2016.md)
+### [サーバーのセットアップ: SQL](prepare-server-sql2016.md)
 ### [サーバーのセットアップ: SharePoint](prepare-server-sharepoint.md)
 ### [サーバーのセットアップ: Exchange](prepare-server-exchange.md)
 ### [MIM のインストール: 同期](install-mim-sync.md)
@@ -144,4 +145,12 @@
 ## バージョン履歴
 ### [MIM のバージョン履歴](./reference/version-history.md)
 ### [BHOLD のバージョン履歴](./reference/version-bhold-history.md)
+### [コネクタのバージョン リリース履歴](./reference/microsoft-identity-manager-2016-connector-version-history.md)
+## コネクタ
+### [Graph](microsoft-identity-manager-2016-connector-graph.md)
+### [Lotus Notes](./reference/microsoft-identity-manager-2016-connector-domino.md)
+### [汎用 LDAP](./reference/microsoft-identity-manager-2016-connector-genericldap.md)
+### [汎用 SQL](./reference/microsoft-identity-manager-2016-connector-genericsql.md)
+### [Web サービス](./reference/microsoft-identity-manager-2016-ma-ws.md)
+### [PowerShell](./reference/microsoft-identity-manager-2016-connector-powershell.md)
 ### [コネクタのバージョン リリース履歴](./reference/microsoft-identity-manager-2016-connector-version-history.md)
