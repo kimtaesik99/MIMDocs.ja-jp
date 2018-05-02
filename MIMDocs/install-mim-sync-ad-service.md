@@ -1,7 +1,7 @@
 ---
-title: "Microsoft Identity Manager と AD との同期を使用する | Microsoft Docs"
-description: "管理エージェントと MIM 同期サービスを使用して、Active Directory と MIM データベースを同期します。"
-keywords: 
+title: Microsoft Identity Manager と AD との同期を使用する | Microsoft Docs
+description: 管理エージェントと MIM 同期サービスを使用して、Active Directory と MIM データベースを同期します。
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 のインストール: Active Directory と MIM サービスを同期する
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/12/2017
 [« MIM サービスおよびポータル](install-mim-service-portal.md)
 
 > [!NOTE]
-> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
+> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 次に例を示します。
 > - ドメイン コントローラー名 - **mimservername**
 > - ドメイン名 - **contoso**
 > - パスワード - **Pass@word1**
@@ -43,7 +43,7 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
 
 1.  Synchronization Service Manager を開きます。
 
-2.  [管理エージェントを作成する] ウィザードを開くには、**[管理操作]** ページに切り替えて、**[操作]** メニューで、**[作成]** をクリックします。
+2.  [管理エージェントを作成する] ウィザードを開くには、**[Management Agents]\(管理エージェント\)** ページに切り替えて、**[操作]** メニューで、**[作成]** をクリックします。
 
 3.  **[管理エージェントを作成する]** ページで、次の設定を行い、**[次へ]** をクリックします。
 

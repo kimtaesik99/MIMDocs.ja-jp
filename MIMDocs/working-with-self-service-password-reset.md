@@ -1,7 +1,7 @@
 ---
-title: "セルフサービス パスワード リセット ポータルを使用する | Microsoft Docs"
-description: "MIM 2016 でのセルフ サービス パスワード リセットの新機能 (多要素認証による SSPR のしくみなど) を参照してください。"
-keywords: 
+title: セルフサービス パスワード リセット ポータルを使用する | Microsoft Docs
+description: MIM 2016 でのセルフ サービス パスワード リセットの新機能 (多要素認証による SSPR のしくみなど) を参照してください。
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0463a91275f3e181a66eb460c167bb9a2008f444
-ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
+ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/26/2018
 ---
 >[!IMPORTANT]
 Azure Multi-factor Authentication ソフトウェア開発キットの廃止予定が発表されました。 Azure MFA SDK は、既存のお客様向けに 2018 年 11 月 14 日の提供終了日までサポートされます。 新規および現在のお客様は、それ以降 Azure クラシック ポータルから SDK をダウンロードできなくなります。 ダウンロードするには、Azure カスタマー サポートに連絡して、生成された MFA サービス資格情報のパッケージを受け取る必要があります。 <br> Microsoft 開発チームは、MFA Server SDK との統合により、MFA の変更を計画しています。この変更は、2018 年初頭に予定されている修正プログラムに含まれる予定です。
@@ -65,9 +65,9 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Azure で多要素認証プロバイダーを登録する
 
-1.  [Azure クラシック ポータル](http://manage.windowsazure.com)に移動し、Azure サブスクリプション管理者としてサインインします。
+1.  [MFA プロバイダー](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider)を作成します。
 
-2.  左下隅の **[新規]**をクリックします。
+2. サポート ケースを開き、ASP.net 2.0 C# 用の直接 SDK を要求します。 直接 SDK は非推奨になったため、SDK は MFA を使用する MIM の現在のユーザーに対してのみ提供されます。 新しいお客様は、MFA サーバーと統合する次のバージョンの MIM を採用する必要があります。
 
 3.  **[App Services] &gt; [Active Directory] &gt; [多要素認証プロバイダー] &gt; [簡易作成]** をクリックします。
 
@@ -85,7 +85,7 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 7.  新しいウィンドウの左側のパネルの **[構成]** の下で、**[設定]** をクリックします。
 
-8.  **[不正アクセスのアラート]**で、[不正アクセスを通報したユーザーをブロックする] をオフにします。 これは、サービス全体のブロックを回避するために行います。
+8.  **[不正アクセスのアラート]** で、[不正アクセスを通報したユーザーをブロックする] をオフにします。 これは、サービス全体のブロックを回避するために行います。
 
 9. **[Azure Multi-factor Authentication]** ウィンドウで、左側のメニューの **[ダウンロード]** の **[SDK]** をクリックします。
 
@@ -127,11 +127,11 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
     ![MIM ポータル ナビゲーションの画像](media/MIM-SSPR-workflow.jpg)
 
-2.  **[パスワード リセット AuthN ワークフロー]**をオンにします。
+2.  **[パスワード リセット AuthN ワークフロー]** をオンにします。
 
     ![MIM ポータル ワークフローの画像](media/MIM-SSPR-PwdResetAuthNworkflow.jpg)
 
-3.  **[アクティビティ]** タブをクリックし、 **[アクティビティの追加]**まで下にスクロールします。
+3.  **[アクティビティ]** タブをクリックし、 **[アクティビティの追加]** まで下にスクロールします。
 
 4.  **[電話ゲート]** または **[ワンタイム パスワードの SMS ゲート]** を選択し、**[選択]** をクリックして、**[OK]** をクリックします。
 
@@ -143,7 +143,7 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
     ユーザーは、パスワード登録ポータルに入り、ユーザー名とパスワードを使用して認証する必要があります。
 
-2.  ユーザーは、 **[電話番号]** または **[携帯電話]**  フィールドに、国コード、スペース、および電話番号を入力し、 **[次へ]**をクリックします。
+2.  ユーザーは、 **[電話番号]** または **[携帯電話]**  フィールドに、国コード、スペース、および電話番号を入力し、 **[次へ]** をクリックします。
 
     ![MIM 電話検証の画像](media/MIM-SSPR-PhoneVerification.JPG)
 
@@ -183,7 +183,7 @@ Azure MFA を使用する場合、ユーザーは、アカウントやリソー�
 
 #### <a name="access-from-the-self-service-portal"></a>セルフサービス ポータルからのアクセス
 
-1.  ユーザーは Web ブラウザーを開いて **パスワード リセット ポータル** に移動し、ユーザー名を入力して、 **[次へ]**をクリックします。
+1.  ユーザーは Web ブラウザーを開いて **パスワード リセット ポータル** に移動し、ユーザー名を入力して、 **[次へ]** をクリックします。
 
     MFA が構成されている場合、ユーザーは電話で呼び出されます。 バックグラウンドでは、ユーザーがサービスにサインアップするときに示した番号に、Azure MFA が電話をかけます。
 
