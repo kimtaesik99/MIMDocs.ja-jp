@@ -1,22 +1,22 @@
 ---
-title: "Microsoft Identity Manager 同期サービスのインストール | Microsoft Docs"
-description: "同期サービスをインストールおよび構成して、MIM 2016 コンポーネントを使用開始します。"
-keywords: 
+title: Microsoft Identity Manager 同期サービスのインストール | Microsoft Docs
+description: 同期サービスをインストールおよび構成して、MIM 2016 コンポーネントを使用開始します。
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 836279ecc7fce65912df4a1a34a9d48daf9d1151
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016 のインストール: MIM 同期サービス
 
@@ -25,28 +25,31 @@ ms.lasthandoff: 10/12/2017
 [MIM サービスおよびポータル »](install-mim-service-portal.md)
 
 > [!NOTE]
-> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 たとえば、
-> - ドメイン コントローラー名 - **mimservername**
+> このチュートリアルでは、"Contoso" という架空の会社の名前と値を使用します。 これらは独自の値に置き換えてください。 次に例を示します。
+> - ドメイン コントローラー名 - **corpdc**
 > - ドメイン名 - **contoso**
+> - MIM サービス サーバー名 - **corpservice**
+> - MIM 同期サーバー名 - **corpsync**
+> - SQL Server 名 - **corpsql**
 > - パスワード - **Pass@word1**
 
 Microsoft Identity Manager 2016 をインストールするには、最初にインストール パッケージをセットアップします。
 
-1. *contoso\Administrator* として、ID 管理に使用しているサーバーにサインインします。
+1. ID 管理同期サーバー **corpsync** に使用しているサーバーに *contoso\miminstall* としてサインインします。
 
 2. MIM インストール パッケージを展開するか、MIM イメージ DVD をマウントします。
 
-## <a name="install-mim-2016-synchronization-service"></a>MIM 2016 同期サービスのインストール
+## <a name="install-mim-2016-sp1-synchronization-service"></a>MIM 2016 SP1 同期サービスのインストール
 
 1. 展開した MIM インストール フォルダー内で、 **同期サービス** のフォルダーに移動します。
 
 2. **MIM 同期サービス インストーラー**を実行します。 インストーラーのガイドラインに従って、インストールを完了します。
 
-3. ウェルカム画面で、 **[次へ]**をクリックします。
+3. ウェルカム画面で、 **[次へ]** をクリックします。
 
     ![MIM インストーラー ウィザードの [ようこそ] の画像](media/MIM-Install1.png)
 
-4. ライセンス条項を読み、同意する場合は**[次へ]**をクリックします。
+4. ライセンス条項を読み、同意する場合は **[次へ]** をクリックします。
 
 5. **[カスタム セットアップ]** 画面で **[次へ]** をクリックします。
 
@@ -88,7 +91,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
 10. **[インストール]** をクリックして MIM 同期サービスのインストールを開始します。
 
-    1. MIM 同期サービス アカウントに関する警告が表示される場合があります。 **[OK]**をクリックします。
+    1. MIM 同期サービス アカウントに関する警告が表示される場合があります。 **[OK]** をクリックします。
 
     2. MIM 同期サービスがインストールされます。
 
@@ -96,7 +99,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
         ![MIM 同期バックアップの暗号化キーの通知の画像](media/MIM-Install7.png)
 
-    4. インストーラーによるインストールが正常に終了したら、 **[完了]**をクリックします。
+    4. インストーラーによるインストールが正常に終了したら、 **[完了]** をクリックします。
 
     5. サインアウトしてサインインし、グループ メンバーシップの変更を有効にする必要があります。 **[はい]** をクリックして、サインアウトします。
 
