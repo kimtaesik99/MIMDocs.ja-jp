@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a1f2a30dd6d8519ec09ea3765e5584123725fe03
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 3460436682054acf5e9e1b186c3fa39faaa40a43
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Microsoft Identity Manager 2016 SP1 の展開
 このセクションの記事では、これまでに FIM または MIM が展開されていない新規のサーバー上に、エンド ユーザー セルフ サービス シナリオのために Microsoft Identity Manager (MIM) 2016 を展開するための手順を提供します。
@@ -34,7 +34,7 @@ MIM は Active Directory (AD) と連動するため、次の手順に従って A
 
 ## <a name="next-prepare-an-identity-management-servers"></a>次: ID 管理サーバーを準備する
 自分のドメインを配置して構成したら、会社の ID 管理サーバーを準備します。 これには、次のセットアップが含まれます。
-- [Windows Server 2012 R2](prepare-server-ws2016.md)
+- [Windows Server 2016](prepare-server-ws2016.md)
 - [SQL Server 2016](prepare-server-sql2016.md)
 - [SharePoint 2016](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (オプション)
