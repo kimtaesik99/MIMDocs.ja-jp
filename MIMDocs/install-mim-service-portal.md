@@ -5,18 +5,18 @@ keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
-ms.date: 10/12/2017
+ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 204aa33cb21ed3998d9085fc56f0c7bea7afec58
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>MIM 2016: MIM サービスおよびポータルのインストール
 
@@ -48,23 +48,23 @@ ms.lasthandoff: 04/27/2018
 
 6. **[MIM データベース接続の構成]** ページで、**[新しいデータベースを作成]** を選択します。
 
-    ![MIM データベース接続イメージを構成する](media/MIM-Install10.png)
+    ![MIM データベース接続イメージを構成する](media/install-mim-service-portal/MIM_Install10.png)
 
-7. **[メール サーバーの接続の構成]** で、**[メール サーバー]** に Exchange サーバーの名前を入力します。または Office 365 のメールボックスを使用できます。 メール サーバーが構成されていない場合は、メール サーバー名として**localhost**を使用し、一番上の 2 つのチェック ボックスをオフにします。 **[Next]** をクリックします。
+7. **[メール サーバーの接続の構成]** で、**[メール サーバー]** に Exchange サーバーの名前を入力します。または **Office 365 のメールボックス**を使用できます。 メール サーバーが構成されていない場合は、メール サーバー名として**localhost**を使用し、一番上の 2 つのチェック ボックスをオフにします。 **[Next]** をクリックします。
 
-    ![メール サーバーの接続の構成の画像](media/MIM-Install11.png)
+    ![メール サーバーの接続の構成の画像](media/install-mim-service-portal/MIM_Install11.png)
 
 8. 新しい自己署名証明書を生成するか、適切な証明書を選択するかを指定します。
 
 9. 使用するサービス アカウント名 (例: *MIMService*)、サービス アカウント パスワード (例: *Pass@word1*)、サービス アカウント ドメイン (例: *contoso*)、サービス電子メール アカウント (例: *contoso*) を指定します。
 
-    ![MIMサービス アカウント イメージを構成する](media/MIM-Install12.png)
+    ![MIMサービス アカウント イメージを構成する](media/install-mim-service-portal/MIM_Install12.png)
 
 10. 現在の構成ではサービス アカウントがセキュリティ保護されていないことを警告するメッセージが表示されます。
 
 11. 同期サーバーの場所の既定値をそのまま使用し、MIM 管理エージェント アカウントに *contoso\MIMMA* を指定します。
 
-    ![MIM サービスおよびポータル イメージを構成する](media/MIM-Install13.png)
+    ![MIM サービスおよびポータル イメージを構成する](media/install-mim-service-portal/MIM_Install13.png)
 
 12. MIM ポータルの MIM サービス サーバー アドレスとして、*CORPIDM* (このコンピューターの名前) を指定します。
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/27/2018
 
 2.  MIM パスワード登録のホスト名として *passwordregistration.contoso.com* を指定し、ポートを **80** に設定します。 **[ファイアウォールでポートを開く]** オプションを有効にします。
 
-    ![IIS で使用される構成情報を入力する画像](media/MIM-Install14.png)
+    ![IIS で使用される構成情報を入力する画像](media/install-mim-service-portal/MIM_Install14.png)
 
 3.  警告が表示されます。確認して **[次へ]** をクリックします。
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/27/2018
 
 2.  MIM パスワード リセット ポータルのホスト名として *passwordreset.contoso.com* を指定し、ポートを **80** に設定します。 **[ファイアウォールでポートを開く]** オプションを有効にします。
 
-    ![IIS で使用される構成情報を入力する画像](media/MIM-Install15.png)
+    ![IIS で使用される構成情報を入力する画像](media/install-mim-service-portal/MIM_Install15.png)
 
 3.  警告が表示されます。確認して **[次へ]** をクリックします。
 

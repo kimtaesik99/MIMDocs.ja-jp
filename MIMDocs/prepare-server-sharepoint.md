@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>ID 管理サーバー: SharePoint のセットアップ
 
@@ -68,14 +68,15 @@ ms.lasthandoff: 04/27/2018
 1. **[サーバー ファームへの接続]** タブで、「新しいサーバー ファームの作成」に移動します。
 
 2. 構成データベース用のデータベース サーバー (**corpsql** など) としてこのサーバーを指定し、SharePoint で使用するデータベース アクセス アカウントとして *Contoso\SharePoint* を指定します。
-    a. 構成ウィザードでは、**[フロントエンド]** の種類に [[MinRole]](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) を選択することをお勧めします
 3. ファーム セキュリティ パスフレーズのパスワードを作成します。
 
-4. 構成ウィザードで 10 個中 10 番目の構成タスク (最後のタスク) の完了後に、[完了] をクリックすると Web ブラウザーが開きます。
+4. 構成ウィザードでは、**[フロントエンド]** の種類に [[MinRole]](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) を選択することをお勧めします
 
-5. Internet Explorer のポップアップ画面で、*Contoso\miminstall* (または同等の管理者アカウント) として認証し、先に進みます。
+5. 構成ウィザードで 10 個中 10 番目の構成タスク (最後のタスク) の完了後に、[完了] をクリックすると Web ブラウザーが開きます。
 
-6. Web ウィザード (Web アプリ内) で、**[キャンセル/スキップ]** をクリックします。
+6. Internet Explorer のポップアップ画面で、*Contoso\miminstall* (または同等の管理者アカウント) として認証し、先に進みます。
+
+7. Web ウィザード (Web アプリ内) で、**[キャンセル/スキップ]** をクリックします。
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>MIM ポータルをホストするように SharePoint を準備する
@@ -94,14 +95,13 @@ ms.lasthandoff: 04/27/2018
     > [!NOTE]
     > Windows クラシック認証方法が使用されることを警告するメッセージが表示されます。また、最後のコマンドが返されるまで数分かかる場合があります。 完了すると、新しいポータルの URL を示す出力が返されます。 後で参照するために**SharePoint 2016 管理シェル** ウィンドウを開いたままにしておきます。
 
-2. SharePoint 2013 管理シェルを起動し、次の PowerShell スクリプトを実行して、Web アプリケーションに関連付られた**SharePoint サイト コレクション**を作成します。
+2. SharePoint 2016 管理シェルを起動し、次の PowerShell スクリプトを実行して、Web アプリケーションに関連付けられた **SharePoint サイト コレクション**を作成します。
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -119,7 +119,7 @@ ms.lasthandoff: 04/27/2018
 
 4. ID 管理サーバーで新しい Web ブラウザー タブを開き、http://mim.contoso.com/ に移動し、*contoso\miminstall* としてログインします。  *MIM ポータル* という名前の空の SharePoint サイトが表示されます。
 
-    ![http://mim.contoso.com/ の MIM ポータルの図](media/MIM-DeploySP1.png)
+    ![http://mim.contoso.com/ の MIM ポータルの図](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. URL をコピーし、Internet Explorer で、**[インターネット オプション]** を開き、**[セキュリティ]** タブに移動し、**[ローカル イントラネット]** を選択して、**[サイト]** をクリックします。
 

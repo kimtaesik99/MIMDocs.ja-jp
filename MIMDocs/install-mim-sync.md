@@ -2,21 +2,21 @@
 title: Microsoft Identity Manager 同期サービスのインストール | Microsoft Docs
 description: 同期サービスをインストールおよび構成して、MIM 2016 コンポーネントを使用開始します。
 keywords: ''
-author: billmath
+author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>MIM 2016 のインストール: MIM 同期サービス
 
@@ -47,21 +47,21 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
 3. ウェルカム画面で、 **[次へ]** をクリックします。
 
-    ![MIM インストーラー ウィザードの [ようこそ] の画像](media/MIM-Install1.png)
+    ![MIM インストーラー ウィザードの [ようこそ] の画像](media/install-mim-sync/MIM_Install1.png)
 
 4. ライセンス条項を読み、同意する場合は **[次へ]** をクリックします。
 
 5. **[カスタム セットアップ]** 画面で **[次へ]** をクリックします。
 
-    ![カスタム セットアップの画像](media/MIM-Install2.png)
+    ![カスタム セットアップの画像](media/install-mim-sync/MIM_Install2.png)
 
 6.  同期サービス データベースの構成画面で、次のように選択します。
 
-    1.  SQL Server の配置場所: **このコンピューター**。
+    1.  SQL Server の場所: **corpsql.contoso.com** と呼ばれる**リモート マシン**。
 
-    2.  SQL Server のインスタンス: **既定のインスタンス**。
+    2.  SQL Server のインスタンス: **既定のインスタンス**
 
-    ![データベース接続の画像](media/MIM-Install3.png)
+    ![データベース接続の画像](media/install-mim-sync/MIM_Install3.png)
 
 7.  前に作成したアカウントに従って同期サービス アカウントを構成します。
 
@@ -71,7 +71,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
     3.  サービス アカウント ドメインまたはローカル コンピューターの名前: *contoso*
 
-    ![サービス アカウントの画像](media/MIM-Install4.png)
+    ![サービス アカウントの画像](media/install-mim-sync/MIM_Install4.png)
 
 8.  MIM 同期サービスに関連するセキュリティ グループを次のとおりに指定します。
 
@@ -85,7 +85,7 @@ Microsoft Identity Manager 2016 をインストールするには、最初にイ
 
     5. WMI パスワード管理 = *contoso \mimsyncpasswordreset*
 
-    ![セキュリティ グループの画像](media/MIM-Install5.png)
+    ![セキュリティ グループの画像](media/install-mim-sync/MIM_Install5.png)
 
 9. [セキュリティ設定] 画面で、**[受信 RPC 通信用のファイアウォール ルールを有効にする]** をオンにし、**[次へ]** をクリックします。
 
