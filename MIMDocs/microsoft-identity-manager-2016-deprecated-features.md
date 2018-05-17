@@ -1,25 +1,25 @@
 ---
-title: "MIM の推奨されない機能と今後の計画 | Microsoft Docs"
-description: "この記事では MIM Identity Manager 2016 SP1 の推奨されない機能を示します。"
-keywords: 
+title: MIM の非推奨の機能と今後の計画 | Microsoft Docs
+description: この記事では MIM Identity Manager 2016 SP1 の非推奨の機能を示します。
+keywords: ''
 author: barclayn
 ms.author: davidste
 manager: mbaldwin
-ms.date: 1/31/2017
+ms.date: 2/28/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: d1e016c45261be5fa9c4dba67ead7f88aa14890b
-ms.sourcegitcommit: 24746cf23b4688b3f8290519527259fc469e0373
+ms.assetid: ''
+ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
+ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="deprecated-features"></a>推奨されない機能
+# <a name="deprecated-features"></a>非推奨の機能
 
-この記事では Microsoft Identity Manager 2016 SP1 の推奨されない機能について説明します。 Microsoft Identity Manager に残っている機能は引き続きサポートされます。 このような機能は今後のリリースで削除される可能性があるため、新しい展開では推奨されません。  開発者には、新しいアプリケーションまたはソリューションで推奨されない機能を使用しないことをお勧めします。
+この記事では Microsoft Identity Manager 2016 SP1 の非推奨の機能について説明します。 Microsoft Identity Manager に残っている機能は引き続きサポートされます。 このような機能は今後のリリースで削除される可能性があるため、新しい展開では推奨されません。  開発者には、新しいアプリケーションまたはソリューションで非推奨の機能を使用しないことをお勧めします。
 
 >[!NOTE]
 Microsoft Identity Manager SP1 で削除された機能には ** が付いています。 <br>
@@ -31,20 +31,23 @@ Microsoft Identity Manager SP1 で削除された機能には ** が付いてい
 お客様が Microsoft BHOLD Suite コンポーネントの新しい展開を開始することはお勧めしません。 BHOLD の既存の展開は引き続きサポートされます。 Azure AD で、[アクセス レビュー](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview)が提供されるようになりました。これにより、BHOLD 構成証明キャンペーン機能の一部が置き換えられます。
 
 ## <a name="certificate-management"></a>証明書の管理 
-| **[カテゴリ]**                | **推奨されない機能**              | **置換およびコメント**           |
+| **[カテゴリ]**                | 
+  **非推奨の機能**              | **置換およびコメント**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | 管理エージェント | **FIM 証明書の管理 | MIM 2016 では FIM 証明書の管理エージェントが削除されています。                                                             |
 
 ## <a name="service-and-portal"></a>サービスおよびポータル
 
-| **[カテゴリ]**                | **推奨されない機能**              | **置換およびコメント**           |
+| **[カテゴリ]**                | 
+  **非推奨の機能**              | **置換およびコメント**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | プログラムによる構成 | Web サービスの構成インターフェイス (ma-data と mv-data) | FIM サービスの Web サービスを介して FIM 同期サービスを構成する機能は、次のバージョンで削除される予定です。
 |
 
 ## <a name="synchronization-service"></a>同期サービス 
 
-| **[カテゴリ]**                | **推奨されない機能**              | **置換およびコメント**           |
+| **[カテゴリ]**                | 
+  **非推奨の機能**              | **置換およびコメント**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | プログラムによる構成 | Web サービスの構成インターフェイス | FIM サービスを介して FIM 同期サービスを構成する機能は、次のバージョンで削除される予定です。                                                          |
 | 管理エージェント           | 組み込みの MA                        | MIM 2016 では、次の MA が削除されています。 </br> 1. **FIM 証明書管理の MA </br>2. **Lotus Notes の MA</br> 3. ** SAP R/3 の MA </br> Lotus Notes と SAP R/3 の MA は新しいバージョンに置き換えられています。 詳細については、[最新のコネクタ バージョンのリリース履歴とダウンロード](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history)に関するページを参照してください                                                                                                                                                                                                                                              |
@@ -57,7 +60,8 @@ Microsoft Identity Manager SP1 で削除された機能には ** が付いてい
 複合の実行プロファイルは、既存のディスコネクタが大量にあることでパフォーマンスが影響を受ける環境でのみ保持してください。
 
 
-| **[カテゴリ]**                | **推奨されない機能**              | **置換およびコメント**           |
+| **[カテゴリ]**                | 
+  **非推奨の機能**              | **置換およびコメント**           |
 |--------|-------|---|    
 | 属性の優先順位 | 複数の支配的/同等の優先順位                       | 同等の優先順位は削除されます。 この機能に代わるものはありません。 代わりに、手動で優先順位を構成する必要があります。 環境内に FIM サービス管理エージェントが展開されている場合は、この機能を引き続き使用することができます。 この管理エージェントでは、宣言型プロビジョニングで非優先のエクスポートを避けるための手動の優先順位が提供されません。 |
 | 結合規則           | オブジェクトの種類 "Any" での結合                             | この機能は置き換えられません。 すべての結合規則で、結合しようとしているメタバース オブジェクトの種類が明示的に定義されます。       |
