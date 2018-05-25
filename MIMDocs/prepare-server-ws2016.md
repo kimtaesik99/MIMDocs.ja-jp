@@ -58,7 +58,7 @@ ms.lasthandoff: 04/27/2018
 
     ![PowerShell 機能の画像](media/MIM-DeployWS2.png)
 
-7. PowerShell で次のコマンドを入力します。 **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー上のサイド バイ サイド (SxS) フォルダー (例: “*d:\Sources\SxS\*”) にあります。
+7. PowerShell で次のコマンドを入力します。 **.NET Framework** 3.5 の機能のソース ファイルに対しては、別の場所を指定することが必要になる場合があります。 Windows Server のインストール時に、これらの機能は通常提示されませんが、OS インストール ディスク ソース フォルダー上のサイド バイ サイド (SxS) フォルダー (例: “\*d:\Sources\SxS\*”) にあります。
 
     ```
     import-module ServerManager
