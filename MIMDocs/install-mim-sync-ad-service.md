@@ -113,11 +113,11 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
     | **データ ソース属性** | **フローの方向** | **メタバース属性** |
     |-|-|-|
     | AccountName | エクスポート | accountName |
-    | 表示名 | エクスポート | displayName |
-    | ドメイン | エクスポート | ドメイン |
-    | 電子メール | エクスポート | メール |
+    | DisplayName | エクスポート | displayName |
+    | Domain | エクスポート | domain |
+    | Email | エクスポート | email |
     | EmployeeID | エクスポート | employeeID |
-    | Employee種類 | エクスポート | employee種類 |
+    | EmployeeType | エクスポート | employeeType |
     | FirstName | エクスポート | firstName |
     | LastName | エクスポート | lastName |
     | ObjectSID | エクスポート | objectSid |
@@ -139,23 +139,23 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
     | **データ ソース属性** | **フローの方向** | **メタバース属性** |
     |-|-|-|
     | AccountName | エクスポート | accountName |
-    | 表示名 | エクスポート | displayName |
-    | ドメイン | エクスポート | ドメイン |
-    | 電子メール | エクスポート | メール |
+    | DisplayName | エクスポート | displayName |
+    | Domain | エクスポート | domain |
+    | Email | エクスポート | email |
     | MailNickName | エクスポート | mailNickName |
-    | メンバー | エクスポート | メンバー |
+    | Member | エクスポート | member |
     | ObjectSID | エクスポート | objectSid |
-    | スコープ | エクスポート | scope |
-    | 型 | エクスポート | 型 |
-    | メンバーshipAddWorkflow | エクスポート | membershipAddWorkflow |
-    | メンバーshipLocked | エクスポート | membershipLocked |
+    | Scope | エクスポート | scope |
+    | Type | エクスポート | type |
+    | MembershipAddWorkflow | エクスポート | membershipAddWorkflow |
+    | MembershipLocked | エクスポート | membershipLocked |
     | AccountName | インポート | accountName |
     | DisplayedOwner | インポート | displayedOwner |
-    | 表示名 | インポート | displayName |
+    | DisplayName | インポート | displayName |
     | MailNickName | インポート | mailNickName |
-    | メンバー | インポート | メンバー |
-    | スコープ | インポート | scope |
-    | 型 | インポート | 型 |
+    | Member | インポート | member |
+    | Scope | インポート | scope |
+    | Type | インポート | type |
 
 10.  **[プロビジョニング解除を構成する]** ページで、**[次へ]** をクリックします
 
@@ -199,15 +199,15 @@ Active Directory 管理エージェントは、AD ドメイン サービス用�
     -   company
     -   displayName
     -   employeeID
-    -   employee種類
+    -   employeeType
     -   givenName
-    -   group種類
+    -   groupType
     -   managedBy
     -   manager
-    -   メンバー
+    -   member
     -   objectSid
     -   sAMAccountName
-    -   sAMAccount種類
+    -   sAMAccountType
     -   sn
     -   unicodePwd
     -   userAccountControl
@@ -326,12 +326,12 @@ AD ユーザー受信同期規則を作成するには:
     |-|-|-|
     |規則 1|samAccountName|accountName|
     |規則 2|displayName|displayName|
-    |規則 3|Employee種類|employee種類|
+    |規則 3|EmployeeType|employeeType|
     |規則 4|givenName|firstName|
     |規則 5|sn|lastName|
     |規則 6|Manager|manager|
     |規則 7|objectSID|ObjectSID|
-    |規則 8|"Contoso"|ドメイン|
+    |規則 8|"Contoso"|Domain|
 
     テーブル内の行ごとに、次の手順を実行します。
 
