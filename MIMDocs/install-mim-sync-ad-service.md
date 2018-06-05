@@ -17,6 +17,7 @@ ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2018
+ms.locfileid: "31771994"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>MIM 2016 のインストール: Active Directory と MIM サービスを同期する
 
@@ -113,7 +114,7 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
     | **データ ソース属性** | **フローの方向** | **メタバース属性** |
     |-|-|-|
     | AccountName | エクスポート | accountName |
-    | DisplayName | エクスポート | displayName |
+    | DisplayName  | エクスポート | displayName |
     | Domain | エクスポート | domain |
     | Email | エクスポート | email |
     | EmployeeID | エクスポート | employeeID |
@@ -139,7 +140,7 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
     | **データ ソース属性** | **フローの方向** | **メタバース属性** |
     |-|-|-|
     | AccountName | エクスポート | accountName |
-    | DisplayName | エクスポート | displayName |
+    | DisplayName  | エクスポート | displayName |
     | Domain | エクスポート | domain |
     | Email | エクスポート | email |
     | MailNickName | エクスポート | mailNickName |
@@ -147,11 +148,11 @@ MIM 管理エージェントを構成するときには、ユーザー アカウ
     | ObjectSID | エクスポート | objectSid |
     | Scope | エクスポート | scope |
     | Type | エクスポート | type |
-    | MembershipAddWorkflow | エクスポート | membershipAddWorkflow |
+    | MembershipAddWorkflow  | エクスポート | membershipAddWorkflow |
     | MembershipLocked | エクスポート | membershipLocked |
     | AccountName | インポート | accountName |
     | DisplayedOwner | インポート | displayedOwner |
-    | DisplayName | インポート | displayName |
+    | DisplayName  | インポート | displayName |
     | MailNickName | インポート | mailNickName |
     | Member | インポート | member |
     | Scope | インポート | scope |
@@ -231,7 +232,7 @@ ADMA および MIMMA コネクタの実行プロファイルを作成します�
 
 この表では、ADMA コネクタ用に作成する 5 つの実行プロファイルを示しています。
 
-| 名前 | 型 |
+| 名前 | Type |
 | ---- | ---- |
 | Profile1 | フル インポート (ステージのみ) |
 | Profile2 | 完全な同期 |
@@ -263,7 +264,7 @@ ADMA コネクタの実行プロファイルを作成するには
 
 この表では、MIMMA コネクタの対応する 5 つの実行プロファイルを示します。
 
-| 名前 | 型 |
+| 名前 | Type |
 | -------- | -------- |
 | Profile1 | フル インポート (ステージのみ) |
 | Profile2 | 完全な同期 |
@@ -331,7 +332,7 @@ AD ユーザー受信同期規則を作成するには:
     |規則 5|sn|lastName|
     |規則 6|Manager|manager|
     |規則 7|objectSID|ObjectSID|
-    |規則 8|"Contoso"|Domain|
+    |規則 8|"Contoso"|domain|
 
     テーブル内の行ごとに、次の手順を実行します。
 
